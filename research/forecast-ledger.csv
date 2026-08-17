@@ -1,0 +1,1 @@
+forecast_id,created_at,expires_at,asset,horizon,base_scenario,base_probability,bull_probability,bear_probability,invalidation,actual_outcome,base_scenario_hit,invalidation_hit,max_favorable_excursion_pct,max_adverse_excursion_pct,data_quality_1_to_5,notes
