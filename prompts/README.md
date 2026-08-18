@@ -8,7 +8,7 @@ Use a strong parent model for orchestration and Luna workers for bounded researc
 |---|---:|---|
 | `killa_quant` | Max | Quantitative regime and derivatives |
 | `macro_liquidity` | Extra High | Macro causality and cross-asset effects |
-| `bang_technician` | High | Price structure and timing |
+| `bang_technician` | High | @BangXBT HTF plan: structure, sweeps, confirmation, targets |
 | `glassnode_onchain` | High | On-chain confirmation and cycle risk |
 | `bitwise_fundamentals` | High | Alt/meme investability and token risk |
 | `leopold_ai_scaling` | Extra High | AI scaling, compute, power, miner infrastructure, and AI-token transmission |

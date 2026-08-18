@@ -20,7 +20,7 @@ Also spawn `cowen_cycle_risk` only when BTC dominance, ETH/BTC, altcoin rotation
 Efficiency rules:
 1. Gather one shared evidence packet before spawning agents. Include exact timestamp/timezone, BTC spot and volume context, BTC dominance, ETH/BTC, funding/open interest, major macro markets, and the next dated catalyst. Prefer primary or authoritative sources.
 2. Give all three agents the same packet. Do not let them independently rebuild it unless they identify a material missing or conflicting fact.
-3. Require each memo to contain only: bias, confidence 0-100, three decisive facts, bull/base/bear weights in 10-point increments totaling 100%, invalidation, and one alt-market implication.
+3. For killa_quant and macro_liquidity, require each memo to contain only: bias, confidence 0-100, three decisive facts, bull/base/bear weights in 10-point increments totaling 100%, invalidation, and one alt-market implication. For bang_technician, keep the native $TICKER plan format, then the compact council block (timestamp/TF, invalidation, bull/base/bear, one objection). Do not rewrite Bang into the compact research memo.
 4. Do not run a debate when the directional conclusions broadly agree. If any agent differs by at least 30 probability points on the base outcome, send only a short disagreement summary to the disagreeing agents and permit one rebuttal each.
 5. Wait for all active agents, then synthesize. Do not blindly average probabilities: discount stale evidence, unsupported claims, and correlated signals.
 
