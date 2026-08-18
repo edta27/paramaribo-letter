@@ -20,6 +20,11 @@ Also spawn `cowen_cycle_risk` only when BTC dominance, ETH/BTC, altcoin rotation
 Also spawn `eth_platform` when the watchlist or question includes ETH, staking, an L2, or an L2-native token.
 Also spawn `hayes_crypto_credit` when stablecoins, Tether, funding, basis, or yen/carry are material.
 Also spawn `policy_regulation` when ETFs, brokerage/exchange listings, bills, or enforcement are material.
+Also spawn `carter_monetary` when money-vs-casino, energy, stablecoin reserves, or ETF plumbing is central.
+Also spawn `murad_meme` when the watchlist includes a meme coin or an attention/cult claim.
+Also spawn `hasu_incentives` when MEV, staking, restaking, or sequencer incentives are material.
+Also spawn `cryptoquant_flows` when exchange netflow, miner-to-exchange, or Asia premium is material.
+Also spawn `options_vol` when the question is a barrier event, listed options, skew, or implied-touch math.
 
 If any Round-1 agents differ by at least 30 probability points on the base outcome, also spawn `risk_red_team` on the disagreement summary.
 

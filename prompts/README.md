@@ -23,9 +23,14 @@ Use a strong parent model for orchestration and Luna workers for bounded researc
 | `eth_platform` | High | ETH, staking, L2s, rollup security, or L2-native tokens |
 | `hayes_crypto_credit` | Extra High | Stablecoins, Tether, funding, basis, JPY/carry, crypto credit |
 | `policy_regulation` | High | ETFs, listings, bills, enforcement, brokers, jurisdiction |
+| `carter_monetary` | High | BTC as money vs casino, energy, stablecoin reserves, ETF plumbing |
+| `murad_meme` | High | Meme coins or attention/cult-coin claims on the watchlist |
+| `hasu_incentives` | High | MEV, staking agency, restaking, sequencer rents, protocol incentives |
+| `cryptoquant_flows` | High | Exchange netflow, miner-to-exchange, or Asia-session premium |
+| `options_vol` | High | Barrier events, listed options, skew, or implied-touch math |
 | `risk_red_team` | High | Always in deep-council Round 2; not a Round 1 forecaster |
 
-All agents remain on `gpt-5.6-luna`. Sessions allow up to 10 concurrent workers so a full bench can run in parallel. Default deep runs stay at the core seven plus Round-2 red team. Say **full bench** in the parent prompt to spawn every specialist in Round 1.
+All agents remain on `gpt-5.6-luna`. Sessions allow up to 15 concurrent workers so a full bench can run in parallel. Default deep runs stay at the core seven plus Round-2 red team. Say **full bench** in the parent prompt to spawn every Round-1 specialist.
 
 ## Which prompt to use
 
@@ -36,7 +41,7 @@ All agents remain on `gpt-5.6-luna`. Sessions allow up to 10 concurrent workers 
 
 The daily pulse normally stays at three agents. It activates `leopold_ai_scaling` only for a material AI, technology-equity, compute/power, miner-HPC, or AI-token catalyst.
 It activates `cowen_cycle_risk` when dominance, ETH/BTC, alt breadth, or a multi-week cycle thesis is central.
-It activates `eth_platform`, `hayes_crypto_credit`, or `policy_regulation` by the same specialist rules as the deep council.
+It activates `eth_platform`, `hayes_crypto_credit`, `policy_regulation`, `carter_monetary`, `murad_meme`, `hasu_incentives`, `cryptoquant_flows`, or `options_vol` by the same specialist rules as the deep council.
 
 Do not run the deep council repeatedly on the same unchanged evidence. A new run is useful when price invalidates a level, a macro release lands, derivatives positioning changes materially, fresh on-chain data arrives, or a token catalyst/unlock changes.
 
