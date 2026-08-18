@@ -2,7 +2,9 @@
 
 ## Recommended setup
 
-Use a strong parent model for orchestration and Luna workers for bounded research. When the controls are available, choose **Sol High** for the parent chat. The project agents already specify their worker settings:
+Use a strong parent model for orchestration and Luna workers for bounded research. When the controls are available, choose **Sol High** for the parent chat. The project agents already specify their worker settings.
+
+**Core seven** (default deep council):
 
 | Agent | Effort | Purpose |
 |---|---:|---|
@@ -14,17 +16,27 @@ Use a strong parent model for orchestration and Luna workers for bounded researc
 | `leopold_ai_scaling` | Extra High | AI scaling, compute, power, miner infrastructure, and AI-token transmission |
 | `cowen_cycle_risk` | High | BTC dominance, ETH/BTC, breadth, market cycles, and time-based capitulation |
 
-Higher effort is reserved for the work most likely to benefit from it. All five agents remain on `gpt-5.6-luna`.
+**Bench specialists** (spawn only when the question needs them):
+
+| Agent | Effort | Spawn when |
+|---|---:|---|
+| `eth_platform` | High | ETH, staking, L2s, rollup security, or L2-native tokens |
+| `hayes_crypto_credit` | Extra High | Stablecoins, Tether, funding, basis, JPY/carry, crypto credit |
+| `policy_regulation` | High | ETFs, listings, bills, enforcement, brokers, jurisdiction |
+| `risk_red_team` | High | Always in deep-council Round 2; not a Round 1 forecaster |
+
+All agents remain on `gpt-5.6-luna`. Sessions allow up to 10 concurrent workers so a full bench can run in parallel. Default deep runs stay at the core seven plus Round-2 red team. Say **full bench** in the parent prompt to spawn every specialist in Round 1.
 
 ## Which prompt to use
 
 | Need | Prompt | Agents | Normal cadence |
 |---|---|---:|---|
-| Quick BTC regime check | `daily-btc-pulse.md` | 3 | Daily or around major events |
-| BTC plus alt/meme/AI conviction review | `run-crypto-council.md` | 7 | Weekly, or before a material decision |
+| Quick BTC regime check | `daily-btc-pulse.md` | 3 + specialists if needed | Daily or around major events |
+| BTC plus alt/meme/AI conviction review | `run-crypto-council.md` | 7 + specialists if needed | Weekly, or before a material decision |
 
 The daily pulse normally stays at three agents. It activates `leopold_ai_scaling` only for a material AI, technology-equity, compute/power, miner-HPC, or AI-token catalyst.
 It activates `cowen_cycle_risk` when dominance, ETH/BTC, alt breadth, or a multi-week cycle thesis is central.
+It activates `eth_platform`, `hayes_crypto_credit`, or `policy_regulation` by the same specialist rules as the deep council.
 
 Do not run the deep council repeatedly on the same unchanged evidence. A new run is useful when price invalidates a level, a macro release lands, derivatives positioning changes materially, fresh on-chain data arrives, or a token catalyst/unlock changes.
 
@@ -37,6 +49,7 @@ Do not run the deep council repeatedly on the same unchanged evidence. A new run
 5. Debate only material disagreements; do not circulate every full memo to every agent.
 6. Preserve `no trade` and `insufficient evidence` as valid conclusions.
 7. Record forecasts before the outcome, then score them after expiry. Favor agents and indicators that demonstrate calibration over time.
+8. Do not add every specialist to every run. Extra voices help only when they own a mechanism the core seven cannot cover.
 
 ## Forecast review
 
