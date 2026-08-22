@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>GROK BOT RESEARCH DESK</title>
+  <style>
+    :root {
+      --bg: #050505;
+      --panel: #0a0a0a;
+      --line: #2a2a2a;
+      --mute: #8a8a8a;
+      --fg: #f3f3f3;
+      --green: #4ade80;
+      --red: #f87171;
+      --orange: #fb923c;
+      --purple: #c4b5fd;
+      --yellow: #facc15;
+      --blue: #60a5fa;
+      --filings: #c4b5fd;
+      --earnings: #f87171;
+      --sector: #4ade80;
+      --insider: #fb923c;
+      --chatter: #facc15;
+      --chief: #f5f5f5;
+    }
+    * { box-sizing: border-box; }
+    html, body {
+      margin: 0; height: 100%;
+      background: var(--bg); color: var(--fg);
+      font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+      font-size: 11px; letter-spacing: 0.02em;
+    }
+    button { font-family: inherit; }
+    .app {
+      min-height: 100%;
+      display: grid;
+      grid-template-rows: auto auto 1fr auto auto;
+      border: 1px solid var(--line);
+    }
+    header {
+      display: grid;
+      grid-template-columns: 1.4fr 1.6fr auto;
+      gap: 12px;
+      align-items: center;
+      padding: 10px 14px 8px;
+      border-bottom: 1px solid var(--line);
+    }
+    .brand { display: flex; gap: 10px; align-items: flex-start; }
+    .mark {
+      width: 28px; height: 28px; flex: none;
+      display: grid; place-items: center;
+      border: 1px solid var(--fg);
+      font-weight: 700; font-size: 16px;
+    }
+    .title { font-size: 18px; font-weight: 700; letter-spacing: 0.08em; }
+    .title span { color: var(--red); }
+    .sub { color: var(--mute); margin-top: 3px; font-size: 10px; }
+    .kpis { display: flex; gap: 22px; justify-content: flex-end; }
+    .kpi b { display: block; font-size: 16px; }
+    .kpi span { color: var(--mute); font-size: 10px; }
+    .clockwrap { text-align: right; }
+    .clock { font-size: 28px; font-weight: 700; line-height: 1; }
+    .status {
+      display: inline-flex; align-items: center; gap: 6px;
+      margin-top: 4px; padding: 3px 8px;
+      border: 1px solid var(--green); color: var(--green);
+      font-size: 10px;
+    }
+    .status i { width: 6px; height: 6px; border-radius: 50%; background: var(--green); display: inline-block; }
+    .tape {
+      overflow: hidden; white-space: nowrap;
+      border-bottom: 1px solid var(--line);
+      padding: 6px 0;
+      color: var(--mute);
+    }
+    .tape-inner { display: inline-block; animation: marquee 28s linear infinite; }
+    .tape b { margin: 0 18px; font-weight: 500; }
+    .dot { display: inline-block; width: 7px; height: 7px; border-radius: 50%; margin-right: 6px; vertical-align: middle; }
+    @keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
+    .swarm {
+      border-bottom: 1px solid var(--line);
+      padding: 8px 14px 10px;
+    }
+    .swarm-head {
+      display: flex; justify-content: space-between; align-items: baseline;
+      margin-bottom: 6px; gap: 12px;
+    }
+    .swarm-head h2 { margin: 0; font-size: 12px; letter-spacing: 0.12em; }
+    .swarm-head .meta { color: var(--mute); }
+    .tabs { display: flex; gap: 0; border: 1px solid var(--line); }
+    .tab {
+      flex: 1; text-align: center; padding: 6px 4px;
+      border-right: 1px solid var(--line); color: var(--mute);
+    }
+    .tab:last-child { border-right: 0; }
+    .tab.on { background: #141414; color: var(--fg); }
+    .tab small { display: block; color: var(--mute); font-size: 9px; }
+    .netwrap {
+      position: relative; height: 250px; margin-top: 8px;
+      border: 1px solid var(--line); background:
+        radial-gradient(circle at 50% 50%, #141414 0%, #070707 62%);
+    }
+    svg.web { position: absolute; inset: 0; width: 100%; height: 100%; }
+    .node {
+      position: absolute; width: 86px; text-align: center;
+      transform: translate(-50%, -50%);
+    }
+    .face {
+      width: 44px; height: 44px; margin: 0 auto 4px;
+      display: grid; place-items: center;
+      border: 1.5px solid currentColor;
+      position: relative;
+    }
+    .face.hex { clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%); }
+    .face.tri { clip-path: polygon(50% 0%, 100% 100%, 0% 100%); }
+    .face.sq { border-radius: 2px; }
+    .face.semi { border-radius: 22px 22px 4px 4px; }
+    .face.circ { border-radius: 50%; }
+    .eyes { display: flex; gap: 8px; }
+    .eyes span { width: 5px; height: 5px; background: currentColor; border-radius: 50%; }
+    .node .name { font-size: 10px; letter-spacing: 0.14em; }
+    .node .stat { color: var(--mute); font-size: 9px; line-height: 1.35; }
+    .bar {
+      height: 3px; background: #222; margin: 4px auto 3px; width: 70px;
+    }
+    .bar > i { display: block; height: 100%; }
+    .chief-box {
+      position: absolute; right: 10px; top: 10px;
+      border: 1px solid var(--line); padding: 8px 10px; color: var(--mute);
+      background: rgba(0,0,0,.55);
+    }
+    .chief-box b { color: var(--fg); display: block; margin-bottom: 4px; }
+
+    .night {
+      display: grid; grid-template-columns: 1.15fr 1fr;
+      min-height: 280px; border-bottom: 1px solid var(--line);
+    }
+    .gantt, .brief { padding: 10px 14px; }
+    .brief { border-left: 1px solid var(--line); overflow: auto; max-height: 340px; }
+    h3 { margin: 0 0 8px; font-size: 11px; letter-spacing: 0.14em; }
+    .axis { display: flex; justify-content: space-between; color: var(--mute); margin-bottom: 6px; }
+    .rows { display: grid; gap: 8px; }
+    .row { display: grid; grid-template-columns: 72px 1fr 52px; align-items: center; gap: 8px; }
+    .track { position: relative; height: 14px; background: #111; border: 1px solid #222; }
+    .track b {
+      position: absolute; top: 1px; bottom: 1px;
+      opacity: .9;
+    }
+    .now {
+      position: absolute; top: 18px; bottom: 8px; width: 1px; background: var(--red);
+      left: 86%; pointer-events: none;
+    }
+    .gantt { position: relative; }
+    .pill { font-size: 9px; color: var(--green); }
+    .pill.work { color: var(--yellow); }
+
+    .flags { width: 100%; border-collapse: collapse; }
+    .flags td { padding: 3px 6px; border-bottom: 1px solid #151515; vertical-align: top; }
+    .flags .t { color: var(--mute); width: 44px; }
+    .flags .sym { font-weight: 700; width: 44px; }
+    .tag {
+      display: inline-block; padding: 1px 6px; font-size: 9px; letter-spacing: 0.08em;
+      border: 1px solid currentColor;
+    }
+    .tag.alpha, .tag.beat { color: var(--green); }
+    .tag.bin, .tag.flag { color: var(--red); }
+    .tag.f13 { color: var(--blue); }
+
+    footer.metrics {
+      display: grid; grid-template-columns: 1.2fr 1fr 0.9fr;
+      min-height: 210px;
+    }
+    footer.metrics > section { padding: 10px 14px; border-right: 1px solid var(--line); }
+    footer.metrics > section:last-child { border-right: 0; }
+    .agent {
+      display: grid;
+      grid-template-columns: 14px 78px 72px 36px 1fr 70px 36px;
+      gap: 8px; align-items: center;
+      padding: 4px 0; border-bottom: 1px solid #151515;
+    }
+    .spark { width: 70px; height: 16px; }
+    .sys div { display: flex; justify-content: space-between; padding: 2px 0; color: var(--mute); }
+    .sys b { color: var(--fg); font-weight: 500; }
+    .saved {
+      margin-top: 10px; padding: 10px; text-align: center;
+      border: 1px solid var(--green); color: var(--green);
+      font-size: 13px; letter-spacing: 0.06em;
+    }
+    .token-chart { display: flex; align-items: flex-end; gap: 3px; height: 140px; }
+    .col { width: 10px; display: flex; flex-direction: column-reverse; height: 100%; }
+    .col i { display: block; width: 100%; }
+    .foot {
+      display: flex; justify-content: space-between; color: var(--mute);
+      padding: 6px 14px; border-top: 1px solid var(--line);
+    }
+    .demo { color: var(--yellow); }
+  </style>
+</head>
+<body>
+  <div class="app">
+    <header>
+      <div class="brand">
+        <div class="mark">X</div>
+        <div>
+          <div class="title">GROK BOT <span>RESEARCH DESK</span></div>
+          <div class="sub">SIX AGENTS REPLACE A $294,000 HEDGE FUND RESEARCH TEAM.</div>
+        </div>
+      </div>
+      <div class="kpis">
+        <div class="kpi"><span>REPLACED</span><b>$294K</b></div>
+        <div class="kpi"><span>COSTS</span><b>$2.4K</b></div>
+        <div class="kpi"><span>CHEAPER</span><b>122x</b></div>
+        <div class="kpi"><span>TICKERS</span><b>20</b></div>
+      </div>
+      <div class="clockwrap">
+        <div class="clock" id="clock">05:31</div>
+        <div class="status"><i></i> BRIEF SENT</div>
+      </div>
+    </header>
+
+    <div class="tape"><div class="tape-inner" id="tape"></div></div>
+
+    <section class="swarm">
+      <div class="swarm-head">
+        <h2>THE SWARM · FIVE MAKERS HAND WORK TO ONE CHECKER</h2>
+        <div class="meta">122x CHEAPER · $294,000 → $2,400 PER YEAR · BURNED WHILE YOU READ <span id="burn">$0.34</span></div>
+      </div>
+      <div class="tabs">
+        <div class="tab"><small>23:30</small>FILINGS</div>
+        <div class="tab"><small>00:30</small>EARNINGS</div>
+        <div class="tab"><small>01:30</small>SECTOR</div>
+        <div class="tab"><small>01:30</small>INSIDER</div>
+        <div class="tab on"><small>03:30</small>CHATTER</div>
+        <div class="tab"><small>05:30</small>CHIEF</div>
+      </div>
+      <div class="netwrap">
+        <svg class="web" viewBox="0 0 1000 250" preserveAspectRatio="none">
+          <g stroke="#3a3a3a" stroke-width="1" fill="none">
+            <line x1="500" y1="125" x2="180" y2="48" />
+            <line x1="500" y1="125" x2="820" y2="48" />
+            <line x1="500" y1="125" x2="140" y2="190" />
+            <line x1="500" y1="125" x2="860" y2="190" />
+            <line x1="500" y1="125" x2="500" y2="28" />
+            <line x1="180" y1="48" x2="500" y2="28" />
+            <line x1="820" y1="48" x2="500" y2="28" />
+            <line x1="140" y1="190" x2="180" y2="48" />
+            <line x1="860" y1="190" x2="820" y2="48" />
+          </g>
+        </svg>
+        <div class="node" style="left:50%;top:50%;color:var(--chief)">
+          <div class="face circ"><div class="eyes"><span></span><span></span></div></div>
+          <div class="name">CHIEF</div>
+          <div class="stat">THE CHECKER<br>BINS SINGLE-BOT FLAGS</div>
+        </div>
+        <div class="node" style="left:18%;top:20%;color:var(--insider)">
+          <div class="face tri"><div class="eyes"><span></span><span></span></div></div>
+          <div class="name">INSIDER</div>
+          <div class="bar"><i style="width:47%;background:var(--insider)"></i></div>
+          <div class="stat">47% · 01:30<br>2.0k tok · 1400ms</div>
+        </div>
+        <div class="node" style="left:82%;top:20%;color:var(--sector)">
+          <div class="face circ"><div class="eyes"><span></span><span></span></div></div>
+          <div class="name">SECTOR</div>
+          <div class="bar"><i style="width:77%;background:var(--sector)"></i></div>
+          <div class="stat">77% · 01:30<br>1.9k tok · 458ms</div>
+        </div>
+        <div class="node" style="left:50%;top:12%;color:var(--chatter)">
+          <div class="face sq"><div class="eyes"><span></span><span></span></div></div>
+          <div class="name">CHATTER</div>
+          <div class="bar"><i style="width:91%;background:var(--chatter)"></i></div>
+          <div class="stat">91% · 03:30<br>0.5k tok · 661ms</div>
+        </div>
+        <div class="node" style="left:14%;top:76%;color:var(--earnings)">
+          <div class="face semi"><div class="eyes"><span></span><span></span></div></div>
+          <div class="name">EARNINGS</div>
+          <div class="bar"><i style="width:100%;background:var(--earnings)"></i></div>
+          <div class="stat">00:30<br>2.3k tok · 167ms</div>
+        </div>
+        <div class="node" style="left:86%;top:76%;color:var(--filings)">
+          <div class="face hex"><div class="eyes"><span></span><span></span></div></div>
+          <div class="name">FILINGS</div>
+          <div class="bar"><i style="width:69%;background:var(--filings)"></i></div>
+          <div class="stat">69% · 23:30<br>1.1k tok · 609ms</div>
+        </div>
+        <div class="chief-box">
+          <b>CHIEF HAS 284 READ</b>
+          72 BINNED
+        </div>
+      </div>
+    </section>
+
+    <section class="night">
+      <div class="gantt">
+        <h3>THE NIGHT RUN</h3>
+        <div class="axis"><span>23:30</span><span>01:00</span><span>03:00</span><span>05:00</span><span>06:00 ET</span></div>
+        <div class="now" title="BRIEF 06:00"></div>
+        <div class="rows" id="gantt"></div>
+      </div>
+      <div class="brief">
+        <h3>MORNING BRIEF · 38 FLAGS</h3>
+        <table class="flags" id="flags"></table>
+      </div>
+    </section>
+
+    <footer class="metrics">
+      <section>
+        <h3>AGENT STATUS · 6 ONLINE</h3>
+        <div id="agents"></div>
+        <div class="foot" style="border:0;padding:8px 0 0"><span>TOTAL TASKS 3,784</span><span>P95 1400MS</span></div>
+      </section>
+      <section>
+        <h3>TOKENS / MIN</h3>
+        <div class="token-chart" id="tokens"></div>
+      </section>
+      <section class="sys">
+        <h3>SYSTEM · LIVE</h3>
+        <div>filings read <b>983</b></div>
+        <div>transcripts <b>86</b></div>
+        <div>13F parsed <b>163</b></div>
+        <div>vault notes <b>7,919</b></div>
+        <div>tokens in <b>24.61M</b></div>
+        <div>handoffs / min <b>37</b></div>
+        <div>spend so far <b>$6.05</b></div>
+        <div>human input <b>approvals only</b></div>
+        <div class="saved">SAVED VS OLD DESK $245,121</div>
+      </section>
+    </footer>
+    <div class="foot">
+      <span>VAULT ./vault · PROMPT prompts/run-equity-desk.md</span>
+      <span class="demo">UI DEMO · DRY-RUN LAYOUT · NOT A LIVE BROKER FEED</span>
+    </div>
+  </div>
+  <script>
+    const tape = [
+      ["var(--yellow)", "ASML mentions 3.4σ"],
+      ["var(--filings)", "SMCI auditor changed"],
+      ["var(--filings)", "PANW auditor changed"],
+      ["var(--insider)", "AMD cluster buy · 3 insiders"],
+      ["var(--green)", "SMCI guidance raised"],
+      ["var(--blue)", "TSM new 13F · Third Point"],
+      ["var(--chatter)", "NVDA mention spike"],
+      ["var(--orange)", "WYFI convert closed"],
+    ];
+    document.getElementById("tape").innerHTML = [...tape, ...tape].map(
+      ([c, t]) => `<b><span class="dot" style="background:${c}"></span>${t}</b>`
+    ).join("");
+
+    const gantt = [
+      ["FILINGS", "var(--filings)", 0, 28, "DONE"],
+      ["EARNINGS", "var(--earnings)", 14, 22, "DONE"],
+      ["SECTOR", "var(--sector)", 28, 36, "DONE"],
+      ["INSIDER", "var(--insider)", 28, 40, "DONE"],
+      ["CHATTER", "var(--chatter)", 52, 70, "WORKING"],
+      ["CHIEF", "var(--chief)", 78, 92, "WORKING"],
+    ];
+    document.getElementById("gantt").innerHTML = gantt.map(([n, c, a, b, s]) => `
+      <div class="row">
+        <div>${n}</div>
+        <div class="track"><b style="left:${a}%;width:${b-a}%;background:${c}"></b></div>
+        <div class="pill ${s === "WORKING" ? "work" : ""}">${s}</div>
+      </div>`).join("");
+
+    const flags = [
+      ["05:31", "AMD", "cluster buy · 3 insiders", "ALPHA", "alpha"],
+      ["05:31", "PANW", "one bot only", "BIN", "bin"],
+      ["05:28", "SMCI", "auditor changed", "FLAG", "flag"],
+      ["05:28", "SMCI", "guidance raised", "BEAT", "beat"],
+      ["05:26", "SNOW", "mention spike · no filing", "BIN", "bin"],
+      ["05:24", "TSM", "new position · Third Point", "13F", "f13"],
+      ["05:22", "ARM", "8-K going concern language", "FLAG", "flag"],
+      ["05:21", "NVDA", "earnings 26 Aug in packet", "FLAG", "flag"],
+      ["05:19", "WYFI", "convert close · $310M 5% notes", "FLAG", "flag"],
+      ["05:18", "IREN", "sector HPC only · one bot", "BIN", "bin"],
+      ["05:16", "AMD", "Form 4 open-market > $1M", "ALPHA", "alpha"],
+      ["05:14", "WMT", "comps miss already in tape", "BEAT", "beat"],
+    ];
+    document.getElementById("flags").innerHTML = flags.map(([t, s, d, tag, cls]) => `
+      <tr>
+        <td class="t">${t}</td>
+        <td class="sym">${s}</td>
+        <td>${d}</td>
+        <td><span class="tag ${cls}">${tag}</span></td>
+      </tr>`).join("");
+
+    const agents = [
+      ["FILINGS", "var(--filings)", "grok-4", "609", 69, [8,12,9,14,11,16,13]],
+      ["EARNINGS", "var(--earnings)", "grok-4-fast", "167", 100, [4,7,6,9,8,5,10]],
+      ["SECTOR", "var(--sector)", "grok-4", "458", 77, [6,8,7,11,9,12,10]],
+      ["INSIDER", "var(--insider)", "grok-4", "1400", 47, [3,5,4,8,6,7,9]],
+      ["CHATTER", "var(--chatter)", "grok-4-fast", "661", 91, [10,14,12,18,15,17,16]],
+      ["CHIEF", "var(--chief)", "grok-4", "802", 38, [2,3,4,5,4,6,5]],
+    ];
+    document.getElementById("agents").innerHTML = agents.map(([n, c, m, ms, p, sp]) => {
+      const w = 70, h = 16;
+      const max = Math.max(...sp);
+      const pts = sp.map((v, i) => `${(i/(sp.length-1))*w},${h - (v/max)*h}`).join(" ");
+      return `<div class="agent">
+        <span class="dot" style="background:${c}"></span>
+        <span>${n}</span>
+        <span style="color:var(--mute)">${m}</span>
+        <span>${ms}ms</span>
+        <div class="bar" style="width:auto"><i style="width:${p}%;background:${c}"></i></div>
+        <svg class="spark" viewBox="0 0 ${w} ${h}" preserveAspectRatio="none"><polyline fill="none" stroke="${c}" stroke-width="1.2" points="${pts}" /></svg>
+        <span>${p}%</span>
+      </div>`;
+    }).join("");
+
+    const colors = ["var(--filings)","var(--earnings)","var(--sector)","var(--insider)","var(--chatter)","var(--chief)"];
+    const cols = Array.from({length: 36}, () => colors.map(() => 8 + Math.random() * 18));
+    document.getElementById("tokens").innerHTML = cols.map(stack => {
+      const total = stack.reduce((a,b)=>a+b,0);
+      return `<div class="col">${stack.map((v,i)=>`<i style="height:${(v/total)*100}%;background:${colors[i]}"></i>`).join("")}</div>`;
+    }).join("");
+
+    const clock = document.getElementById("clock");
+    const burn = document.getElementById("burn");
+    let cents = 34;
+    function tick() {
+      const d = new Date();
+      const h = String(d.getHours()).padStart(2,"0");
+      const m = String(d.getMinutes()).padStart(2,"0");
+      clock.textContent = `${h}:${m}`;
+      cents += Math.random() * 0.02;
+      burn.textContent = `$${(cents/100).toFixed(2)}`;
+    }
+    tick();
+    setInterval(tick, 1000);
+  </script>
+</body>
+</html>

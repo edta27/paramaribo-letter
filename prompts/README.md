@@ -1,4 +1,4 @@
-# Crypto Council Operating Guide
+# Research Desk Operating Guide
 
 ## Recommended setup
 
@@ -31,7 +31,18 @@ Use a strong parent model for orchestration and Luna workers for bounded researc
 | `capriole_systematic` | High | BTC timing vs buy-and-hold, long/short/cash, Hash Ribbons/Energy Value, institutional absorption vs issuance, leveraged BTC treasuries, or gold/equity/cash rotation |
 | `risk_red_team` | High | Always in deep-council Round 2; not a Round 1 forecaster |
 
-All agents remain on `gpt-5.6-luna`. Sessions allow up to 16 concurrent workers so a full bench can run in parallel. Default deep runs stay at the core seven plus Round-2 red team. Say **full bench** in the parent prompt to spawn every Round-1 specialist.
+**Equity desk** (separate session; do not mix with the crypto council):
+
+| Agent | Effort | Purpose |
+|---|---:|---|
+| `filings` | High | EDGAR 10-K / 10-Q / 8-K flags |
+| `earnings` | High | Transcript tone and guidance vs prior quarter |
+| `sector` | High | Rule changes, competitors, supply-chain noise |
+| `insider` | High | Form 4 buys and lagged 13F appearances/exits |
+| `chatter` | High | Public mention spikes; 3σ only if a baseline exists |
+| `chief_of_staff` | High | Drops single-source flags; one-page morning brief; no email without `APPROVE_SEND` |
+
+All agents remain on `gpt-5.6-luna`. Sessions allow up to 16 concurrent workers so a full crypto bench or the five equity specialists can run in parallel. Default crypto deep runs stay at the core seven plus Round-2 red team. Say **full bench** in the crypto parent prompt to spawn every crypto Round-1 specialist — not the equity desk.
 
 ## Which prompt to use
 
@@ -40,6 +51,8 @@ All agents remain on `gpt-5.6-luna`. Sessions allow up to 16 concurrent workers 
 | Quick BTC regime check | `daily-btc-pulse.md` | 3 + specialists if needed | Daily or around major events |
 | Confirmation-first buy-low / sell-high plan | `buy-low-sell-high.md` | bang + capriole + glassnode | When deciding whether to add, hold cash, or reduce |
 | BTC plus alt/meme/AI conviction review | `run-crypto-council.md` | 7 + specialists if needed | Weekly, or before a material decision |
+| Overnight equity filings / earnings / insider desk | `run-equity-desk.md` | 5 + chief_of_staff | Nightly or pre-market; dry-run first |
+| Visual night-run board (open in a browser) | `desk/index.html` | UI only | Matches the six-agent swarm / brief layout |
 
 The daily pulse normally stays at three agents. It activates `leopold_ai_scaling` only for a material AI, technology-equity, compute/power, miner-HPC, or AI-token catalyst.
 It activates `cowen_cycle_risk` when dominance, ETH/BTC, alt breadth, or a multi-week cycle thesis is central.
@@ -50,13 +63,14 @@ Do not run the deep council repeatedly on the same unchanged evidence. A new run
 ## Practices that improve results
 
 1. Ask one concrete question with one main horizon. More horizons produce more words, not necessarily more signal.
-2. Keep the watchlist to eight assets or fewer in deep mode and five or fewer in daily mode.
+2. Keep the watchlist to eight assets or fewer in crypto deep mode, five or fewer in daily pulse, and 20 or fewer on the equity desk.
 3. Use one timestamped evidence packet so every agent analyzes the same market state.
 4. Keep first-round work independent to reduce anchoring.
 5. Debate only material disagreements; do not circulate every full memo to every agent.
 6. Preserve `no trade` and `insufficient evidence` as valid conclusions.
 7. Record forecasts before the outcome, then score them after expiry. Favor agents and indicators that demonstrate calibration over time.
 8. Do not add every specialist to every run. Extra voices help only when they own a mechanism the core seven cannot cover.
+9. Run the equity desk in its own session. Specialists must not see each other; the chief drops single-source flags. Dry-run until you set `APPROVE_SEND`.
 
 ## Forecast review
 

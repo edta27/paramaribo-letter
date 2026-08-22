@@ -1,3 +1,4 @@
 [agents]
 enabled = true
 max_concurrent_threads_per_session = 16
+# Five equity-desk specialists run in parallel, then chief_of_staff. Crypto full bench still fits in 16.
