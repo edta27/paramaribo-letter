@@ -28,20 +28,22 @@ Use a strong parent model for orchestration and Luna workers for bounded researc
 | `hasu_incentives` | High | MEV, staking agency, restaking, sequencer rents, protocol incentives |
 | `cryptoquant_flows` | High | Exchange netflow, miner-to-exchange, or Asia-session premium |
 | `options_vol` | High | Barrier events, listed options, skew, or implied-touch math |
+| `capriole_systematic` | High | BTC timing vs buy-and-hold, long/short/cash, Hash Ribbons/Energy Value, institutional absorption vs issuance, leveraged BTC treasuries, or gold/equity/cash rotation |
 | `risk_red_team` | High | Always in deep-council Round 2; not a Round 1 forecaster |
 
-All agents remain on `gpt-5.6-luna`. Sessions allow up to 15 concurrent workers so a full bench can run in parallel. Default deep runs stay at the core seven plus Round-2 red team. Say **full bench** in the parent prompt to spawn every Round-1 specialist.
+All agents remain on `gpt-5.6-luna`. Sessions allow up to 16 concurrent workers so a full bench can run in parallel. Default deep runs stay at the core seven plus Round-2 red team. Say **full bench** in the parent prompt to spawn every Round-1 specialist.
 
 ## Which prompt to use
 
 | Need | Prompt | Agents | Normal cadence |
 |---|---|---:|---|
 | Quick BTC regime check | `daily-btc-pulse.md` | 3 + specialists if needed | Daily or around major events |
+| Confirmation-first buy-low / sell-high plan | `buy-low-sell-high.md` | bang + capriole + glassnode | When deciding whether to add, hold cash, or reduce |
 | BTC plus alt/meme/AI conviction review | `run-crypto-council.md` | 7 + specialists if needed | Weekly, or before a material decision |
 
 The daily pulse normally stays at three agents. It activates `leopold_ai_scaling` only for a material AI, technology-equity, compute/power, miner-HPC, or AI-token catalyst.
 It activates `cowen_cycle_risk` when dominance, ETH/BTC, alt breadth, or a multi-week cycle thesis is central.
-It activates `eth_platform`, `hayes_crypto_credit`, `policy_regulation`, `carter_monetary`, `murad_meme`, `hasu_incentives`, `cryptoquant_flows`, or `options_vol` by the same specialist rules as the deep council.
+It activates `eth_platform`, `hayes_crypto_credit`, `policy_regulation`, `carter_monetary`, `murad_meme`, `hasu_incentives`, `cryptoquant_flows`, `options_vol`, or `capriole_systematic` by the same specialist rules as the deep council.
 
 Do not run the deep council repeatedly on the same unchanged evidence. A new run is useful when price invalidates a level, a macro release lands, derivatives positioning changes materially, fresh on-chain data arrives, or a token catalyst/unlock changes.
 

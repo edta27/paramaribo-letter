@@ -25,11 +25,12 @@ Also spawn `murad_meme` when the watchlist includes a meme coin or an attention/
 Also spawn `hasu_incentives` when MEV, staking, restaking, or sequencer incentives are material.
 Also spawn `cryptoquant_flows` when exchange netflow, miner-to-exchange, or Asia premium is material.
 Also spawn `options_vol` when the question is a barrier event, listed options, skew, or implied-touch math.
+Also spawn `capriole_systematic` when BTC timing vs buy-and-hold, long/short/cash exposure, Hash Ribbons or Energy Value, institutional absorption of mined supply, leveraged BTC treasuries, or gold/equity/cash rotation is material.
 
 If any Round-1 agents differ by at least 30 probability points on the base outcome, also spawn `risk_red_team` on the disagreement summary.
 
 Efficiency rules:
-1. Gather one shared evidence packet before spawning agents. Include exact timestamp/timezone, BTC spot and volume context, BTC dominance, ETH/BTC, funding/open interest, major macro markets, and the next dated catalyst. Prefer primary or authoritative sources.
+1. Gather one shared evidence packet before spawning agents. Include exact timestamp/timezone, BTC spot and volume context, BTC dominance, ETH/BTC, funding/open interest, major macro markets, and the next dated catalyst. Prefer primary or authoritative sources. When `capriole_systematic` is spawned, also include hash-rate / miner-capitulation context and ETF or treasury demand versus daily mined supply if available.
 2. Give every spawned agent the same packet. Do not let them independently rebuild it unless they identify a material missing or conflicting fact.
 3. For killa_quant, macro_liquidity, and any spawned specialist except bang_technician, require each memo to contain only: bias, confidence 0-100, three decisive facts, bull/base/bear weights in 10-point increments totaling 100%, invalidation, and one alt-market implication. For bang_technician, keep the native $TICKER plan format, then the compact council block (timestamp/TF, invalidation, bull/base/bear, one objection). Do not rewrite Bang into the compact research memo.
 4. Do not run a debate when the directional conclusions broadly agree. If any agent differs by at least 30 probability points on the base outcome, send only a short disagreement summary to the disagreeing agents and permit one rebuttal each.
