@@ -1,0 +1,9 @@
+.git
+.cursor
+.context
+.codex
+/desk
+/vault
+/research
+/prompts
+*.md

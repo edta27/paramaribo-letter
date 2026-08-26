@@ -1,0 +1,32 @@
+name: Equity desk ticker refresh
+
+on:
+  workflow_dispatch:
+  schedule:
+    # Weekdays, roughly 5:00 / 9:30 / 16:15 America/New_York (UTC offsets ignore DST).
+    - cron: "0 9,13,20 * * 1-5"
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Update each watchlist ticker
+        run: python3 scripts/update_tickers.py
+      - name: Commit snapshot
+        run: |
+          git config user.name "equity-desk-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add vault/tickers vault/live desk/live.js
+          if git diff --staged --quiet; then
+            echo "No ticker changes"
+          else
+            git commit -m "Refresh equity desk quotes and filings for the watchlist"
+            git push
+          fi

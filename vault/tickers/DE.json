@@ -1,0 +1,45 @@
+{
+  "ticker": "DE",
+  "updated_at": "2026-08-22T04:40:06Z",
+  "price": 647.47,
+  "filings": [
+    {
+      "form": "8-K",
+      "filing_date": "2026-08-20",
+      "accession": "0001104659-26-098904",
+      "url": "https://www.sec.gov/Archives/edgar/data/315189/000110465926098904/de-20260820x8k.htm"
+    },
+    {
+      "form": "4",
+      "filing_date": "2026-08-18",
+      "accession": "0002133005-26-000004",
+      "url": "https://www.sec.gov/Archives/edgar/data/315189/000213300526000004/xslF345X06/form4-08182026_070832.xml"
+    },
+    {
+      "form": "8-K",
+      "filing_date": "2026-07-15",
+      "accession": "0001104659-26-083910",
+      "url": "https://www.sec.gov/Archives/edgar/data/315189/000110465926083910/de-20260710x8k.htm"
+    },
+    {
+      "form": "8-K",
+      "filing_date": "2026-06-01",
+      "accession": "0001104659-26-068930",
+      "url": "https://www.sec.gov/Archives/edgar/data/315189/000110465926068930/de-20260526x8k.htm"
+    },
+    {
+      "form": "10-Q",
+      "filing_date": "2026-05-28",
+      "accession": "0001104659-26-067311",
+      "url": "https://www.sec.gov/Archives/edgar/data/315189/000110465926067311/de-20260503x10q.htm"
+    }
+  ],
+  "error": null,
+  "prev_close": 620.94,
+  "change": 26.53,
+  "change_pct": 4.273,
+  "currency": "USD",
+  "exchange": "NYSE",
+  "volume": 2393079.0,
+  "quote_source": "nasdaq-stocks"
+}

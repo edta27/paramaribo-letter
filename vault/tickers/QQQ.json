@@ -1,0 +1,27 @@
+{
+  "ticker": "QQQ",
+  "updated_at": "2026-08-22T04:40:06Z",
+  "price": 713.44,
+  "filings": [
+    {
+      "form": "8-K",
+      "filing_date": "2014-09-08",
+      "accession": "0001104659-14-065254",
+      "url": "https://www.sec.gov/Archives/edgar/data/1067839/000110465914065254/a14-20543_28k.htm"
+    },
+    {
+      "form": "8-K",
+      "filing_date": "2014-02-07",
+      "accession": "0001104659-14-007543",
+      "url": "https://www.sec.gov/Archives/edgar/data/1067839/000110465914007543/a14-5267_28k.htm"
+    }
+  ],
+  "error": null,
+  "prev_close": 710.93,
+  "change": 2.51,
+  "change_pct": 0.353,
+  "currency": "USD",
+  "exchange": "NASDAQ-GM",
+  "volume": 33400236.0,
+  "quote_source": "nasdaq-etf"
+}

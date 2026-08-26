@@ -52,7 +52,10 @@ All agents remain on `gpt-5.6-luna`. Sessions allow up to 16 concurrent workers 
 | Confirmation-first buy-low / sell-high plan | `buy-low-sell-high.md` | bang + capriole + glassnode | When deciding whether to add, hold cash, or reduce |
 | BTC plus alt/meme/AI conviction review | `run-crypto-council.md` | 7 + specialists if needed | Weekly, or before a material decision |
 | Overnight equity filings / earnings / insider desk | `run-equity-desk.md` | 5 + chief_of_staff | Nightly or pre-market; dry-run first |
-| Visual night-run board (open in a browser) | `desk/index.html` | UI only | Matches the six-agent swarm / brief layout |
+| Auto-update each watchlist ticker (quotes + EDGAR index) | `scripts/update_tickers.py` | none | Once, `--loop 300`, or GitHub Action weekdays |
+| Visual night-run board (open in a browser) | `desk/index.html` | UI + `desk/live.js` | Refreshes after each ticker update |
+| Cursor skill: live BTC + meme tape / Bang plan | `.cursor/skills/crypto-desk-update/SKILL.md` | parent chat | Say **update** or **Bang**; pulls CoinGecko, no invented prices |
+| Newsletter archive (issues are never deleted) | `public/index.html` | none | `python3 -m http.server 8766 --directory public` |
 
 The daily pulse normally stays at three agents. It activates `leopold_ai_scaling` only for a material AI, technology-equity, compute/power, miner-HPC, or AI-token catalyst.
 It activates `cowen_cycle_risk` when dominance, ETH/BTC, alt breadth, or a multi-week cycle thesis is central.

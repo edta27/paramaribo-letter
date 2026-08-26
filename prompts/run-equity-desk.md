@@ -21,7 +21,7 @@ You are the moderator, not a forecaster. Do not let agents impersonate issuers, 
 Round 0 — packet
 1. Establish as-of timestamp and timezone.
 2. Load the watchlist. If more than 20 names, cut to 20 and say so.
-3. Gather one shared packet from primary sources: last close, next dated catalyst, EDGAR links for recent 10-K/10-Q/8-K, any retrieved earnings transcript or 8-K exhibit, Form 4 / 13F if available, and one sector headline per industry. Mark paywalled, delayed, or missing series. Never substitute memory for live data.
+3. Gather one shared packet from primary sources: last close, next dated catalyst, EDGAR links for recent 10-K/10-Q/8-K, any retrieved earnings transcript or 8-K exhibit, Form 4 / 13F if available, and one sector headline per industry. Prefer `vault/live/snapshot.json` and `vault/tickers/{SYM}.json` from `python3 scripts/update_tickers.py` when those files exist. Mark paywalled, delayed, or missing series. Never substitute memory for live data.
 4. Give every Round-1 agent the same packet. They may verify only critical gaps.
 
 Round 1 — independent flags
@@ -55,4 +55,13 @@ Hard rules:
 
 ## Cadence
 
-Nightly or pre-market. Do not run the crypto council in the same session. After a stable loop, add a post-mortem on `review-forecast.md` for equity flags you choose to score.
+Quotes and EDGAR indexes update without a chat:
+
+```bash
+python3 scripts/update_tickers.py
+python3 scripts/update_tickers.py --loop 300
+```
+
+The GitHub Action on this repo runs the same script weekdays at 09:00 / 13:00 / 20:00 UTC. Then open `desk/index.html`. That layer does not spawn the six agents and does not email.
+
+The LLM desk is still nightly or pre-market: paste this prompt in its own session. After a stable loop, add a post-mortem on `review-forecast.md` for equity flags you choose to score.

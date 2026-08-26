@@ -1,0 +1,45 @@
+{
+  "ticker": "KEEL",
+  "updated_at": "2026-08-22T04:40:04Z",
+  "price": 3.32,
+  "filings": [
+    {
+      "form": "4",
+      "filing_date": "2026-08-21",
+      "accession": "0001812477-26-000031",
+      "url": "https://www.sec.gov/Archives/edgar/data/1812477/000181247726000031/xslF345X06/wk-form4_1787344965.xml"
+    },
+    {
+      "form": "4",
+      "filing_date": "2026-08-20",
+      "accession": "0001812477-26-000029",
+      "url": "https://www.sec.gov/Archives/edgar/data/1812477/000181247726000029/xslF345X06/wk-form4_1787260250.xml"
+    },
+    {
+      "form": "4",
+      "filing_date": "2026-08-17",
+      "accession": "0001812477-26-000027",
+      "url": "https://www.sec.gov/Archives/edgar/data/1812477/000181247726000027/xslF345X06/wk-form4_1787000696.xml"
+    },
+    {
+      "form": "4",
+      "filing_date": "2026-08-14",
+      "accession": "0001812477-26-000025",
+      "url": "https://www.sec.gov/Archives/edgar/data/1812477/000181247726000025/xslF345X06/wk-form4_1786729462.xml"
+    },
+    {
+      "form": "10-Q",
+      "filing_date": "2026-08-10",
+      "accession": "0001812477-26-000023",
+      "url": "https://www.sec.gov/Archives/edgar/data/1812477/000181247726000023/keel-20260630.htm"
+    }
+  ],
+  "error": null,
+  "prev_close": 3.37,
+  "change": -0.05,
+  "change_pct": -1.484,
+  "currency": "USD",
+  "exchange": "NASDAQ-GM",
+  "volume": 48388197.0,
+  "quote_source": "nasdaq-stocks"
+}

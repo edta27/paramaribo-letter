@@ -1,0 +1,45 @@
+{
+  "ticker": "NBIS",
+  "updated_at": "2026-08-22T04:40:04Z",
+  "price": 219.13,
+  "filings": [
+    {
+      "form": "6-K",
+      "filing_date": "2026-08-20",
+      "accession": "0001104659-26-098924",
+      "url": "https://www.sec.gov/Archives/edgar/data/1513845/000110465926098924/tm2623617d1_6k.htm"
+    },
+    {
+      "form": "6-K",
+      "filing_date": "2026-08-19",
+      "accession": "0001104659-26-098590",
+      "url": "https://www.sec.gov/Archives/edgar/data/1513845/000110465926098590/tm2623513d1_6k.htm"
+    },
+    {
+      "form": "4",
+      "filing_date": "2026-08-18",
+      "accession": "0001513845-26-000092",
+      "url": "https://www.sec.gov/Archives/edgar/data/1513845/000151384526000092/xslF345X06/form4.xml"
+    },
+    {
+      "form": "4",
+      "filing_date": "2026-08-18",
+      "accession": "0001513845-26-000090",
+      "url": "https://www.sec.gov/Archives/edgar/data/1513845/000151384526000090/xslF345X06/form4.xml"
+    },
+    {
+      "form": "6-K",
+      "filing_date": "2026-08-12",
+      "accession": "0001104659-26-094844",
+      "url": "https://www.sec.gov/Archives/edgar/data/1513845/000110465926094844/nbis-20260812x6k.htm"
+    }
+  ],
+  "error": null,
+  "prev_close": 220.11,
+  "change": -0.98,
+  "change_pct": -0.445,
+  "currency": "USD",
+  "exchange": "NASDAQ-GS",
+  "volume": 20239771.0,
+  "quote_source": "nasdaq-stocks"
+}

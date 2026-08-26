@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>New issue · The Paramaribo Letter</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="wrap">
+    <header class="mast">
+      <div class="mast-bar">
+        <a href="index.html" style="text-decoration:none">← Archive</a>
+        <span>Compose</span>
+        <span>Append only</span>
+      </div>
+      <div class="brand">New <em>issue</em></div>
+      <p class="dek-top">This page never deletes an old letter. It downloads a new issue file. Put that file in <code>public/issues/</code> and rebuild. Same-named files are refused.</p>
+    </header>
+
+    <div class="note">
+      From the project root:<br />
+      <code>python3 scripts/publish_letter.py --title "Your headline" --dek "One-line lede" --cover images/cover-squeeze.png --body-file notes.md</code><br />
+      Then refresh this site. Covers on disk: cover-squeeze, cover-eighty, cover-pullback, cover-council, masthead.
+    </div>
+
+    <form class="compose" id="form">
+      <label>Headline</label>
+      <input id="title" required placeholder="The week inside the box" />
+      <label>One-line lede</label>
+      <input id="dek" placeholder="What the tape did, in one sentence." />
+      <label>Kicker</label>
+      <input id="kicker" placeholder="Vol. 1 · Desk" />
+      <label>Cover</label>
+      <select id="cover">
+        <option value="images/cover-squeeze.png">Storm / squeeze</option>
+        <option value="images/cover-eighty.png">Gate / eighty</option>
+        <option value="images/cover-pullback.png">Tide / pullback</option>
+        <option value="images/cover-council.png">Table / council</option>
+        <option value="images/masthead.png">Desk / masthead</option>
+      </select>
+      <label>Body (blank line = new paragraph; start a line with ## for a heading; &gt; for a pull quote)</label>
+      <textarea id="body" placeholder="Write the letter here. It will be kept."></textarea>
+      <button class="btn" type="submit">Download issue files</button>
+    </form>
+    <p class="disclaimer">Educational research only. The publisher script will not overwrite an existing issue id.</p>
+    <footer class="site">
+      <div>© The Paramaribo Letter</div>
+      <div>Issues live in git. That is the point of leaving Medium.</div>
+    </footer>
+  </div>
+  <script>
+    document.getElementById("form").addEventListener("submit", (event) => {
+      event.preventDefault();
+      const title = document.getElementById("title").value.trim();
+      const dek = document.getElementById("dek").value.trim();
+      const kicker = document.getElementById("kicker").value.trim() || "Vol. 1";
+      const cover = document.getElementById("cover").value;
+      const raw = document.getElementById("body").value.trim();
+      const day = new Date().toISOString().slice(0, 10);
+      const slug = title.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "").slice(0, 60) || "issue";
+      const id = day + "-" + slug;
+      const chunks = raw.split(/\n\s*\n/).filter(Boolean).map((chunk) => {
+        const t = chunk.trim();
+        if (t.startsWith("## ")) return "<h2>" + t.slice(3) + "</h2>";
+        if (t.startsWith("> ")) return "<blockquote>" + t.slice(2) + "</blockquote>";
+        return "<p>" + t.replace(/\n/g, " ") + "</p>";
+      });
+      chunks.push("<p>This letter is educational scenario research. It is not personalized advice and it does not recommend leverage.</p>");
+      const meta = {
+        id, date: day, kicker, title, dek, cover, byline: "The Paramaribo Letter"
+      };
+      const a = document.createElement("a");
+      a.href = URL.createObjectURL(new Blob([JSON.stringify(meta, null, 2) + "\n"], { type: "application/json" }));
+      a.download = id + ".json";
+      a.click();
+      const b = document.createElement("a");
+      b.href = URL.createObjectURL(new Blob([chunks.join("\n") + "\n"], { type: "text/html" }));
+      b.download = id + ".body.html";
+      setTimeout(() => b.click(), 300);
+      alert("Save both files into public/issues/, then run:\npython3 scripts/publish_letter.py --rebuild");
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Colophon · The Paramaribo Letter</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="wrap">
+    <header class="mast">
+      <img class="mast-photo" src="images/masthead.png" alt="" />
+      <div class="mast-bar">
+        <a href="index.html" style="text-decoration:none">← Archive</a>
+        <span>Colophon</span>
+        <span>Kept locally</span>
+      </div>
+      <div class="brand">Why this <em>letter</em></div>
+    </header>
+    <article class="issue-page" style="padding-top:0;width:min(720px,100%)">
+      <p class="lede">Medium is a landlord. This folder is a filing cabinet. Each issue is a pair of files. New posts are added. Old posts are not removed to satisfy a filter.</p>
+      <div class="body">
+        <p>The Paramaribo Letter is a static newsletter for desk notes: Bitcoin structure, event windows, and what the council actually agreed on. It is not a broker, not a Medium mirror, and not personalized advice.</p>
+        <h2>How an issue survives</h2>
+        <p>Every letter lives in <code>public/issues/</code> as a JSON sidecar and an HTML body. That folder is the Vercel website root. The catalog is rebuilt from it. The publisher refuses to overwrite an existing id. Git keeps the history even if you never run a platform.</p>
+        <h2>How to post</h2>
+        <p>Open <a href="write.html">New issue</a>, download the two files, drop them in <code>public/issues/</code>, then:</p>
+        <blockquote>python3 scripts/publish_letter.py --rebuild</blockquote>
+        <p>Or one command from notes:</p>
+        <blockquote>python3 scripts/publish_letter.py --title "Headline" --dek "Lede" --cover images/cover-pullback.png --body-file notes.md</blockquote>
+        <h2>How to read it</h2>
+        <p>From the project root:</p>
+        <blockquote>python3 -m http.server 8766 --directory public</blockquote>
+        <p>Then open <a href="http://127.0.0.1:8766/">http://127.0.0.1:8766/</a>. Photographs in <code>public/images/</code> are editorial stills generated for this letter. No issuer logos. The equity board is at <a href="desk/">/desk</a>.</p>
+      </div>
+      <p class="disclaimer">Educational scenario research only. Not financial advice. No leverage recommendation.</p>
+    </article>
+  </div>
+</body>
+</html>

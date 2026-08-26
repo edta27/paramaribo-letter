@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>The Paramaribo Letter</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="wrap">
+    <header class="mast">
+      <img class="mast-photo" src="images/masthead.png" alt="Masthead: a quiet desk at dusk" />
+      <div class="mast-bar">
+        <span>Independent research notes</span>
+        <span id="today"></span>
+        <span>Not for sale on Medium</span>
+      </div>
+      <div class="brand">The Paramaribo <em>Letter</em></div>
+      <p class="dek-top">A private newsletter for desk notes that platforms keep bouncing. Issues stay on disk. Nothing here is deleted to make room for the next one.</p>
+      <nav class="links">
+        <a href="index.html">Today</a>
+        <a href="index.html#archive-wrap">Archive</a>
+        <a href="write.html">New issue</a>
+        <a href="about.html">Colophon</a>
+        <a href="desk/">Desk</a>
+      </nav>
+    </header>
+
+    <section class="hero" id="hero"></section>
+    <div id="archive-wrap">
+      <h3 class="archive-title">The archive · every issue kept</h3>
+      <div class="grid" id="archive"></div>
+    </div>
+
+    <footer class="site">
+      <div>© The Paramaribo Letter · Educational research, not advice.</div>
+      <div>Host this folder. Add files under public/issues/. Never overwrite them.</div>
+    </footer>
+  </div>
+  <script src="catalog.js"></script>
+  <script src="app.js"></script>
+  <script>
+    document.getElementById("today").textContent = new Date().toLocaleDateString("en-US", {
+      weekday: "long", month: "long", day: "numeric", year: "numeric"
+    });
+    Letter.renderIndex();
+  </script>
+</body>
+</html>

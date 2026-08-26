@@ -1,0 +1,45 @@
+{
+  "ticker": "CLSK",
+  "updated_at": "2026-08-22T04:40:03Z",
+  "price": 11.98,
+  "filings": [
+    {
+      "form": "4",
+      "filing_date": "2026-08-14",
+      "accession": "0001193125-26-352934",
+      "url": "https://www.sec.gov/Archives/edgar/data/827876/000119312526352934/xslF345X06/ownership.xml"
+    },
+    {
+      "form": "4",
+      "filing_date": "2026-08-14",
+      "accession": "0001193125-26-352931",
+      "url": "https://www.sec.gov/Archives/edgar/data/827876/000119312526352931/xslF345X06/ownership.xml"
+    },
+    {
+      "form": "4",
+      "filing_date": "2026-08-14",
+      "accession": "0001193125-26-352927",
+      "url": "https://www.sec.gov/Archives/edgar/data/827876/000119312526352927/xslF345X06/ownership.xml"
+    },
+    {
+      "form": "4",
+      "filing_date": "2026-08-14",
+      "accession": "0001193125-26-352919",
+      "url": "https://www.sec.gov/Archives/edgar/data/827876/000119312526352919/xslF345X06/ownership.xml"
+    },
+    {
+      "form": "10-Q",
+      "filing_date": "2026-08-06",
+      "accession": "0001193125-26-338382",
+      "url": "https://www.sec.gov/Archives/edgar/data/827876/000119312526338382/clsk-20260630.htm"
+    }
+  ],
+  "error": null,
+  "prev_close": 12.6,
+  "change": -0.62,
+  "change_pct": -4.921,
+  "currency": "USD",
+  "exchange": "NASDAQ-CM",
+  "volume": 28226597.0,
+  "quote_source": "nasdaq-stocks"
+}

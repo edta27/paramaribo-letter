@@ -1,0 +1,45 @@
+{
+  "ticker": "IREN",
+  "updated_at": "2026-08-22T04:40:03Z",
+  "price": 41.88,
+  "filings": [
+    {
+      "form": "8-K",
+      "filing_date": "2026-08-13",
+      "accession": "0001140361-26-032638",
+      "url": "https://www.sec.gov/Archives/edgar/data/1878848/000114036126032638/ef20080141_8k.htm"
+    },
+    {
+      "form": "8-K",
+      "filing_date": "2026-08-04",
+      "accession": "0001140361-26-031053",
+      "url": "https://www.sec.gov/Archives/edgar/data/1878848/000114036126031053/ny20079234x2_8k.htm"
+    },
+    {
+      "form": "8-K",
+      "filing_date": "2026-07-20",
+      "accession": "0001140361-26-028871",
+      "url": "https://www.sec.gov/Archives/edgar/data/1878848/000114036126028871/ef20078253_8k.htm"
+    },
+    {
+      "form": "4",
+      "filing_date": "2026-07-01",
+      "accession": "0000950103-26-009969",
+      "url": "https://www.sec.gov/Archives/edgar/data/1878848/000095010326009969/xslF345X06/ownership.xml"
+    },
+    {
+      "form": "4",
+      "filing_date": "2026-07-01",
+      "accession": "0000950103-26-009962",
+      "url": "https://www.sec.gov/Archives/edgar/data/1878848/000095010326009962/xslF345X06/ownership.xml"
+    }
+  ],
+  "error": null,
+  "prev_close": 42.6,
+  "change": -0.72,
+  "change_pct": -1.69,
+  "currency": "USD",
+  "exchange": "NASDAQ-GS",
+  "volume": 49894711.0,
+  "quote_source": "nasdaq-stocks"
+}

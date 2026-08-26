@@ -1,0 +1,45 @@
+{
+  "ticker": "MSFT",
+  "updated_at": "2026-08-22T04:40:07Z",
+  "price": 483.24,
+  "filings": [
+    {
+      "form": "4",
+      "filing_date": "2026-08-17",
+      "accession": "0000789019-26-000145",
+      "url": "https://www.sec.gov/Archives/edgar/data/789019/000078901926000145/xslF345X06/form4.xml"
+    },
+    {
+      "form": "4",
+      "filing_date": "2026-08-06",
+      "accession": "0000789019-26-000143",
+      "url": "https://www.sec.gov/Archives/edgar/data/789019/000078901926000143/xslF345X06/form4.xml"
+    },
+    {
+      "form": "4",
+      "filing_date": "2026-08-05",
+      "accession": "0000789019-26-000141",
+      "url": "https://www.sec.gov/Archives/edgar/data/789019/000078901926000141/xslF345X06/form4.xml"
+    },
+    {
+      "form": "10-K",
+      "filing_date": "2026-07-29",
+      "accession": "0001193125-26-323660",
+      "url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526323660/msft-20260630.htm"
+    },
+    {
+      "form": "8-K",
+      "filing_date": "2026-07-29",
+      "accession": "0001193125-26-323632",
+      "url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526323632/msft-20260729.htm"
+    }
+  ],
+  "error": null,
+  "prev_close": 481.15,
+  "change": 2.09,
+  "change_pct": 0.434,
+  "currency": "USD",
+  "exchange": "NASDAQ-GS",
+  "volume": 22510858.0,
+  "quote_source": "nasdaq-stocks"
+}

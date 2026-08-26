@@ -1,0 +1,38 @@
+[
+  {
+    "id": "2026-08-26-full-bench",
+    "date": "2026-08-26",
+    "kicker": "Vol. 1 \u00b7 Issue 04",
+    "title": "The bench on Bang, hours before Nvidia",
+    "dek": "Sixteen lenses, one disagreement: wait for 71.7\u201372.4k, or let PCE and Warsh decide. Pre-positioning is the error.",
+    "cover": "images/cover-council.png",
+    "byline": "The Paramaribo Letter"
+  },
+  {
+    "id": "2026-08-25-bang-stopped",
+    "date": "2026-08-25",
+    "kicker": "Vol. 1 \u00b7 Issue 03",
+    "title": "His short is already dead",
+    "dek": "Bang\u2019s August card: 66.5k short delivered, 62.2k long missed, 78.5k short stopped. He wants 71.7\u201372.4k next. Spot is not there yet.",
+    "cover": "images/cover-pullback.png",
+    "byline": "The Paramaribo Letter"
+  },
+  {
+    "id": "2026-08-24-second-probe",
+    "date": "2026-08-24",
+    "kicker": "Vol. 1 \u00b7 Issue 02",
+    "title": "A second probe of eighty",
+    "dek": "Monday afternoon retested the round number. A wick is not a Daily close. Cash Cat ripped anyway.",
+    "cover": "images/cover-eighty.png",
+    "byline": "The Paramaribo Letter"
+  },
+  {
+    "id": "2026-08-22-the-window",
+    "date": "2026-08-22",
+    "kicker": "Vol. 1 \u00b7 Issue 01",
+    "title": "The crash is a window, not a date",
+    "dek": "A full-bench read after Bitcoin\u2019s five-day squeeze. Local panic clusters around events. It does not print on a slogan.",
+    "cover": "images/cover-squeeze.png",
+    "byline": "The Paramaribo Letter"
+  }
+]
