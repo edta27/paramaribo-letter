@@ -1,8 +1,14 @@
 {
   "ticker": "WMT",
-  "updated_at": "2026-08-28T05:37:59Z",
-  "price": 102.63,
+  "updated_at": "2026-08-28T20:41:22Z",
+  "price": 103.21,
   "filings": [
+    {
+      "form": "10-Q",
+      "filing_date": "2026-08-28",
+      "accession": "0000104169-26-000154",
+      "url": "https://www.sec.gov/Archives/edgar/data/104169/000010416926000154/wmt-20260731.htm"
+    },
     {
       "form": "4",
       "filing_date": "2026-08-27",
@@ -26,20 +32,14 @@
       "filing_date": "2026-08-13",
       "accession": "0002058309-26-000016",
       "url": "https://www.sec.gov/Archives/edgar/data/104169/000205830926000016/xslF345X06/wk-form4_1786662189.xml"
-    },
-    {
-      "form": "4",
-      "filing_date": "2026-08-13",
-      "accession": "0002110643-26-000016",
-      "url": "https://www.sec.gov/Archives/edgar/data/104169/000211064326000016/xslF345X06/wk-form4_1786662021.xml"
     }
   ],
   "error": null,
-  "prev_close": 104.34,
-  "change": -1.71,
-  "change_pct": -1.639,
+  "prev_close": 103.09,
+  "change": 0.12,
+  "change_pct": 0.116,
   "currency": "USD",
   "exchange": "NASDAQ-GS",
-  "volume": 29816587.0,
+  "volume": 19126316.177709,
   "quote_source": "nasdaq-stocks"
 }
