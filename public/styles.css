@@ -224,6 +224,77 @@ footer.site {
   justify-content: space-between;
   gap: 16px;
 }
+.subscribe-box {
+  margin: 8px 0 36px;
+  padding: 22px 22px 18px;
+  background: var(--white);
+  border: 1px solid var(--rule);
+}
+.subscribe-box h2 {
+  font-size: 26px;
+  margin: 0 0 8px;
+  letter-spacing: -0.02em;
+}
+.subscribe-lede {
+  margin: 0 0 14px;
+  color: var(--ink-soft);
+  font-size: 16px;
+  line-height: 1.45;
+  max-width: 520px;
+}
+.subscribe-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: stretch;
+}
+.subscribe-form input[type="email"] {
+  flex: 1 1 220px;
+  font: 16px/1.4 var(--serif);
+  padding: 11px 12px;
+  border: 1px solid var(--rule);
+  background: var(--paper);
+  color: var(--ink);
+}
+.subscribe-form .btn {
+  flex: 0 0 auto;
+  background: var(--oxblood);
+  color: var(--white);
+  font-family: var(--sans);
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 12px 18px;
+}
+.subscribe-form .btn:disabled {
+  opacity: 0.6;
+  cursor: wait;
+}
+.subscribe-form .hp {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+}
+.subscribe-status {
+  min-height: 1.2em;
+  margin: 10px 0 0;
+  font-family: var(--sans);
+  font-size: 13px;
+  color: var(--ink-soft);
+}
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
 .compose label {
   display: block;
   font-family: var(--sans);

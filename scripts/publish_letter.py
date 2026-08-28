@@ -114,10 +114,20 @@ def main() -> int:
     parser.add_argument("--slug", default="")
     parser.add_argument("--body", default="")
     parser.add_argument("--body-file", default="")
+    parser.add_argument(
+        "--notify",
+        action="store_true",
+        help="After rebuild, email subscribers via scripts/notify_subscribers.py (needs NOTIFY_SECRET)",
+    )
     args = parser.parse_args()
     if args.title:
         add_issue(args)
     write_catalog(list_issues())
+    if args.notify:
+        import subprocess
+
+        print("notifying subscribers…")
+        subprocess.check_call([sys.executable, str(ROOT / "scripts" / "notify_subscribers.py")])
     return 0
 
 

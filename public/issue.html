@@ -44,13 +44,25 @@
     <p class="disclaimer">Educational scenario research. Not personalized financial advice. No execution, no position sizing, no leverage recommendation. Older issues remain in the archive and are not removed when a new letter is posted. <a href="agents.html">Read who the agents are</a>.</p>
   </article>
   <div class="wrap">
+    <section class="subscribe-box" id="new-subscribers" aria-labelledby="sub-title">
+      <h2 id="sub-title">New subscribers</h2>
+      <p class="subscribe-lede">Email me when the next letter posts.</p>
+      <form class="subscribe-form" data-subscribe-form>
+        <label class="sr-only" for="sub-email">Email</label>
+        <input id="sub-email" name="email" type="email" required placeholder="you@example.com" autocomplete="email" />
+        <input class="hp" name="company" type="text" tabindex="-1" autocomplete="off" aria-hidden="true" />
+        <button class="btn" type="submit">Subscribe</button>
+      </form>
+      <p class="subscribe-status" data-sub-status aria-live="polite"></p>
+    </section>
     <footer class="site">
       <div>© The Paramaribo Letter</div>
-      <div><a href="agents.html">Agents</a> · <a href="https://github.com/edta27/paramaribo-letter">GitHub</a> · <a href="write.html">Post the next issue</a></div>
+      <div><a href="#new-subscribers">Subscribe</a> · <a href="unsubscribe.html">Unsubscribe</a> · <a href="agents.html">Agents</a> · <a href="https://github.com/edta27/paramaribo-letter">GitHub</a></div>
     </footer>
   </div>
   <script src="catalog.js"></script>
   <script src="app.js"></script>
+  <script src="subscribe.js"></script>
   <script>Letter.renderIssue();</script>
 </body>
 </html>

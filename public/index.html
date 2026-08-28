@@ -37,6 +37,19 @@
     </header>
 
     <section class="hero" id="hero"></section>
+
+    <section class="subscribe-box" id="new-subscribers" aria-labelledby="sub-title">
+      <h2 id="sub-title">New subscribers</h2>
+      <p class="subscribe-lede">Get an email when the next Paramaribo Letter posts. Educational research only — unsubscribe any time.</p>
+      <form class="subscribe-form" data-subscribe-form>
+        <label class="sr-only" for="sub-email">Email</label>
+        <input id="sub-email" name="email" type="email" required placeholder="you@example.com" autocomplete="email" />
+        <input class="hp" name="company" type="text" tabindex="-1" autocomplete="off" aria-hidden="true" />
+        <button class="btn" type="submit">Subscribe</button>
+      </form>
+      <p class="subscribe-status" data-sub-status aria-live="polite"></p>
+    </section>
+
     <div id="archive-wrap">
       <h3 class="archive-title">The archive · every issue kept</h3>
       <div class="grid" id="archive"></div>
@@ -44,11 +57,12 @@
 
     <footer class="site">
       <div>© The Paramaribo Letter · Educational research, not advice.</div>
-      <div><a href="agents.html">Agents</a> · <a href="https://github.com/edta27/paramaribo-letter">GitHub</a></div>
+      <div><a href="#new-subscribers">Subscribe</a> · <a href="agents.html">Agents</a> · <a href="https://github.com/edta27/paramaribo-letter">GitHub</a></div>
     </footer>
   </div>
   <script src="catalog.js"></script>
   <script src="app.js"></script>
+  <script src="subscribe.js"></script>
   <script>
     document.getElementById("today").textContent = new Date().toLocaleDateString("en-US", {
       weekday: "long", month: "long", day: "numeric", year: "numeric"

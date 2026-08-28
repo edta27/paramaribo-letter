@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Unsubscribe · The Paramaribo Letter</title>
+  <meta name="robots" content="noindex" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="wrap">
+    <header class="mast">
+      <div class="mast-bar">
+        <a href="index.html" style="text-decoration:none">← Archive</a>
+        <span>Unsubscribe</span>
+        <span>One click</span>
+      </div>
+      <div class="brand">Leave the <em>list</em></div>
+      <p class="dek-top">Stop new-issue email notifications. The archive stays public either way.</p>
+    </header>
+
+    <section class="subscribe-box">
+      <h2>Unsubscribe</h2>
+      <p class="subscribe-lede">Enter the email you used when you subscribed.</p>
+      <form id="unsub-form" class="subscribe-form">
+        <label class="sr-only" for="email">Email</label>
+        <input id="email" name="email" type="email" required placeholder="you@example.com" autocomplete="email" />
+        <button class="btn" type="submit">Unsubscribe</button>
+      </form>
+      <p class="subscribe-status" id="status" aria-live="polite"></p>
+    </section>
+
+    <footer class="site">
+      <div>© The Paramaribo Letter</div>
+      <div><a href="index.html">Archive</a></div>
+    </footer>
+  </div>
+  <script>
+    const params = new URLSearchParams(location.search);
+    const preset = params.get("email");
+    if (preset) document.getElementById("email").value = preset;
+    document.getElementById("unsub-form").addEventListener("submit", async (event) => {
+      event.preventDefault();
+      const status = document.getElementById("status");
+      status.textContent = "Working…";
+      try {
+        const res = await fetch("/api/unsubscribe", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ email: document.getElementById("email").value.trim() }),
+        });
+        const data = await res.json().catch(() => ({}));
+        if (!res.ok || !data.ok) throw new Error(data.error || "Could not unsubscribe.");
+        status.textContent = data.message || "Unsubscribed.";
+      } catch (err) {
+        status.textContent = err.message || "Could not unsubscribe.";
+      }
+    });
+  </script>
+</body>
+</html>

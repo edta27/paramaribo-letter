@@ -1,0 +1,65 @@
+name: Notify letter subscribers
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "public/catalog.json"
+
+permissions:
+  contents: read
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+
+      - name: Detect new featured issue
+        id: detect
+        run: |
+          python3 <<'PY'
+          import json, subprocess, os
+          from pathlib import Path
+
+          def featured(text: str):
+              rows = json.loads(text)
+              if not rows:
+                  return ""
+              return rows[0].get("id") or ""
+
+          cur = featured(Path("public/catalog.json").read_text())
+          prev = ""
+          try:
+              old = subprocess.check_output(
+                  ["git", "show", "HEAD~1:public/catalog.json"],
+                  text=True,
+                  stderr=subprocess.DEVNULL,
+              )
+              prev = featured(old)
+          except Exception:
+              prev = ""
+
+          changed = "true" if cur and cur != prev else "false"
+          print(f"previous={prev}")
+          print(f"current={cur}")
+          print(f"changed={changed}")
+          with open(os.environ["GITHUB_OUTPUT"], "a") as fh:
+              fh.write(f"issue_id={cur}\n")
+              fh.write(f"changed={changed}\n")
+          PY
+
+      - name: Email subscribers via Resend
+        if: steps.detect.outputs.changed == 'true'
+        env:
+          NOTIFY_SECRET: ${{ secrets.NOTIFY_SECRET }}
+          SITE_URL: ${{ vars.SITE_URL }}
+        run: |
+          if [ -z "$NOTIFY_SECRET" ]; then
+            echo "NOTIFY_SECRET not set — skip notify (add the GitHub secret to enable)."
+            exit 0
+          fi
+          export SITE_URL="${SITE_URL:-https://paramaribo-letter.vercel.app}"
+          python3 scripts/notify_subscribers.py --issue-id "${{ steps.detect.outputs.issue_id }}"
