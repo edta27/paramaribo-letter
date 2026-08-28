@@ -16,12 +16,19 @@
       </div>
       <div class="brand">New <em>issue</em></div>
       <p class="dek-top">This page never deletes an old letter. It downloads a new issue file. Put that file in <code>public/issues/</code> and rebuild. Same-named files are refused.</p>
+      <nav class="links">
+        <a href="index.html">Today</a>
+        <a href="index.html#archive-wrap">Archive</a>
+        <a href="agents.html">Agents</a>
+        <a href="write.html">New issue</a>
+        <a href="desk/">Desk</a>
+      </nav>
     </header>
 
     <div class="note">
       From the project root:<br />
       <code>python3 scripts/publish_letter.py --title "Your headline" --dek "One-line lede" --cover images/cover-squeeze.png --body-file notes.md</code><br />
-      Then refresh this site. Covers on disk: cover-squeeze, cover-eighty, cover-pullback, cover-council, masthead.
+      Then refresh this site. Covers on disk: cover-squeeze, cover-eighty, cover-pullback, cover-council, cover-after-prints, cover-september-box, masthead.
     </div>
 
     <form class="compose" id="form">
@@ -37,6 +44,8 @@
         <option value="images/cover-eighty.png">Gate / eighty</option>
         <option value="images/cover-pullback.png">Tide / pullback</option>
         <option value="images/cover-council.png">Table / council</option>
+        <option value="images/cover-after-prints.png">Lamp / after the prints</option>
+        <option value="images/cover-september-box.png">Window / September box</option>
         <option value="images/masthead.png">Desk / masthead</option>
       </select>
       <label>Body (blank line = new paragraph; start a line with ## for a heading; &gt; for a pull quote)</label>

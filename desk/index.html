@@ -205,13 +205,11 @@
         <div class="mark">X</div>
         <div>
           <div class="title">GROK BOT <span>RESEARCH DESK</span></div>
-          <div class="sub">SIX AGENTS REPLACE A $294,000 HEDGE FUND RESEARCH TEAM.</div>
+          <div class="sub">SIX AGENTS · EQUITY NIGHT RUN · EDUCATIONAL · NOT ADVICE.</div>
         </div>
       </div>
       <div class="kpis">
-        <div class="kpi"><span>REPLACED</span><b>$294K</b></div>
-        <div class="kpi"><span>COSTS</span><b>$2.4K</b></div>
-        <div class="kpi"><span>CHEAPER</span><b>122x</b></div>
+        <div class="kpi"><span>AGENTS</span><b>6</b></div>
         <div class="kpi"><span>TICKERS</span><b id="kpi-tickers">20</b></div>
       </div>
       <div class="clockwrap">
@@ -225,7 +223,7 @@
     <section class="swarm">
       <div class="swarm-head">
         <h2>THE SWARM · FIVE MAKERS HAND WORK TO ONE CHECKER</h2>
-        <div class="meta">122x CHEAPER · $294,000 → $2,400 PER YEAR · BURNED WHILE YOU READ <span id="burn">$0.34</span></div>
+        <div class="meta">FIVE MAKERS HAND WORK TO ONE CHECKER</div>
       </div>
       <div class="tabs">
         <div class="tab"><small>23:30</small>FILINGS</div>
@@ -437,15 +435,11 @@
     }).join("");
 
     const clock = document.getElementById("clock");
-    const burn = document.getElementById("burn");
-    let cents = 34;
     function tick() {
       const d = new Date();
       const h = String(d.getHours()).padStart(2,"0");
       const m = String(d.getMinutes()).padStart(2,"0");
       clock.textContent = `${h}:${m}`;
-      cents += Math.random() * 0.02;
-      burn.textContent = `$${(cents/100).toFixed(2)}`;
     }
     tick();
     setInterval(tick, 1000);
