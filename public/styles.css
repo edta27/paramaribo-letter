@@ -296,6 +296,85 @@ footer.site {
   text-decoration: underline;
   text-underline-offset: 2px;
 }
+body.sub-modal-open {
+  overflow: hidden;
+}
+.sub-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 80;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+}
+.sub-modal[hidden] {
+  display: none !important;
+}
+.sub-modal-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(28, 23, 18, 0.45);
+}
+.sub-modal-card {
+  position: relative;
+  width: min(420px, 100%);
+  background: var(--white);
+  border: 1px solid var(--rule);
+  box-shadow: 0 18px 50px rgba(28, 23, 18, 0.22);
+  padding: 28px 26px 22px;
+  text-align: left;
+  animation: sub-modal-in 0.22s ease-out;
+}
+@keyframes sub-modal-in {
+  from { opacity: 0; transform: translateY(10px) scale(0.98); }
+  to { opacity: 1; transform: none; }
+}
+.sub-modal-kicker {
+  margin: 0 0 8px;
+  font-family: var(--sans);
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--mute);
+}
+.sub-modal-card h2 {
+  margin: 0 0 10px;
+  font-size: 28px;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+  color: var(--ink);
+}
+.sub-modal-body {
+  margin: 0 0 20px;
+  font-size: 17px;
+  line-height: 1.45;
+  color: var(--ink-soft);
+}
+.sub-modal-btn {
+  border: 0;
+  cursor: pointer;
+  background: var(--oxblood);
+  color: var(--white);
+  font-family: var(--sans);
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 12px 18px;
+}
+.sub-modal-btn:hover {
+  background: var(--oxblood-dark);
+}
+.sub-modal-foot {
+  margin: 14px 0 0;
+  font-family: var(--sans);
+  font-size: 12px;
+  color: var(--mute);
+}
+.sub-modal-foot a {
+  color: var(--ink-soft);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
 .sr-only {
   position: absolute;
   width: 1px;
