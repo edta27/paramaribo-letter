@@ -76,6 +76,8 @@ Wait for all revisions, then produce one council report with:
 10. A forecast record containing a unique forecast ID, creation time, expiry time, base scenario, probabilities, and invalidation so the result can later be scored in `research/forecast-ledger.csv`.
 11. A short educational-use disclaimer.
 
+If the user wants a public Paramaribo Letter issue, hand the packet and Round-3 material to `research_director` (see `prompts/run-paramaribo-letter.md`) for the reader-facing edit: central question, facts/levels, bull/base/bear with confirm/invalidate, strongest red-team objection, concise synthesis, hook and headline. Do not present specialist lenses as actual authors.
+
 Hard rules:
 - This is scenario analysis, not certainty or personalized financial advice.
 - Never fabricate live prices, metrics, chart levels, sources, quotes, or social posts.
