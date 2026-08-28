@@ -26,4 +26,6 @@ If that id already exists, the script exits. Pick a new `--slug`.
 
 ## Vercel (team `michael-162c`)
 
-Project on team `michael-162c`. Framework: Other. Set **Root Directory** to `public` (or leave empty if the dashboard already maps `public/` to `/`). Prefer the `paramaribo-letter` / `paramaribo-letter-newsletter` aliases over any `temporary-…` URL.
+Project `paramaribo-letter-newsletter` on team `michael-162c`, linked to this GitHub repo (`edta27/paramaribo-letter`). Framework: Other. Output directory is `public/`. Production domains: `paramaribo-letter.vercel.app` and `paramaribo-letter-newsletter.vercel.app`.
+
+Pushes to `main` deploy the site. The GitHub Action **Equity desk ticker refresh** runs on weekdays (09:00 / 13:00 / 17:00 / 21:00 UTC), updates `public/desk/live.js`, commits, and that push redeploys `/desk` with fresh quotes.

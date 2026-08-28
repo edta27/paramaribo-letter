@@ -3,8 +3,9 @@ name: Equity desk ticker refresh
 on:
   workflow_dispatch:
   schedule:
-    # Weekdays, roughly 5:00 / 9:30 / 16:15 America/New_York (UTC offsets ignore DST).
-    - cron: "0 9,13,20 * * 1-5"
+    # Weekdays around US cash hours (UTC). Roughly:
+    # 09:00 UTC ≈ premarket ET, 13:30 ≈ near open, 17:00 ≈ midday, 21:00 ≈ near close.
+    - cron: "0 9,13,17,21 * * 1-5"
 
 permissions:
   contents: write
@@ -14,16 +15,20 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
+
       - name: Update each watchlist ticker
         run: python3 scripts/update_tickers.py
-      - name: Commit snapshot
+
+      - name: Commit desk tape for the live site
         run: |
           git config user.name "equity-desk-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add vault/tickers vault/live desk/live.js
+          # public/desk/live.js is what Vercel serves at /desk/
+          git add vault/tickers vault/live desk/live.js public/desk/live.js
           if git diff --staged --quiet; then
             echo "No ticker changes"
           else
