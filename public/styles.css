@@ -284,6 +284,18 @@ footer.site {
   font-size: 13px;
   color: var(--ink-soft);
 }
+.subscribe-unsub {
+  margin: 8px 0 0;
+  font-family: var(--sans);
+  font-size: 13px;
+  color: var(--mute);
+  line-height: 1.4;
+}
+.subscribe-unsub a {
+  color: var(--ink-soft);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
 .sr-only {
   position: absolute;
   width: 1px;

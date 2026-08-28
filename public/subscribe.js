@@ -24,7 +24,11 @@
         if (!res.ok || !data.ok) {
           throw new Error(data.error || "Could not subscribe.");
         }
-        if (status) status.textContent = data.message || "Subscribed.";
+        if (status) {
+          status.innerHTML =
+            (data.message || "Subscribed.") +
+            ' <a href="unsubscribe.html">Unsubscribe</a> any time.';
+        }
         form.reset();
       } catch (err) {
         if (status) status.textContent = err.message || "Could not subscribe.";
