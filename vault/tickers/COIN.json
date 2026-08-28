@@ -1,45 +1,45 @@
 {
   "ticker": "COIN",
-  "updated_at": "2026-08-22T04:40:05Z",
-  "price": 186.49,
+  "updated_at": "2026-08-28T05:30:43Z",
+  "price": 190.72,
   "filings": [
     {
       "form": "4",
-      "filing_date": "2026-08-18",
-      "accession": "0001679788-26-000092",
-      "url": "https://www.sec.gov/Archives/edgar/data/1679788/000167978826000092/xslF345X06/wk-form4_1787085916.xml"
+      "filing_date": "2026-08-26",
+      "accession": "0001679788-26-000099",
+      "url": "https://www.sec.gov/Archives/edgar/data/1679788/000167978826000099/xslF345X06/wk-form4_1787775437.xml"
     },
     {
       "form": "4",
-      "filing_date": "2026-08-17",
-      "accession": "0001679788-26-000091",
-      "url": "https://www.sec.gov/Archives/edgar/data/1679788/000167978826000091/xslF345X06/wk-form4_1787002688.xml"
+      "filing_date": "2026-08-24",
+      "accession": "0001679788-26-000097",
+      "url": "https://www.sec.gov/Archives/edgar/data/1679788/000167978826000097/xslF345X06/wk-form4_1787603712.xml"
     },
     {
       "form": "4",
-      "filing_date": "2026-08-05",
-      "accession": "0001679788-26-000090",
-      "url": "https://www.sec.gov/Archives/edgar/data/1679788/000167978826000090/xslF345X06/wk-form4_1785961036.xml"
+      "filing_date": "2026-08-24",
+      "accession": "0001679788-26-000096",
+      "url": "https://www.sec.gov/Archives/edgar/data/1679788/000167978826000096/xslF345X06/wk-form4_1787603694.xml"
     },
     {
       "form": "4",
-      "filing_date": "2026-07-31",
-      "accession": "0001679788-26-000089",
-      "url": "https://www.sec.gov/Archives/edgar/data/1679788/000167978826000089/xslF345X06/wk-form4_1785540940.xml"
+      "filing_date": "2026-08-24",
+      "accession": "0001679788-26-000095",
+      "url": "https://www.sec.gov/Archives/edgar/data/1679788/000167978826000095/xslF345X06/wk-form4_1787603663.xml"
     },
     {
-      "form": "10-Q",
-      "filing_date": "2026-07-30",
-      "accession": "0001679788-26-000088",
-      "url": "https://www.sec.gov/Archives/edgar/data/1679788/000167978826000088/coin-20260630.htm"
+      "form": "4",
+      "filing_date": "2026-08-24",
+      "accession": "0001679788-26-000094",
+      "url": "https://www.sec.gov/Archives/edgar/data/1679788/000167978826000094/xslF345X06/wk-form4_1787603615.xml"
     }
   ],
   "error": null,
-  "prev_close": 172.35,
-  "change": 14.14,
-  "change_pct": 8.204,
+  "prev_close": 181.78,
+  "change": 8.94,
+  "change_pct": 4.918,
   "currency": "USD",
   "exchange": "NASDAQ-GS",
-  "volume": 22736106.0,
+  "volume": 9240969.0,
   "quote_source": "nasdaq-stocks"
 }

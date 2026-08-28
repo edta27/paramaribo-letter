@@ -1,8 +1,26 @@
 {
   "ticker": "NVDA",
-  "updated_at": "2026-08-22T04:40:01Z",
-  "price": 214.72,
+  "updated_at": "2026-08-28T05:30:39Z",
+  "price": 227.98,
   "filings": [
+    {
+      "form": "10-Q",
+      "filing_date": "2026-08-26",
+      "accession": "0001045810-26-000075",
+      "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000075/nvda-20260726.htm"
+    },
+    {
+      "form": "8-K",
+      "filing_date": "2026-08-26",
+      "accession": "0001045810-26-000073",
+      "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000073/nvda-20260826.htm"
+    },
+    {
+      "form": "4",
+      "filing_date": "2026-08-24",
+      "accession": "0001347842-26-000015",
+      "url": "https://www.sec.gov/Archives/edgar/data/1045810/000134784226000015/xslF345X06/wk-form4_1787607122.xml"
+    },
     {
       "form": "8-K",
       "filing_date": "2026-08-17",
@@ -14,32 +32,14 @@
       "filing_date": "2026-08-14",
       "accession": "0001045810-26-000065",
       "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000065/xslForm13F_X02/primary_doc.xml"
-    },
-    {
-      "form": "4",
-      "filing_date": "2026-08-12",
-      "accession": "0001310264-26-000008",
-      "url": "https://www.sec.gov/Archives/edgar/data/1045810/000131026426000008/xslF345X06/wk-form4_1786569187.xml"
-    },
-    {
-      "form": "4",
-      "filing_date": "2026-08-07",
-      "accession": "0001197647-26-000007",
-      "url": "https://www.sec.gov/Archives/edgar/data/1045810/000119764726000007/xslF345X06/wk-form4_1786135642.xml"
-    },
-    {
-      "form": "4",
-      "filing_date": "2026-07-06",
-      "accession": "0001197647-26-000005",
-      "url": "https://www.sec.gov/Archives/edgar/data/1045810/000119764726000005/xslF345X06/wk-form4_1783371701.xml"
     }
   ],
   "error": null,
-  "prev_close": 216.85,
-  "change": -2.13,
-  "change_pct": -0.982,
+  "prev_close": 209.66,
+  "change": 18.32,
+  "change_pct": 8.738,
   "currency": "USD",
   "exchange": "NASDAQ-GS",
-  "volume": 98871651.0,
+  "volume": 298913275.0,
   "quote_source": "nasdaq-stocks"
 }

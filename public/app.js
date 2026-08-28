@@ -38,6 +38,19 @@ function renderIndex() {
   }
 }
 
+function absUrl(path) {
+  try {
+    return new URL(path, location.origin).href;
+  } catch (e) {
+    return path;
+  }
+}
+
+function setMeta(id, attr, value) {
+  const el = document.getElementById(id);
+  if (el && value) el.setAttribute(attr, value);
+}
+
 function renderIssue() {
   const params = new URLSearchParams(location.search);
   const row = byId(params.get("id") || "") || ISSUES[0];
@@ -51,6 +64,10 @@ function renderIssue() {
   cover.src = row.cover;
   cover.alt = row.title;
   document.getElementById("body").innerHTML = row.body || "";
+  setMeta("og-title", "content", row.title + " · The Paramaribo Letter");
+  setMeta("og-desc", "content", row.dek || row.title);
+  setMeta("og-image", "content", absUrl(row.cover));
+  setMeta("og-url", "content", absUrl("issue.html?id=" + encodeURIComponent(row.id)));
 }
 
 window.Letter = { renderIndex, renderIssue, ISSUES };

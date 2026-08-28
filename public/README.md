@@ -2,6 +2,11 @@
 
 A local newsletter for desk notes. Issues are files. They are not deleted when you post again.
 
+- Live site: [paramaribo-letter.vercel.app](https://paramaribo-letter.vercel.app) (also [paramaribo-letter-newsletter.vercel.app](https://paramaribo-letter-newsletter.vercel.app))
+- GitHub: [edta27/paramaribo-letter](https://github.com/edta27/paramaribo-letter)
+- Agents: [/agents.html](https://paramaribo-letter.vercel.app/agents.html)
+- Equity desk: [/desk](https://paramaribo-letter.vercel.app/desk/)
+
 The Vercel website root is `public/`. The letter is `/`. The equity board is `/desk`.
 
 ```bash
@@ -21,4 +26,4 @@ If that id already exists, the script exits. Pick a new `--slug`.
 
 ## Vercel (team `michael-162c`)
 
-Live: [https://paramaribo-letter-newsletter.vercel.app](https://paramaribo-letter-newsletter.vercel.app) (also [paramaribo-letter.vercel.app](https://paramaribo-letter.vercel.app)). Project `paramaribo-letter-newsletter` on team `michael-162c`. Framework: Other. Leave **Root Directory** empty. Vercel serves `public/` as the website root.
+Project on team `michael-162c`. Framework: Other. Set **Root Directory** to `public` (or leave empty if the dashboard already maps `public/` to `/`). Prefer the `paramaribo-letter` / `paramaribo-letter-newsletter` aliases over any `temporary-…` URL.
