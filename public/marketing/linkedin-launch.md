@@ -1,7 +1,7 @@
 # LinkedIn — The Paramaribo Letter
 
 **Status: live** (LinkedIn Newsletter product).  
-Author: Shan Ho · **67 subscribers** · **3 editions** (live check on 2026-08-29).
+Author: Shan Ho · **68 subscribers** · **3 editions** (live check on 2026-08-29).
 Site: https://www.paramariboletter.com  
 Public newsletter: https://www.linkedin.com/newsletters/the-paramaribo-letter-7498641775679426560/
 
@@ -46,7 +46,7 @@ Educational scenario research only. Not personalized financial advice. Named tra
 ## Cadence
 
 - Mirror each major site issue as a LinkedIn edition the same day when you can.
-- 67 → next milestone **100** LinkedIn subs, then **250** — separate from the Resend list (do not mash counts).
+- 68 → next milestone **100** LinkedIn subs, then **250** — separate from the Resend list (do not mash counts).
 - Cross-link X @paramaribolette in the newsletter description or edition footer once.
 - Still freeze paid LinkedIn boosts until you know visit→subscribe CVR on the site.
 
@@ -55,7 +55,7 @@ Educational scenario research only. Not personalized financial advice. Named tra
 - [x] Newsletter created
 - [x] Logo + description
 - [x] 3 editions published
-- [x] 67 subscribers
+- [x] 68 subscribers
 - [ ] Optional: fix frequency label if not actually daily
 - [ ] Publish Issue 12 edition (paste above)
 - [ ] Add LinkedIn newsletter public URL here when you copy it from Share

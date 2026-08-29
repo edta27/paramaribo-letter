@@ -5,7 +5,7 @@
 | Site | https://www.paramariboletter.com | Live |
 | Fallback site | https://paramaribo-letter.vercel.app | Live |
 | X | [@paramaribolette](https://x.com/paramaribolette) | Live (pin + Issue 12 + agents post); Issue 12 link correction pending |
-| LinkedIn Newsletter | [The Paramaribo Letter](https://www.linkedin.com/newsletters/the-paramaribo-letter-7498641775679426560/) (by Shan Ho) | **Live** — 67 subs, 3 editions; Issue 12 pending |
+| LinkedIn Newsletter | [The Paramaribo Letter](https://www.linkedin.com/newsletters/the-paramaribo-letter-7498641775679426560/) (by Shan Ho) | **Live** — 68 subs, 3 editions; Issue 12 pending |
 | Inbox / replies | paramariboletter@gmail.com | Live |
 | Subscribe | https://www.paramariboletter.com/#new-subscribers | Live |
 | Unsubscribe | https://www.paramariboletter.com/unsubscribe.html | Live |

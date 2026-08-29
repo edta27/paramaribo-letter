@@ -16,7 +16,7 @@ Updated: 2026-08-29
 - [x] Anonymous subscribe funnel events: `subscribe_form_start` and `subscribe_complete`
 - [x] Dry-run lifecycle, CVR, growth, editorial, and reply-first materials (`docs/`)
 - [x] Vercel Web Analytics script on pages
-- [x] **LinkedIn Newsletter** live — The Paramaribo Letter · 67 subscribers · 3 editions (Shan Ho)
+- [x] **LinkedIn Newsletter** live — The Paramaribo Letter · 68 subscribers · 3 editions (Shan Ho)
 
 ## Next
 
@@ -34,7 +34,7 @@ Planning baseline: approximately **4 website visitors over one week**. This is t
 
 | List | Count (approx) | Notes |
 |---|---:|---|
-| LinkedIn Newsletter | 67 | Platform subscribers |
+| LinkedIn Newsletter | 68 | Platform subscribers |
 | Resend / site email | unknown here | Separate list — never invent |
 | X followers | 0 | Awareness, not email |
 
