@@ -19,7 +19,7 @@ Status: preparation complete. Public actions remain blocked until a human gives 
 
 ## Funnel and account checks
 
-- [ ] In Microsoft Clarity project `ya3iur94oo`, verify the email input is masked.
+- [x] Subscribe and unsubscribe forms explicitly carry `data-clarity-mask="true"`; confirm the setting in Microsoft Clarity project `ya3iur94oo` when dashboard access is available.
 - [ ] In Vercel Analytics, record visitors, `subscribe_form_start`, and `subscribe_complete` separately.
 - [ ] Do not calculate a stable CVR from the current ~4-visitors/week baseline.
 - [ ] Confirm Resend sender-domain authentication and `RESEND_REPLY_TO` in Vercel.
