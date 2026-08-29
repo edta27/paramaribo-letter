@@ -97,15 +97,20 @@ async function listAllContacts() {
 
 async function sendEmail({ to, subject, html, text }) {
   const from = requireEnv("RESEND_FROM_EMAIL");
+  const body = {
+    from,
+    to: [to],
+    subject,
+    html,
+    text,
+  };
+  // Optional human inbox, e.g. paramariboletter@gmail.com
+  if (process.env.RESEND_REPLY_TO) {
+    body.reply_to = process.env.RESEND_REPLY_TO;
+  }
   return resend("/emails", {
     method: "POST",
-    body: {
-      from,
-      to: [to],
-      subject,
-      html,
-      text,
-    },
+    body,
   });
 }
 

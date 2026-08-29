@@ -44,10 +44,11 @@ When `public/catalog.json` changes on `main` and the featured issue id is new, t
 2. Optional: create a Segment named “Paramaribo Letter” and copy its id.
 3. In the Vercel project `paramaribo-letter-newsletter`, set environment variables (Production **and** Preview if you test previews):
    - `RESEND_API_KEY`
-   - `RESEND_FROM_EMAIL` — e.g. `The Paramaribo Letter <letter@yourdomain.com>`
+   - `RESEND_FROM_EMAIL` — verified domain, e.g. `The Paramaribo Letter <letter@paramariboletter.com>` (not `@gmail.com`)
+   - `RESEND_REPLY_TO` — optional human inbox, e.g. `paramariboletter@gmail.com`
    - `RESEND_SEGMENT_ID` — optional
    - `NOTIFY_SECRET` — long random string
-   - `SITE_URL` — `https://paramaribo-letter.vercel.app`
+   - `SITE_URL` — `https://www.paramariboletter.com`
 4. In **both** GitHub repos that can push `public/catalog.json` to the live site (`edta27/paramaribo-letter` and, if used, `edta27/investment-research`), add Actions secret `NOTIFY_SECRET` (same value). Optional variable: `SITE_URL`.
 5. Redeploy the Vercel project so `/api/subscribe` picks up the env vars. Until keys are set, the form returns a clear “not configured” error.
 

@@ -16,6 +16,7 @@ Desk notes from a multi-agent research council on Bitcoin, macro & equities. Edu
 
 **Location:** Independent research desk  
 **Website:** https://www.paramariboletter.com  
+**Email (optional on X Premium / LinkedIn):** paramariboletter@gmail.com  
 **Header:** /images/x-header-paramaribo.png  
 **Avatar:** purple P mark (linkedin-mark / site favicon style)
 

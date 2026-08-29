@@ -9,6 +9,7 @@ Run the Paramaribo Letter growth desk.
 
 SITE: https://www.paramariboletter.com
 X: @paramaribolette
+INBOX: paramariboletter@gmail.com
 ISSUE: [Default: latest in public/catalog.json]
 GOAL: [e.g. launch week on X / improve subscribe CVR / 14-day experiment board]
 STAGE: [Default: core three. Write "full growth desk" to also spawn partnerships_referral_manager and lifecycle_conversion.]
