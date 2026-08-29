@@ -13,6 +13,8 @@ Updated: 2026-08-29
 - [x] Five-role growth desk (Growth, Editorial, Social, Partnerships, Lifecycle)
 - [x] Gmail inbox: paramariboletter@gmail.com
 - [x] Site subscribe + Resend path + thank-you modal + unsubscribe
+- [x] Anonymous subscribe funnel events: `subscribe_form_start` and `subscribe_complete`
+- [x] Dry-run lifecycle, CVR, growth, editorial, and reply-first materials (`docs/`)
 - [x] Vercel Web Analytics script on pages
 - [x] **LinkedIn Newsletter** live — The Paramaribo Letter · 56 subscribers · 2 editions (Shan Ho)
 
@@ -24,6 +26,8 @@ Updated: 2026-08-29
 - [ ] Resend **domain** From (`letter@paramariboletter.com`) + `RESEND_REPLY_TO=paramariboletter@gmail.com` if not already
 - [ ] `SITE_URL=https://www.paramariboletter.com` on Vercel + GitHub notify secret
 - [ ] Measure visit→subscribe CVR before paid ads / heavy partnerships
+
+Planning baseline: approximately **4 website visitors over one week**. This is too small to establish a reliable conversion rate; collect a larger comparable window first.
 
 ## Channel counts (do not mash)
 

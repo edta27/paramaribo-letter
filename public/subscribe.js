@@ -1,4 +1,22 @@
 (function () {
+  function pagePath() {
+    return window.location.pathname.replace(/\/index\.html$/, "/") || "/";
+  }
+
+  function track(name, data) {
+    if (typeof window.va !== "function") return;
+    window.va("event", { name, data });
+  }
+
+  function trackFormStart(form) {
+    if (form.dataset.startTracked === "1") return;
+    form.dataset.startTracked = "1";
+    track("subscribe_form_start", {
+      form_location: form.id || "subscribe",
+      page: pagePath(),
+    });
+  }
+
   function ensureModal() {
     let root = document.getElementById("subscribe-thanks");
     if (root) return root;
@@ -49,8 +67,12 @@
     const email = form.querySelector('input[name="email"]');
     const btn = form.querySelector('button[type="submit"]');
 
+    form.addEventListener("focusin", () => trackFormStart(form));
+    form.addEventListener("input", () => trackFormStart(form));
+
     form.addEventListener("submit", async (event) => {
       event.preventDefault();
+      trackFormStart(form);
       if (!email || !email.value.trim()) return;
       if (status) status.textContent = "Sending…";
       if (btn) btn.disabled = true;
@@ -69,6 +91,11 @@
         }
         const msg =
           data.message || "You are on the list. We will email when a new letter posts.";
+        track("subscribe_complete", {
+          form_location: form.id || "subscribe",
+          page: pagePath(),
+          outcome: /already subscribed/i.test(msg) ? "already_subscribed" : "new_subscriber",
+        });
         if (status) {
           status.innerHTML =
             msg + ' <a href="unsubscribe.html">Unsubscribe</a> any time.';
