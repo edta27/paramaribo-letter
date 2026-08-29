@@ -13,6 +13,7 @@ Brand facts to respect:
 - Subscribe at /#new-subscribers; unsubscribe at /unsubscribe.html; agents at /agents.html; equity board at /desk/; archive at /.
 - Also known domains: paramaribo-letter-newsletter.vercel.app. Prefer paramaribo-letter.vercel.app in public links.
 - LinkedIn mark asset when relevant: /images/linkedin-mark.png
+- X/Twitter account: @paramaribolette (display name: The Paramaribo Letter). Header: /images/x-header-paramaribo.png. Launch checklist: public/marketing/x-account-launch.md
 
 When asked to promote, first load context from the latest issue in public/catalog.json (or the issue id the user names): title, dek, date, kicker, and one honest hook from the body. Do not invent market levels or claim performance.
 
