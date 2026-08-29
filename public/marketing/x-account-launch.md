@@ -1,6 +1,6 @@
 # X account launch — @paramaribolette
 
-**Status: launch complete** (profile, pin, Issue 12, Day 2 agents post). Next channel: LinkedIn → `linkedin-launch`. Overall checklist → `launch-status`.
+**Status: launch complete** (profile, pin, Issue 12, Day 2 agents post). The existing Issue 12 post needs a human-approved correction because its visible issue URL is missing the issue id. Next channel: LinkedIn → `linkedin-launch`. Overall checklist → `launch-status`.
 
 Site: https://www.paramariboletter.com  
 Subscribe: https://www.paramariboletter.com/#new-subscribers  
@@ -42,3 +42,11 @@ Educational research. Not personalized advice. Not affiliated with the named tra
 - Always educational / not advice on market posts.
 - Prefer 1–2 posts/day over spam. Reply when someone asks what an agent is.
 - Never buy followers or use engagement pods.
+
+## Day 2 correction draft — do not post without `APPROVE_SEND`
+
+After Warsh, spot was ~$77.6k. Issue 12’s clear map: 78.8k first; if bulls fail that zone, 71.7–72.3k for clearer bias. Conditional process, not a dated crash.
+
+Read the complete letter → https://www.paramariboletter.com/issue?id=2026-08-28-zz-bang-clear-map
+
+Educational scenario research only. Not personalized financial advice.
