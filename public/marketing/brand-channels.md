@@ -1,14 +1,15 @@
 # Paramaribo Letter — brand channels
 
-| Channel | Value |
-|---|---|
-| Site | https://www.paramariboletter.com |
-| Fallback site | https://paramaribo-letter.vercel.app |
-| X | [@paramaribolette](https://x.com/paramaribolette) |
-| Inbox / replies | paramariboletter@gmail.com (display: paramariboletter) |
-| Subscribe | https://www.paramariboletter.com/#new-subscribers |
-| Unsubscribe | https://www.paramariboletter.com/unsubscribe.html |
-| Agents | https://www.paramariboletter.com/agents.html |
+| Channel | Value | Status |
+|---|---|---|
+| Site | https://www.paramariboletter.com | Live |
+| Fallback site | https://paramaribo-letter.vercel.app | Live |
+| X | [@paramaribolette](https://x.com/paramaribolette) | Live (pin + Issue 12 + agents post) |
+| LinkedIn | Page / Newsletter | **Not connected yet** — see `linkedin-launch.md` |
+| Inbox / replies | paramariboletter@gmail.com | Live |
+| Subscribe | https://www.paramariboletter.com/#new-subscribers | Live |
+| Unsubscribe | https://www.paramariboletter.com/unsubscribe.html | Live |
+| Agents | https://www.paramariboletter.com/agents.html | Live |
 
 ## Email: two different jobs
 

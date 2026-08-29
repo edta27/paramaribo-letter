@@ -1,5 +1,7 @@
 # X account launch — @paramaribolette
 
+**Status: launch complete** (profile, pin, Issue 12, Day 2 agents post). Next channel: LinkedIn → `linkedin-launch.md`. Overall checklist → `launch-status.md`.
+
 Site: https://www.paramariboletter.com  
 Subscribe: https://www.paramariboletter.com/#new-subscribers  
 Agents: https://www.paramariboletter.com/agents.html  
