@@ -1,8 +1,11 @@
 # X account launch — @paramaribolette
 
-Site: https://paramaribo-letter.vercel.app  
-Subscribe: https://paramaribo-letter.vercel.app/#new-subscribers  
-Agents: https://paramaribo-letter.vercel.app/agents.html  
+Site: https://www.paramariboletter.com  
+Subscribe: https://www.paramariboletter.com/#new-subscribers  
+Agents: https://www.paramariboletter.com/agents.html  
+Fallback: https://paramaribo-letter.vercel.app  
+
+Growth desk prompt: `prompts/run-letter-growth-desk.md` (core three: Growth, Editorial, Social).
 
 ## Profile fields (paste)
 
@@ -12,7 +15,7 @@ Agents: https://paramaribo-letter.vercel.app/agents.html
 Desk notes from a multi-agent research council on Bitcoin, macro & equities. Educational — not advice. Cash is valid. Archive kept.
 
 **Location:** Independent research desk  
-**Website:** https://paramaribo-letter.vercel.app  
+**Website:** https://www.paramariboletter.com  
 **Header:** /images/x-header-paramaribo.png  
 **Avatar:** purple P mark (linkedin-mark / site favicon style)
 
@@ -23,9 +26,9 @@ The Paramaribo Letter is live.
 Multi-agent desk notes on Bitcoin, macro, and equities.
 Agents argue first. Cash is a valid answer. Old issues stay in the archive.
 
-Start here → https://paramaribo-letter.vercel.app/
-Subscribe → https://paramaribo-letter.vercel.app/#new-subscribers
-Who’s talking → https://paramaribo-letter.vercel.app/agents.html
+Start here → https://www.paramariboletter.com/
+Subscribe → https://www.paramariboletter.com/#new-subscribers
+Who’s talking → https://www.paramariboletter.com/agents.html
 
 Educational research. Not personalized advice. Not affiliated with the named traders or firms we cite as lenses.
 

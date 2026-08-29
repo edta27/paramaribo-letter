@@ -37,11 +37,16 @@ Use a strong parent model for orchestration and Luna workers for bounded researc
 |---|---:|---|
 | `research_director` | High | Managing Editor of The Paramaribo Letter: packet → question, levels, scenarios, red-team, synthesis, headline |
 
-**Publisher desk** (promote the site; not a market lens):
+**Publisher / growth desk** (promote the site; not a market lens). North star: long-horizon 500k email subscribers — stage milestones; never invent the current count.
 
 | Agent | Effort | Purpose |
 |---|---:|---|
-| `letter_marketing` | High | Ethical growth copy, LinkedIn/X/email CTAs, funnel check; dry-run unless `APPROVE_SEND` |
+| `growth_marketing_lead` | High | Strategy, funnel, experiments, targets (core) |
+| `editorial_content_lead` | High | Issue → X/LinkedIn/threads/video scripts/pull quotes (core) |
+| `social_community_manager` | High | X/LinkedIn cadence, replies, community rules (core) |
+| `partnerships_referral_manager` | High | Creators/newsletters/podcasts — after funnel converts |
+| `lifecycle_conversion` | High | Signup UX, onboarding email, A/B tests, analytics |
+| `letter_marketing` | High | Solo quick path when you do not need the full desk |
 
 **Equity desk** (separate session; do not mix with the crypto council):
 
@@ -64,7 +69,8 @@ All agents remain on `gpt-5.6-luna`. Sessions allow up to 16 concurrent workers 
 | Confirmation-first buy-low / sell-high plan | `buy-low-sell-high.md` | bang + capriole + glassnode | When deciding whether to add, hold cash, or reduce |
 | BTC plus alt/meme/AI conviction review | `run-crypto-council.md` | 7 + specialists if needed | Weekly, or before a material decision |
 | Newsletter issue (headline, scenarios, stands) | `run-paramaribo-letter.md` | `research_director` (+ council as needed) | When publishing to The Paramaribo Letter |
-| Promote the site or a new issue | `run-letter-marketing.md` | `letter_marketing` | After each publish, or weekly growth pass |
+| Growth desk (core 3 → optional 5) | `run-letter-growth-desk.md` | growth + editorial + social (± partnerships, lifecycle) | After publish / weekly sprint |
+| Solo promo pack (one agent) | `run-letter-marketing.md` | `letter_marketing` | Quick announce when you do not need the full desk |
 | Overnight equity filings / earnings / insider desk | `run-equity-desk.md` | 5 + chief_of_staff | Nightly or pre-market; dry-run first |
 | Auto-update each watchlist ticker (quotes + EDGAR index) | `scripts/update_tickers.py` | none | Once, `--loop 300`, or GitHub Action weekdays |
 | Visual night-run board (open in a browser) | `desk/index.html` | UI + `desk/live.js` | Refreshes after each ticker update |
