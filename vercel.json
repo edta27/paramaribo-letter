@@ -4,10 +4,12 @@
   "outputDirectory": "public",
   "cleanUrls": true,
   "trailingSlash": false,
+  "redirects": [
+    { "source": "/marketing/launch-status.md", "destination": "/marketing/launch-status.html", "permanent": false },
+    { "source": "/marketing/linkedin-launch.md", "destination": "/marketing/linkedin-launch.html", "permanent": false }
+  ],
   "rewrites": [
-    { "source": "/favicon.ico", "destination": "/favicon.svg" },
-    { "source": "/marketing/launch-status.md", "destination": "/marketing/launch-status.html" },
-    { "source": "/marketing/linkedin-launch.md", "destination": "/marketing/linkedin-launch.html" }
+    { "source": "/favicon.ico", "destination": "/favicon.svg" }
   ],
   "functions": {
     "api/**/*.js": {
