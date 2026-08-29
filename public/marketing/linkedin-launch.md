@@ -1,92 +1,60 @@
-# LinkedIn launch — The Paramaribo Letter
+# LinkedIn — The Paramaribo Letter
 
-Status: **not connected yet** (X launch is done).  
+**Status: live** (LinkedIn Newsletter product).  
+Author: Shan Ho · **56 subscribers** · **2 editions** (as of 2026-08-29 screenshot).  
 Site: https://www.paramariboletter.com  
-Inbox: paramariboletter@gmail.com  
-Mark (300×300): https://www.paramariboletter.com/images/linkedin-mark.png  
-Banner: https://www.paramariboletter.com/images/x-header-paramaribo.png  
 
-## A) Create / claim the Page (or personal + Newsletter)
+Logo/mark on LinkedIn is the stylized P (Bitcoin path) — keep consistent with the Page.
 
-Preferred: **LinkedIn Page** named `The Paramaribo Letter`, then enable **LinkedIn Newsletter** on that Page.
+## Newsletter fields (current)
 
-### Page fields
-
-| Field | Value |
+| Field | Current / recommended |
 |---|---|
-| Page name | The Paramaribo Letter |
-| Public URL | linkedin.com/company/paramaribo-letter (or closest available) |
-| Website | https://www.paramariboletter.com |
-| Industry | Online Media / Research |
-| Tagline | Multi-agent desk notes on Bitcoin, macro, and equities |
-| About | The Paramaribo Letter publishes educational research notes from a multi-agent desk. Agents argue first; cash and “insufficient evidence” are valid answers; old issues stay in the archive. Not personalized financial advice. Lenses are not the named traders or firms. |
-| Logo | linkedin-mark.png |
-| Cover | x-header-paramaribo.png (or masthead.png) |
+| Name | The Paramaribo Letter |
+| Description | An evidence-driven research desk on Bitcoin, macro liquidity, and event risk. Multiple lenses, one evidence packet. |
+| Frequency label | LinkedIn shows “Published daily” — if you publish event-driven, Edit → set to **Weekly** or **Occasionally** so expectations match |
+| CTA | Always link full issue on paramariboletter.com + site subscribe |
 
-### LinkedIn Newsletter setup (when prompted)
+## Create new edition — Issue 12 (paste)
 
-| Field | Value |
-|---|---|
-| Newsletter name | The Paramaribo Letter |
-| Description | Desk notes from agents that argue first, then get synthesized into a letter. Educational scenario research — not advice. |
-| Frequency | When we publish (often event-driven) |
-| Logo | linkedin-mark.png |
-| Headline / first edition title | Bang’s clear map: 78.8k, then 71.7–72.3k |
-| First edition body | Use “First LinkedIn post” below, or paste a short excerpt + link to the full issue |
+**Title:** Bang’s clear map: 78.8k, then 71.7–72.3k  
 
-## B) First LinkedIn post (Page or personal)
+**Body:**
 
 ```
-The Paramaribo Letter is live.
+After Warsh, Bitcoin sat near $77.6k on our evening packet.
 
-We publish multi-agent desk notes on Bitcoin, macro, and equities.
-Agents argue first. Cash is a valid answer. Old issues stay in the archive.
+This edition is a full-bench desk read of a clear map from @BangXBT: first take-profit at 78.8k; if bulls fail to hold that zone, final TP 71.7–72.3k for clearer directional bias. Conditional process — not a dated crash, and not personalized advice.
 
-Read the archive → https://www.paramariboletter.com/
-Subscribe for new-issue email → https://www.paramariboletter.com/#new-subscribers
-Who the agents are → https://www.paramariboletter.com/agents.html
+On the site we keep each agent stand on its own line (Bang, Capriole, red team, and the rest of the bench). Cash and “insufficient evidence” remain valid answers.
 
-Educational research. Not personalized advice.
-We cite traders and firms as analytical lenses — they do not write for us.
-```
-
-## C) Second post — Issue 12 (same day or next)
-
-```
-After Warsh, Bitcoin sat near $77.6k.
-
-Desk read of a clear map making the rounds: first checkpoint 78.8k; if bulls fail that zone, 71.7–72.3k for clearer bias — conditional process, not a dated crash.
-
-Full bench, each lens on its own line:
+Read the full letter (archive kept):
 https://www.paramariboletter.com/issue.html?id=2026-08-28-zz-bang-clear-map
 
-Educational scenario research. Not advice.
+Email when the next site issue posts:
+https://www.paramariboletter.com/#new-subscribers
+
+Who the agents are:
+https://www.paramariboletter.com/agents.html
+
+Educational scenario research only. Not personalized financial advice. Named traders and firms are analytical lenses — they do not write these notes.
 ```
 
-## D) Third post — What is an agent? (matches your X Day 2)
+**Cover:** use Issue 12 cover or the desk/window image you already used on LinkedIn.
 
-```
-When we say Bang, Capriole, or the red team, we mean a research lens on this desk — not a guest column and not a claim that the real person wrote the note.
+## Cadence
 
-Each agent gets the same timestamped packet, writes alone first, then argues only where disagreement would change the conclusion.
+- Mirror each major site issue as a LinkedIn edition the same day when you can.
+- 56 → next milestone **100** LinkedIn subs, then **250** — separate from the Resend list (do not mash counts).
+- Cross-link X @paramaribolette in the newsletter description or edition footer once.
+- Still freeze paid LinkedIn boosts until you know visit→subscribe CVR on the site.
 
-Meet the roster → https://www.paramariboletter.com/agents.html
-Subscribe → https://www.paramariboletter.com/#new-subscribers
-```
+## Checklist
 
-## E) Cadence (until funnel CVR is known)
-
-- 2–4 LinkedIn posts / week (not daily spam)
-- Every market post: issue link + “educational / not advice”
-- Freeze paid LinkedIn ads until visit→subscribe conversion is measured
-- Cross-link X @paramaribolette in the Page About once
-
-## F) Checklist
-
-- [ ] Create LinkedIn Page
-- [ ] Upload logo + cover
-- [ ] Publish post B (launch)
-- [ ] Publish post C (Issue 12)
-- [ ] Publish post D (agents)
-- [ ] Optional: turn on LinkedIn Newsletter and paste first edition
-- [ ] Add Page URL to public/marketing/brand-channels.md when you have it
+- [x] Newsletter created
+- [x] Logo + description
+- [x] 2 editions published
+- [x] 56 subscribers
+- [ ] Optional: fix frequency label if not actually daily
+- [ ] Publish Issue 12 edition (paste above)
+- [ ] Add LinkedIn newsletter public URL here when you copy it from Share
