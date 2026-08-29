@@ -30,6 +30,8 @@ Project `paramaribo-letter-newsletter` on team `michael-162c`, linked to this Gi
 
 Pushes to `main` deploy the site. The GitHub Action **Equity desk ticker refresh** runs on weekdays (09:00 / 13:00 / 17:00 / 21:00 UTC), updates `public/desk/live.js`, commits, and that push redeploys `/desk` with fresh quotes.
 
+**Web Analytics:** pages load Vercel’s `/_vercel/insights/script.js` (static HTML, not the Next.js React package). Enable Web Analytics in the Vercel project dashboard if it is not already on, then visit a few pages after deploy.
+
 ## New subscribers (email list)
 
 Emails are **not** stored in git. They live in [Resend](https://resend.com) Contacts (optional Segment). The homepage and each issue page have a **New subscribers** form that posts to `/api/subscribe`.
