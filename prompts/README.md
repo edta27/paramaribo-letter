@@ -37,6 +37,12 @@ Use a strong parent model for orchestration and Luna workers for bounded researc
 |---|---:|---|
 | `research_director` | High | Managing Editor of The Paramaribo Letter: packet → question, levels, scenarios, red-team, synthesis, headline |
 
+**Publisher desk** (promote the site; not a market lens):
+
+| Agent | Effort | Purpose |
+|---|---:|---|
+| `letter_marketing` | High | Ethical growth copy, LinkedIn/X/email CTAs, funnel check; dry-run unless `APPROVE_SEND` |
+
 **Equity desk** (separate session; do not mix with the crypto council):
 
 | Agent | Effort | Purpose |
@@ -58,6 +64,7 @@ All agents remain on `gpt-5.6-luna`. Sessions allow up to 16 concurrent workers 
 | Confirmation-first buy-low / sell-high plan | `buy-low-sell-high.md` | bang + capriole + glassnode | When deciding whether to add, hold cash, or reduce |
 | BTC plus alt/meme/AI conviction review | `run-crypto-council.md` | 7 + specialists if needed | Weekly, or before a material decision |
 | Newsletter issue (headline, scenarios, stands) | `run-paramaribo-letter.md` | `research_director` (+ council as needed) | When publishing to The Paramaribo Letter |
+| Promote the site or a new issue | `run-letter-marketing.md` | `letter_marketing` | After each publish, or weekly growth pass |
 | Overnight equity filings / earnings / insider desk | `run-equity-desk.md` | 5 + chief_of_staff | Nightly or pre-market; dry-run first |
 | Auto-update each watchlist ticker (quotes + EDGAR index) | `scripts/update_tickers.py` | none | Once, `--loop 300`, or GitHub Action weekdays |
 | Visual night-run board (open in a browser) | `desk/index.html` | UI + `desk/live.js` | Refreshes after each ticker update |
