@@ -29,7 +29,7 @@ This edition is a full-bench desk read of a clear map from @BangXBT: first take-
 On the site we keep each agent stand on its own line (Bang, Capriole, red team, and the rest of the bench). Cash and “insufficient evidence” remain valid answers.
 
 Read the full letter (archive kept):
-https://www.paramariboletter.com/issue.html?id=2026-08-28-zz-bang-clear-map
+https://www.paramariboletter.com/issue?id=2026-08-28-zz-bang-clear-map
 
 Email when the next site issue posts:
 https://www.paramariboletter.com/#new-subscribers

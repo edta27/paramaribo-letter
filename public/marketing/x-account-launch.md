@@ -1,13 +1,13 @@
 # X account launch — @paramaribolette
 
-**Status: launch complete** (profile, pin, Issue 12, Day 2 agents post). Next channel: LinkedIn → `linkedin-launch.md`. Overall checklist → `launch-status.md`.
+**Status: launch complete** (profile, pin, Issue 12, Day 2 agents post). Next channel: LinkedIn → `linkedin-launch`. Overall checklist → `launch-status`.
 
 Site: https://www.paramariboletter.com  
 Subscribe: https://www.paramariboletter.com/#new-subscribers  
 Agents: https://www.paramariboletter.com/agents.html  
 Fallback: https://paramaribo-letter.vercel.app  
 
-Growth desk prompt: `prompts/run-letter-growth-desk.md` (core three: Growth, Editorial, Social).
+Growth desk prompt: `prompts/run-letter-growth-desk` (core three: Growth, Editorial, Social).
 
 ## Profile fields (paste)
 

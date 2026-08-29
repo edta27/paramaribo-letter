@@ -5,7 +5,7 @@
 | Site | https://www.paramariboletter.com | Live |
 | Fallback site | https://paramaribo-letter.vercel.app | Live |
 | X | [@paramaribolette](https://x.com/paramaribolette) | Live (pin + Issue 12 + agents post) |
-| LinkedIn Newsletter | The Paramaribo Letter (by Shan Ho) | **Live** — 56 subs, 2 editions; see `linkedin-launch.md` |
+| LinkedIn Newsletter | The Paramaribo Letter (by Shan Ho) | **Live** — 56 subs, 2 editions; see `linkedin-launch` |
 | Inbox / replies | paramariboletter@gmail.com | Live |
 | Subscribe | https://www.paramariboletter.com/#new-subscribers | Live |
 | Unsubscribe | https://www.paramariboletter.com/unsubscribe.html | Live |

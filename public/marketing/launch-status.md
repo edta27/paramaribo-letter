@@ -18,9 +18,9 @@ Updated: 2026-08-29
 
 ## Next
 
-- [ ] LinkedIn edition for **Issue 12** (paste in `linkedin-launch.md`)
+- [ ] LinkedIn edition for **Issue 12** (paste in `linkedin-launch`)
 - [ ] Optional: change LinkedIn frequency from “Published daily” → weekly/occasionally if that matches reality
-- [ ] Paste LinkedIn newsletter **public URL** into `brand-channels.md` when you have Share link
+- [ ] Paste LinkedIn newsletter **public URL** into `brand-channels` when you have Share link
 - [ ] Resend **domain** From (`letter@paramariboletter.com`) + `RESEND_REPLY_TO=paramariboletter@gmail.com` if not already
 - [ ] `SITE_URL=https://www.paramariboletter.com` on Vercel + GitHub notify secret
 - [ ] Measure visit→subscribe CVR before paid ads / heavy partnerships

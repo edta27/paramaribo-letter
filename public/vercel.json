@@ -2,6 +2,18 @@
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "cleanUrls": true,
   "trailingSlash": false,
+  "redirects": [
+    {
+      "source": "/marketing/:slug.md",
+      "destination": "/marketing/:slug",
+      "permanent": true
+    },
+    {
+      "source": "/issue.html",
+      "destination": "/issue",
+      "permanent": false
+    }
+  ],
   "rewrites": [
     {
       "source": "/favicon.ico",

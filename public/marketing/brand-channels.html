@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Paramaribo Letter — brand channels · The Paramaribo Letter</title>
+  <meta name="robots" content="noindex" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="/styles.css" />
+  <script>window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };</script>
+  <script defer src="/_vercel/insights/script.js"></script>
+</head>
+<body>
+  <div class="wrap">
+    <header class="mast">
+      <div class="mast-bar">
+        <a href="/" style="text-decoration:none">← Archive</a>
+        <span>Publisher</span>
+        <span>Internal notes</span>
+      </div>
+      <nav class="links">
+        <a href="/">Today</a>
+        <a href="/#archive-wrap">Archive</a>
+        <a href="/agents">Agents</a>
+        <a href="/marketing">Marketing</a>
+        <a href="/#new-subscribers">Subscribe</a>
+      </nav>
+    </header>
+    <article class="issue-page" style="padding-top:0;width:min(760px,100%)">
+<h1>Paramaribo Letter — brand channels</h1>
+
+<table class='flags' style='width:100%;margin:12px 0'>
+<tr><th>Channel</th><th>Value</th><th>Status</th></tr>
+<tr><td>Site</td><td><a href="https://www.paramariboletter.com">https://www.paramariboletter.com</a></td><td>Live</td></tr>
+<tr><td>Fallback site</td><td><a href="https://paramaribo-letter.vercel.app">https://paramaribo-letter.vercel.app</a></td><td>Live</td></tr>
+<tr><td>X</td><td><a href="https://x.com/paramaribolette">@paramaribolette</a></td><td>Live (pin + Issue 12 + agents post)</td></tr>
+<tr><td>LinkedIn Newsletter</td><td>The Paramaribo Letter (by Shan Ho)</td><td><strong>Live</strong> — 56 subs, 2 editions; see <code>linkedin-launch</code></td></tr>
+<tr><td>Inbox / replies</td><td>paramariboletter@gmail.com</td><td>Live</td></tr>
+<tr><td>Subscribe</td><td><a href="https://www.paramariboletter.com/#new-subscribers">https://www.paramariboletter.com/#new-subscribers</a></td><td>Live</td></tr>
+<tr><td>Unsubscribe</td><td><a href="https://www.paramariboletter.com/unsubscribe.html">https://www.paramariboletter.com/unsubscribe.html</a></td><td>Live</td></tr>
+<tr><td>Agents</td><td><a href="https://www.paramariboletter.com/agents.html">https://www.paramariboletter.com/agents.html</a></td><td>Live</td></tr>
+</table>
+
+<h2 class='roster-title'>Email: two different jobs</h2>
+
+<p>1. <strong>Inbox (done)</strong> — <code>paramariboletter@gmail.com</code>  </p>
+<p>   Use for: reader replies, partner outreach “From”, LinkedIn/X “Email”, press.  </p>
+<p>   Put in bios: <code>paramariboletter@gmail.com</code> or “DM / email paramariboletter@gmail.com”.</p>
+
+<p>2. <strong>Newsletter send (Resend)</strong> — transactional “new issue” mail via <code>/api/notify</code>  </p>
+<p>   Vercel env <code>RESEND_FROM_EMAIL</code> should be a <strong>verified Resend domain</strong>, ideally:  </p>
+<p>   <code>The Paramaribo Letter &lt;letter@paramariboletter.com&gt;</code>  </p>
+<p>   Optional: set Resend <strong>Reply-To</strong> to <code>paramariboletter@gmail.com</code> so readers hit the Gmail inbox.  </p>
+<p>   Do <strong>not</strong> use <code>@gmail.com</code> as the Resend From address (deliverability / Resend rules).</p>
+
+<h2 class='roster-title'>Checklist when “email is set up”</h2>
+
+<ul><li>[x] Gmail inbox exists: paramariboletter@gmail.com  </li><li>[ ] Site/X/LinkedIn point readers to that inbox if you want replies  </li><li>[ ] Resend domain verified for paramariboletter.com (or send domain you own)  </li><li>[ ] Vercel: <code>RESEND_API_KEY</code>, <code>RESEND_FROM_EMAIL</code>, <code>NOTIFY_SECRET</code>, <code>SITE_URL=<a href="https://www.paramariboletter.com">https://www.paramariboletter.com</a></code>  </li><li>[ ] GitHub Action secret <code>NOTIFY_SECRET</code> on the letter deploy repo  </li><li>[ ] Test: subscribe with your own address → thank-you modal → get a notify after next catalog push (or run <code>scripts/notify_subscribers.py</code>)</li></ul>
+    </article>
+    <footer class="site">
+      <div>© The Paramaribo Letter</div>
+      <div><a href="/marketing">Marketing index</a> · <a href="/">Archive</a></div>
+    </footer>
+  </div>
+</body>
+</html>
