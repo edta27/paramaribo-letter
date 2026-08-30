@@ -1,6 +1,6 @@
 # Launch status (publisher)
 
-Updated: 2026-08-29 22:50 CDT
+Updated: 2026-08-29 23:02 CDT
 
 ## Done
 
@@ -27,10 +27,10 @@ Updated: 2026-08-29 22:50 CDT
 - [ ] Change LinkedIn frequency from “Published daily” → **Occasionally** (requires `APPROVE_SEND`)
 - [x] Record LinkedIn newsletter **public URL** in `brand-channels`
 - [ ] X: promote **Issue 13** (requires `APPROVE_SEND`)
-- [ ] X: publish a correction for the malformed Issue 12 link if the old post still lacks `?id=` (requires `APPROVE_SEND`)
-- [ ] Resend **domain** From (`letter@paramariboletter.com`) + `RESEND_REPLY_TO=paramariboletter@gmail.com` if not already
-- [ ] `SITE_URL=https://www.paramariboletter.com` on Vercel + GitHub notify secret
-- [x] Add today's measurement-log row; today's visitors / starts / completes and Resend contacts remain unknown
+- [x] X: publish the correction reply for the malformed Issue 12 link (posted; do not duplicate)
+- [ ] Resend **domain** From (`letter@paramariboletter.com`) + `RESEND_REPLY_TO=paramariboletter@gmail.com` — `updates.paramariboletter.com` is verified; root domain and Reply-To remain open
+- [ ] Vercel/GitHub environment confirmation — Vercel Production names observed: `SITE_URL`, `RESEND_API_KEY`, `RESEND_FROM_EMAIL`, `NOTIFY_SECRET`; `RESEND_REPLY_TO` is missing; GitHub notify secret not checked
+- [x] Add today's measurement-log row; Vercel last-7-day snapshot shows 25 visitors, 102 page views, and 64% bounce; starts/completes unavailable on the current plan; Resend shows 4 subscribers
 - [ ] Measure visit→subscribe CVR before paid ads / heavy partnerships
 
 Planning baseline: approximately **4 website visitors over one week**. This is too small to establish a reliable conversion rate; collect a larger comparable window first.
@@ -40,7 +40,7 @@ Planning baseline: approximately **4 website visitors over one week**. This is t
 | List | Count (approx) | Notes |
 |---|---:|---|
 | LinkedIn Newsletter | 68 | Platform subscribers |
-| Resend / site email | unknown here | Separate list — never invent |
+| Resend / site email | 4 subscribers | Resend Audience snapshot; 0 unsubscribers |
 | X followers | 0 | Awareness, not email |
 
 North star 500k = **email** list over a long horizon; LinkedIn is a top-of-funnel + distribution channel.
