@@ -1,0 +1,4 @@
+date,timezone,unique_visitors_1d,unique_visitors_1w,subscribe_form_start,subscribe_complete_new,subscribe_complete_already,visit_to_subscribe_cvr_pct,top_referrer,linkedin_newsletter_subs,resend_contacts,x_impressions_optional,notes
+2026-08-29,America/Chicago,,4,,,,,"",56,,,Day 1 baseline note (superseded)
+2026-08-29,America/Chicago,,25,unavailable,unavailable,unavailable,not_clean,,68,4,,"Prior Vercel note 25/102/64%"
+2026-08-30,America/Chicago,,28,unavailable,unavailable,unavailable,not_clean,"t.co;linkedin.com",68,4,,"Vercel: 28 vis / 110 PV / 68% bounce; / 17 /issue 15; Clarity 3d: 17 sess / 14 users / 1.3m active / 94% new; obs healthy 0% err; LI 120 impr 0 eng; X 0 foll"

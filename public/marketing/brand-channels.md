@@ -4,46 +4,33 @@
 |---|---|---|
 | Site | https://www.paramariboletter.com | Live |
 | Fallback site | https://paramaribo-letter.vercel.app | Live |
-| X | [@paramaribolette](https://x.com/paramaribolette) | Live (pin + Issue 12 + agents post); Issue 13 announce pending; Issue 12 link correction posted |
-| LinkedIn Newsletter | [The Paramaribo Letter](https://www.linkedin.com/newsletters/the-paramaribo-letter-7498641775679426560/) (by Shan Ho) | **Live** — approximately 68 subs; edition count confirm in UI; Issue 13 posted, frequency pending |
+| X | [@paramaribolette](https://x.com/paramaribolette) | Live · Issue 12 correction [posted](https://x.com/paramaribolette/status/2093911560607383999) |
+| LinkedIn Newsletter | [The Paramaribo Letter](https://www.linkedin.com/newsletters/the-paramaribo-letter-7498641775679426560/) | Live · Issue 13 posted · ~68 subs |
 | Inbox / replies | paramariboletter@gmail.com | Live |
 | Subscribe | https://www.paramariboletter.com/#new-subscribers | Live |
-| Unsubscribe | https://www.paramariboletter.com/unsubscribe.html | Live |
-| Agents | https://www.paramariboletter.com/agents.html | Live |
-
-## Next
-
-- [x] LinkedIn Issue 13 posted (human-confirmed; do not re-post)
-- [ ] LinkedIn frequency → **Occasionally** (`APPROVE_SEND` required)
-- [ ] X Issue 13 announce (`APPROVE_SEND` required)
-- [x] X Issue 12 correction reply posted to the existing post; do not duplicate
+| Unsubscribe | https://www.paramariboletter.com/unsubscribe | Live |
+| Agents | https://www.paramariboletter.com/agents | Live |
+| Resend send domain | `updates.paramariboletter.com` | **Verified** |
+| Google Search Console | www.paramariboletter.com | Verified |
+| UptimeRobot | www.paramariboletter.com | Up |
+| Clarity | `ya3iur94oo` | Live |
 
 ## Email: two different jobs
 
 1. **Inbox (done)** — `paramariboletter@gmail.com`  
-   Use for: reader replies, partner outreach “From”, LinkedIn/X “Email”, press.  
-   Put in bios: `paramariboletter@gmail.com` or “DM / email paramariboletter@gmail.com”.
+   Reader replies, partner outreach, LinkedIn/X email field.
 
-2. **Newsletter send (Resend)** — transactional “new issue” mail via `/api/notify`  
-   Vercel env `RESEND_FROM_EMAIL` should be a **verified Resend domain**, ideally:  
-   `The Paramaribo Letter <letter@paramariboletter.com>`  
-   Optional: set Resend **Reply-To** to `paramariboletter@gmail.com` so readers hit the Gmail inbox.  
-   Do **not** use `@gmail.com` as the Resend From address (deliverability / Resend rules).
+2. **Newsletter send (Resend)** — `/api/notify`  
+   Verified domain: **`updates.paramariboletter.com`**.  
+   Vercel has `RESEND_FROM_EMAIL` + `RESEND_API_KEY` + `NOTIFY_SECRET` + `SITE_URL`.  
+   **Still add:** `RESEND_REPLY_TO=paramariboletter@gmail.com` so replies hit Gmail.  
+   Do **not** use `@gmail.com` as the Resend From address.
 
 ## Checklist when “email is set up”
 
-- [x] Gmail inbox exists: paramariboletter@gmail.com  
-- [ ] Site/X/LinkedIn point readers to that inbox if you want replies  
-- [ ] Resend domain verified for paramariboletter.com (or send domain you own)  
-- [ ] Vercel: `RESEND_API_KEY`, `RESEND_FROM_EMAIL`, `NOTIFY_SECRET`, `SITE_URL=https://www.paramariboletter.com`  
-- [ ] GitHub Action secret `NOTIFY_SECRET` on the letter deploy repo  
-- [ ] Test: subscribe with your own address → thank-you modal → get a notify after next catalog push (or run `scripts/notify_subscribers.py`)
-
-## Resend/Vercel confirmation — 2026-08-29 23:02 CDT
-
-- Resend Audience: **4 subscribers**, **0 unsubscribers**.
-- Resend Metrics, last 15 days: **16 emails**, **100% deliverability**, **0 bounces**, **0 complaints**.
-- Resend: `updates.paramariboletter.com` is verified. The root `paramariboletter.com` was not shown as verified.
-- Vercel Production variable names observed: `SITE_URL`, `RESEND_API_KEY`, `RESEND_FROM_EMAIL`, `NOTIFY_SECRET`.
-- `RESEND_REPLY_TO` was not present. Values were masked/hidden and were not changed.
-- GitHub Action `NOTIFY_SECRET` was not checked in this pass.
+- [x] Gmail inbox: paramariboletter@gmail.com  
+- [x] Resend domain verified (`updates.paramariboletter.com`)  
+- [x] Vercel: `RESEND_API_KEY`, `RESEND_FROM_EMAIL`, `NOTIFY_SECRET`, `SITE_URL`  
+- [ ] Vercel: `RESEND_REPLY_TO=paramariboletter@gmail.com`  
+- [ ] Confirm GitHub Action secret `NOTIFY_SECRET` on paramaribo-letter  
+- [x] Resend Contacts: **4** · unsubs **0** · deliverability OK on recent sends  

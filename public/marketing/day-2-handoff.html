@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Overnight handoff — Day 2 · The Paramaribo Letter</title>
+<meta name="robots" content="noindex"/>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml"/>
+<link rel="stylesheet" href="/styles.css"/>
+<script>window.va=window.va||function(){(window.vaq=window.vaq||[]).push(arguments);};</script>
+<script defer src="/_vercel/insights/script.js"></script>
+<script defer src="/clarity.js"></script>
+</head><body><div class="wrap">
+<header class="mast"><div class="mast-bar"><a href="/" style="text-decoration:none">← Archive</a><span>Publisher</span><span>Team A</span></div>
+<nav class="links"><a href="/">Today</a><a href="/marketing">Marketing</a><a href="/#new-subscribers">Subscribe</a></nav></header>
+<article class="issue-page" style="padding-top:0;width:min(760px,100%)">
+<h1>Overnight handoff — Day 2</h1>
+
+<p><strong>As-of:</strong> 2026-08-29 ~01:36 CT · Day 1 closed · human asleep  </p>
+<p><strong>Split:</strong> Conductor = marketing oversee (no X / LinkedIn / Gmail). Codex + human = those channels.  </p>
+<p><strong>Posts need</strong> <code>APPROVE_SEND</code> named per item.</p>
+
+<h2 class='roster-title'>Roles</h2>
+
+<table class='flags' style='width:100%;margin:12px 0'>
+<tr><th>Who</th><th>Does</th></tr>
+<tr><td><strong>Conductor marketing team</strong></td><td>Oversees plan, measurement, paste packs, deploy verify, Day N briefs</td></tr>
+<tr><td><strong>Codex</strong></td><td>X, LinkedIn (Shan Ho / Newsletter), Gmail inbox drafts — only with approval</td></tr>
+<tr><td><strong>Human</strong></td><td>Approves sends, confirms env/Resend count, sleeps / wakes the sprint</td></tr>
+</table>
+
+<h2 class='roster-title'>Day 1 closed</h2>
+
+<ul><li>[x] Site live; subscribe / unsubscribe / agents / archive / marketing notes</li><li>[x] X profile, pin, Issue 12, “What is an agent?”</li><li>[x] LinkedIn Newsletter live (56 · 3 editions) — Issue 12 edition <strong>not</strong> published</li><li>[x] Local funnel events: <code>subscribe_form_start</code>, <code>subscribe_complete</code> (no email in payloads)</li><li>[ ] Production deploy of those events — <strong>verify on Day 2 open</strong></li><li>[x] Paid ads + partnerships frozen; ~4 visitors / 1w baseline noted</li></ul>
+
+<h2 class='roster-title'>Day 2 objective</h2>
+
+<p>Confirm subscribe events on production, publish LinkedIn Issue 12 with an honest frequency label, keep X reply-first, and log the first real numbers (small n is fine).</p>
+
+<h2 class='roster-title'>Day 2 — Codex + human (channels)</h2>
+
+<p>Volume cap: <strong>one</strong> distribution action (LinkedIn Issue 12). X = replies only.</p>
+
+<p>1. Gmail — read; draft only until <code>APPROVE_SEND</code> per thread  </p>
+<p>2. LinkedIn frequency → Weekly or Occasionally — <code>APPROVE_SEND</code>  </p>
+<p>3. LinkedIn Issue 12 from <code>linkedin-launch.md</code> — <code>APPROVE_SEND</code>  </p>
+<p>4. LinkedIn comment replies (short, educational) — <code>APPROVE_SEND</code>  </p>
+<p>5. X — replies only; no fourth promo — <code>APPROVE_SEND</code> per reply  </p>
+<p>6. Skip: Issue 10 quote, polls, partner DMs, welcome mail, subscribe nag  </p>
+
+<h3>Paste into Codex (morning)</h3>
+
+<pre class='note'>
+Run Paramaribo Letter Day 2 channel work. DRY-RUN until I type APPROVE_SEND and name the item.
+
+SITE: https://www.paramariboletter.com
+X: @paramaribolette
+LINKEDIN: https://www.linkedin.com/newsletters/the-paramaribo-letter-7498641775679426560/
+  (56 subs, 3 editions as of 2026-08-29 — do not invent Resend or X follower counts)
+INBOX: paramariboletter@gmail.com
+ISSUE 12: https://www.paramariboletter.com/issue?id=2026-08-28-zz-bang-clear-map
+SUBSCRIBE: https://www.paramariboletter.com/#new-subscribers
+AGENTS: https://www.paramariboletter.com/agents
+PASTE PACK: public/marketing/linkedin-launch.md
+AS-OF: [paste time + timezone]
+MODE: dry-run. APPROVE_SEND only for items I name.
+
+Facts you must not fight:
+- Day 1 X work is done (pin + Issue 12 + agents post). Unlock-more prompt → reply-first. Do not re-queue those posts.
+- Instrumentation may be local-only until Conductor confirms production. Do not claim events are live.
+- Paid ads + partnerships frozen. Educational / not advice. Lenses ≠ authors. Prefer clean paramariboletter.com URLs.
+
+Do, in order, as drafts only:
+1) Gmail: summarize unread that looks like a reader. Draft replies. Do not send.
+2) LinkedIn Newsletter: draft click-path to change frequency from “Published daily” → Weekly or Occasionally. Wait for APPROVE_SEND frequency.
+3) LinkedIn Issue 12: use linkedin-launch.md paste. Wait for APPROVE_SEND Issue 12.
+4) LinkedIn reply block: 3 short comment-reply drafts. APPROVE_SEND per reply or named batch.
+5) X: draft replies only. Zero new promo posts. APPROVE_SEND per reply.
+6) End with one-screen recap: waiting on APPROVE_SEND, untouched items, counts still unknown.
+
+If I later say e.g. APPROVE_SEND LinkedIn Issue 12 — execute only that item, then stop and wait.
+</pre>
+
+<h2 class='roster-title'>Day 2 — Conductor oversee (no posting)</h2>
+
+<p>1. Verify production <code>subscribe.js</code> contains both event names; deploy from Codex letter repo if still missing  </p>
+<p>2. Self-test brief for human (focus → start; subscribe → complete; no PII in events)  </p>
+<p>3. Measurement log line: visitors / starts / completes / LinkedIn / Resend (unknown OK)  </p>
+<p>4. Keep paste packs clean-URL; partnerships freeze holds  </p>
+<p>5. Env reminder: <code>SITE_URL</code>, Resend From domain, Reply-To, <code>NOTIFY_SECRET</code>  </p>
+
+<h2 class='roster-title'>Success criteria</h2>
+
+<ul><li>Events on prod <strong>or</strong> written “not on prod” + next deploy step  </li><li>Self-test attempted; “0 completes” is a valid log  </li><li>LinkedIn frequency not “daily”; Issue 12 edition public if approved  </li><li>X: zero new promo posts  </li><li>No ads, welcome blast, or invented counts  </li></ul>
+
+<h2 class='roster-title'>Free tools — use all free tiers</h2>
+
+<p>Full list + signup order: <strong><code>free-services.md</code></strong>.</p>
+
+<p><strong>Day 2 priority signups (human / Codex):</strong></p>
+<p>1. Microsoft Clarity → paste Project ID into <code>public/site-config.js</code>  </p>
+<p>2. Google Search Console → submit <code>/sitemap.xml</code>  </p>
+<p>3. UptimeRobot → watch <code>/</code>  </p>
+<p>4. Google Sheets → import <code>measurement-log.csv</code>  </p>
+<p>5. (Optional) GA4, Bing Webmaster, Canva, mail-tester after Resend domain  </p>
+
+<p>Site already ships: Vercel Analytics · <code>/feed.xml</code> · <code>/sitemap.xml</code> · Clarity/GA4 loader (off until IDs filled).</p>
+
+<h2 class='roster-title'>What not to do</h2>
+
+<p>Paid boosts · partnerships · invent CVR · mash LinkedIn into email north star · second agents explainer · welcome sequence send · impersonate named traders  </p>
+
+<h2 class='roster-title'>When you wake up</h2>
+
+<p>Say <strong>“Day 2”</strong> here — Conductor runs oversee (deploy verify + log). Paste the Codex block above for X / LinkedIn / Gmail.  </p>
+<p>If events still are not live, say <strong><code>push to main and deploy</code></strong> in the Codex letter tree (or here) first.</p>
+</article>
+<footer class="site"><div>© The Paramaribo Letter</div><div><a href="/marketing">Marketing</a></div></footer>
+</div></body></html>

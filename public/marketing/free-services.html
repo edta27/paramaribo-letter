@@ -1,38 +1,158 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <script defer src="/clarity.js"></script>
-  <title>Free services — Team A closeout · The Paramaribo Letter</title>
-  <meta name="robots" content="noindex" />
-  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-  <link rel="stylesheet" href="/styles.css" />
-</head>
-<body>
-  <div class="wrap">
-    <header class="mast">
-      <div class="mast-bar"><a href="/marketing" style="text-decoration:none">← Marketing notes</a><span>Publisher</span><span>Internal notes</span></div>
-      <nav class="links"><a href="/">Today</a><a href="/#archive-wrap">Archive</a><a href="/agents">Agents</a><a href="/marketing">Marketing</a><a href="/#new-subscribers">Subscribe</a></nav>
-    </header>
-    <article class="issue-page" style="padding-top:0;width:min(760px,100%)">
-      <h1>Free services — Team A closeout</h1>
-      <p>Updated: 2026-08-29 23:02 CDT</p>
-      <table class="flags" style="width:100%;margin:12px 0">
-        <tr><th>Service</th><th>Status</th><th>Notes</th></tr>
-        <tr><td>Google Search Console</td><td>Done</td><td>URL-prefix property verified; sitemap submitted; 15 URLs discovered.</td></tr>
-        <tr><td>UptimeRobot</td><td>Done</td><td>HTTP monitor is Up; 100% / 24h; 0 incidents. Email alerts remain optional.</td></tr>
-        <tr><td>Bing Webmaster Tools</td><td>Open</td><td>Requires the owner’s account access, then submit the production sitemap.</td></tr>
-        <tr><td>Measurement log</td><td>Done for today</td><td>Vercel Analytics last 7 days: 25 visitors, 102 page views, 64% bounce. Custom event counts for starts/completes are unavailable on the current plan. Resend Audience: 4 subscribers, 0 unsubscribers.</td></tr>
-        <tr><td>Resend</td><td>Partially confirmed</td><td><code>updates.paramariboletter.com</code> is verified; 16 emails / 100% deliverability / 0 bounces / 0 complaints in the last 15 days. Root domain was not shown as verified; <code>RESEND_REPLY_TO</code> is missing from Vercel Production.</td></tr>
-        <tr><td>Vercel environment</td><td>Partially confirmed</td><td>Production variable names observed: <code>SITE_URL</code>, <code>RESEND_API_KEY</code>, <code>RESEND_FROM_EMAIL</code>, <code>NOTIFY_SECRET</code>. Values were masked/hidden and were not changed. GitHub Action secret was not checked.</td></tr>
-        <tr><td>Paid promotion</td><td>Frozen</td><td>No paid ads or boosts before a larger comparable CVR window.</td></tr>
-        <tr><td>Partnerships</td><td>Frozen</td><td>No partnership or referral outreach in this closeout.</td></tr>
-      </table>
-      <h2 class="roster-title">UptimeRobot email alerts</h2>
-      <p>Open the monitor, choose <strong>Edit → Alert contacts</strong>, select <code>paramariboletter@gmail.com</code>, and save. Optional; account-owner action.</p>
-    </article>
-    <footer class="site"><div>© The Paramaribo Letter</div><div><a href="/marketing">Marketing index</a> · <a href="/">Archive</a></div></footer>
-  </div>
-</body>
-</html>
+<html lang="en"><head>
+<meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Free services stack — use every free tier that helps · The Paramaribo Letter</title>
+<meta name="robots" content="noindex"/>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml"/>
+<link rel="stylesheet" href="/styles.css"/>
+<script>window.va=window.va||function(){(window.vaq=window.vaq||[]).push(arguments);};</script>
+<script defer src="/_vercel/insights/script.js"></script>
+<script defer src="/clarity.js"></script>
+</head><body><div class="wrap">
+<header class="mast"><div class="mast-bar"><a href="/" style="text-decoration:none">← Archive</a><span>Publisher</span><span>Team A</span></div>
+<nav class="links"><a href="/">Today</a><a href="/marketing">Marketing</a><a href="/#new-subscribers">Subscribe</a></nav></header>
+<article class="issue-page" style="padding-top:0;width:min(760px,100%)">
+<h1>Free services stack — use every free tier that helps</h1>
+
+<p>Rule: <strong>if it is free forever (or a free tier with no card required for our scale), use it.</strong> Skip anything that needs paid ads, boosts, or paid seats. Do not invent metrics from empty dashboards.</p>
+
+<p>Primary site: <a href="https://www.paramariboletter.com">https://www.paramariboletter.com</a>  </p>
+<p>Overseer: Conductor marketing desk · Channels (X / LinkedIn / Gmail): Codex + human <code>APPROVE_SEND</code></p>
+
+<p>---</p>
+
+<h2 class='roster-title'>Already in use (keep)</h2>
+
+<table class='flags' style='width:100%;margin:12px 0'>
+<tr><th>Service</th><th>Free what</th><th>Job</th></tr>
+<tr><td><a href="https://vercel.com">Vercel</a> Hobby</td><td>Hosting + Web Analytics + custom events</td><td>Site + <code>subscribe_form_start</code> / <code>subscribe_complete</code></td></tr>
+<tr><td><a href="https://resend.com">Resend</a> free</td><td>Contacts + transactional mail (quota)</td><td>Subscribe / notify</td></tr>
+<tr><td><a href="https://github.com/edta27/paramaribo-letter">GitHub</a></td><td>Repo + Actions</td><td>Source + notify workflow</td></tr>
+<tr><td>Custom domain</td><td>DNS you already own</td><td>Canonical links</td></tr>
+<tr><td>X / LinkedIn native analytics</td><td>Built into apps</td><td>Impressions (separate from email)</td></tr>
+</table>
+
+<p>---</p>
+
+<h2 class='roster-title'>Sign up today (human + Codex) — all free</h2>
+
+<p>Do these once. Paste IDs into <code>public/site-config.js</code> (Clarity / GA4) or the measurement sheet. Conductor can wire code; you create accounts.</p>
+
+<h3>A. Measurement &amp; UX (highest value)</h3>
+
+<table class='flags' style='width:100%;margin:12px 0'>
+<tr><th>#</th><th>Service</th><th>Sign up</th><th>Then</th></tr>
+<tr><td>1</td><td><strong><a href="https://clarity.microsoft.com">Microsoft Clarity</a></strong></td><td>Free Microsoft account → project for paramariboletter.com</td><td>Paste <strong>Project ID</strong> into <code>site-config.js</code> → <code>clarityProjectId</code>. Heatmaps + session replay. Mask email fields in Clarity settings.</td></tr>
+<tr><td>2</td><td><strong><a href="https://analytics.google.com">Google Analytics 4</a></strong> (optional)</td><td>Free Google account → GA4 property</td><td>Paste <code>G-…</code> into <code>ga4MeasurementId</code>. Primary funnel stays Vercel events; GA4 is backup + referrers.</td></tr>
+<tr><td>3</td><td><strong><a href="https://search.google.com/search-console">Google Search Console</a></strong></td><td>Add <code>https://www.paramariboletter.com</code> → DNS or HTML verify</td><td>Submit <code>https://www.paramariboletter.com/sitemap.xml</code></td></tr>
+<tr><td>4</td><td><strong><a href="https://www.bing.com/webmasters">Bing Webmaster Tools</a></strong></td><td>Import from Search Console or verify domain</td><td>Free discovery; no cost</td></tr>
+<tr><td>5</td><td><strong>Measurement log</strong></td><td><a href="https://sheets.google.com">Google Sheets</a> (free)</td><td>Import <code>public/marketing/measurement-log.csv</code> as the Day 2+ log</td></tr>
+</table>
+
+<h3>B. Uptime &amp; quality</h3>
+
+<table class='flags' style='width:100%;margin:12px 0'>
+<tr><th>#</th><th>Service</th><th>Sign up</th><th>Then</th></tr>
+<tr><td>6</td><td><strong><a href="https://uptimerobot.com">UptimeRobot</a></strong></td><td>Free 50 monitors</td><td>HTTP(s) monitor every 5 min on <code>/</code> and <code>/api/subscribe</code> (keyword or status). Alert → Gmail.</td></tr>
+<tr><td>7</td><td><strong><a href="https://pagespeed.web.dev">PageSpeed Insights</a></strong></td><td>No account</td><td>Run monthly on home + one issue URL; fix only free wins</td></tr>
+<tr><td>8</td><td><strong><a href="https://securityheaders.com">securityheaders.com</a></strong></td><td>No account</td><td>Spot-check after deploys</td></tr>
+<tr><td>9</td><td><strong><a href="https://www.mail-tester.com">mail-tester.com</a></strong></td><td>Free tests (limited/day)</td><td>After Resend domain works, send one test issue notify → score SPF/DKIM/DMARC</td></tr>
+<tr><td>10</td><td><strong><a href="https://mxtoolbox.com">MXToolbox</a></strong></td><td>Free lookups</td><td>SPF / DKIM / DMARC for paramariboletter.com</td></tr>
+</table>
+
+<h3>C. Content &amp; social (no paid boost)</h3>
+
+<table class='flags' style='width:100%;margin:12px 0'>
+<tr><th>#</th><th>Service</th><th>Sign up</th><th>Then</th></tr>
+<tr><td>11</td><td><strong><a href="https://www.canva.com">Canva</a></strong> Free</td><td>Account</td><td>Quote cards from Issue 10/12 pull quotes; export PNG for X/LinkedIn</td></tr>
+<tr><td>12</td><td><strong><a href="https://ga-dev-tools.google/campaign-url-builder/">Google Campaign URL Builder</a></strong></td><td>No account</td><td>Only when adding UTMs (<code>utm_source=x</code> / <code>linkedin</code> → <code>/#new-subscribers</code>)</td></tr>
+<tr><td>13</td><td><strong><a href="https://www.opengraph.xyz">opengraph.xyz</a></strong> or LinkedIn Post Inspector</td><td>Free</td><td>Preview OG before sharing Issue 12</td></tr>
+<tr><td>14</td><td><strong>RSS readers</strong> (Feedly free / NetNewsWire)</td><td>Optional</td><td>Subscribe to <code>https://www.paramariboletter.com/feed.xml</code> to verify the feed</td></tr>
+<tr><td>15</td><td><strong><a href="https://httpstatus.io">httpstatus.io</a></strong></td><td>Free</td><td>Batch-check <code>/</code>, <code>/agents</code>, issue URL, <code>/marketing</code></td></tr>
+</table>
+
+<h3>D. Email hygiene (still free)</h3>
+
+<table class='flags' style='width:100%;margin:12px 0'>
+<tr><th>#</th><th>Service</th><th>Notes</th></tr>
+<tr><td>16</td><td><strong>Gmail</strong> <code>paramariboletter@gmail.com</code></td><td>Human inbox / Reply-To — Codex drafts</td></tr>
+<tr><td>17</td><td><strong>Resend dashboard</strong></td><td>Contacts count only until welcome is approved</td></tr>
+<tr><td>18</td><td><strong>Google Domains / registrar DNS</strong></td><td>Free checks for Resend TXT records (wherever DNS lives)</td></tr>
+</table>
+
+<p>---</p>
+
+<h2 class='roster-title'>Built into the site (no signup)</h2>
+
+<table class='flags' style='width:100%;margin:12px 0'>
+<tr><th>Asset</th><th>URL</th><th>Purpose</th></tr>
+<tr><td>Sitemap</td><td><code>/sitemap.xml</code></td><td>Search Console</td></tr>
+<tr><td>RSS</td><td><code>/feed.xml</code></td><td>Archive syndication</td></tr>
+<tr><td>Robots</td><td><code>/robots.txt</code></td><td>Points at custom-domain sitemap</td></tr>
+<tr><td>Site config</td><td><code>/site-config.js</code></td><td>Paste Clarity / GA4 IDs</td></tr>
+<tr><td>Extra analytics loader</td><td><code>/analytics-extra.js</code></td><td>Loads Clarity/GA4 only if IDs set</td></tr>
+<tr><td>CVR / welcome docs</td><td><code>docs/</code> in letter repo + <code>marketing/</code> here</td><td>Dry-run</td></tr>
+</table>
+
+<p>Regenerate feeds after catalog changes:</p>
+
+<pre class='note'>
+python3 scripts/build_feeds.py
+</pre>
+
+<p><code>publish_letter.py --rebuild</code> also refreshes feeds.</p>
+
+<p>---</p>
+
+<h2 class='roster-title'>Do not use (not free, or wrong stage)</h2>
+
+<ul><li>Paid X / LinkedIn boosts or ads managers  </li><li>Plausible / Fathom paid plans (Clarity + Vercel cover this stage)  </li><li>Beehiiv / Substack as a second list (splits Resend)  </li><li>Engagement pods, bought followers, shoutout farms  </li><li>Speed Insights <strong>Plus</strong> (paid) — skip unless later  </li><li>Anything that asks for a credit card “for the free trial” when a forever-free tool exists  </li></ul>
+
+<p>---</p>
+
+<h2 class='roster-title'>Owner checklist (paste when done)</h2>
+
+<pre class='note'>
+Clarity project ID: ya3iur94oo   → LIVE on production via /clarity.js (2026-08-29)
+GA4 ID (optional): _______________   → site-config.js
+Search Console: [x] verified  [x] sitemap submitted (15 URLs · commits f62445a / 3ad25ba)
+Bing Webmaster: [ ] verified
+UptimeRobot: [x] www.paramariboletter.com HTTP Up · 100% / 24h · 0 incidents
+              [ ] email alerts (optional)  [ ] optional /api/subscribe
+Sheets log: [ ] imported measurement-log.csv (CSV updated locally)
+Resend Contacts count: 4 (0 unsubs) · domain updates.paramariboletter.com verified
+mail-tester score (after domain): ___/10
+Vercel 7d: 25 visitors · 102 PV · 64% bounce · subscribe events N/A on plan
+RESEND_REPLY_TO on Vercel: [ ] still missing
+</pre>
+
+
+<p>Deploy <code>site-config.js</code> after filling IDs (same path as other public files). Empty IDs = no Clarity/GA4 load (Vercel Analytics still runs).</p>
+
+<p>---</p>
+
+<h2 class='roster-title'>Paste into Codex (account setup + IDs)</h2>
+
+<pre class='note'>
+Help set up FREE-ONLY tools for The Paramaribo Letter. No paid plans, no ads, no boosts.
+
+SITE: https://www.paramariboletter.com
+INBOX: paramariboletter@gmail.com
+CONFIG FILE: public/site-config.js
+PLAYBOOK: public/marketing/free-services.md
+
+In order:
+1) Walk me through Microsoft Clarity project creation; I will paste the Project ID — you update site-config.js clarityProjectId only.
+2) Walk me through Google Search Console property + submit https://www.paramariboletter.com/sitemap.xml
+3) Walk me through UptimeRobot monitor on https://www.paramariboletter.com/ (alert to Gmail)
+4) Optional: GA4 Measurement ID into site-config.js
+5) Optional: Bing Webmaster import from Search Console
+6) Create/open a Google Sheet from public/marketing/measurement-log.csv columns
+7) After Resend domain is verified: remind me to run mail-tester once
+
+Do not enable paid Vercel Speed Insights Plus. Do not buy ads. Do not post to X/LinkedIn unless I APPROVE_SEND.
+When site-config.js changes, remind me to deploy (push to main) so Clarity loads in production.
+</pre>
+</article>
+<footer class="site"><div>© The Paramaribo Letter</div><div><a href="/marketing">Marketing</a></div></footer>
+</div></body></html>
