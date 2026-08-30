@@ -42,8 +42,8 @@ Use a strong parent model for orchestration and Luna workers for bounded researc
 | Agent | Effort | Purpose |
 |---|---:|---|
 | `growth_marketing_lead` | High | Strategy, funnel, experiments, targets (core) |
-| `editorial_content_lead` | High | Issue → X/LinkedIn/threads/video scripts/pull quotes (core) |
-| `social_community_manager` | High | X/LinkedIn cadence, replies, community rules (core) |
+| `editorial_content_lead` | High | Content Writer: issue → X/LinkedIn/threads/video scripts/pull quotes (core); owns main-feed editorial posts |
+| `social_community_manager` | High | Mary — dedicated X Community Manager: replies, conversation research, community rules, and daily activity report (core) |
 | `partnerships_referral_manager` | High | Creators/newsletters/podcasts — after funnel converts |
 | `lifecycle_conversion` | High | Signup UX, onboarding email, A/B tests, analytics |
 | `letter_marketing` | High | Solo quick path when you do not need the full desk |

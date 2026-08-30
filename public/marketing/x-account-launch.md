@@ -7,7 +7,19 @@ Subscribe: https://www.paramariboletter.com/#new-subscribers
 Agents: https://www.paramariboletter.com/agents.html  
 Fallback: https://paramaribo-letter.vercel.app  
 
-Growth desk prompt: `prompts/run-letter-growth-desk` (core three: Growth, Editorial, Social).
+Growth desk prompt: `prompts/run-letter-growth-desk` (core three: Growth, Content Writer, Mary — X Community Manager).
+
+## Mary’s community lane
+
+Mary is the dedicated X Community Manager (`social_community_manager`), separate from the Content Writer. The Content Writer owns main-feed editorial posts and threads. Mary owns organic community development:
+
+- Monitor mentions, replies, and relevant Bitcoin/macro conversations.
+- Write 10–15 specific, useful replies daily and cover genuine engagement.
+- Identify potential collaborators and prepare drafts; do not send proposals without approval.
+- Send the Content Writer recurring questions, objections, emerging topics, strong conversations, and collaboration opportunities.
+- Report daily activity and track meaningful conversations, relevant followers, returning participants, profile visits, subscription-link clicks, confirmed subscribers, and collaboration opportunities.
+
+No bought followers, follow-for-follow, mass messaging, repetitive replies, fabricated facts, or engagement rings. Browser-dependent execution is user-assisted until secure X access is stable: Mary supplies the exact action and text; the user performs it and returns confirmation.
 
 ## Profile fields (paste)
 
