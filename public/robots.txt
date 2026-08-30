@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://paramaribo-letter.vercel.app/
+Sitemap: https://www.paramariboletter.com/sitemap.xml
