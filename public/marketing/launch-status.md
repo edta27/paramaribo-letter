@@ -1,6 +1,6 @@
 # Launch status (publisher)
 
-Updated: 2026-08-29
+Updated: 2026-08-29 22:50 CDT
 
 ## Done
 
@@ -16,16 +16,21 @@ Updated: 2026-08-29
 - [x] Anonymous subscribe funnel events: `subscribe_form_start` and `subscribe_complete`
 - [x] Dry-run lifecycle, CVR, growth, editorial, and reply-first materials (`docs/`)
 - [x] Vercel Web Analytics script on pages
-- [x] **LinkedIn Newsletter** live — The Paramaribo Letter · 68 subscribers · 3 editions (Shan Ho)
+- [x] **LinkedIn Newsletter** live — The Paramaribo Letter · approximately 68 subscribers; edition count confirm in UI (Shan Ho)
+- [x] LinkedIn Issue 13 edition posted (human-confirmed; do not re-post)
+- [x] Google Search Console property verified + sitemap submitted
+- [x] UptimeRobot HTTP monitor live for www.paramariboletter.com (100% / 24h; 0 incidents)
 
 ## Next
 
 - [ ] LinkedIn edition for **Issue 12** (paste in `linkedin-launch`)
-- [ ] Optional: change LinkedIn frequency from “Published daily” → weekly/occasionally if that matches reality
+- [ ] Change LinkedIn frequency from “Published daily” → **Occasionally** (requires `APPROVE_SEND`)
 - [x] Record LinkedIn newsletter **public URL** in `brand-channels`
-- [ ] Publish a correction for the malformed X Issue 12 link
+- [ ] X: promote **Issue 13** (requires `APPROVE_SEND`)
+- [ ] X: publish a correction for the malformed Issue 12 link if the old post still lacks `?id=` (requires `APPROVE_SEND`)
 - [ ] Resend **domain** From (`letter@paramariboletter.com`) + `RESEND_REPLY_TO=paramariboletter@gmail.com` if not already
 - [ ] `SITE_URL=https://www.paramariboletter.com` on Vercel + GitHub notify secret
+- [x] Add today's measurement-log row; today's visitors / starts / completes and Resend contacts remain unknown
 - [ ] Measure visit→subscribe CVR before paid ads / heavy partnerships
 
 Planning baseline: approximately **4 website visitors over one week**. This is too small to establish a reliable conversion rate; collect a larger comparable window first.

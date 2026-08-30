@@ -1,7 +1,7 @@
 # LinkedIn — The Paramaribo Letter
 
 **Status: live** (LinkedIn Newsletter product).  
-Author: Shan Ho · **68 subscribers** · **3 editions** (live check on 2026-08-29).
+Author: Shan Ho · **approximately 68 subscribers** · **edition count confirm in UI** (Issue 13 posted by human confirmation on 2026-08-29).
 Site: https://www.paramariboletter.com  
 Public newsletter: https://www.linkedin.com/newsletters/the-paramaribo-letter-7498641775679426560/
 
@@ -15,6 +15,29 @@ Logo/mark on LinkedIn is the stylized P (Bitcoin path) — keep consistent with 
 | Description | An evidence-driven research desk on Bitcoin, macro liquidity, and event risk. Multiple lenses, one evidence packet. |
 | Frequency label | LinkedIn shows “Published daily” — if you publish event-driven, Edit → set to **Weekly** or **Occasionally** so expectations match |
 | CTA | Always link full issue on paramariboletter.com + site subscribe |
+
+## Archive — Issue 13 (posted; do not re-post)
+
+**Title:** The $77–80k stall is not a floor
+
+**Body:**
+
+```
+Bitcoin’s $77–80k stall is not a floor. After a failed ~$81–81.5k high and a snapped ETF inflow streak, the weekend is quiet but unconfirmed. The desk maps $77–80k as a range, watches $77k and $80–81.5k for a Daily close, and keeps cash valid until direction confirms.
+
+Read the full Issue 13:
+https://www.paramariboletter.com/issue?id=2026-08-30-stall-not-a-floor
+
+Subscribe for future issues:
+https://www.paramariboletter.com/#new-subscribers
+
+Who the agents are:
+https://www.paramariboletter.com/agents.html
+
+Educational scenario research only. Not personalized financial advice. Named traders and firms are analytical lenses — they do not write these notes.
+```
+
+**Cover:** `images/cover-pullback.png`
 
 ## Create new edition — Issue 12 (paste)
 
@@ -46,7 +69,7 @@ Educational scenario research only. Not personalized financial advice. Named tra
 ## Cadence
 
 - Mirror each major site issue as a LinkedIn edition the same day when you can.
-- 68 → next milestone **100** LinkedIn subs, then **250** — separate from the Resend list (do not mash counts).
+- approximately 68 → next milestone **100** LinkedIn subs, then **250** — separate from the Resend list (do not mash counts).
 - Cross-link X @paramaribolette in the newsletter description or edition footer once.
 - Still freeze paid LinkedIn boosts until you know visit→subscribe CVR on the site.
 
@@ -54,8 +77,9 @@ Educational scenario research only. Not personalized financial advice. Named tra
 
 - [x] Newsletter created
 - [x] Logo + description
-- [x] 3 editions published
-- [x] 68 subscribers
-- [ ] Optional: fix frequency label if not actually daily
+- [ ] Edition count confirm in UI
+- [x] Approximately 68 subscribers (latest known)
+- [ ] Change frequency label to **Occasionally** (requires `APPROVE_SEND`)
+- [x] Issue 13 edition published (human-confirmed; do not re-post)
 - [ ] Publish Issue 12 edition (paste above)
 - [ ] Add LinkedIn newsletter public URL here when you copy it from Share

@@ -43,6 +43,26 @@ Educational research. Not personalized advice. Not affiliated with the named tra
 - Prefer 1–2 posts/day over spam. Reply when someone asks what an agent is.
 - Never buy followers or use engagement pods.
 
+## Today — Issue 13 dry-run (DO NOT POST without `APPROVE_SEND`)
+
+### Issue 13 announce
+
+The $77–80k stall is not a floor. After a failed ~$81–81.5k high, cash remains valid until the Daily close confirms direction.
+
+Read Issue 13 → https://www.paramariboletter.com/issue?id=2026-08-30-stall-not-a-floor
+
+Educational scenario research only. Not personalized financial advice.
+
+### Optional Issue 12 correction reply
+
+Use only if the old Issue 12 post still shows an incomplete URL. Reply once; do not create a second promo post.
+
+Correction: here’s the complete Issue 12 link:
+
+https://www.paramariboletter.com/issue?id=2026-08-28-zz-bang-clear-map
+
+DO NOT POST without `APPROVE_SEND`.
+
 ## Day 2 correction draft — do not post without `APPROVE_SEND`
 
 After Warsh, spot was ~$77.6k. Issue 12’s clear map: 78.8k first; if bulls fail that zone, 71.7–72.3k for clearer bias. Conditional process, not a dated crash.
