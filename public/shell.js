@@ -26,6 +26,7 @@
     <nav class="side-nav" aria-label="Primary">
       ${item("/", "home", "Home")}
       ${item("/#feed", "feed", "Research")}
+      ${item("/charts", "charts", "Charts")}
       ${item("/agents", "agents", "Agents")}
       ${item("/desk/", "desk", "Desk")}
     </nav>

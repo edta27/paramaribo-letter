@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Charts · The Paramaribo Letter</title>
+  <meta name="description" content="Weekly Chart Desk: dual-panel price and volume analysis for Bitcoin and Solana. Educational scenario research, not advice." />
+  <meta property="og:title" content="Charts · The Paramaribo Letter" />
+  <meta property="og:description" content="Weekly dual-chart briefs from the Paramaribo desk. Public market data, conditional language." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.paramariboletter.com/charts" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="icon" href="/favicon-32.png" type="image/png" sizes="32x32" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <link rel="stylesheet" href="/styles.css" />
+  <script>
+    try {
+      var t = localStorage.getItem("paramaribo-theme");
+      document.documentElement.dataset.theme = t === "light" ? "light" : "dark";
+    } catch (e) {
+      document.documentElement.dataset.theme = "dark";
+    }
+  </script>
+  <script>
+    window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+  </script>
+  <script defer src="/_vercel/insights/script.js"></script>
+</head>
+<body data-nav="charts">
+  <div class="portal-stage wrap">
+    <section class="feed-head">
+      <h1>Charts</h1>
+      <span class="feed-toggle">Updated weekly · dual panels</span>
+    </section>
+
+    <div id="chart-meta" class="chart-meta"></div>
+    <div id="chart-desk" class="chart-desk"></div>
+
+    <h2 class="roster-title">Prior weeks</h2>
+    <div id="chart-archive" class="chart-archive"></div>
+
+    <section class="subscribe-box" id="new-subscribers" aria-labelledby="sub-title">
+      <h2 id="sub-title">Subscribe</h2>
+      <p class="subscribe-lede">Get the letter when it posts. Chart Desk packs stay on this page.</p>
+      <form class="subscribe-form" data-subscribe-form>
+        <label class="sr-only" for="sub-email">Email</label>
+        <input id="sub-email" name="email" type="email" required placeholder="you@example.com" autocomplete="email" />
+        <input class="hp" name="company" type="text" tabindex="-1" autocomplete="off" aria-hidden="true" />
+        <button class="btn btn-primary" type="submit">Subscribe</button>
+      </form>
+      <p class="subscribe-status" data-sub-status aria-live="polite"></p>
+      <p class="subscribe-unsub">Already on the list? <a href="/unsubscribe">Unsubscribe</a>.</p>
+    </section>
+
+    <p class="disclaimer">
+      Chart Desk is educational scenario research. Dual charts use public CoinGecko price/volume unless a pack cites another source.
+      They are not Glassnode product charts and not personalized advice. No leverage.
+    </p>
+
+    <footer class="site">
+      <div>© The Paramaribo Letter</div>
+      <div><a href="/">Feed</a> · <a href="/#new-subscribers">Subscribe</a> · <a href="/agents">Agents</a></div>
+    </footer>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+  <script src="/catalog.js"></script>
+  <script src="/charts.js"></script>
+  <script src="/subscribe.js"></script>
+  <script src="/shell.js"></script>
+  <script>ChartDesk.render();</script>
+</body>
+</html>
