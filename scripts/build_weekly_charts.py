@@ -95,6 +95,19 @@ def build_pack(as_of: datetime) -> dict:
         ),
         "asOf": as_of.strftime("%Y-%m-%dT%H:%M:%SZ"),
         "cadence": "weekly",
+        "thesis": "Bitcoin is still in a $77–80k stall. AI equities can bid without making that one trade.",
+        "stakes": (
+            f"Spot ~${btc_last:,.0f}. Until a Daily close reclaims $80k or loses $77k, "
+            "the desk stays cash / observe — charts below are the tape under that call."
+        ),
+        "levels": ["$77k", "$78.8k", "$80k", "$81–81.5k"],
+        "letterId": "2026-08-31-two-tapes",
+        "letterUrl": "/issue?id=2026-08-31-two-tapes",
+        "letterLabel": "Issue 14 · Two tapes",
+        "subscribeHook": (
+            "When the Daily close breaks the stall — or fails it — the letter hits your inbox "
+            "the same day. Charts stay free here; the call moves by email."
+        ),
         "sourceNote": (
             "Charts built from CoinGecko market_chart (USD). Green/red bars are day-over-day "
             "spot volume change, a tape proxy — not US spot ETF net creations. Issuer ETF flow "
@@ -210,7 +223,20 @@ def write_catalog(pack: dict) -> None:
         rows = []
     public = {
         k: pack[k]
-        for k in ("id", "date", "kicker", "title", "dek", "asOf", "cadence")
+        for k in (
+            "id",
+            "date",
+            "kicker",
+            "title",
+            "dek",
+            "asOf",
+            "cadence",
+            "thesis",
+            "stakes",
+            "letterId",
+            "letterUrl",
+            "letterLabel",
+        )
         if k in pack
     }
     rows = [r for r in rows if r.get("id") != pack["id"]]

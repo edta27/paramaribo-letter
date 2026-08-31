@@ -684,13 +684,81 @@ pre.note {
   .search-trigger span { display: none; }
   footer.site { flex-direction: column; }
 }
-.chart-meta { margin-bottom: 8px; }
-.chart-meta h1 {
-  font-family: var(--serif);
-  font-size: 28px;
-  margin: 0 0 10px;
-  letter-spacing: -0.02em;
+.chart-meta { margin-bottom: 18px; }
+.thesis-card {
+  background: linear-gradient(160deg, var(--raised), var(--base));
+  border: 1px solid var(--stroke);
+  border-radius: 14px;
+  padding: 22px 22px 18px;
+  margin-bottom: 12px;
 }
+.thesis-eyebrow {
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.thesis-title {
+  font-family: var(--serif);
+  font-size: clamp(26px, 4vw, 34px);
+  line-height: 1.15;
+  letter-spacing: -0.03em;
+  margin: 0 0 12px;
+  max-width: 28ch;
+}
+.thesis-stakes {
+  margin: 0 0 16px;
+  color: var(--text-2);
+  font-size: 16px;
+  line-height: 1.5;
+  max-width: 52ch;
+}
+.thesis-levels {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 0;
+  margin: 0 0 18px;
+}
+.thesis-levels li {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  padding: 6px 10px;
+  border-radius: 999px;
+  border: 1px solid var(--stroke);
+  background: var(--sunken);
+  color: var(--text);
+}
+.thesis-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+.thesis-actions .btn {
+  height: 40px;
+  padding: 0 16px;
+}
+.thesis-card .meta { margin: 0; }
+.source-details {
+  margin: 0 0 8px;
+  border: 1px solid var(--stroke-subtle);
+  border-radius: 8px;
+  padding: 10px 12px;
+  color: var(--mute);
+  font-size: 13px;
+}
+.source-details summary { cursor: pointer; color: var(--text-2); }
+.source-details p { margin: 8px 0 0; line-height: 1.45; }
+.subscribe-hook {
+  border-color: color-mix(in srgb, var(--accent) 45%, var(--stroke));
+  box-shadow: 0 0 0 1px color-mix(in srgb, var(--accent) 18%, transparent);
+}
+.subscribe-hook h2 { font-size: 22px; }
 .chart-desk { display: flex; flex-direction: column; gap: 28px; margin: 18px 0 36px; }
 .chart-brief {
   background: var(--base);

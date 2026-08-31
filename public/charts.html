@@ -4,9 +4,9 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Charts · The Paramaribo Letter</title>
-  <meta name="description" content="Weekly Chart Desk: dual-panel price and volume analysis for Bitcoin and Solana. Educational scenario research, not advice." />
+  <meta name="description" content="Weekly Chart Desk: the current Bitcoin call, dual-panel tape, and email when the Daily close decides. Educational research, not advice." />
   <meta property="og:title" content="Charts · The Paramaribo Letter" />
-  <meta property="og:description" content="Weekly dual-chart briefs from the Paramaribo desk. Public market data, conditional language." />
+  <meta property="og:description" content="Thesis first, then the charts. Subscribe for the next Daily-close letter." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://www.paramariboletter.com/charts" />
   <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
@@ -30,27 +30,31 @@
   <div class="portal-stage wrap">
     <section class="feed-head">
       <h1>Charts</h1>
-      <span class="feed-toggle">Updated weekly · dual panels</span>
+      <span class="feed-toggle">Thesis first · tape below · weekly</span>
     </section>
 
     <div id="chart-meta" class="chart-meta"></div>
-    <div id="chart-desk" class="chart-desk"></div>
 
-    <h2 class="roster-title">Prior weeks</h2>
-    <div id="chart-archive" class="chart-archive"></div>
-
-    <section class="subscribe-box" id="new-subscribers" aria-labelledby="sub-title">
-      <h2 id="sub-title">Subscribe</h2>
-      <p class="subscribe-lede">Get the letter when it posts. Chart Desk packs stay on this page.</p>
+    <section class="subscribe-box subscribe-hook" id="new-subscribers" aria-labelledby="sub-title">
+      <h2 id="sub-title">Get the next Daily close</h2>
+      <p class="subscribe-lede" id="subscribe-hook-copy">
+        When the stall breaks — or fails — the letter hits your inbox the same day. Charts stay free here; the call moves by email.
+      </p>
       <form class="subscribe-form" data-subscribe-form>
         <label class="sr-only" for="sub-email">Email</label>
         <input id="sub-email" name="email" type="email" required placeholder="you@example.com" autocomplete="email" />
         <input class="hp" name="company" type="text" tabindex="-1" autocomplete="off" aria-hidden="true" />
-        <button class="btn btn-primary" type="submit">Subscribe</button>
+        <button class="btn btn-primary" type="submit">Email me the next close</button>
       </form>
       <p class="subscribe-status" data-sub-status aria-live="polite"></p>
-      <p class="subscribe-unsub">Already on the list? <a href="/unsubscribe">Unsubscribe</a>.</p>
+      <p class="subscribe-unsub">Already on the list? <a href="/unsubscribe">Unsubscribe</a>. Educational only — not advice.</p>
     </section>
+
+    <h2 class="roster-title" id="tape">The tape under the call</h2>
+    <div id="chart-desk" class="chart-desk"></div>
+
+    <h2 class="roster-title">Prior weeks</h2>
+    <div id="chart-archive" class="chart-archive"></div>
 
     <p class="disclaimer">
       Chart Desk is educational scenario research. Dual charts use public CoinGecko price/volume unless a pack cites another source.
@@ -59,7 +63,7 @@
 
     <footer class="site">
       <div>© The Paramaribo Letter</div>
-      <div><a href="/">Feed</a> · <a href="/#new-subscribers">Subscribe</a> · <a href="/agents">Agents</a></div>
+      <div><a href="/">Feed</a> · <a href="#new-subscribers">Subscribe</a> · <a href="/agents">Agents</a></div>
     </footer>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>

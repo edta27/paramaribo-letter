@@ -21,7 +21,6 @@
       text: s.getPropertyValue("--text").trim() || "#e9ebed",
       mute: s.getPropertyValue("--mute").trim() || "#9aa4b2",
       stroke: s.getPropertyValue("--stroke").trim() || "#2a2e32",
-      accent: s.getPropertyValue("--accent").trim() || "#2e90fa",
     };
   }
 
@@ -120,6 +119,52 @@
       </article>`;
   }
 
+  function levelsHtml(levels) {
+    if (!levels || !levels.length) return "";
+    return `<ul class="thesis-levels">${levels.map((l) => `<li>${l}</li>`).join("")}</ul>`;
+  }
+
+  function renderMeta(pack) {
+    const meta = document.getElementById("chart-meta");
+    const hook = document.getElementById("subscribe-hook-copy");
+    if (hook && pack.subscribeHook) hook.textContent = pack.subscribeHook;
+    if (!meta) return;
+
+    const thesis = pack.thesis || pack.title || "Weekly chart desk";
+    const stakes = pack.stakes || pack.dek || "";
+    const letterUrl = pack.letterUrl || "/";
+    const letterLabel = pack.letterLabel || "Read the letter";
+
+    meta.innerHTML = `
+      <div class="thesis-card">
+        <div class="thesis-eyebrow">Current call · ${pack.kicker || "Chart Desk"}</div>
+        <h1 class="thesis-title">${thesis}</h1>
+        <p class="thesis-stakes">${stakes}</p>
+        ${levelsHtml(pack.levels)}
+        <div class="thesis-actions">
+          <a class="btn btn-primary" href="${letterUrl}">${letterLabel}</a>
+          <a class="btn" href="#tape">See the tape ↓</a>
+        </div>
+        <p class="meta">As-of ${pack.asOf || pack.date} · ${pack.cadence || "weekly"} · pack <code>${pack.id}</code></p>
+      </div>
+      <details class="source-details">
+        <summary>Sources &amp; method</summary>
+        <p>${pack.sourceNote || pack.dek || ""}</p>
+      </details>`;
+  }
+
+  function paintPack(pack) {
+    const root = document.getElementById("chart-desk");
+    renderMeta(pack);
+    root.innerHTML = (pack.briefs || []).map(briefHtml).join("");
+    (pack.briefs || []).forEach((brief) => {
+      (brief.charts || []).forEach((spec, i) => {
+        const canvas = document.getElementById(`chart-${brief.id}-${i}`);
+        if (canvas) renderDual(canvas, spec);
+      });
+    });
+  }
+
   async function loadPack(id) {
     const res = await fetch(`/charts/packs/${encodeURIComponent(id)}.json`);
     if (!res.ok) throw new Error("Could not load chart pack.");
@@ -134,7 +179,6 @@
 
   async function render() {
     const root = document.getElementById("chart-desk");
-    const meta = document.getElementById("chart-meta");
     if (!root) return;
     destroyAll();
     root.innerHTML = `<p class="chart-loading">Loading weekly charts…</p>`;
@@ -144,23 +188,8 @@
         root.innerHTML = `<p class="note">No chart packs yet. Run <code>python3 scripts/build_weekly_charts.py</code>.</p>`;
         return;
       }
-      const latest = catalog[0];
-      const pack = await loadPack(latest.id);
-      if (meta) {
-        meta.innerHTML = `
-          <div class="kicker">${pack.kicker || "Chart Desk"}</div>
-          <h1>${pack.title}</h1>
-          <p class="lede">${pack.dek || ""}</p>
-          <p class="meta">As-of ${pack.asOf || pack.date} · ${pack.cadence || "weekly"} · ${catalog.length} pack${catalog.length === 1 ? "" : "s"} in archive</p>
-          <p class="note">${pack.sourceNote || ""}</p>`;
-      }
-      root.innerHTML = (pack.briefs || []).map(briefHtml).join("");
-      (pack.briefs || []).forEach((brief) => {
-        (brief.charts || []).forEach((spec, i) => {
-          const canvas = document.getElementById(`chart-${brief.id}-${i}`);
-          if (canvas) renderDual(canvas, spec);
-        });
-      });
+      const pack = await loadPack(catalog[0].id);
+      paintPack(pack);
 
       const archive = document.getElementById("chart-archive");
       if (archive) {
@@ -168,7 +197,7 @@
           .map(
             (row) => `
           <button type="button" class="chart-archive-item${row.id === pack.id ? " is-active" : ""}" data-pack="${row.id}">
-            <strong>${row.title}</strong>
+            <strong>${row.thesis || row.title}</strong>
             <span>${row.date} · ${row.kicker || "Weekly"}</span>
           </button>`
           )
@@ -180,24 +209,11 @@
             root.innerHTML = `<p class="chart-loading">Loading…</p>`;
             try {
               const next = await loadPack(id);
-              if (meta) {
-                meta.innerHTML = `
-                  <div class="kicker">${next.kicker || "Chart Desk"}</div>
-                  <h1>${next.title}</h1>
-                  <p class="lede">${next.dek || ""}</p>
-                  <p class="meta">As-of ${next.asOf || next.date} · ${next.cadence || "weekly"}</p>
-                  <p class="note">${next.sourceNote || ""}</p>`;
-              }
-              root.innerHTML = (next.briefs || []).map(briefHtml).join("");
-              (next.briefs || []).forEach((brief) => {
-                (brief.charts || []).forEach((spec, i) => {
-                  const canvas = document.getElementById(`chart-${brief.id}-${i}`);
-                  if (canvas) renderDual(canvas, spec);
-                });
-              });
+              paintPack(next);
               archive.querySelectorAll(".chart-archive-item").forEach((el) => {
                 el.classList.toggle("is-active", el.getAttribute("data-pack") === id);
               });
+              window.scrollTo({ top: 0, behavior: "smooth" });
             } catch (err) {
               root.innerHTML = `<p class="note">${err.message || "Load failed."}</p>`;
             }
