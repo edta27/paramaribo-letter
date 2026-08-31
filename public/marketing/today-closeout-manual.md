@@ -30,30 +30,16 @@ Curious what others are watching: what signal would you require before treating 
 
 ---
 
-## 3. X — Issue 13 announce (you post)
+## 3. X — Issue 14 announce — **done**
 
-Open https://x.com/paramaribolette → **Post**
-
-**Paste:**
-
-```text
-The $77–80k stall is not a floor.
-
-After Warsh, a snapped ETF streak, and a failed ~$81–81.5k high, the weekend was quiet. That is not confirmation.
-
-Full-bench desk note — cash until a Daily close:
-https://www.paramariboletter.com/issue?id=2026-08-30-stall-not-a-floor
-
-Educational scenario research. Not advice. Lenses ≠ authors.
-```
-
-Optional media: `public/images/cover-pullback.png`  
-After posting, paste the permalink back for the log.
+Verified: [Issue 14 post](https://x.com/paramaribolette/status/2094338477378654619) · profile **6** followers · **12** following · **17** posts.  
+Issue 13 paste in this pack was superseded — do **not** post it.
 
 ---
 
 ## Already done today (do not redo)
 
+- [x] Issue 14 on site + Resend 4/4 + [X announce](https://x.com/paramaribolette/status/2094338477378654619) (6 foll / 12 following / 17 posts)  
 - [x] Mary: 8 replies · @CryptoMichNL follow · followers 0→4  
 - [x] [BTC Recovery Check](https://x.com/paramaribolette/status/2094149496921870372)  
 - [x] Issue 13 on site + LinkedIn  
@@ -66,4 +52,4 @@ Bing Webmaster · UptimeRobot email alerts · Google Sheets import · welcome em
 
 ## After you finish the three
 
-Reply here: **Today closeout done** + X Issue 13 permalink if new.
+Reply here: **Today closeout done** for the two remaining items (Reply-To, LinkedIn frequency). X Issue 14 is already logged.

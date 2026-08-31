@@ -1,7 +1,7 @@
 # Mary — next 8:30 AM Central chart pack
 
-**For:** first chart after 2026-08-30 Recovery Check  
-**Cadence:** sourced chart daily · this one can be a **scenario-analysis** day (2–3×/week)  
+**For:** first 8:30 AM Central chart after Issue 14 X announce (2026-08-31)  
+**Cadence:** sourced chart daily · this one can be a **scenario-analysis** day (2–3×/week) — Issue 14 is the two-tape relative-regime note  
 **Publish:** human on X if agent browser blocked · verify from permalink  
 
 ## Before writing numbers
@@ -16,14 +16,14 @@ BTC desk check — [DAY] [DATE] ~8:30 AM Central
 Fact: spot ~$[SPOT] (source: [Coinbase/CoinGecko], observed [TIME] CT).
 24h range roughly $[LOW]–$[HIGH] in this window.
 
-Analysis: still a high-seventies / low-eighties stall until a Daily close decides. Quiet sessions are not confirmation.
+Analysis: two tapes until a Daily close decides. AI mega-cap 5d bid (MSFT/META) is not a Bitcoin breakout. Quiet sessions are not confirmation.
 
-Scenario A — range holds: acceptance back above $[LEVEL_HIGH] and a Daily hold.
-Scenario B — fail: Daily acceptance below $[LEVEL_LOW] opens the deeper map from Issue 13 (watch 75.6k / 71.7–72.3k as process levels, not appointments).
+Scenario A — range holds: acceptance back above $[LEVEL_HIGH] and a Daily hold (Issue 14 stall $77–80k; watch $80k then $81–81.5k).
+Scenario B — fail: Daily acceptance below $[LEVEL_LOW] opens the deeper map (watch 75.6k / 71.7–72.3k as process levels, not appointments).
 
 Invalidation: a clean Daily close that either reclaims and holds the failed-high zone or loses the talk-support zone.
 
-Full letter: https://www.paramariboletter.com/issue?id=2026-08-30-stall-not-a-floor
+Full letter: https://www.paramariboletter.com/issue?id=2026-08-31-two-tapes
 
 Educational scenario research. Not advice.
 ```

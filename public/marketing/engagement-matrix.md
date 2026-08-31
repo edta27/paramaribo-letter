@@ -1,12 +1,12 @@
 # Engagement matrix
 
-Updated: 2026-08-30. Do not mash channels. Never invent missing cells.
+Updated: 2026-08-31 (X snapshot only; other channels still 2026-08-30). Do not mash channels. Never invent missing cells.
 
 ## Cross-platform snapshot
 
 | Channel | Reach / activity | Engagement | Growth |
 |---|---|---|---|
-| **X** (@paramaribolette) | 8 relevant replies · [BTC Recovery Check](https://x.com/paramaribolette/status/2094149496921870372) | early chart post (views may lag) | **4** followers · 6 following |
+| **X** (@paramaribolette) | [Issue 14](https://x.com/paramaribolette/status/2094338477378654619) · 17 posts · prior day 8 replies + [Recovery Check](https://x.com/paramaribolette/status/2094149496921870372) | profile visits / link clicks unavailable (needs Premium) | **6** followers · 12 following |
 | **LinkedIn** (Issue 13 post) | **120** impressions · **51** members reached | **0** social engagements | **0** followers gained |
 | **LinkedIn Newsletter email** | **63** sends | **8%** open rate | (subs counted separately ~68) |
 | **Site (Vercel Analytics)** | **28** visitors · **110** page views | bounce **68%** | see pages/referrers below |

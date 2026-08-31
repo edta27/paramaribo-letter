@@ -1,28 +1,17 @@
 # X account launch — @paramaribolette
 
-**Status: live + Mary operating plan.** Profile, pin, Issue 12 (+ URL correction), agents post, Recovery Check chart, followers **4**.  
-Mary: `mary-community-manager.md` · Today closeout: `today-closeout-manual.md`
+**Status: live + Mary operating plan.** Profile, pin, Issue 12 (+ URL correction), Recovery Check, Issue 14, followers **6** · following **12** · posts **17**.  
+Mary: `mary-community-manager.md` · Chart pack: `mary-chart-pack-next.md`
 
 Site: https://www.paramariboletter.com  
 Subscribe: https://www.paramariboletter.com/#new-subscribers  
 Agents: https://www.paramariboletter.com/agents  
 
-## Issue 13 announce — paste today (if not yet posted)
+## Live posts (do not re-announce)
 
-```text
-The $77–80k stall is not a floor.
-
-After Warsh, a snapped ETF streak, and a failed ~$81–81.5k high, the weekend was quiet. That is not confirmation.
-
-Full-bench desk note — cash until a Daily close:
-https://www.paramariboletter.com/issue?id=2026-08-30-stall-not-a-floor
-
-Educational scenario research. Not advice. Lenses ≠ authors.
-```
-
-Optional image: `/images/cover-pullback.png`  
-Live Issue 12 correction: https://x.com/paramaribolette/status/2093911560607383999  
-Live Recovery Check: https://x.com/paramaribolette/status/2094149496921870372
+- Issue 14: https://x.com/paramaribolette/status/2094338477378654619  
+- Recovery Check: https://x.com/paramaribolette/status/2094149496921870372  
+- Issue 12 URL correction: https://x.com/paramaribolette/status/2093911560607383999
 
 ## Profile fields (paste)
 
