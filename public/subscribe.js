@@ -30,7 +30,7 @@
       '<p class="sub-modal-kicker">The Paramaribo Letter</p>' +
       '<h2 id="sub-thanks-title">Thank you for subscribing</h2>' +
       '<p class="sub-modal-body" data-sub-modal-body>' +
-      "You are on the list. We will email you when the next letter posts." +
+      "You are on the list. We will email you when the Daily close decides, or when the next desk note posts." +
       "</p>" +
       '<button type="button" class="btn sub-modal-btn" data-sub-close>Continue reading</button>' +
       '<p class="sub-modal-foot"><a href="unsubscribe.html">Unsubscribe</a> any time.</p>' +

@@ -188,7 +188,8 @@ button, input { font-family: inherit; }
   gap: 16px;
   margin-bottom: 18px;
 }
-.feed-head h1 {
+.feed-head h1,
+.feed-head h2 {
   margin: 0;
   font-size: 22px;
   font-weight: 600;

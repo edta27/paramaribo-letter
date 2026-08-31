@@ -233,6 +233,8 @@ def write_catalog(pack: dict) -> None:
             "cadence",
             "thesis",
             "stakes",
+            "levels",
+            "subscribeHook",
             "letterId",
             "letterUrl",
             "letterLabel",

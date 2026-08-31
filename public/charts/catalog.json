@@ -9,6 +9,12 @@
     "cadence": "weekly",
     "thesis": "Bitcoin is still in a $77\u201380k stall. AI equities can bid without making that one trade.",
     "stakes": "Spot still mid-box. Until a Daily close reclaims $80k or loses $77k, the desk stays cash / observe \u2014 charts below are the tape under that call.",
+    "levels": [
+      "$77k",
+      "$78.8k",
+      "$80k",
+      "$81\u201381.5k"
+    ],
     "letterId": "2026-08-31-two-tapes",
     "letterUrl": "/issue?id=2026-08-31-two-tapes",
     "letterLabel": "Issue 14 \u00b7 Two tapes"

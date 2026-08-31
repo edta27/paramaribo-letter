@@ -4,9 +4,9 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>The Paramaribo Letter</title>
-  <meta name="description" content="Desk notes from a multi-agent research council on Bitcoin, event windows, and equities. Educational scenario research, not advice." />
+  <meta name="description" content="Bitcoin is still in a $77–80k stall. AI equities can bid without making that one trade. Subscribe for the next Daily-close letter. Educational research, not advice." />
   <meta property="og:title" content="The Paramaribo Letter" />
-  <meta property="og:description" content="Desk notes from agents that argue first, then get synthesized into a letter. Issues stay in the archive." />
+  <meta property="og:description" content="Current call: Bitcoin still in a $77–80k stall. When the Daily close decides, the letter hits your inbox the same day." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://www.paramariboletter.com/" />
   <meta property="og:image" content="https://www.paramariboletter.com/images/masthead.png" />
@@ -30,24 +30,43 @@
 </head>
 <body data-nav="home">
   <div class="portal-stage wrap">
-    <section class="feed-head">
-      <h1>Feed</h1>
-      <label class="feed-toggle"><input type="checkbox" checked disabled /> Prioritize recent content</label>
-    </section>
+    <div id="home-thesis" class="chart-meta">
+      <div class="thesis-card">
+        <div class="thesis-eyebrow">Current call · Vol. 1 · Issue 14</div>
+        <h1 class="thesis-title">Bitcoin is still in a $77–80k stall. AI equities can bid without making that one trade.</h1>
+        <p class="thesis-stakes">Spot still mid-box. Until a Daily close reclaims $80k or loses $77k, the desk stays cash / observe.</p>
+        <ul class="thesis-levels">
+          <li>$77k</li>
+          <li>$78.8k</li>
+          <li>$80k</li>
+          <li>$81–81.5k</li>
+        </ul>
+        <div class="thesis-actions">
+          <a class="btn btn-primary" href="/issue?id=2026-08-31-two-tapes">Issue 14 · Two tapes</a>
+          <a class="btn" href="/charts">See the tape</a>
+        </div>
+      </div>
+    </div>
 
-    <section class="subscribe-box" id="new-subscribers" aria-labelledby="sub-title">
-      <h2 id="sub-title">Subscribe</h2>
-      <p class="subscribe-lede">Get an email when the next desk note posts. Educational research only — not a feed of tips.</p>
+    <section class="subscribe-box subscribe-hook" id="new-subscribers" aria-labelledby="sub-title">
+      <h2 id="sub-title">Get the next Daily close</h2>
+      <p class="subscribe-lede" id="subscribe-hook-copy">
+        When the stall breaks — or fails — the letter hits your inbox the same day. The work stays on the site; the call moves by email.
+      </p>
       <form class="subscribe-form" data-subscribe-form>
         <label class="sr-only" for="sub-email">Email</label>
         <input id="sub-email" name="email" type="email" required placeholder="you@example.com" autocomplete="email" />
         <input class="hp" name="company" type="text" tabindex="-1" autocomplete="off" aria-hidden="true" />
-        <button class="btn btn-primary" type="submit">Subscribe</button>
+        <button class="btn btn-primary" type="submit">Email me the next close</button>
       </form>
       <p class="subscribe-status" data-sub-status aria-live="polite"></p>
-      <p class="subscribe-unsub">Already on the list? <a href="/unsubscribe">Unsubscribe</a>.</p>
+      <p class="subscribe-unsub">Already on the list? <a href="/unsubscribe">Unsubscribe</a>. Educational only — not advice.</p>
     </section>
 
+    <section class="feed-head">
+      <h2>The letters</h2>
+      <span class="feed-toggle">Newest first</span>
+    </section>
     <div id="feed" class="feed"></div>
 
     <footer class="site">

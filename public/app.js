@@ -9,9 +9,17 @@ function fmt(date) {
   return d.toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" });
 }
 
-function cardHTML(row, featured) {
+function esc(s) {
+  return String(s || "")
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;");
+}
+
+function cardHTML(row) {
   return `
-    <a class="feed-card${featured ? " feed-card--feature" : ""}" href="/issue?id=${encodeURIComponent(row.id)}">
+    <a class="feed-card" href="/issue?id=${encodeURIComponent(row.id)}">
       <img src="${row.cover}" alt="">
       <div>
         <div class="feed-kicker">${row.kicker || ""}</div>
@@ -22,11 +30,45 @@ function cardHTML(row, featured) {
     </a>`;
 }
 
+function levelsHtml(levels) {
+  if (!levels || !levels.length) return "";
+  return `<ul class="thesis-levels">${levels.map((l) => `<li>${esc(l)}</li>`).join("")}</ul>`;
+}
+
+async function renderHomeThesis() {
+  const mount = document.getElementById("home-thesis");
+  if (!mount) return;
+  const issue = ISSUES[0];
+  try {
+    const res = await fetch("/charts/catalog.json");
+    if (!res.ok) return;
+    const catalog = await res.json();
+    const pack = catalog[0];
+    if (!pack || !pack.thesis) return;
+    const letterUrl = pack.letterUrl || (issue ? "/issue?id=" + encodeURIComponent(issue.id) : "/");
+    const letterLabel = pack.letterLabel || (issue ? issue.kicker || "Read the letter" : "Read the letter");
+    const eyebrow = (issue && issue.kicker) || pack.kicker || "Desk";
+    const stakes = (issue && issue.dek) || pack.stakes || "";
+    mount.innerHTML = `
+      <div class="thesis-card">
+        <div class="thesis-eyebrow">Current call · ${esc(eyebrow)}</div>
+        <h1 class="thesis-title">${esc(pack.thesis)}</h1>
+        <p class="thesis-stakes">${esc(stakes)}</p>
+        ${levelsHtml(pack.levels)}
+        <div class="thesis-actions">
+          <a class="btn btn-primary" href="${esc(letterUrl)}">${esc(letterLabel)}</a>
+          <a class="btn" href="/charts">See the tape</a>
+        </div>
+      </div>`;
+  } catch (e) {}
+}
+
 function renderIndex() {
+  renderHomeThesis();
   if (!ISSUES.length) return;
   const feed = document.getElementById("feed") || document.getElementById("archive");
   if (feed) {
-    feed.innerHTML = ISSUES.map((row, i) => cardHTML(row, i === 0)).join("");
+    feed.innerHTML = ISSUES.map((row) => cardHTML(row)).join("");
   }
   const hero = document.getElementById("hero");
   if (hero) hero.innerHTML = "";
