@@ -1,6 +1,6 @@
 # Engagement matrix
 
-Updated: 2026-08-31 (X snapshot only; other channels still 2026-08-30). Do not mash channels. Never invent missing cells.
+Updated: 2026-08-31 ~3:47 a.m. CT (Clarity CSV + X snapshot). Vercel / LinkedIn still 2026-08-30. Do not mash channels. Never invent missing cells.
 
 ## Cross-platform snapshot
 
@@ -10,7 +10,7 @@ Updated: 2026-08-31 (X snapshot only; other channels still 2026-08-30). Do not m
 | **LinkedIn** (Issue 13 post) | **120** impressions · **51** members reached | **0** social engagements | **0** followers gained |
 | **LinkedIn Newsletter email** | **63** sends | **8%** open rate | (subs counted separately ~68) |
 | **Site (Vercel Analytics)** | **28** visitors · **110** page views | bounce **68%** | see pages/referrers below |
-| **Site (Clarity, 3d)** | **17** sessions · **14** unique users | 1.59 pages/session · 1.3 min active | 94% new-user sessions |
+| **Site (Clarity, 29–31 Aug)** | **43** sessions (**28** bot) · **34** unique users | 1.33 pages/session · 1.5 min active | 40/43 new-user sessions |
 | **Resend** | — | — | **4** contacts |
 
 ## Site analytics (Vercel · screenshot 2026-08-30 ~1:06 AM)
@@ -27,22 +27,38 @@ Updated: 2026-08-31 (X snapshot only; other channels still 2026-08-30). Do not m
 
 **Reading:** Traffic ramped Aug 27–29 (Issue 12/13 + social). Home and issue pages dominate. X (`t.co`) and LinkedIn both show as referrers, but counts are still tiny — discovery is starting, not a funnel yet. Subscribe custom events remain unavailable on the current Analytics plan.
 
-## Clarity (last 3 days · screenshot 2026-08-30 ~1:08 AM)
+## Clarity (29–31 Aug · export 2026-08-31 ~3:47 AM)
+
+Source: Clarity dashboard CSV, project `paramariboletter`, range 29 Aug 12:00 AM – 31 Aug 11:59 PM.
 
 | Measure | Result |
 |---|---:|
-| Sessions | 17 (15 bot sessions excluded) |
-| Unique users | 14 |
-| Pages per session | 1.59 |
-| Scroll depth (avg) | 34.70% |
-| Active time | 1.3 min (of 3.0 min total) |
-| New-user sessions | 94.12% |
-| Returning-user sessions | 5.88% |
-| Rage clicks | 0% |
-| Dead clicks | 5.88% (1 session) |
-| Excessive scrolling / quick backs | 0% |
+| Total sessions | **43** |
+| Bot sessions | **28** (suspicious-interaction 28; suspicious-device 25 — categories overlap) |
+| Non-bot remainder | **~15** if bots ⊆ total |
+| Unique users | **34** (export; may include bots — do not treat as 34 humans) |
+| Pages per session | 1.33 |
+| Scroll depth (avg) | 41.67% |
+| Active time | 92s / **1.5 min** (of 145s / 2.4 min total) |
+| New-user sessions | 40 / 43 (93%) |
+| Returning-user sessions | 3 / 43 (7%) |
+| Rage clicks | 0 |
+| Dead clicks | 2 (4.65%) |
+| Excessive scrolling / quick backs | 0 |
+| JS errors | 0 |
+| Smart events | none recorded |
 
-**Reading:** Mostly first-time visitors, short sessions, shallow scroll — consistent with high bounce. No rage-click problem. Dead clicks are low but worth a later UX pass on subscribe/nav if they persist.
+**Unique users by day:** 29 Aug **13** · 30 Aug **22** · 31 Aug **1** (pre-open; Issue 14 X went up ~3:25 AM — too early for click-through).
+
+**Top pages (sessions):** `/` 29 · `/issue` 14 · `/marketing/today-closeout-manual` 3 · vercel.app alias 1 · `/marketing/brand-channels` 1 · `/unsubscribe` 1.
+
+**Referrers (sessions):** internal 7 · LinkedIn Android **2** · `t.co` **2** · Gmail Android **1** · vercel.com 1 · google.com 1.
+
+**Channels:** Other 31 · Direct 7 · Referral 5 · Organic Search 2.
+
+**Reading:** Headline uniques (**34**) and sessions (**43**) are up vs the 30 Aug screenshot (14 users / 17 sess), but **28/43 sessions are bots**. Do not report 34 readers. Peak day in this window is **30 Aug (22 uniques)** — Issue 13 weekend — not 31 Aug. Home and issue still dominate. `/marketing/today-closeout-manual` (3) is publisher traffic, not audience. Social referrers remain tiny (`t.co` 2, LinkedIn app 2). One Gmail Android session is consistent with a Resend click, not proof of list growth. No Clarity smart events → subscribe funnel still unmeasured here. Dead clicks 2, still low. France/Netherlands one-session PCs sit next to 25 suspicious-device bots — do not call that EU demand.
+
+Prior Clarity (screenshot 2026-08-30 ~1:08 AM): 17 sessions (15 bot excluded) · 14 unique · 1.59 pages · 34.70% scroll · 1.3 min active. Keep that row as the previous snapshot; do not splice the two series.
 
 ## Observability (Production · last 6h · screenshot ~1:07 AM)
 

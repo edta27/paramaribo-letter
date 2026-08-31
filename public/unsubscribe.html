@@ -3,19 +3,26 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <script defer src="/clarity.js"></script>
   <title>Unsubscribe · The Paramaribo Letter</title>
   <meta name="robots" content="noindex" />
   <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="/styles.css" />
+  <script>
+    try {
+      var t = localStorage.getItem("paramaribo-theme");
+      document.documentElement.dataset.theme = t === "light" ? "light" : "dark";
+    } catch (e) {
+      document.documentElement.dataset.theme = "dark";
+    }
+  </script>
   <!-- Vercel Web Analytics -->
   <script>
     window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
   </script>
   <script defer src="/_vercel/insights/script.js"></script>
 </head>
-<body>
-  <div class="wrap">
+<body data-nav="unsubscribe">
+  <div class="portal-stage wrap">
     <header class="mast">
       <div class="mast-bar">
         <a href="index.html" style="text-decoration:none">← Archive</a>
@@ -29,7 +36,7 @@
     <section class="subscribe-box">
       <h2>Unsubscribe</h2>
       <p class="subscribe-lede">Enter the email you used when you subscribed.</p>
-      <form id="unsub-form" class="subscribe-form" data-clarity-mask="true">
+      <form id="unsub-form" class="subscribe-form">
         <label class="sr-only" for="email">Email</label>
         <input id="email" name="email" type="email" required placeholder="you@example.com" autocomplete="email" />
         <button class="btn" type="submit">Unsubscribe</button>
@@ -39,9 +46,11 @@
 
     <footer class="site">
       <div>© The Paramaribo Letter</div>
-      <div><a href="index.html">Archive</a></div>
+      <div><a href="/">Feed</a></div>
     </footer>
   </div>
+  <script src="/catalog.js"></script>
+  <script src="/shell.js"></script>
   <script>
     const params = new URLSearchParams(location.search);
     const preset = params.get("email");

@@ -3,18 +3,25 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <script defer src="/clarity.js"></script>
   <title>Not found · The Paramaribo Letter</title>
   <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
   <link rel="stylesheet" href="/styles.css" />
+  <script>
+    try {
+      var t = localStorage.getItem("paramaribo-theme");
+      document.documentElement.dataset.theme = t === "light" ? "light" : "dark";
+    } catch (e) {
+      document.documentElement.dataset.theme = "dark";
+    }
+  </script>
   <!-- Vercel Web Analytics -->
   <script>
     window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
   </script>
   <script defer src="/_vercel/insights/script.js"></script>
 </head>
-<body>
-  <div class="wrap">
+<body data-nav="home">
+  <div class="portal-stage wrap">
     <header class="mast">
       <div class="mast-bar">
         <a href="/" style="text-decoration:none">← Archive</a>
@@ -33,7 +40,7 @@
     </header>
     <div class="note">
       Working links:
-      <a href="/issue?id=2026-08-28-zz-bang-clear-map">latest issue pattern</a> ·
+      <a href="/issue?id=2026-08-31-two-tapes">latest issue</a> ·
       <a href="/marketing">publisher notes</a> ·
       <a href="/unsubscribe">unsubscribe</a>.
       Prefer paths without <code>.html</code> or <code>.md</code>.
@@ -44,5 +51,7 @@
       <a href="https://github.com/edta27/paramaribo-letter">GitHub</a>
     </footer>
   </div>
+  <script src="/catalog.js"></script>
+  <script src="/shell.js"></script>
 </body>
 </html>

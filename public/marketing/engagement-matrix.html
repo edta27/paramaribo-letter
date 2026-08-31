@@ -14,7 +14,7 @@
 <article class="issue-page" style="padding-top:0;width:min(760px,100%)">
 <h1>Engagement matrix</h1>
 
-<p>Updated: 2026-08-31 (X snapshot only; other channels still 2026-08-30). Do not mash channels. Never invent missing cells.</p>
+<p>Updated: 2026-08-31 ~3:47 a.m. CT (Clarity CSV + X snapshot). Vercel / LinkedIn still 2026-08-30. Do not mash channels. Never invent missing cells.</p>
 
 <h2 class='roster-title'>Cross-platform snapshot</h2>
 
@@ -24,7 +24,7 @@
 <tr><td><strong>LinkedIn</strong> (Issue 13 post)</td><td><strong>120</strong> impressions · <strong>51</strong> members reached</td><td><strong>0</strong> social engagements</td><td><strong>0</strong> followers gained</td></tr>
 <tr><td><strong>LinkedIn Newsletter email</strong></td><td><strong>63</strong> sends</td><td><strong>8%</strong> open rate</td><td>(subs counted separately ~68)</td></tr>
 <tr><td><strong>Site (Vercel Analytics)</strong></td><td><strong>28</strong> visitors · <strong>110</strong> page views</td><td>bounce <strong>68%</strong></td><td>see pages/referrers below</td></tr>
-<tr><td><strong>Site (Clarity, 3d)</strong></td><td><strong>17</strong> sessions · <strong>14</strong> unique users</td><td>1.59 pages/session · 1.3 min active</td><td>94% new-user sessions</td></tr>
+<tr><td><strong>Site (Clarity, 29–31 Aug)</strong></td><td><strong>43</strong> sessions (<strong>28</strong> bot) · <strong>34</strong> unique users</td><td>1.33 pages/session · 1.5 min active</td><td>40/43 new-user sessions</td></tr>
 <tr><td><strong>Resend</strong></td><td>—</td><td>—</td><td><strong>4</strong> contacts</td></tr>
 </table>
 
@@ -43,23 +43,34 @@
 
 <p><strong>Reading:</strong> Traffic ramped Aug 27–29 (Issue 12/13 + social). Home and issue pages dominate. X (<code>t.co</code>) and LinkedIn both show as referrers, but counts are still tiny — discovery is starting, not a funnel yet. Subscribe custom events remain unavailable on the current Analytics plan.</p>
 
-<h2 class='roster-title'>Clarity (last 3 days · screenshot 2026-08-30 ~1:08 AM)</h2>
+<h2 class='roster-title'>Clarity (29–31 Aug · export 2026-08-31 ~3:47 AM)</h2>
+
+<p>Source: Clarity dashboard CSV, project <code>paramariboletter</code>, range 29 Aug 12:00 AM – 31 Aug 11:59 PM.</p>
 
 <table class='flags' style='width:100%;margin:12px 0'>
 <tr><th>Measure</th><th>Result</th></tr>
-<tr><td>Sessions</td><td>17 (15 bot sessions excluded)</td></tr>
-<tr><td>Unique users</td><td>14</td></tr>
-<tr><td>Pages per session</td><td>1.59</td></tr>
-<tr><td>Scroll depth (avg)</td><td>34.70%</td></tr>
-<tr><td>Active time</td><td>1.3 min (of 3.0 min total)</td></tr>
-<tr><td>New-user sessions</td><td>94.12%</td></tr>
-<tr><td>Returning-user sessions</td><td>5.88%</td></tr>
-<tr><td>Rage clicks</td><td>0%</td></tr>
-<tr><td>Dead clicks</td><td>5.88% (1 session)</td></tr>
-<tr><td>Excessive scrolling / quick backs</td><td>0%</td></tr>
+<tr><td>Total sessions</td><td><strong>43</strong></td></tr>
+<tr><td>Bot sessions</td><td><strong>28</strong> (suspicious-interaction 28; suspicious-device 25 — categories overlap)</td></tr>
+<tr><td>Non-bot remainder</td><td><strong>~15</strong> if bots ⊆ total</td></tr>
+<tr><td>Unique users</td><td><strong>34</strong> (export; may include bots — do not treat as 34 humans)</td></tr>
+<tr><td>Pages per session</td><td>1.33</td></tr>
+<tr><td>Scroll depth (avg)</td><td>41.67%</td></tr>
+<tr><td>Active time</td><td>92s / <strong>1.5 min</strong> (of 145s / 2.4 min total)</td></tr>
+<tr><td>New-user sessions</td><td>40 / 43 (93%)</td></tr>
+<tr><td>Returning-user sessions</td><td>3 / 43 (7%)</td></tr>
+<tr><td>Rage clicks</td><td>0</td></tr>
+<tr><td>Dead clicks</td><td>2 (4.65%)</td></tr>
+<tr><td>Excessive scrolling / quick backs</td><td>0</td></tr>
+<tr><td>JS errors</td><td>0</td></tr>
+<tr><td>Smart events</td><td>none recorded</td></tr>
 </table>
 
-<p><strong>Reading:</strong> Mostly first-time visitors, short sessions, shallow scroll — consistent with high bounce. No rage-click problem. Dead clicks are low but worth a later UX pass on subscribe/nav if they persist.</p>
+<p><strong>Unique users by day:</strong> 29 Aug <strong>13</strong> · 30 Aug <strong>22</strong> · 31 Aug <strong>1</strong> (pre-open; Issue 14 X went up ~3:25 AM — too early for click-through).</p>
+<p><strong>Top pages (sessions):</strong> <code>/</code> 29 · <code>/issue</code> 14 · <code>/marketing/today-closeout-manual</code> 3 · vercel.app alias 1 · <code>/marketing/brand-channels</code> 1 · <code>/unsubscribe</code> 1.</p>
+<p><strong>Referrers (sessions):</strong> internal 7 · LinkedIn Android <strong>2</strong> · <code>t.co</code> <strong>2</strong> · Gmail Android <strong>1</strong> · vercel.com 1 · google.com 1.</p>
+<p><strong>Channels:</strong> Other 31 · Direct 7 · Referral 5 · Organic Search 2.</p>
+<p><strong>Reading:</strong> Headline uniques (<strong>34</strong>) and sessions (<strong>43</strong>) are up vs the 30 Aug screenshot (14 users / 17 sess), but <strong>28/43 sessions are bots</strong>. Do not report 34 readers. Peak day in this window is <strong>30 Aug (22 uniques)</strong> — Issue 13 weekend — not 31 Aug. Home and issue still dominate. <code>/marketing/today-closeout-manual</code> (3) is publisher traffic, not audience. Social referrers remain tiny (<code>t.co</code> 2, LinkedIn app 2). One Gmail Android session is consistent with a Resend click, not proof of list growth. No Clarity smart events → subscribe funnel still unmeasured here. Dead clicks 2, still low. France/Netherlands one-session PCs sit next to 25 suspicious-device bots — do not call that EU demand.</p>
+<p>Prior Clarity (screenshot 2026-08-30 ~1:08 AM): 17 sessions (15 bot excluded) · 14 unique · 1.59 pages · 34.70% scroll · 1.3 min active. Keep that row as the previous snapshot; do not splice the two series.</p>
 
 <h2 class='roster-title'>Observability (Production · last 6h · screenshot ~1:07 AM)</h2>
 

@@ -11,15 +11,23 @@
   <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
   <link rel="icon" href="/favicon-32.png" type="image/png" sizes="32x32" />
   <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="/styles.css" />
+  <script>
+    try {
+      var t = localStorage.getItem("paramaribo-theme");
+      document.documentElement.dataset.theme = t === "light" ? "light" : "dark";
+    } catch (e) {
+      document.documentElement.dataset.theme = "dark";
+    }
+  </script>
   <!-- Vercel Web Analytics -->
   <script>
     window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
   </script>
   <script defer src="/_vercel/insights/script.js"></script>
 </head>
-<body>
-  <div class="wrap">
+<body data-nav="agents">
+  <div class="portal-stage wrap">
     <header class="mast">
       <div class="mast-bar">
         <a href="index.html" style="text-decoration:none">← Archive</a>
@@ -202,8 +210,10 @@
 
     <footer class="site">
       <div>© The Paramaribo Letter</div>
-      <div><a href="index.html#new-subscribers">Subscribe</a> · <a href="unsubscribe.html">Unsubscribe</a> · <a href="index.html">Archive</a> · <a href="https://github.com/edta27/paramaribo-letter">GitHub</a></div>
+      <div><a href="/#new-subscribers">Subscribe</a> · <a href="/unsubscribe">Unsubscribe</a> · <a href="/">Feed</a></div>
     </footer>
   </div>
+  <script src="/catalog.js"></script>
+  <script src="/shell.js"></script>
 </body>
 </html>

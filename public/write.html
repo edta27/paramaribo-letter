@@ -3,21 +3,28 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <script defer src="/clarity.js"></script>
   <title>New issue · The Paramaribo Letter</title>
   <meta name="description" content="Compose a new Paramaribo Letter issue. Append-only. Old issues are never overwritten." />
   <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
   <link rel="icon" href="/favicon-32.png" type="image/png" sizes="32x32" />
   <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="/styles.css" />
+  <script>
+    try {
+      var t = localStorage.getItem("paramaribo-theme");
+      document.documentElement.dataset.theme = t === "light" ? "light" : "dark";
+    } catch (e) {
+      document.documentElement.dataset.theme = "dark";
+    }
+  </script>
   <!-- Vercel Web Analytics -->
   <script>
     window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
   </script>
   <script defer src="/_vercel/insights/script.js"></script>
 </head>
-<body>
-  <div class="wrap">
+<body data-nav="home">
+  <div class="portal-stage wrap">
     <header class="mast">
       <div class="mast-bar">
         <a href="index.html" style="text-decoration:none">← Archive</a>
@@ -105,5 +112,7 @@
       alert("Save both files into public/issues/, then run:\npython3 scripts/publish_letter.py --rebuild");
     });
   </script>
+  <script src="/catalog.js"></script>
+  <script src="/shell.js"></script>
 </body>
 </html>
