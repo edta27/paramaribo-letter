@@ -132,8 +132,13 @@
 
     const thesis = pack.thesis || pack.title || "Weekly chart desk";
     const stakes = pack.stakes || pack.dek || "";
-    const letterUrl = pack.letterUrl || "/";
-    const letterLabel = pack.letterLabel || "Read the letter";
+    const latest = (window.LETTER_ISSUES || [])[0];
+    const letterUrl = latest
+      ? "/issue?id=" + encodeURIComponent(latest.id)
+      : pack.letterUrl || "/";
+    const letterLabel = latest
+      ? latest.kicker || "Latest letter"
+      : pack.letterLabel || "Read the letter";
 
     meta.innerHTML = `
       <div class="thesis-card">
