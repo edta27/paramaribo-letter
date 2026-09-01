@@ -19,7 +19,9 @@ Open http://127.0.0.1:8766/
 To add an issue without touching old ones:
 
 ```bash
-python3 scripts/publish_letter.py --title "Headline" --dek "Lede" --cover images/cover-squeeze.png --body-file notes.md
+python3 scripts/publish_letter.py --title "Headline" --dek "Lede" --cover images/cover-new-unique.png --body-file notes.md
+
+Every issue needs its own cover. Do not reuse another issue's photo; create `public/images/cover-{slug}.png` if needed.
 ```
 
 If that id already exists, the script exits. Pick a new `--slug`.
