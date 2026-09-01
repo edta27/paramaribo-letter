@@ -137,7 +137,7 @@
 
     meta.innerHTML = `
       <div class="thesis-card">
-        <div class="thesis-eyebrow">Current call · ${pack.kicker || "Chart Desk"}</div>
+        <div class="thesis-eyebrow">Current call · Desk</div>
         <h1 class="thesis-title">${thesis}</h1>
         <p class="thesis-stakes">${stakes}</p>
         ${levelsHtml(pack.levels)}

@@ -38,20 +38,25 @@ function levelsHtml(levels) {
 async function renderHomeThesis() {
   const mount = document.getElementById("home-thesis");
   if (!mount) return;
-  const issue = ISSUES[0];
+  const latest = ISSUES[0];
   try {
     const res = await fetch("/charts/catalog.json");
     if (!res.ok) return;
     const catalog = await res.json();
     const pack = catalog[0];
     if (!pack || !pack.thesis) return;
-    const letterUrl = pack.letterUrl || (issue ? "/issue?id=" + encodeURIComponent(issue.id) : "/");
-    const letterLabel = pack.letterLabel || (issue ? issue.kicker || "Read the letter" : "Read the letter");
-    const eyebrow = (issue && issue.kicker) || pack.kicker || "Desk";
-    const stakes = (issue && issue.dek) || pack.stakes || "";
+    // Current call is the market map (from Chart Desk). Do not label it with an
+    // issue number — that fought the featured letter when ISSUES[0] advanced.
+    const stakes = pack.stakes || "";
+    const letterUrl = latest
+      ? "/issue?id=" + encodeURIComponent(latest.id)
+      : pack.letterUrl || "/";
+    const letterLabel = latest
+      ? latest.kicker || "Latest letter"
+      : pack.letterLabel || "Read the letter";
     mount.innerHTML = `
       <div class="thesis-card">
-        <div class="thesis-eyebrow">Current call · ${esc(eyebrow)}</div>
+        <div class="thesis-eyebrow">Current call · Desk</div>
         <h1 class="thesis-title">${esc(pack.thesis)}</h1>
         <p class="thesis-stakes">${esc(stakes)}</p>
         ${levelsHtml(pack.levels)}
