@@ -1,8 +1,14 @@
 {
   "ticker": "TSM",
-  "updated_at": "2026-08-31T21:44:16Z",
-  "price": 416.09,
+  "updated_at": "2026-09-01T13:54:44Z",
+  "price": 415.19,
   "filings": [
+    {
+      "form": "6-K",
+      "filing_date": "2026-09-01",
+      "accession": "0001046179-26-000552",
+      "url": "https://www.sec.gov/Archives/edgar/data/1046179/000104617926000552/tsm-dividendadjustmentx202.htm"
+    },
     {
       "form": "6-K",
       "filing_date": "2026-08-25",
@@ -26,20 +32,14 @@
       "filing_date": "2026-08-11",
       "accession": "0001046179-26-000539",
       "url": "https://www.sec.gov/Archives/edgar/data/1046179/000104617926000539/sonysemiconductorsolutions.htm"
-    },
-    {
-      "form": "6-K",
-      "filing_date": "2026-08-11",
-      "accession": "0001046179-26-000536",
-      "url": "https://www.sec.gov/Archives/edgar/data/1046179/000104617926000536/tsm-boardx20260811.htm"
     }
   ],
   "error": null,
-  "prev_close": 415.0,
-  "change": 1.09,
-  "change_pct": 0.263,
+  "prev_close": 415.32,
+  "change": -0.13,
+  "change_pct": -0.031,
   "currency": "USD",
   "exchange": "NYSE",
-  "volume": 6697463.66375,
+  "volume": 1480227.164833,
   "quote_source": "nasdaq-stocks"
 }
