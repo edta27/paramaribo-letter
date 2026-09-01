@@ -14,6 +14,16 @@
       "source": "/issue.html",
       "destination": "/issue",
       "permanent": false
+    },
+    {
+      "source": "/case-studies",
+      "destination": "/cases",
+      "permanent": false
+    },
+    {
+      "source": "/investor-case-studies",
+      "destination": "/cases",
+      "permanent": false
     }
   ],
   "rewrites": [

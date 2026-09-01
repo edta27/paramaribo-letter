@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Case study · The Paramaribo Letter</title>
+  <meta name="description" content="An investor case study from The Paramaribo Letter. Educational and historical. Not advice." />
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="The Paramaribo Letter" />
+  <meta id="og-title" property="og:title" content="Investor Case Studies · The Paramaribo Letter" />
+  <meta id="og-desc" property="og:description" content="How an exceptional investor evaluated a business with what was knowable at the time." />
+  <meta id="og-image" property="og:image" content="https://www.paramariboletter.com/images/masthead.png" />
+  <meta id="og-url" property="og:url" content="https://www.paramariboletter.com/cases" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="icon" href="/favicon-32.png" type="image/png" sizes="32x32" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <link rel="stylesheet" href="/styles.css" />
+  <script>
+    try {
+      var t = localStorage.getItem("paramaribo-theme");
+      document.documentElement.dataset.theme = t === "light" ? "light" : "dark";
+    } catch (e) {
+      document.documentElement.dataset.theme = "dark";
+    }
+  </script>
+  <script>
+    window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+  </script>
+  <script defer src="/_vercel/insights/script.js"></script>
+</head>
+<body data-nav="cases">
+  <div class="portal-stage wrap">
+    <p class="case-back"><a href="/cases">← Investor Case Studies</a></p>
+    <article class="issue-page case-page" id="case-root">
+      <p class="chart-loading">Loading case study…</p>
+    </article>
+    <section class="subscribe-box" id="new-subscribers" aria-labelledby="sub-title">
+      <h2 id="sub-title">Get the next Daily close</h2>
+      <p class="subscribe-lede">Email when the next desk note posts. Case studies stay free on the site.</p>
+      <form class="subscribe-form" data-subscribe-form>
+        <label class="sr-only" for="sub-email">Email</label>
+        <input id="sub-email" name="email" type="email" required placeholder="you@example.com" autocomplete="email" />
+        <input class="hp" name="company" type="text" tabindex="-1" autocomplete="off" aria-hidden="true" />
+        <button class="btn btn-primary" type="submit">Email me the next close</button>
+      </form>
+      <p class="subscribe-status" data-sub-status aria-live="polite"></p>
+      <p class="subscribe-unsub">Already on the list? <a href="/unsubscribe">Unsubscribe</a>.</p>
+    </section>
+    <footer class="site">
+      <div>© The Paramaribo Letter</div>
+      <div><a href="/cases">Case studies</a> · <a href="/#new-subscribers">Subscribe</a> · <a href="/agents">Agents</a></div>
+    </footer>
+  </div>
+  <script src="/catalog.js"></script>
+  <script src="/cases.js"></script>
+  <script src="/subscribe.js"></script>
+  <script src="/shell.js"></script>
+  <script>CaseStudies.renderCase();</script>
+</body>
+</html>

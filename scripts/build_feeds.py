@@ -34,9 +34,18 @@ def write_sitemap(issues: list[dict]) -> None:
     add(f"{SITE}/", issues[0]["date"] if issues else None, "1.0")
     add(f"{SITE}/agents", None, "0.8")
     add(f"{SITE}/charts", None, "0.75")
+    add(f"{SITE}/cases", None, "0.8")
     add(f"{SITE}/desk", None, "0.6")
     add(f"{SITE}/unsubscribe", None, "0.3")
     add(f"{SITE}/feed.xml", None, "0.4")
+    cases_path = PUBLIC / "cases" / "catalog.json"
+    cases = []
+    if cases_path.exists():
+        raw = json.loads(cases_path.read_text())
+        if isinstance(raw, list):
+            cases = raw
+    for case in cases:
+        add(f"{SITE}/case?id={case['id']}", case.get("date"), "0.75")
     for issue in issues:
         add(f"{SITE}/issue?id={issue['id']}", issue.get("date"), "0.7")
 
@@ -44,7 +53,7 @@ def write_sitemap(issues: list[dict]) -> None:
     ET.indent(tree, space="  ")
     out = PUBLIC / "sitemap.xml"
     tree.write(out, encoding="utf-8", xml_declaration=True)
-    print(f"wrote {out.relative_to(ROOT)} ({2 + len(issues)} urls)")
+    print(f"wrote {out.relative_to(ROOT)} ({len(list(urlset))} urls)")
 
 
 def write_rss(issues: list[dict]) -> None:

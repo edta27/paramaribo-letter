@@ -27,6 +27,7 @@
       ${item("/", "home", "Home")}
       ${item("/#feed", "feed", "Research")}
       ${item("/charts", "charts", "Charts")}
+      ${item("/cases", "cases", "Case studies")}
       ${item("/agents", "agents", "Agents")}
       ${item("/desk/", "desk", "Desk")}
     </nav>
@@ -100,6 +101,17 @@
   });
   scrim.addEventListener("click", closeSide);
 
+  let caseRows = window.CASE_STUDIES || [];
+  fetch("/cases/catalog.json")
+    .then((res) => (res.ok ? res.json() : []))
+    .then((rows) => {
+      if (Array.isArray(rows)) {
+        caseRows = rows;
+        window.CASE_STUDIES = rows;
+      }
+    })
+    .catch(() => {});
+
   function issues() {
     return window.LETTER_ISSUES || [];
   }
@@ -115,11 +127,29 @@
       if (!needle) return true;
       return [row.title, row.dek, row.kicker, row.id].join(" ").toLowerCase().includes(needle);
     });
-    results.innerHTML = rows.slice(0, 12).map((row) => `
+    const caseHits = caseRows.filter((row) => {
+      if (!needle) return true;
+      return [row.title, row.dek, row.kicker, row.id, ...(row.investors || []), ...(row.companies || [])]
+        .join(" ")
+        .toLowerCase()
+        .includes(needle);
+    });
+    const issueHits = rows.slice(0, 8).map(
+      (row) => `
       <a class="search-hit" href="/issue?id=${encodeURIComponent(row.id)}">
         <strong>${row.title}</strong>
         <span>${row.kicker || ""} · ${fmt(row.date)}</span>
-      </a>`).join("") || `<p class="search-empty">No issues match.</p>`;
+      </a>`
+    );
+    const studyHits = caseHits.slice(0, 4).map(
+      (row) => `
+      <a class="search-hit" href="/case?id=${encodeURIComponent(row.id)}">
+        <strong>${row.title}</strong>
+        <span>Case study · ${row.kicker || ""} · ${fmt(row.date)}</span>
+      </a>`
+    );
+    results.innerHTML =
+      studyHits.join("") + issueHits.join("") || `<p class="search-empty">No issues or case studies match.</p>`;
   }
   function openSearch() {
     modal.hidden = false;
