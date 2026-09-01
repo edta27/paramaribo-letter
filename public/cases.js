@@ -145,7 +145,7 @@
       if (list) {
         if (catalog.length === 1) {
           list.innerHTML =
-            `<p class="case-library-note">This is the first case in the library. Later cases will appear here when they are researched and added by hand.</p>`;
+            `<p class="case-library-note">One completed case is live. The next one will show up in this list when it is finished. Unpublished names and dates stay off this page.</p>`;
         } else {
           list.innerHTML = catalog.slice(1).map((row) => cardHTML(row, false)).join("");
         }
