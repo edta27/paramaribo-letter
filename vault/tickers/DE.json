@@ -1,8 +1,14 @@
 {
   "ticker": "DE",
-  "updated_at": "2026-09-02T13:13:02Z",
-  "price": 676.3835,
+  "updated_at": "2026-09-02T19:38:08Z",
+  "price": 695.835,
   "filings": [
+    {
+      "form": "4",
+      "filing_date": "2026-09-02",
+      "accession": "0001772144-26-000006",
+      "url": "https://www.sec.gov/Archives/edgar/data/315189/000177214426000006/xslF345X06/form4-09022026_040946.xml"
+    },
     {
       "form": "10-Q",
       "filing_date": "2026-08-27",
@@ -26,20 +32,14 @@
       "filing_date": "2026-08-20",
       "accession": "0001104659-26-098904",
       "url": "https://www.sec.gov/Archives/edgar/data/315189/000110465926098904/de-20260820x8k.htm"
-    },
-    {
-      "form": "4",
-      "filing_date": "2026-08-18",
-      "accession": "0002133005-26-000004",
-      "url": "https://www.sec.gov/Archives/edgar/data/315189/000213300526000004/xslF345X06/form4-08182026_070832.xml"
     }
   ],
   "error": null,
   "prev_close": 676.08,
-  "change": 0.3035,
-  "change_pct": 0.045,
+  "change": 19.755,
+  "change_pct": 2.922,
   "currency": "USD",
   "exchange": "NYSE",
-  "volume": 1138.094802,
+  "volume": 1352057.344648,
   "quote_source": "nasdaq-stocks"
 }
