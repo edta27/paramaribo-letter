@@ -1,8 +1,20 @@
 {
   "ticker": "MSFT",
-  "updated_at": "2026-09-02T19:38:09Z",
-  "price": 496.98,
+  "updated_at": "2026-09-02T22:58:29Z",
+  "price": 498.35,
   "filings": [
+    {
+      "form": "8-K",
+      "filing_date": "2026-09-02",
+      "accession": "0001193125-26-380280",
+      "url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526380280/d291965d8k.htm"
+    },
+    {
+      "form": "4",
+      "filing_date": "2026-09-02",
+      "accession": "0000789019-26-000161",
+      "url": "https://www.sec.gov/Archives/edgar/data/789019/000078901926000161/xslF345X06/form4.xml"
+    },
     {
       "form": "4",
       "filing_date": "2026-09-01",
@@ -20,26 +32,14 @@
       "filing_date": "2026-09-01",
       "accession": "0000789019-26-000157",
       "url": "https://www.sec.gov/Archives/edgar/data/789019/000078901926000157/xslF345X06/form4.xml"
-    },
-    {
-      "form": "4",
-      "filing_date": "2026-09-01",
-      "accession": "0000789019-26-000156",
-      "url": "https://www.sec.gov/Archives/edgar/data/789019/000078901926000156/xslF345X06/form4.xml"
-    },
-    {
-      "form": "4",
-      "filing_date": "2026-09-01",
-      "accession": "0000789019-26-000155",
-      "url": "https://www.sec.gov/Archives/edgar/data/789019/000078901926000155/xslF345X06/form4.xml"
     }
   ],
   "error": null,
-  "prev_close": 501.02,
-  "change": -4.04,
-  "change_pct": -0.806,
+  "prev_close": 496.82,
+  "change": 1.53,
+  "change_pct": 0.308,
   "currency": "USD",
   "exchange": "NASDAQ-GS",
-  "volume": 10253865.382997,
+  "volume": 15328412.143878,
   "quote_source": "nasdaq-stocks"
 }
