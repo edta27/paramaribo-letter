@@ -1,5 +1,24 @@
 [
   {
+    "id": "2026-does-orchestration-stay-scarce",
+    "date": "2026-09-02",
+    "kicker": "Desk Case Studies · 02",
+    "title": "Does Orchestration Stay Scarce?",
+    "dek": "The Model Is No Longer the Moat contains two theses: a well-supported scarcity migration toward power, chips, data, and distribution — and a more speculative claim that agent orchestration and harnesses become a durable moat. This follow-up isolates the hinge: if models become commodities, does orchestration remain scarce, or does it become commodity software too?",
+    "investors": [
+      "The Paramaribo Letter desk"
+    ],
+    "companies": [],
+    "themes": [
+      "Agent orchestration",
+      "Verification",
+      "Commodity software",
+      "Gödel caution",
+      "Falsification"
+    ],
+    "readingMinutes": 11
+  },
+  {
     "id": "2026-model-no-longer-the-moat",
     "date": "2026-09-02",
     "kicker": "Desk Case Studies · 01",

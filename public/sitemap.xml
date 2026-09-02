@@ -39,6 +39,11 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+    <url>
+    <loc>https://www.paramariboletter.com/case?id=2026-does-orchestration-stay-scarce</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
   <url>
     <loc>https://www.paramariboletter.com/issue?id=2026-09-02-four-year-cycle-on-trial</loc>
     <lastmod>2026-09-02</lastmod>
