@@ -951,3 +951,12 @@ pre.note {
   .brand { font-size: 28px; }
   .chart-panel { height: 260px; }
 }
+
+.case-page .case-figure img {
+  width: min(420px, 100%);
+  height: auto;
+  margin: 0 auto;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #000;
+}

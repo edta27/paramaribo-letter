@@ -1,16 +1,41 @@
 [
   {
+    "id": "2026-model-no-longer-the-moat",
+    "date": "2026-09-02",
+    "kicker": "Desk Case Studies · 01",
+    "title": "The Model Is No Longer the Moat",
+    "dek": "Dimension Capital’s August 2026 China memo argues that open-weight models are compressing the intelligence layer. This desk case turns that evidence into an investment question: if models become interchangeable, where does economic value migrate — chips, power, data, distribution, or the systems that route, verify, and deploy agents?",
+    "investors": [
+      "The Paramaribo Letter desk"
+    ],
+    "companies": [
+      "DeepSeek",
+      "Alibaba (Qwen)",
+      "Moonshot (Kimi)",
+      "ByteDance (Doubao)",
+      "Zhipu (GLM)"
+    ],
+    "themes": [
+      "AI commoditization",
+      "Open-weight models",
+      "Agent orchestration",
+      "Compute scarcity",
+      "Power infrastructure"
+    ],
+    "readingMinutes": 14
+  },
+  {
     "id": "1972-sees-candies",
     "date": "2026-08-31",
-    "kicker": "Investor Case Studies \u00b7 01",
-    "title": "See\u2019s Candies, 1972: the franchise they almost didn\u2019t buy",
-    "dek": "Buffett and Munger bought See\u2019s through Blue Chip Stamps at a hard $25 million ceiling. Reconstruct the thesis from filings and letters \u2014 pricing power, thin tangible capital, and a near-miss on price \u2014 without turning the later cash gusher into a 1972 prophecy.",
+    "kicker": "Investor Case Studies · 01",
+    "title": "See’s Candies, 1972: the franchise they almost didn’t buy",
+    "dek": "Buffett and Munger bought See’s through Blue Chip Stamps at a hard $25 million ceiling. Reconstruct the thesis from filings and letters — pricing power, thin tangible capital, and a near-miss on price — without turning the later cash gusher into a 1972 prophecy.",
     "investors": [
       "Warren Buffett",
       "Charlie Munger"
     ],
     "companies": [
-      "See\u2019s Candies",
+      "See’s Candies",
       "Blue Chip Stamps",
       "Berkshire Hathaway"
     ],
