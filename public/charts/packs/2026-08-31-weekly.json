@@ -14,9 +14,9 @@
     "$80k",
     "$81\u201381.5k"
   ],
-  "letterId": "2026-09-01-crash-stack-on-trial",
-  "letterUrl": "/issue?id=2026-09-01-crash-stack-on-trial",
-  "letterLabel": "Vol. 1 \u00b7 Issue 16",
+  "letterId": "2026-09-02-four-year-cycle-on-trial",
+  "letterUrl": "/issue?id=2026-09-02-four-year-cycle-on-trial",
+  "letterLabel": "Vol. 1 \u00b7 Issue 17",
   "subscribeHook": "When the Daily close breaks the stall \u2014 or fails it \u2014 the letter hits your inbox the same day. Charts stay free here; the call moves by email.",
   "sourceNote": "Charts built from CoinGecko market_chart (USD). Green/red bars are day-over-day spot volume change, a tape proxy \u2014 not US spot ETF net creations. Issuer ETF flow tables (Farside / Glassnode / SoSoValue) were not available to this builder; paste sourced ETF numbers into a future pack when you have them.",
   "briefs": [
