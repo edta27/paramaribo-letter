@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://www.paramariboletter.com/</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-03</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
@@ -30,18 +30,23 @@
     <priority>0.4</priority>
   </url>
   <url>
+    <loc>https://www.paramariboletter.com/case?id=2026-does-orchestration-stay-scarce</loc>
+    <lastmod>2026-09-02</lastmod>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.paramariboletter.com/case?id=2026-model-no-longer-the-moat</loc>
+    <lastmod>2026-09-02</lastmod>
+    <priority>0.75</priority>
+  </url>
+  <url>
     <loc>https://www.paramariboletter.com/case?id=1972-sees-candies</loc>
     <lastmod>2026-08-31</lastmod>
     <priority>0.75</priority>
   </url>
-    <url>
-    <loc>https://www.paramariboletter.com/case?id=2026-model-no-longer-the-moat</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-    <url>
-    <loc>https://www.paramariboletter.com/case?id=2026-does-orchestration-stay-scarce</loc>
-    <changefreq>monthly</changefreq>
+  <url>
+    <loc>https://www.paramariboletter.com/issue?id=2026-09-03-yen-carry-sleeve</loc>
+    <lastmod>2026-09-03</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
