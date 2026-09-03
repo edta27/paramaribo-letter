@@ -1,7 +1,7 @@
 {
   "ticker": "META",
-  "updated_at": "2026-09-03T19:38:08Z",
-  "price": 613.27,
+  "updated_at": "2026-09-03T22:58:34Z",
+  "price": 612.39,
   "filings": [
     {
       "form": "4",
@@ -35,11 +35,11 @@
     }
   ],
   "error": null,
-  "prev_close": 592.85,
-  "change": 20.42,
-  "change_pct": 3.444,
+  "prev_close": 610.68,
+  "change": 1.71,
+  "change_pct": 0.28,
   "currency": "USD",
   "exchange": "NASDAQ-GS",
-  "volume": 14422416.967354,
+  "volume": 19712176.941693,
   "quote_source": "nasdaq-stocks"
 }
