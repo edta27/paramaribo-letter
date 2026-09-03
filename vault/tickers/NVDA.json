@@ -1,19 +1,25 @@
 {
   "ticker": "NVDA",
-  "updated_at": "2026-09-02T22:58:23Z",
-  "price": 225.02,
+  "updated_at": "2026-09-03T13:14:21Z",
+  "price": 226.1356,
   "filings": [
     {
-      "form": "4",
-      "filing_date": "2026-09-02",
-      "accession": "0001696841-26-000010",
-      "url": "https://www.sec.gov/Archives/edgar/data/1045810/000169684126000010/xslF345X06/wk-form4_1788386836.xml"
+      "form": "8-K",
+      "filing_date": "2026-09-03",
+      "accession": "0001045810-26-000078",
+      "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000078/nvda-20260902.htm"
     },
     {
       "form": "4",
       "filing_date": "2026-09-02",
       "accession": "0001199039-26-000012",
       "url": "https://www.sec.gov/Archives/edgar/data/1045810/000119903926000012/xslF345X06/wk-form4_1788387031.xml"
+    },
+    {
+      "form": "4",
+      "filing_date": "2026-09-02",
+      "accession": "0001696841-26-000010",
+      "url": "https://www.sec.gov/Archives/edgar/data/1045810/000169684126000010/xslF345X06/wk-form4_1788386836.xml"
     },
     {
       "form": "10-Q",
@@ -26,20 +32,14 @@
       "filing_date": "2026-08-26",
       "accession": "0001045810-26-000073",
       "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000073/nvda-20260826.htm"
-    },
-    {
-      "form": "4",
-      "filing_date": "2026-08-24",
-      "accession": "0001347842-26-000015",
-      "url": "https://www.sec.gov/Archives/edgar/data/1045810/000134784226000015/xslF345X06/wk-form4_1787607122.xml"
     }
   ],
   "error": null,
   "prev_close": 224.41,
-  "change": 0.61,
-  "change_pct": 0.272,
+  "change": 1.7256,
+  "change_pct": 0.769,
   "currency": "USD",
   "exchange": "NASDAQ-GS",
-  "volume": 156812018.385833,
+  "volume": 4158724.62016,
   "quote_source": "nasdaq-stocks"
 }
