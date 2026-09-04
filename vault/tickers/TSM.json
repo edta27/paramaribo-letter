@@ -1,8 +1,14 @@
 {
   "ticker": "TSM",
-  "updated_at": "2026-09-03T22:58:30Z",
-  "price": 416.2,
+  "updated_at": "2026-09-04T13:08:13Z",
+  "price": 420.54,
   "filings": [
+    {
+      "form": "4",
+      "filing_date": "2026-09-04",
+      "accession": "0001046179-26-000596",
+      "url": "https://www.sec.gov/Archives/edgar/data/1046179/000104617926000596/xslF345X06/wk-form4_1788517801.xml"
+    },
     {
       "form": "4",
       "filing_date": "2026-09-02",
@@ -26,20 +32,14 @@
       "filing_date": "2026-09-02",
       "accession": "0001046179-26-000591",
       "url": "https://www.sec.gov/Archives/edgar/data/1046179/000104617926000591/xslF345X06/wk-form4_1788344647.xml"
-    },
-    {
-      "form": "4",
-      "filing_date": "2026-09-02",
-      "accession": "0001046179-26-000590",
-      "url": "https://www.sec.gov/Archives/edgar/data/1046179/000104617926000590/xslF345X06/wk-form4_1788344516.xml"
     }
   ],
   "error": null,
-  "prev_close": 417.02,
-  "change": -0.82,
-  "change_pct": -0.197,
+  "prev_close": 417.01,
+  "change": 3.53,
+  "change_pct": 0.847,
   "currency": "USD",
   "exchange": "NYSE",
-  "volume": 7823000.836705,
+  "volume": 447218.061107,
   "quote_source": "nasdaq-stocks"
 }

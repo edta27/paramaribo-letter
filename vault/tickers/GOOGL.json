@@ -1,8 +1,20 @@
 {
   "ticker": "GOOGL",
-  "updated_at": "2026-09-03T22:58:34Z",
-  "price": 342.9,
+  "updated_at": "2026-09-04T13:08:17Z",
+  "price": 341.53,
   "filings": [
+    {
+      "form": "4",
+      "filing_date": "2026-09-03",
+      "accession": "0001193125-26-382332",
+      "url": "https://www.sec.gov/Archives/edgar/data/1652044/000119312526382332/xslF345X06/ownership.xml"
+    },
+    {
+      "form": "4",
+      "filing_date": "2026-09-03",
+      "accession": "0001193125-26-382328",
+      "url": "https://www.sec.gov/Archives/edgar/data/1652044/000119312526382328/xslF345X06/ownership.xml"
+    },
     {
       "form": "4",
       "filing_date": "2026-08-31",
@@ -20,26 +32,14 @@
       "filing_date": "2026-08-27",
       "accession": "0001193125-26-371797",
       "url": "https://www.sec.gov/Archives/edgar/data/1652044/000119312526371797/xslF345X06/ownership.xml"
-    },
-    {
-      "form": "4",
-      "filing_date": "2026-08-27",
-      "accession": "0001193125-26-371794",
-      "url": "https://www.sec.gov/Archives/edgar/data/1652044/000119312526371794/xslF345X06/ownership.xml"
-    },
-    {
-      "form": "4",
-      "filing_date": "2026-08-27",
-      "accession": "0001193125-26-371788",
-      "url": "https://www.sec.gov/Archives/edgar/data/1652044/000119312526371788/xslF345X06/ownership.xml"
     }
   ],
   "error": null,
-  "prev_close": 342.48,
-  "change": 0.42,
-  "change_pct": 0.123,
+  "prev_close": 342.26,
+  "change": -0.73,
+  "change_pct": -0.213,
   "currency": "USD",
   "exchange": "NASDAQ-GS",
-  "volume": 20707729.602883,
+  "volume": 298138.324572,
   "quote_source": "nasdaq-stocks"
 }
