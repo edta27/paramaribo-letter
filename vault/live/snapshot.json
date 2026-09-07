@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-07T14:45:50Z",
+  "updated_at": "2026-09-07T20:21:53Z",
   "mode": "auto-refresh",
   "disclaimer": "Educational quotes and EDGAR indexes only. Not advice. No trades. No email.",
   "watchlist": [
@@ -27,7 +27,7 @@
   "tickers": [
     {
       "ticker": "NVDA",
-      "updated_at": "2026-09-07T14:45:43Z",
+      "updated_at": "2026-09-07T20:21:46Z",
       "price": 230.36,
       "filings": [
         {
@@ -72,7 +72,7 @@
     },
     {
       "ticker": "AVGO",
-      "updated_at": "2026-09-07T14:45:43Z",
+      "updated_at": "2026-09-07T20:21:46Z",
       "price": 357.895,
       "filings": [
         {
@@ -117,7 +117,7 @@
     },
     {
       "ticker": "TSM",
-      "updated_at": "2026-09-07T14:45:44Z",
+      "updated_at": "2026-09-07T20:21:47Z",
       "price": 428.91,
       "filings": [
         {
@@ -162,7 +162,7 @@
     },
     {
       "ticker": "AMD",
-      "updated_at": "2026-09-07T14:45:44Z",
+      "updated_at": "2026-09-07T20:21:47Z",
       "price": 477.57,
       "filings": [
         {
@@ -207,7 +207,7 @@
     },
     {
       "ticker": "IREN",
-      "updated_at": "2026-09-07T14:45:44Z",
+      "updated_at": "2026-09-07T20:21:47Z",
       "price": 44.68,
       "filings": [
         {
@@ -252,7 +252,7 @@
     },
     {
       "ticker": "CLSK",
-      "updated_at": "2026-09-07T14:45:45Z",
+      "updated_at": "2026-09-07T20:21:48Z",
       "price": 12.69,
       "filings": [
         {
@@ -297,7 +297,7 @@
     },
     {
       "ticker": "WYFI",
-      "updated_at": "2026-09-07T14:45:45Z",
+      "updated_at": "2026-09-07T20:21:48Z",
       "price": 19.54,
       "filings": [
         {
@@ -342,7 +342,7 @@
     },
     {
       "ticker": "KEEL",
-      "updated_at": "2026-09-07T14:45:45Z",
+      "updated_at": "2026-09-07T20:21:48Z",
       "price": 3.47,
       "filings": [
         {
@@ -387,7 +387,7 @@
     },
     {
       "ticker": "NBIS",
-      "updated_at": "2026-09-07T14:45:45Z",
+      "updated_at": "2026-09-07T20:21:49Z",
       "price": 226.39,
       "filings": [
         {
@@ -432,7 +432,7 @@
     },
     {
       "ticker": "AAOI",
-      "updated_at": "2026-09-07T14:45:46Z",
+      "updated_at": "2026-09-07T20:21:49Z",
       "price": 105.53,
       "filings": [
         {
@@ -477,7 +477,7 @@
     },
     {
       "ticker": "WMT",
-      "updated_at": "2026-09-07T14:45:46Z",
+      "updated_at": "2026-09-07T20:21:49Z",
       "price": 107.14,
       "filings": [
         {
@@ -522,7 +522,7 @@
     },
     {
       "ticker": "COIN",
-      "updated_at": "2026-09-07T14:45:47Z",
+      "updated_at": "2026-09-07T20:21:50Z",
       "price": 184.64,
       "filings": [
         {
@@ -567,7 +567,7 @@
     },
     {
       "ticker": "SPY",
-      "updated_at": "2026-09-07T14:45:47Z",
+      "updated_at": "2026-09-07T20:21:50Z",
       "price": 770.19,
       "filings": [],
       "error": null,
@@ -581,7 +581,7 @@
     },
     {
       "ticker": "QQQ",
-      "updated_at": "2026-09-07T14:45:47Z",
+      "updated_at": "2026-09-07T20:21:50Z",
       "price": 718.96,
       "filings": [
         {
@@ -608,7 +608,7 @@
     },
     {
       "ticker": "DE",
-      "updated_at": "2026-09-07T14:45:48Z",
+      "updated_at": "2026-09-07T20:21:51Z",
       "price": 693.53,
       "filings": [
         {
@@ -653,7 +653,7 @@
     },
     {
       "ticker": "MRNA",
-      "updated_at": "2026-09-07T14:45:48Z",
+      "updated_at": "2026-09-07T20:21:51Z",
       "price": 145.55,
       "filings": [
         {
@@ -698,7 +698,7 @@
     },
     {
       "ticker": "AMZN",
-      "updated_at": "2026-09-07T14:45:48Z",
+      "updated_at": "2026-09-07T20:21:51Z",
       "price": 258.51,
       "filings": [
         {
@@ -743,7 +743,7 @@
     },
     {
       "ticker": "MSFT",
-      "updated_at": "2026-09-07T14:45:49Z",
+      "updated_at": "2026-09-07T20:21:52Z",
       "price": 499.7,
       "filings": [
         {
@@ -788,7 +788,7 @@
     },
     {
       "ticker": "GOOGL",
-      "updated_at": "2026-09-07T14:45:49Z",
+      "updated_at": "2026-09-07T20:21:52Z",
       "price": 338.46,
       "filings": [
         {
@@ -833,7 +833,7 @@
     },
     {
       "ticker": "META",
-      "updated_at": "2026-09-07T14:45:49Z",
+      "updated_at": "2026-09-07T20:21:52Z",
       "price": 616.77,
       "filings": [
         {
