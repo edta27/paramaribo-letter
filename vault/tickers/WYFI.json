@@ -1,7 +1,7 @@
 {
   "ticker": "WYFI",
-  "updated_at": "2026-09-09T13:22:25Z",
-  "price": 20.44,
+  "updated_at": "2026-09-09T19:36:34Z",
+  "price": 19.14,
   "filings": [
     {
       "form": "4",
@@ -36,10 +36,10 @@
   ],
   "error": null,
   "prev_close": 20.57,
-  "change": -0.13,
-  "change_pct": -0.632,
+  "change": -1.43,
+  "change_pct": -6.952,
   "currency": "USD",
   "exchange": "NASDAQ-CM",
-  "volume": 19212.0,
+  "volume": 868535.288228,
   "quote_source": "nasdaq-stocks"
 }
