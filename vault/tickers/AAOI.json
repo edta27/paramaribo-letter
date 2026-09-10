@@ -1,8 +1,26 @@
 {
   "ticker": "AAOI",
-  "updated_at": "2026-09-10T19:27:53Z",
-  "price": 103.79,
+  "updated_at": "2026-09-10T22:56:02Z",
+  "price": 103.0771,
   "filings": [
+    {
+      "form": "4",
+      "filing_date": "2026-09-10",
+      "accession": "0001683168-26-007059",
+      "url": "https://www.sec.gov/Archives/edgar/data/1158114/000168316826007059/xslF345X06/ownership.xml"
+    },
+    {
+      "form": "4",
+      "filing_date": "2026-09-10",
+      "accession": "0001683168-26-007058",
+      "url": "https://www.sec.gov/Archives/edgar/data/1158114/000168316826007058/xslF345X06/ownership.xml"
+    },
+    {
+      "form": "8-K",
+      "filing_date": "2026-09-10",
+      "accession": "0001683168-26-007057",
+      "url": "https://www.sec.gov/Archives/edgar/data/1158114/000168316826007057/aaoi_8k.htm"
+    },
     {
       "form": "8-K",
       "filing_date": "2026-09-01",
@@ -14,32 +32,14 @@
       "filing_date": "2026-08-24",
       "accession": "0001683168-26-006693",
       "url": "https://www.sec.gov/Archives/edgar/data/1158114/000168316826006693/aaoi_8k.htm"
-    },
-    {
-      "form": "8-K",
-      "filing_date": "2026-08-21",
-      "accession": "0001104659-26-099688",
-      "url": "https://www.sec.gov/Archives/edgar/data/1158114/000110465926099688/tm2623389d2_8k.htm"
-    },
-    {
-      "form": "4",
-      "filing_date": "2026-08-20",
-      "accession": "0001683168-26-006634",
-      "url": "https://www.sec.gov/Archives/edgar/data/1158114/000168316826006634/xslF345X06/ownership.xml"
-    },
-    {
-      "form": "4",
-      "filing_date": "2026-08-12",
-      "accession": "0001683168-26-006272",
-      "url": "https://www.sec.gov/Archives/edgar/data/1158114/000168316826006272/xslF345X06/ownership.xml"
     }
   ],
   "error": null,
-  "prev_close": 107.93,
-  "change": -4.14,
-  "change_pct": -3.836,
+  "prev_close": 103.29,
+  "change": -0.2129,
+  "change_pct": -0.206,
   "currency": "USD",
   "exchange": "NASDAQ-GM",
-  "volume": 4484979.787544,
+  "volume": 5684094.184906,
   "quote_source": "nasdaq-stocks"
 }
