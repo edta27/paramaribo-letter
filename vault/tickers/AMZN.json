@@ -1,8 +1,14 @@
 {
   "ticker": "AMZN",
-  "updated_at": "2026-09-14T20:44:29Z",
-  "price": 253.68,
+  "updated_at": "2026-09-14T23:41:23Z",
+  "price": 253.67,
   "filings": [
+    {
+      "form": "8-K",
+      "filing_date": "2026-09-14",
+      "accession": "0001104659-26-107526",
+      "url": "https://www.sec.gov/Archives/edgar/data/1018724/000110465926107526/tm2624614d5_8k.htm"
+    },
     {
       "form": "4",
       "filing_date": "2026-09-09",
@@ -26,20 +32,14 @@
       "filing_date": "2026-09-03",
       "accession": "0001936006-26-000024",
       "url": "https://www.sec.gov/Archives/edgar/data/1018724/000193600626000024/xslF345X06/wk-form4_1788468119.xml"
-    },
-    {
-      "form": "4",
-      "filing_date": "2026-08-27",
-      "accession": "0001043298-26-000002",
-      "url": "https://www.sec.gov/Archives/edgar/data/1018724/000104329826000002/xslF345X06/wk-form4_1787862279.xml"
     }
   ],
   "error": null,
   "prev_close": 253.54,
-  "change": 0.14,
-  "change_pct": 0.055,
+  "change": 0.13,
+  "change_pct": 0.051,
   "currency": "USD",
   "exchange": "NASDAQ-GS",
-  "volume": 33104351.565094,
+  "volume": 34332649.571318,
   "quote_source": "nasdaq-stocks"
 }
