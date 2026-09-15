@@ -1,7 +1,7 @@
 {
   "ticker": "WMT",
-  "updated_at": "2026-09-15T19:58:23Z",
-  "price": 108.05,
+  "updated_at": "2026-09-15T23:24:00Z",
+  "price": 108.3,
   "filings": [
     {
       "form": "4",
@@ -35,11 +35,11 @@
     }
   ],
   "error": null,
-  "prev_close": 109.08,
-  "change": -1.03,
-  "change_pct": -0.944,
+  "prev_close": 108.09,
+  "change": 0.21,
+  "change_pct": 0.194,
   "currency": "USD",
   "exchange": "NASDAQ-GS",
-  "volume": 13451630.616171,
+  "volume": 19312295.179023,
   "quote_source": "nasdaq-stocks"
 }

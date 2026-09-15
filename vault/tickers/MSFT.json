@@ -1,8 +1,26 @@
 {
   "ticker": "MSFT",
-  "updated_at": "2026-09-15T19:58:25Z",
-  "price": 496.78,
+  "updated_at": "2026-09-15T23:24:02Z",
+  "price": 498.4741,
   "filings": [
+    {
+      "form": "4",
+      "filing_date": "2026-09-15",
+      "accession": "0000789019-26-000214",
+      "url": "https://www.sec.gov/Archives/edgar/data/789019/000078901926000214/xslF345X06/form4.xml"
+    },
+    {
+      "form": "4",
+      "filing_date": "2026-09-15",
+      "accession": "0000789019-26-000213",
+      "url": "https://www.sec.gov/Archives/edgar/data/789019/000078901926000213/xslF345X06/form4.xml"
+    },
+    {
+      "form": "4",
+      "filing_date": "2026-09-15",
+      "accession": "0000789019-26-000212",
+      "url": "https://www.sec.gov/Archives/edgar/data/789019/000078901926000212/xslF345X06/form4.xml"
+    },
     {
       "form": "4",
       "filing_date": "2026-09-11",
@@ -14,32 +32,14 @@
       "filing_date": "2026-09-11",
       "accession": "0000789019-26-000207",
       "url": "https://www.sec.gov/Archives/edgar/data/789019/000078901926000207/xslF345X06/form4.xml"
-    },
-    {
-      "form": "4",
-      "filing_date": "2026-09-11",
-      "accession": "0000789019-26-000206",
-      "url": "https://www.sec.gov/Archives/edgar/data/789019/000078901926000206/xslF345X06/form4.xml"
-    },
-    {
-      "form": "4",
-      "filing_date": "2026-09-11",
-      "accession": "0000789019-26-000205",
-      "url": "https://www.sec.gov/Archives/edgar/data/789019/000078901926000205/xslF345X06/form4.xml"
-    },
-    {
-      "form": "4",
-      "filing_date": "2026-09-11",
-      "accession": "0000789019-26-000204",
-      "url": "https://www.sec.gov/Archives/edgar/data/789019/000078901926000204/xslF345X06/form4.xml"
     }
   ],
   "error": null,
-  "prev_close": 505.41,
-  "change": -8.63,
-  "change_pct": -1.708,
+  "prev_close": 497.12,
+  "change": 1.3541,
+  "change_pct": 0.272,
   "currency": "USD",
   "exchange": "NASDAQ-GS",
-  "volume": 11488510.167765,
+  "volume": 17786678.202754,
   "quote_source": "nasdaq-stocks"
 }
