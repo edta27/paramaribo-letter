@@ -1,45 +1,45 @@
 {
   "ticker": "MSFT",
-  "updated_at": "2026-09-17T19:59:50Z",
-  "price": 497.97,
+  "updated_at": "2026-09-17T23:22:16Z",
+  "price": 496.0042,
   "filings": [
     {
       "form": "4",
-      "filing_date": "2026-09-15",
-      "accession": "0000789019-26-000214",
-      "url": "https://www.sec.gov/Archives/edgar/data/789019/000078901926000214/xslF345X06/form4.xml"
+      "filing_date": "2026-09-17",
+      "accession": "0000789019-26-000224",
+      "url": "https://www.sec.gov/Archives/edgar/data/789019/000078901926000224/xslF345X06/form4.xml"
     },
     {
       "form": "4",
-      "filing_date": "2026-09-15",
-      "accession": "0000789019-26-000213",
-      "url": "https://www.sec.gov/Archives/edgar/data/789019/000078901926000213/xslF345X06/form4.xml"
+      "filing_date": "2026-09-17",
+      "accession": "0000789019-26-000223",
+      "url": "https://www.sec.gov/Archives/edgar/data/789019/000078901926000223/xslF345X06/form4.xml"
     },
     {
       "form": "4",
-      "filing_date": "2026-09-15",
-      "accession": "0000789019-26-000212",
-      "url": "https://www.sec.gov/Archives/edgar/data/789019/000078901926000212/xslF345X06/form4.xml"
+      "filing_date": "2026-09-17",
+      "accession": "0000789019-26-000222",
+      "url": "https://www.sec.gov/Archives/edgar/data/789019/000078901926000222/xslF345X06/form4.xml"
     },
     {
       "form": "4",
-      "filing_date": "2026-09-11",
-      "accession": "0000789019-26-000208",
-      "url": "https://www.sec.gov/Archives/edgar/data/789019/000078901926000208/xslF345X06/form4.xml"
+      "filing_date": "2026-09-17",
+      "accession": "0000789019-26-000221",
+      "url": "https://www.sec.gov/Archives/edgar/data/789019/000078901926000221/xslF345X06/form4.xml"
     },
     {
       "form": "4",
-      "filing_date": "2026-09-11",
-      "accession": "0000789019-26-000207",
-      "url": "https://www.sec.gov/Archives/edgar/data/789019/000078901926000207/xslF345X06/form4.xml"
+      "filing_date": "2026-09-17",
+      "accession": "0000789019-26-000220",
+      "url": "https://www.sec.gov/Archives/edgar/data/789019/000078901926000220/xslF345X06/form4.xml"
     }
   ],
   "error": null,
-  "prev_close": 490.3,
-  "change": 7.67,
-  "change_pct": 1.564,
+  "prev_close": 497.75,
+  "change": -1.7458,
+  "change_pct": -0.351,
   "currency": "USD",
   "exchange": "NASDAQ-GS",
-  "volume": 11048775.991091,
+  "volume": 17836637.30822,
   "quote_source": "nasdaq-stocks"
 }

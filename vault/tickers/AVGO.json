@@ -1,8 +1,20 @@
 {
   "ticker": "AVGO",
-  "updated_at": "2026-09-17T19:59:46Z",
-  "price": 347.6,
+  "updated_at": "2026-09-17T23:22:12Z",
+  "price": 348.3,
   "filings": [
+    {
+      "form": "4",
+      "filing_date": "2026-09-17",
+      "accession": "0001730168-26-000084",
+      "url": "https://www.sec.gov/Archives/edgar/data/1730168/000173016826000084/xslF345X06/wk-form4_1789683021.xml"
+    },
+    {
+      "form": "4",
+      "filing_date": "2026-09-17",
+      "accession": "0001730168-26-000082",
+      "url": "https://www.sec.gov/Archives/edgar/data/1730168/000173016826000082/xslF345X06/wk-form4_1789682754.xml"
+    },
     {
       "form": "10-Q",
       "filing_date": "2026-09-10",
@@ -20,26 +32,14 @@
       "filing_date": "2026-07-14",
       "accession": "0001730168-26-000072",
       "url": "https://www.sec.gov/Archives/edgar/data/1730168/000173016826000072/xslF345X06/wk-form4_1784075275.xml"
-    },
-    {
-      "form": "4",
-      "filing_date": "2026-07-14",
-      "accession": "0001730168-26-000070",
-      "url": "https://www.sec.gov/Archives/edgar/data/1730168/000173016826000070/xslF345X06/wk-form4_1784075021.xml"
-    },
-    {
-      "form": "4",
-      "filing_date": "2026-07-10",
-      "accession": "0001730168-26-000068",
-      "url": "https://www.sec.gov/Archives/edgar/data/1730168/000173016826000068/xslF345X06/wk-form4_1783723427.xml"
     }
   ],
   "error": null,
-  "prev_close": 339.51,
-  "change": 8.09,
-  "change_pct": 2.383,
+  "prev_close": 347.3,
+  "change": 1.0,
+  "change_pct": 0.288,
   "currency": "USD",
   "exchange": "NASDAQ-GS",
-  "volume": 14959562.39786,
+  "volume": 24375023.765185,
   "quote_source": "nasdaq-stocks"
 }
