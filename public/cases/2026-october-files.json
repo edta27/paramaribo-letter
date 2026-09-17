@@ -1,0 +1,237 @@
+{
+  "id": "2026-october-files",
+  "date": "2026-09-16",
+  "kicker": "Desk Case Studies \u00b7 03",
+  "title": "We Saw the Crash. We Didn't See the Whole Story.",
+  "subtitle": "A forensic audit of what this desk can actually recover about 10 October 2025 \u2014 and what that does not license for Q4 2026.",
+  "dek": "The Paramaribo Letter did not publish before crypto\u2019s 10 October 2025 liquidation. This case freezes that gap, reconstructs the event from dated market data and contemporaneous reporting, scores the 2026 letters that came after, and refuses to treat a $105k rhyme or a $30k analogue as a prediction.",
+  "investors": [
+    "The Paramaribo Letter desk"
+  ],
+  "companies": [],
+  "themes": [
+    "Forecast scoring",
+    "October 10 2025",
+    "Wildcard vs structure",
+    "Hindsight bias",
+    "Q4 2026 map"
+  ],
+  "readingMinutes": 24,
+  "summaryHtml": "<p>The Paramaribo Letter did not exist on 10 October 2025. The public archive begins with <a href=\"/issue?id=2026-08-22-the-window\">Issue 01</a> on 22 August 2026. This case therefore cannot freeze a desk forecast that was never dated. That gap is the first finding, not a footnote.</p>\n<p>What we <em>can</em> recover is the event itself (Yahoo Bitcoin; OKX PENGU; contemporaneous reporting of a tariff post and a record liquidation), the 2026 letters that reconstructed it without claiming to have timed it, and the subsequent path: year-end 2025 close about $87.5k, a 1 July 2026 daily low of $57,748, and a 15 September 2026 daily close of $75,613 that finally printed Issue 21\u2019s $77k correction gate.</p>\n<p>The honest title is not \u201cwe predicted the crash.\u201d It is: a useful desk measures the fragility that makes an unexpected headline catastrophic \u2014 and treats crash, timing, depth, catalyst, and recovery as five separate forecasts. Getting one of those right does not get the others.</p>",
+  "toc": [
+    {
+      "id": "summary",
+      "title": "Executive summary"
+    },
+    {
+      "id": "freeze",
+      "title": "I. Freeze the forecast"
+    },
+    {
+      "id": "reality",
+      "title": "II. Reconstruct reality"
+    },
+    {
+      "id": "score",
+      "title": "III. Score what we published"
+    },
+    {
+      "id": "105k",
+      "title": "IV. The $105k test"
+    },
+    {
+      "id": "wildcard",
+      "title": "V. The wild-card question"
+    },
+    {
+      "id": "mechanism",
+      "title": "VI. Why it became nonlinear"
+    },
+    {
+      "id": "wrong",
+      "title": "VII. What we got wrong"
+    },
+    {
+      "id": "controller",
+      "title": "VIII. Controller thought experiment"
+    },
+    {
+      "id": "overlay",
+      "title": "IX. Overlay 2026"
+    },
+    {
+      "id": "cycles",
+      "title": "X. Historical top-to-bottom"
+    },
+    {
+      "id": "30k",
+      "title": "XI. The $30k question"
+    },
+    {
+      "id": "tree",
+      "title": "XII. 2026 decision tree"
+    },
+    {
+      "id": "lesson",
+      "title": "XIII. The actual lesson"
+    },
+    {
+      "id": "watch",
+      "title": "Q4 2026 watch"
+    },
+    {
+      "id": "sources",
+      "title": "Sources"
+    }
+  ],
+  "timeline": [
+    {
+      "when": "6 Oct 2025",
+      "what": "Yahoo daily high $126,198 (desk ATH $126,080).",
+      "source": "Yahoo Finance BTC-USD"
+    },
+    {
+      "when": "10 Oct 2025",
+      "what": "Yahoo low $104,582, close $113,214. OKX PENGU wick to $0.005726. Contemporaneous reports: tariff post, ~$19B liquidations.",
+      "source": "Yahoo; OKX; CoinGecko Learn / CoinDesk / Galaxy"
+    },
+    {
+      "when": "31 Dec 2025",
+      "what": "Yahoo close $87,509. The 10/10 wick was not the cycle low.",
+      "source": "Yahoo Finance BTC-USD"
+    },
+    {
+      "when": "1 Jul 2026",
+      "what": "Yahoo daily low $57,748 \u2014 2026 trough in this pull (\u221254% from the October high).",
+      "source": "Yahoo Finance BTC-USD"
+    },
+    {
+      "when": "22 Aug 2026",
+      "what": "Paramaribo Letter Issue 01 publishes. Public forecast archive begins.",
+      "source": "paramariboletter.com"
+    },
+    {
+      "when": "1\u201311 Sep 2026",
+      "what": "Issues 16, 21, 22: $46k is a tail; no crash from $79.9k; 2025 costume does not fit. WAIT.",
+      "source": "Issues 16 / 21 / 22"
+    },
+    {
+      "when": "15 Sep 2026",
+      "what": "Yahoo daily close $75,613 \u2014 Issue 21\u2019s $77k correction gate prints.",
+      "source": "Yahoo Finance BTC-USD"
+    },
+    {
+      "when": "16 Sep 2026",
+      "what": "FOMC hikes 25 bp to 3.75\u20134.00%.",
+      "source": "Federal Reserve FOMC / Warsh transcript"
+    },
+    {
+      "when": "16 Sep 2026",
+      "what": "This case study. As-of Coinbase ~$76.1k.",
+      "source": "This case"
+    }
+  ],
+  "figures": {
+    "caption": "Drawdowns from the 2025 ATH \u2014 historically possible, not confirmed",
+    "columns": [
+      "Drawdown from $126,080",
+      "Implied price",
+      "How to read it"
+    ],
+    "rows": [
+      [
+        "\u221239.6% (spot, this pull)",
+        "~$76.1k",
+        "Fact, not a forecast"
+      ],
+      [
+        "\u221254.2% (1 Jul 2026 Yahoo low vs 6 Oct high)",
+        "$57,748",
+        "Trough so far \u2014 may or may not be the bottom"
+      ],
+      [
+        "\u221260%",
+        "~$50.4k",
+        "Near Issue 16\u2019s deeper branch"
+      ],
+      [
+        "\u221277.3% (2021\u201322 Yahoo analogue)",
+        "~$28.6\u201329.4k",
+        "Historically possible; not a 2026 base"
+      ],
+      [
+        "\u221280%",
+        "~$25.2k",
+        "Extreme tail \u2014 not confirmed"
+      ]
+    ],
+    "note": "n=2 completed Yahoo cycles plus an incomplete 2025\u201326 path. Percentage analogues are not mandates. $30k capitulation is not confirmed."
+  },
+  "bodyHtml": "<h2 id=\"freeze\">Part I \u2014 Freeze the forecast</h2>\n<p>Search of this repository\u2019s public issues, <code>research/forecast-ledger.csv</code>, and git-tracked research files for dated BTC/PENGU forecasts <em>before 10 October 2025</em> returned <strong>none</strong>. Requested reconstruction dates \u2014 5, 19, 21, 26, 28, 29 September and 8 October 2025 \u2014 are not in the archive. Private notes, if they exist, are not a recoverably dated public ledger. Empty cells beat invented rows.</p>\n<p>What <em>is</em> dated:</p>\n<ul>\n  <li><strong>22 August 2026.</strong> Issue 01: \u201cThe crash is a window, not a date.\u201d Local panic clusters around events. It does not print on a slogan.</li>\n  <li><strong>19 August 2026 onward.</strong> Forecast ledger IDs <code>IR-2026-08-19A</code> through <code>IR-2026-09-11A</code>. Earliest rows already sit in a post-ATH, post-10/10, post-June-trough tape. They are not pre-event calls.</li>\n  <li><strong>1 September 2026.</strong> Issue 16 put a crash stack on trial and refused to treat waiting near $79k as a $46k ticket. $46k stayed a tail node. Independent agent cards were not collected that night.</li>\n  <li><strong>7 September 2026.</strong> Issue 21: no crash from ~$79.9k; correction 40%; crash/new-cycle-low 15%; Daily close below $77k opens the correction map.</li>\n  <li><strong>11 September 2026.</strong> Issue 22: 2025 looked strong the night before the wick; 2026 was testing $77k with PENGU lagging; decision WAIT; a $80\u201382k bounce with PENGU limp would rhyme more, not less.</li>\n</ul>\n<aside class=\"interp\" aria-label=\"Desk interpretation\">\n  <p><strong>Desk interpretation.</strong> If someone later points to a $105k level as \u201cour number,\u201d ask for the dated row. Without a timestamped probability, matching the eventual Yahoo low of $104,582 is overfitting, not scoring.</p>\n</aside>\n\n<h2 id=\"reality\">Part II \u2014 Reconstruct reality</h2>\n<p><strong>Known fact \u2014 cycle high.</strong> Yahoo UTC daily: 6 October 2025 high $126,198, close $124,753. CoinGecko ATH used on this desk: $126,080 (6 October 2025).</p>\n<p><strong>Known fact \u2014 10 October tape.</strong> Yahoo: open about $121,706, high $122,510, low $104,582, close $113,214. Intraday drawdown versus the 9 October close ($121,706) about \u221214%. OKX PENGU: 9 October close $0.02899; 10 October low $0.005726, close $0.02325 (about \u221280% wick versus the prior close).</p>\n<p><strong>Source interpretation \u2014 catalyst class.</strong> Contemporaneous reporting (CoinDesk, CoinGecko Learn, Galaxy, Reuters-adjacent roundups) attributed the first impulse to a Truth Social post by President Trump on 10 October 2025 announcing an additional 100% tariff on Chinese imports after the U.S. cash session, with liquidations then amplifying. CoinGecko Learn and Coinglass-cited roundups put notional liquidations on the order of $19 billion. Binance later argued the move was a macro shock plus automated deleveraging, with venue-specific depegs (USDe, WBETH, BNSOL) as amplifiers rather than the sole cause.</p>\n<p><strong>Paramaribo analysis.</strong> That is a <em>catalyst class</em> (unexpected macro headline into leveraged books). It is not evidence the post was engineered to crash crypto. This desk does not claim a hidden Controller.</p>\n<p><strong>Known fact \u2014 after the wick.</strong> Yahoo post-10 October path: 11 October close $110,808; 21 November 2025 daily low $80,660; 31 December 2025 close $87,509. 2026 Yahoo high 14 January $97,861; 2026 daily minimum low 1 July $57,748. This as-of (17 September 2026 ~02:11 UTC): Coinbase $76,083; CoinGecko $76,138 (\u221239.6% versus ATH). 15 September 2026 daily close $75,613, low $74,945 \u2014 Issue 21\u2019s $77k gate printed. PENGU last about $0.00701 (\u221289.8% versus ATH $0.06845).</p>\n<p><strong>Known fact \u2014 16 September 2026 FOMC.</strong> Federal Reserve: funds rate raised 25 basis points to 3.75\u20134.00%. Primary source: FOMC materials and Chairman Warsh press-conference transcript, 16 September 2026. US 10-year about 5.01%; DXY about 100.33 (Yahoo, this pull).</p>\n\n<h2 id=\"score\">Part III \u2014 Score what we actually published</h2>\n<p>There is no pre-10/10 Paramaribo scorecard. Scoring 2026 letters against 10/10 as if they were 2025 calls would be hindsight leakage. Score them against their own as-ofs.</p>\n<table class=\"flags\">\n  <thead>\n    <tr><th>Claim</th><th>When dated</th><th>Grade</th><th>Note</th></tr>\n  </thead>\n  <tbody>\n    <tr><td>Crash is a window, not a date</td><td>Issue 01 \u00b7 22 Aug 2026</td><td>Process \u2014 not a 10/10 prediction</td><td>Correct as a method. Too late to be a 2025 forecast.</td></tr>\n    <tr><td>$46k is a tail node, not a ticket</td><td>Issue 16 \u00b7 1 Sep 2026</td><td>Still open</td><td>Did not treat 10/10 as proof of $46k. Missing OI/ETF/on-chain that night.</td></tr>\n    <tr><td>No crash from ~$79.9k; Daily &lt;$77k opens correction</td><td>Issue 21 \u00b7 7 Sep 2026</td><td>Correction gate hit</td><td>15 Sep 2026 close $75,613. Crash/new-low 15% was not promoted to base.</td></tr>\n    <tr><td>2025 looked strong the night before; 2026 does not</td><td>Issue 22 \u00b7 11 Sep 2026</td><td>Supported by the overlay</td><td>9 Oct 2025 BTC still +11% from 1 Sep; 9 Sep 2026 was a failed $82k probe. WAIT.</td></tr>\n    <tr><td>Dated October crash / specific tariff post</td><td>Not in archive</td><td>Not claimed</td><td>Issue 22 explicitly separated vulnerability from an unknowable wildcard.</td></tr>\n  </tbody>\n</table>\n<p>Direction of \u201cfragility can turn a headline into a cascade\u201d matches 10/10\u2019s <em>mechanism</em> in the historical record. Timing of 10/10 was not a Paramaribo call. Magnitude: BTC\u2019s first print (~\u221214% intraday) is ordinary-to-severe for Bitcoin; PENGU\u2019s \u221280% wick is the extraordinary leg. Catalyst class (macro shock) is in contemporaneous sources; the specific post was not knowable from September closes. Post-crash recovery: 10/10 was not the cycle low. That is the largest \u201cif we had called the wick, we still would have missed the story\u201d fact.</p>\n\n<h2 id=\"105k\">Part IV \u2014 The $105k test</h2>\n<p>Yahoo\u2019s 10 October 2025 low was <strong>$104,582</strong>. That sits next to a round $105k. It is an attractive number to \u201cremember.\u201d</p>\n<p>This archive contains no dated probability mass on $105k, $100k, $96k, $90k, or $85k <em>before</em> the event. Issue 16\u2019s named tail was <strong>$46k</strong>, months later and as a node, not a 10/10 target. $104,582 is not $46k. Selecting $105k after seeing the low is the definition of overfitting a successful digit.</p>\n<p>What the tape actually did after the first wick is harsher on a \u201cwe nailed the level\u201d story: November 2025 already printed a Yahoo daily low of <strong>$80,660</strong>, then 2026 printed <strong>$57,748</strong>. The first capitulation print was not the bottom.</p>\n\n<h2 id=\"wildcard\">Part V \u2014 The wild-card question</h2>\n<p>On the 2026 desk, the framework is recoverably <strong>B, with an explicit warning not to date C</strong>: a black swan is <em>allowed</em>; it is not required; Issue 01 and Issue 22 say not to predict the headline. Issue 16 says a vulnerability stack is not a measured trigger. There is no 2025 chronology of A\u2192B\u2192C\u2192D because those notes were not published then.</p>\n<p>The distinction that matters:</p>\n<ul>\n  <li><strong>Ordinary structure</strong> can produce a correction (failed highs, relative-strength lag, event calendar).</li>\n  <li><strong>An unexpected catalyst</strong> can turn that correction into a nonlinear liquidation when leverage, crowding, and thin books are already there.</li>\n</ul>\n<p>10 October 2025 is the second sentence. September 2025 closes, by themselves, were the first. Treating the first as a timed prediction of the second is the error this case exists to refuse.</p>\n\n<h2 id=\"mechanism\">Part VI \u2014 Why it became nonlinear</h2>\n<p>The mechanical stack does not need a conspiracy:</p>\n<ol>\n  <li>Price falls on a headline after cash hours.</li>\n  <li>Leveraged perps hit maintenance; engines sell into a thinning book.</li>\n  <li>Forced selling drops marks; collateral (including wrapped/pegged names on some venues) deteriorates.</li>\n  <li>Bids pull; altcoins with shallow books overshoot; liquidations chain.</li>\n</ol>\n<p>Contemporaneous reporting of ~$19B notionals, weekend-adjacent timing, and venue-specific depegs is enough to tell that story. Missing from <em>this</em> 2026 reconstruction, still: a desk-owned open-interest snapshot for 9 October 2025, ETF creation/redemption tape that day, and Glassnode holder series. Those absences limit how tightly we can compare \u201cfragility then vs now.\u201d They do not require a Controller to close the gap.</p>\n\n<h2 id=\"wrong\">Part VII \u2014 What we got wrong (and what we must not claim)</h2>\n<p>This section is the load-bearing wall.</p>\n<ul>\n  <li><strong>We did not publish before the event.</strong> Any sentence that begins \u201cwe saw the crash coming in September 2025\u201d is false as a Paramaribo Letter claim.</li>\n  <li><strong>Requested 2025 forecast dates are missing.</strong> Not recovered is not \u201cclassified.\u201d It is insufficient evidence.</li>\n  <li><strong>$105k as our number is not in the ledger.</strong> Using the low as proof of skill would be retrospective selection.</li>\n  <li><strong>10/10 was not the bottom.</strong> A desk that had faded the wick into \u201cthe low is in\u201d would have been wrong through November 2025 and June 2026. Issue 16\u2019s caution that recovery is a separate forecast is the correction.</li>\n  <li><strong>PENGU after the wick.</strong> The token bounced from $0.00573 and still sits about $0.007 a year later, \u221290% from ATH. \u201cHigh-beta diagnostic\u201d was useful. Treating a wick low as a sustainable bottom was not.</li>\n  <li><strong>Issue 21\u2019s 45% chop base</strong> aged poorly once 15 September closed under $77k. The <em>gate</em> was right; the modal weight was too calm. That is a real miss, dated and checkable.</li>\n  <li><strong>Plumbing still missing.</strong> Issues 16, 21, and 22 all marked ETF/OI/on-chain insufficient. We still cannot rank 16 September 2026 leverage versus 9 October 2025 with a desk pull. That is an ongoing failure of measurement, not a secret.</li>\n</ul>\n\n<h2 id=\"controller\">Part VIII \u2014 Controller thought experiment</h2>\n<p>Only after the facts: <em>if</em> an observer could see the whole system from above on 9 October 2025, the sequence would have looked like euphoria (new ATH four days earlier) \u2192 leverage (record OI in contemporaneous roundups) \u2192 fragility (weekend books, crowded longs) \u2192 unexpected shock (tariff post) \u2192 liquidity disappearance \u2192 forced selling \u2192 capitulation wick, especially in alts.</p>\n<p>That is a <strong>scenario-analysis lens</strong>. It is not evidence that an actual hidden Controller orchestrated the post, the books, or the depegs. This desk will not smuggle a conspiracy in through the back door of a useful diagram.</p>\n\n<h2 id=\"overlay\">Part IX \u2014 Overlay 2026</h2>\n<p>Do not say \u201c2025 happened, therefore 2026 will repeat.\u201d</p>\n<p><strong>Present again (as of this pull):</strong> a prior ATH far overhead; PENGU still a high-beta laggard; event risk (FOMC just hiked 25 bp; 10-year ~5.01%; DXY ~100.3); Daily structure that has now lost $77k (15 Sep close $75,613) and is working toward inherited $71.7\u201372.3k / $62\u201365k / June $57,748 maps from Issues 16\u201322.</p>\n<p><strong>Absent or different:</strong> 2025 September was a melt-up into an ATH. 2026 September is a failed stall after a \u221240% drawdown and a June trough already in the books. Spot ETFs existed in both years \u2014 product existence is not a 2026-only shock absorber (Issue 22). Open interest versus 9 October 2025 is still not pulled. Corporate BTC holdings and a full ETF flow tape are insufficient here.</p>\n<p>Issue 22\u2019s overlay still holds as a regime warning: a bounce toward $80\u201382k with PENGU stuck near $0.007 would look <em>more</em> like the deceptive 2025 week, not less. That bounce has not printed as of this as-of.</p>\n\n<h2 id=\"cycles\">Part X \u2014 Historical top-to-bottom test</h2>\n<p>Yahoo BTC-USD daily extrema (desk-verified in this pull):</p>\n<ul>\n  <li><strong>2017\u201318.</strong> High 17 December 2017 $20,089 \u2192 low 15 December 2018 $3,191. 363 days. \u221284.1%.</li>\n  <li><strong>2021\u201322.</strong> High 10 November 2021 $68,790 \u2192 low 21 November 2022 $15,599. 376 days. \u221277.3%.</li>\n  <li><strong>2025\u201326 (incomplete).</strong> High 6 October 2025 $126,198 \u2192 low so far 1 July 2026 $57,748. 268 days. \u221254.2%.</li>\n</ul>\n<p>The 2013\u201315 pair is widely cited near $1,100\u2013$1,200 to ~$150\u2013$180 over roughly 12\u201314 months. This Yahoo pull does <strong>not</strong> cleanly recover the 2013 high, so those figures stay external, not desk-verified.</p>\n<p>Two completed Yahoo cycles lasted about 12\u201312.5 months from top to bottom. That is a sample of two. It is not a law. It does make October\u2013November 2026 a <em>window to watch</em>, not a date to predict. June 2026 is already a major countertrend low on this path; whether it is <em>the</em> bottom is exactly the unconfirmed question.</p>\n\n<h2 id=\"30k\">Part XI \u2014 The $30k question</h2>\n<p>From the 2025 ATH used on this desk ($126,080):</p>\n<ul>\n  <li>\u221260% \u2192 about $50,432</li>\n  <li>\u221265% \u2192 about $44,128</li>\n  <li>\u221270% \u2192 about $37,824</li>\n  <li>\u221275% \u2192 about $31,520</li>\n  <li>\u221276.7% \u2192 about $29,377</li>\n  <li>\u221280% \u2192 about $25,216</li>\n</ul>\n<p>Applying the 2021\u201322 Yahoo percentage (\u221277.3%) to the 6 October 2025 Yahoo high ($126,198) lands near <strong>$28,600</strong>. That is historically <em>possible</em>. It is not structurally confirmed. It is not a 2026 base case. Issue 16 already refused to promote $46k to a ticket; $29k is a further tail on a further tail. n=2 completed percentages plus an incomplete 2025\u201326 path is not a mandate.</p>\n\n<h2 id=\"tree\">Part XII \u2014 2026 decision tree</h2>\n<p>As-of Coinbase about $76.1k, after a Daily close below $77k. Falsifiable map, not a single prediction:</p>\n<ol>\n  <li><strong>Now \u2192 ~$71.7\u201372.3k</strong> (inherited Bang deeper TP / Issue 13\u201322 map). Hold and reclaim strengthens range; acceptance below opens the next shelf.</li>\n  <li><strong>~$62\u201365k.</strong> Major structural test from earlier box work.</li>\n  <li><strong>June daily low $57,748.</strong> Decisive. Sweep-and-strong-reclaim: cycle-bottom thesis gains. Break and failed reclaim: $50k / $46k become relevant (Issue 16 node, still a tail until that print).</li>\n  <li><strong>If $46k fails in severe cross-asset stress:</strong> the historical-percentage band ~$28\u201338k becomes discussable. Not confirmed. Not a buy-rule.</li>\n</ol>\n<p>Bull repair still requires the old ladder: two Daily closes above $81.5k holding $80k, then weekly through May\u2019s $82,792. That has not printed.</p>\n\n<h2 id=\"lesson\">Part XIII \u2014 Paramaribo\u2019s actual lesson</h2>\n<p>The conclusion is not \u201cwe predicted the crash.\u201d We did not have a public desk to predict it with.</p>\n<p>The stronger conclusion, which Issues 01, 16, and 22 already stated in 2026 language:</p>\n<blockquote>\n  <p>A useful research system does not need to predict the headline. It needs to identify when the system is vulnerable enough that an unexpected headline can produce an extraordinary outcome.</p>\n</blockquote>\n<p><strong>Do not predict the wild card. Measure the fragility that makes a wild card matter.</strong></p>\n<p>Second lesson, forced by the post-wick path: <strong>correctly describing a crash \u2014 even after the fact \u2014 does not mean you have correctly forecast what happens after the crash.</strong> 10/10 was not the low. PENGU\u2019s wick was not a sustainable bottom. Treat crash probability, timing, depth, catalyst, and recovery as five forecasts. Score them separately.</p>\n\n<h2 id=\"watch\">Paramaribo Watch \u2014 Q4 2026</h2>\n<aside class=\"interp\" aria-label=\"Q4 2026 watch box\">\n<p><strong>PARAMARIBO WATCH \u2014 Q4 2026</strong></p>\n<p><strong>Not confirmed:</strong> $30k capitulation.</p>\n<p><strong>First test:</strong> ~$71.7\u201372.3k (Daily $77k already lost on 15 Sep 2026).</p>\n<p><strong>Major structural test:</strong> ~$62\u201365k.</p>\n<p><strong>Decisive level:</strong> June daily low $57,748 (packet\u2019s ~$58.5k June figure was slightly high; use the Yahoo print).</p>\n<p><strong>Deeper branch:</strong> ~$50k / ~$46k.</p>\n<p><strong>Extreme historical-capitulation branch:</strong> ~$28\u201338k.</p>\n<p><strong>Wild card:</strong> unknown and not required.</p>\n<p><strong>Rule:</strong> Let price structure confirm the scenario before promoting the tail. Educational research, not advice. No leverage.</p>\n</aside>",
+  "sources": [
+    {
+      "title": "Yahoo Finance BTC-USD daily (desk pull)",
+      "url": "https://finance.yahoo.com/quote/BTC-USD",
+      "kind": "Primary market data",
+      "date": "pulled 2026-09-17 ~02:11 UTC",
+      "note": "ATH window, 10 Oct 2025 OHLC, 2025 year-end, 2026 trough, 15 Sep 2026 close, cycle extrema 2017\u201318 and 2021\u201322."
+    },
+    {
+      "title": "OKX PENGU-USDT daily candles",
+      "url": "https://www.okx.com",
+      "kind": "Primary market data",
+      "date": "Issue 22 reconstruction, 2025-09-01 through 2025-10-14",
+      "note": "10 Oct 2025 low $0.005726."
+    },
+    {
+      "title": "Coinbase BTC-USD spot / CoinGecko markets",
+      "url": "https://www.coingecko.com/en/coins/bitcoin",
+      "kind": "Primary market data",
+      "date": "2026-09-17 ~02:11 UTC",
+      "note": "As-of spot for the watch box."
+    },
+    {
+      "title": "What Is October 10th? Crypto's 10/10 Mass Market Liquidation Event",
+      "url": "https://www.coingecko.com/learn/october-10-crypto-crash-explained",
+      "kind": "Contemporaneous / explainer",
+      "date": "2025-10",
+      "note": "Tariff-post timing, liquidation notionals, cascade description. Source interpretation, not desk tape."
+    },
+    {
+      "title": "CoinDesk \u2014 Bitcoin crash on further Trump tariff on China",
+      "url": "https://www.coindesk.com/markets/2025/10/10/bitcoin-crashes-below-usd110k-cryptos-in-freefall-on-further-trump-tariff-on-china",
+      "kind": "Contemporaneous reporting",
+      "date": "2025-10-10",
+      "note": "Catalyst class. Not used as proof of intent."
+    },
+    {
+      "title": "Galaxy \u2014 Crypto\u2019s largest flash crash yet",
+      "url": "https://www.galaxy.com/insights/research/cryptos-flash-crash-liquidation-binance-adl-auto-deleveraging",
+      "kind": "Research recap",
+      "date": "2025-10",
+      "note": "ADL / depeg amplifiers. Source interpretation."
+    },
+    {
+      "title": "FOMC projections and Warsh press conference, 16 September 2026",
+      "url": "https://www.federalreserve.gov/monetarypolicy/fomcprojtabl20260916.htm",
+      "kind": "Primary (policy)",
+      "date": "2026-09-16",
+      "note": "25 bp hike to 3.75\u20134.00%. Transcript: federalreserve.gov mediacenter FOMCpresconf20260916.pdf"
+    },
+    {
+      "title": "The Paramaribo Letter Issues 01, 16, 21, 22",
+      "url": "https://www.paramariboletter.com/",
+      "kind": "Desk archive",
+      "date": "2026-08-22 through 2026-09-11",
+      "note": "Only dated Paramaribo forecasts recovered. None predate 10 Oct 2025."
+    },
+    {
+      "title": "research/forecast-ledger.csv",
+      "url": "https://github.com/edta27/investment-research",
+      "kind": "Desk archive",
+      "date": "from IR-2026-08-19A",
+      "note": "Earliest ledger row is 19 August 2026."
+    }
+  ],
+  "disclaimer": "This case study is provided for educational and research purposes only. It is not investment advice and not a prediction of Q4 2026 prices. The Paramaribo Letter\u2019s public archive begins 22 August 2026; this note does not invent pre-October 2025 desk forecasts. Named officials, firms, and traders are subjects of research commentary, not authors. No leverage. Cash and insufficient evidence remain valid."
+}

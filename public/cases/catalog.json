@@ -1,10 +1,29 @@
 [
   {
+    "id": "2026-october-files",
+    "date": "2026-09-16",
+    "kicker": "Desk Case Studies \u00b7 03",
+    "title": "We Saw the Crash. We Didn't See the Whole Story.",
+    "dek": "The Paramaribo Letter did not publish before crypto\u2019s 10 October 2025 liquidation. This case freezes that gap, reconstructs the event from dated market data and contemporaneous reporting, scores the 2026 letters that came after, and refuses to treat a $105k rhyme or a $30k analogue as a prediction.",
+    "investors": [
+      "The Paramaribo Letter desk"
+    ],
+    "companies": [],
+    "themes": [
+      "Forecast scoring",
+      "October 10 2025",
+      "Wildcard vs structure",
+      "Hindsight bias",
+      "Q4 2026 map"
+    ],
+    "readingMinutes": 24
+  },
+  {
     "id": "2026-does-orchestration-stay-scarce",
     "date": "2026-09-02",
-    "kicker": "Desk Case Studies · 02",
+    "kicker": "Desk Case Studies \u00b7 02",
     "title": "Does Orchestration Stay Scarce?",
-    "dek": "The Model Is No Longer the Moat contains two theses: a well-supported scarcity migration toward power, chips, data, and distribution — and a more speculative claim that agent orchestration and harnesses become a durable moat. This follow-up isolates the hinge: if models become commodities, does orchestration remain scarce, or does it become commodity software too?",
+    "dek": "The Model Is No Longer the Moat contains two theses: a well-supported scarcity migration toward power, chips, data, and distribution \u2014 and a more speculative claim that agent orchestration and harnesses become a durable moat. This follow-up isolates the hinge: if models become commodities, does orchestration remain scarce, or does it become commodity software too?",
     "investors": [
       "The Paramaribo Letter desk"
     ],
@@ -13,7 +32,7 @@
       "Agent orchestration",
       "Verification",
       "Commodity software",
-      "Gödel caution",
+      "G\u00f6del caution",
       "Falsification"
     ],
     "readingMinutes": 11
@@ -21,9 +40,9 @@
   {
     "id": "2026-model-no-longer-the-moat",
     "date": "2026-09-02",
-    "kicker": "Desk Case Studies · 01",
+    "kicker": "Desk Case Studies \u00b7 01",
     "title": "The Model Is No Longer the Moat",
-    "dek": "Public excerpts attributed to a Dimension Capital August 2026 China memo argue that open-weight models are compressing the intelligence layer. This desk case turns that incomplete public evidence into an investment question: if models become interchangeable, where does economic value migrate — chips, power, data, distribution, or the systems that route, verify, and deploy agents?",
+    "dek": "Public excerpts attributed to a Dimension Capital August 2026 China memo argue that open-weight models are compressing the intelligence layer. This desk case turns that incomplete public evidence into an investment question: if models become interchangeable, where does economic value migrate \u2014 chips, power, data, distribution, or the systems that route, verify, and deploy agents?",
     "investors": [
       "The Paramaribo Letter desk"
     ],
@@ -46,15 +65,15 @@
   {
     "id": "1972-sees-candies",
     "date": "2026-08-31",
-    "kicker": "Investor Case Studies · 01",
-    "title": "See’s Candies, 1972: the franchise they almost didn’t buy",
-    "dek": "Buffett and Munger bought See’s through Blue Chip Stamps at a hard $25 million ceiling. Reconstruct the thesis from filings and letters — pricing power, thin tangible capital, and a near-miss on price — without turning the later cash gusher into a 1972 prophecy.",
+    "kicker": "Investor Case Studies \u00b7 01",
+    "title": "See\u2019s Candies, 1972: the franchise they almost didn\u2019t buy",
+    "dek": "Buffett and Munger bought See\u2019s through Blue Chip Stamps at a hard $25 million ceiling. Reconstruct the thesis from filings and letters \u2014 pricing power, thin tangible capital, and a near-miss on price \u2014 without turning the later cash gusher into a 1972 prophecy.",
     "investors": [
       "Warren Buffett",
       "Charlie Munger"
     ],
     "companies": [
-      "See’s Candies",
+      "See\u2019s Candies",
       "Blue Chip Stamps",
       "Berkshire Hathaway"
     ],
