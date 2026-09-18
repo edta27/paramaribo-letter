@@ -1,7 +1,7 @@
 {
   "ticker": "TSM",
-  "updated_at": "2026-09-18T13:22:19Z",
-  "price": 429.3,
+  "updated_at": "2026-09-18T19:26:27Z",
+  "price": 430.4299,
   "filings": [
     {
       "form": "6-K",
@@ -36,10 +36,10 @@
   ],
   "error": null,
   "prev_close": 430.26,
-  "change": -0.96,
-  "change_pct": -0.223,
+  "change": 0.1699,
+  "change_pct": 0.039,
   "currency": "USD",
   "exchange": "NYSE",
-  "volume": 156409.34472,
+  "volume": 5274976.834258,
   "quote_source": "nasdaq-stocks"
 }
