@@ -1,8 +1,20 @@
 {
   "ticker": "WMT",
-  "updated_at": "2026-09-18T19:26:29Z",
-  "price": 107.43,
+  "updated_at": "2026-09-18T23:00:13Z",
+  "price": 106.8525,
   "filings": [
+    {
+      "form": "4",
+      "filing_date": "2026-09-18",
+      "accession": "0001992808-26-000027",
+      "url": "https://www.sec.gov/Archives/edgar/data/104169/000199280826000027/xslF345X06/wk-form4_1789763762.xml"
+    },
+    {
+      "form": "4",
+      "filing_date": "2026-09-18",
+      "accession": "0001696737-26-000019",
+      "url": "https://www.sec.gov/Archives/edgar/data/104169/000169673726000019/xslF345X06/wk-form4_1789764067.xml"
+    },
     {
       "form": "4",
       "filing_date": "2026-09-09",
@@ -20,26 +32,14 @@
       "filing_date": "2026-09-09",
       "accession": "0002110304-26-000021",
       "url": "https://www.sec.gov/Archives/edgar/data/104169/000211030426000021/xslF345X06/wk-form4_1788988237.xml"
-    },
-    {
-      "form": "4",
-      "filing_date": "2026-09-09",
-      "accession": "0001886367-26-000025",
-      "url": "https://www.sec.gov/Archives/edgar/data/104169/000188636726000025/xslF345X06/wk-form4_1788988202.xml"
-    },
-    {
-      "form": "4",
-      "filing_date": "2026-09-02",
-      "accession": "0001579299-26-000024",
-      "url": "https://www.sec.gov/Archives/edgar/data/104169/000157929926000024/xslF345X06/wk-form4_1788382695.xml"
     }
   ],
   "error": null,
-  "prev_close": 106.79,
-  "change": 0.64,
-  "change_pct": 0.599,
+  "prev_close": 106.73,
+  "change": 0.1225,
+  "change_pct": 0.115,
   "currency": "USD",
   "exchange": "NASDAQ-GS",
-  "volume": 15133009.983101,
+  "volume": 45331393.758886,
   "quote_source": "nasdaq-stocks"
 }

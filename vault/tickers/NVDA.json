@@ -1,45 +1,45 @@
 {
   "ticker": "NVDA",
-  "updated_at": "2026-09-18T19:26:27Z",
-  "price": 219.555,
+  "updated_at": "2026-09-18T23:00:10Z",
+  "price": 222.2992,
   "filings": [
     {
       "form": "4",
-      "filing_date": "2026-09-11",
-      "accession": "0002152188-26-000005",
-      "url": "https://www.sec.gov/Archives/edgar/data/1045810/000215218826000005/xslF345X06/wk-form4_1789160684.xml"
+      "filing_date": "2026-09-18",
+      "accession": "0001283854-26-000010",
+      "url": "https://www.sec.gov/Archives/edgar/data/1045810/000128385426000010/xslF345X06/wk-form4_1789766082.xml"
     },
     {
       "form": "4",
-      "filing_date": "2026-09-08",
-      "accession": "0001199039-26-000014",
-      "url": "https://www.sec.gov/Archives/edgar/data/1045810/000119903926000014/xslF345X06/wk-form4_1788901755.xml"
+      "filing_date": "2026-09-18",
+      "accession": "0001696841-26-000012",
+      "url": "https://www.sec.gov/Archives/edgar/data/1045810/000169684126000012/xslF345X06/wk-form4_1789766007.xml"
     },
     {
       "form": "4",
-      "filing_date": "2026-09-04",
-      "accession": "0001197647-26-000009",
-      "url": "https://www.sec.gov/Archives/edgar/data/1045810/000119764726000009/xslF345X06/wk-form4_1788555631.xml"
-    },
-    {
-      "form": "8-K",
-      "filing_date": "2026-09-03",
-      "accession": "0001045810-26-000078",
-      "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000078/nvda-20260902.htm"
+      "filing_date": "2026-09-18",
+      "accession": "0001588670-26-000014",
+      "url": "https://www.sec.gov/Archives/edgar/data/1045810/000158867026000014/xslF345X06/wk-form4_1789765959.xml"
     },
     {
       "form": "4",
-      "filing_date": "2026-09-02",
-      "accession": "0001199039-26-000012",
-      "url": "https://www.sec.gov/Archives/edgar/data/1045810/000119903926000012/xslF345X06/wk-form4_1788387031.xml"
+      "filing_date": "2026-09-18",
+      "accession": "0001243821-26-000007",
+      "url": "https://www.sec.gov/Archives/edgar/data/1045810/000124382126000007/xslF345X06/wk-form4_1789766132.xml"
+    },
+    {
+      "form": "4",
+      "filing_date": "2026-09-18",
+      "accession": "0001197649-26-000012",
+      "url": "https://www.sec.gov/Archives/edgar/data/1045810/000119764926000012/xslF345X06/wk-form4_1789765856.xml"
     }
   ],
   "error": null,
-  "prev_close": 219.34,
-  "change": 0.215,
-  "change_pct": 0.098,
+  "prev_close": 222.27,
+  "change": 0.0292,
+  "change_pct": 0.013,
   "currency": "USD",
   "exchange": "NASDAQ-GS",
-  "volume": 76744055.513687,
+  "volume": 190039168.449275,
   "quote_source": "nasdaq-stocks"
 }
