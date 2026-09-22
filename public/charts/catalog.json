@@ -1,22 +1,33 @@
 [
   {
+    "id": "2026-09-22-87k-breakout",
+    "date": "2026-09-22",
+    "kicker": "Chart Desk · Issue 25",
+    "title": "Bitcoin cleared the door; $86k still needs a close",
+    "dek": "Coinbase price, Farside ETF flows, and OKX positioning through 22 September 2026.",
+    "asOf": "2026-09-22T20:06:00Z",
+    "cadence": "follow-up",
+    "thesis": "Bitcoin cleared $81.5k and reached $87k, but $86k support is not confirmed.",
+    "stakes": "ETF inflows supported the move; short liquidations and rising leverage supplied torque. The next fact is the completed daily close.",
+    "levels": ["$81.5k", "$86k", "$87.4k", "$77–80k"],
+    "letterId": "2026-09-22-the-87k-door",
+    "letterUrl": "/issue?id=2026-09-22-the-87k-door",
+    "letterLabel": "Vol. 1 · Issue 25",
+    "subscribeHook": "When $86k holds — or the break fails below $81.5k — the letter hits your inbox the same day. Charts stay free here; the call moves by email."
+  },
+  {
     "id": "2026-08-31-weekly",
     "date": "2026-08-31",
-    "kicker": "Chart Desk \u00b7 Weekly",
+    "kicker": "Chart Desk · Weekly",
     "title": "Weekly charts: BTC stall tape and SOL volume",
-    "dek": "As-of 31 Aug 2026 20:03 UTC. Dual charts from public CoinGecko price/volume \u2014 not Glassnode issuer ETF flows. Educational only.",
+    "dek": "Prior chart pack from 31 August 2026.",
     "asOf": "2026-08-31T20:03:07Z",
     "cadence": "weekly",
-    "thesis": "Bitcoin is still in a $77\u201380k stall. AI equities can bid without making that one trade.",
-    "stakes": "Spot still mid-box. Until a Daily close reclaims $80k or loses $77k, the desk stays cash / observe \u2014 charts below are the tape under that call.",
-    "levels": [
-      "$77k",
-      "$78.8k",
-      "$80k",
-      "$81\u201381.5k"
-    ],
+    "thesis": "Bitcoin is still in a $77–80k stall.",
+    "stakes": "Prior-week chart context; the current call is in the latest pack.",
+    "levels": ["$77k", "$78.8k", "$80k", "$81–81.5k"],
     "letterId": "2026-09-02-four-year-cycle-on-trial",
     "letterUrl": "/issue?id=2026-09-02-four-year-cycle-on-trial",
-    "letterLabel": "Vol. 1 \u00b7 Issue 17"
+    "letterLabel": "Vol. 1 · Issue 17"
   }
 ]

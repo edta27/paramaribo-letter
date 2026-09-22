@@ -1,0 +1,81 @@
+{
+  "id": "2026-09-22-87k-breakout",
+  "date": "2026-09-22",
+  "kicker": "Chart Desk · Issue 25",
+  "title": "Bitcoin cleared the door; $86k still needs a close",
+  "dek": "Coinbase price, Farside ETF flows, and OKX positioning through 22 September 2026.",
+  "asOf": "2026-09-22T20:06:00Z",
+  "cadence": "follow-up",
+  "thesis": "Bitcoin cleared $81.5k and reached $87k, but $86k support is not confirmed.",
+  "stakes": "ETF inflows supported the move; short liquidations and rising leverage supplied torque. The next fact is the completed daily close.",
+  "levels": ["$81.5k", "$86k", "$87.4k", "$77–80k"],
+  "letterId": "2026-09-22-the-87k-door",
+  "letterUrl": "/issue?id=2026-09-22-the-87k-door",
+  "letterLabel": "Vol. 1 · Issue 25",
+  "subscribeHook": "When $86k holds — or the break fails below $81.5k — the letter hits your inbox the same day. Charts stay free here; the call moves by email.",
+  "sourceNote": "The issue’s three publication charts use Coinbase Exchange UTC candles, Farside Investors US-session ETF flows, and OKX public BTC-USDT perpetual open-interest/funding data. The issue labels the date range, timezone, units, retrieval time, and missing ETF observations. Educational scenario research; no leverage.",
+  "briefs": [
+    {
+      "id": "btc-price-pathway",
+      "asset": "BTC",
+      "headline": "The price path: $77k to $87k",
+      "lede": "One completed close above $81.5k is printed; the $86k support test remains open.",
+      "bodyHtml": "<p><strong>Fact.</strong> Coinbase’s 18 September high reached $81,388; the 21 September daily closed at $86,595 after reaching $87,397. The 22 September candle was open at retrieval.</p><p><strong>Read.</strong> A level crossed is not a level held. The desk is watching the close, not a higher target.</p>",
+      "charts": [
+        {
+          "title": "BTC daily range [USD] vs close",
+          "bars": {
+            "label": "Daily high–low range [USD]",
+            "unsigned": true,
+            "data": [[1789516800000,3355.26],[1789603200000,1588.46],[1789689600000,1183.54],[1789776000000,5183.01],[1789862400000,1102.96],[1789948800000,1387.04],[1790035200000,6560.67],[1790121600000,1674.72]]
+          },
+          "line": {
+            "label": "BTC-USD close [USD]",
+            "data": [[1789516800000,75584.17],[1789603200000,76144.99],[1789689600000,76348.74],[1789776000000,80875.04],[1789862400000,81233.91],[1789948800000,81159.64],[1790035200000,86594.94],[1790121600000,86268.62]]
+          }
+        }
+      ]
+    },
+    {
+      "id": "btc-etf-flows",
+      "asset": "BTC · SPOT DEMAND",
+      "headline": "ETF flows turned supportive",
+      "lede": "The flow tape helped the break, but the positive run is short and includes one outsized session.",
+      "bodyHtml": "<p><strong>Fact.</strong> Farside reported −$450.4M and −$295.9M on 15–16 September, then +$159.5M, +$433.0M, and +$999.0M on 17–18 and 21 September.</p><p><strong>Read.</strong> Supportive is observable. Persistent is not yet earned.</p>",
+      "charts": [
+        {
+          "title": "US spot BTC ETF net flow [US$M] vs BTC close",
+          "bars": {
+            "label": "Farside daily net flow [US$M]",
+            "data": [[1789516800000,-450.4],[1789603200000,-295.9],[1789689600000,159.5],[1789776000000,433.0],[1789862400000,null],[1789948800000,null],[1790035200000,999.0],[1790121600000,null]]
+          },
+          "line": {
+            "label": "BTC-USD close [USD]",
+            "data": [[1789516800000,75584.17],[1789603200000,76144.99],[1789689600000,76348.74],[1789776000000,80875.04],[1789862400000,81233.91],[1789948800000,81159.64],[1790035200000,86594.94],[1790121600000,86268.62]]
+          }
+        }
+      ]
+    },
+    {
+      "id": "btc-positioning",
+      "asset": "BTC · LEVERAGE",
+      "headline": "Positioning rose with the rally",
+      "lede": "OKX OI rose into the break and funding stayed positive; the move had leverage in it.",
+      "bodyHtml": "<p><strong>Fact.</strong> OKX BTC-USDT perpetual OI rose from $2.14B on 15 September to $2.66B on 20 September. Average realized funding reached 0.0100% per eight hours on 19 September.</p><p><strong>Read.</strong> A short-liquidation spark plus new leverage is a stronger explanation than spot demand alone. The values are venue-specific.</p>",
+      "charts": [
+        {
+          "title": "OKX BTC-USDT-SWAP open interest [US$B] vs BTC close",
+          "bars": {
+            "label": "OKX open interest [US$B]",
+            "unsigned": true,
+            "data": [[1789516800000,2.13885],[1789603200000,2.20777],[1789689600000,2.41676],[1789776000000,2.52925],[1789862400000,2.47369],[1789948800000,2.66122],[1790035200000,2.61442],[1790121600000,2.63291]]
+          },
+          "line": {
+            "label": "BTC-USD close [USD]",
+            "data": [[1789516800000,75584.17],[1789603200000,76144.99],[1789689600000,76348.74],[1789776000000,80875.04],[1789862400000,81233.91],[1789948800000,81159.64],[1790035200000,86594.94],[1790121600000,86268.62]]
+          }
+        }
+      ]
+    }
+  ]
+}

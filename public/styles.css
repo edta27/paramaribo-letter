@@ -435,6 +435,22 @@ nav.links a:hover { color: var(--accent); }
   font-size: 14px;
   margin: 0 0 1.2em;
 }
+.body figure.issue-chart {
+  margin: 1.8em 0 2em;
+}
+.body figure.issue-chart img {
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--stroke-subtle);
+  border-radius: 8px;
+  background: #0e1721;
+}
+.body figure.issue-chart figcaption {
+  margin-top: 8px;
+  color: var(--mute);
+  font-size: 13px;
+  line-height: 1.45;
+}
 .body th, .body td, table.flags th, table.flags td {
   border-bottom: 1px solid var(--stroke-subtle);
   padding: 8px 10px;
