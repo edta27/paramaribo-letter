@@ -1,7 +1,7 @@
 {
   "ticker": "AMD",
-  "updated_at": "2026-09-24T20:16:26Z",
-  "price": 627.4671,
+  "updated_at": "2026-09-24T23:45:24Z",
+  "price": 629.95,
   "filings": [
     {
       "form": "4",
@@ -36,10 +36,10 @@
   ],
   "error": null,
   "prev_close": 629.26,
-  "change": -1.7929,
-  "change_pct": -0.285,
+  "change": 0.69,
+  "change_pct": 0.11,
   "currency": "USD",
   "exchange": "NASDAQ-GS",
-  "volume": 25075364.675415,
+  "volume": 25306924.205082,
   "quote_source": "nasdaq-stocks"
 }
