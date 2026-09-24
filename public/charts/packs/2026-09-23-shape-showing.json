@@ -1,0 +1,81 @@
+{
+  "id": "2026-09-23-shape-showing",
+  "date": "2026-09-23",
+  "kicker": "Chart Desk · Issue 26",
+  "title": "Still early, but the shape is showing",
+  "dek": "Coinbase price, Farside ETF flows, and OKX positioning through the 23 September long-liquidation wave.",
+  "asOf": "2026-09-24T02:45:00Z",
+  "cadence": "follow-up",
+  "thesis": "The shape is showing; the tail is not confirmed.",
+  "stakes": "The $87.4k squeeze produced a long flush below $84k. The next evidence is whether $82k/$80k holds while flow and leverage reset.",
+  "levels": ["$82–83k", "$80k", "$77k", "$74–76k", "$71–72k", "~$57.7k"],
+  "letterId": "2026-09-23-still-early-shape",
+  "letterUrl": "/issue?id=2026-09-23-still-early-shape",
+  "letterLabel": "Vol. 1 · Issue 26",
+  "subscribeHook": "When $82k holds — or $77k fails — the letter updates the sequence. Charts stay free here; the call moves by email.",
+  "sourceNote": "Issue 26 charts use Coinbase Exchange UTC candles, Farside Investors US-session ETF flows, and OKX public BTC-USDT perpetual open-interest/funding data. The 23 September ETF row is marked preliminary; weekend blanks are not zeroes. Educational scenario research; no leverage.",
+  "briefs": [
+    {
+      "id": "btc-shape-price",
+      "asset": "BTC",
+      "headline": "The rejection did not erase the recovery",
+      "lede": "A 4.3% high-to-low day is serious; it is not yet a break of the inherited $77k gate.",
+      "bodyHtml": "<p><strong>Fact.</strong> Coinbase's 23 September candle reached $87,283, traded to $83,513, and closed at $84,378.</p><p><strong>Read.</strong> The next doors are $82–83k, $80k, and $77k. A severe tail requires those structures to fail in sequence.</p>",
+      "charts": [
+        {
+          "title": "BTC daily range [USD] vs close",
+          "bars": {
+            "label": "Daily high–low range [USD]",
+            "unsigned": true,
+            "data": [[1789516800000,3355.26],[1789603200000,1588.46],[1789689600000,1183.54],[1789776000000,5183.01],[1789862400000,1102.96],[1789948800000,1387.04],[1790035200000,6560.67],[1790121600000,1674.72],[1790208000000,3769.81]]
+          },
+          "line": {
+            "label": "BTC-USD close [USD]",
+            "data": [[1789516800000,75584.17],[1789603200000,76144.99],[1789689600000,76348.74],[1789776000000,80875.04],[1789862400000,81233.91],[1789948800000,81159.64],[1790035200000,86594.94],[1790121600000,86198.05],[1790208000000,84378.31]]
+          }
+        }
+      ]
+    },
+    {
+      "id": "btc-shape-flows",
+      "asset": "BTC · SPOT DEMAND",
+      "headline": "Flows helped, but the latest row is incomplete",
+      "lede": "Reported ETF creations are supportive; the 23 September cells do not yet prove a persistent cash bid.",
+      "bodyHtml": "<p><strong>Fact.</strong> Farside reported +$999.0M on 21 September and +$714.7M on 22 September. The 23 September table showed +$32.4M with several issuer cells blank.</p><p><strong>Read.</strong> Supportive is observable. Persistent is still a hypothesis.</p>",
+      "charts": [
+        {
+          "title": "US spot BTC ETF net flow [US$M] vs BTC close",
+          "bars": {
+            "label": "Farside daily net flow [US$M]",
+            "data": [[1789516800000,-450.4],[1789603200000,-295.9],[1789689600000,159.5],[1789776000000,433.0],[1789862400000,null],[1789948800000,null],[1790035200000,999.0],[1790121600000,714.7],[1790208000000,32.4]]
+          },
+          "line": {
+            "label": "BTC-USD close [USD]",
+            "data": [[1789516800000,75584.17],[1789603200000,76144.99],[1789689600000,76348.74],[1789776000000,80875.04],[1789862400000,81233.91],[1789948800000,81159.64],[1790035200000,86594.94],[1790121600000,86198.05],[1790208000000,84378.31]]
+          }
+        }
+      ]
+    },
+    {
+      "id": "btc-shape-positioning",
+      "asset": "BTC · LEVERAGE",
+      "headline": "OI came out, but not back to baseline",
+      "lede": "The rally rebuilt leverage; the 23 September flush released some of it without resetting the whole venue.",
+      "bodyHtml": "<p><strong>Fact.</strong> OKX BTC-USDT perpetual OI rose from $2.14B on 15 September to $2.66B on 20 September, then fell to $2.48B on 23 September.</p><p><strong>Read.</strong> This is a venue-specific reset. It is not evidence that the market is either fully clean or definitely doomed.</p>",
+      "charts": [
+        {
+          "title": "OKX open interest [US$B] vs BTC close",
+          "bars": {
+            "label": "OKX BTC-USDT-SWAP OI [US$B]",
+            "unsigned": true,
+            "data": [[1789516800000,2.13885],[1789603200000,2.20777],[1789689600000,2.41676],[1789776000000,2.52925],[1789862400000,2.47369],[1789948800000,2.66122],[1790035200000,2.61442],[1790121600000,2.58059],[1790208000000,2.48436]]
+          },
+          "line": {
+            "label": "BTC-USD close [USD]",
+            "data": [[1789516800000,75584.17],[1789603200000,76144.99],[1789689600000,76348.74],[1789776000000,80875.04],[1789862400000,81233.91],[1789948800000,81159.64],[1790035200000,86594.94],[1790121600000,86198.05],[1790208000000,84378.31]]
+          }
+        }
+      ]
+    }
+  ]
+}
