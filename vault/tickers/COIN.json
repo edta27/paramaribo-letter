@@ -1,7 +1,7 @@
 {
   "ticker": "COIN",
-  "updated_at": "2026-09-23T23:25:51Z",
-  "price": 198.2,
+  "updated_at": "2026-09-24T14:00:25Z",
+  "price": 195.5516,
   "filings": [
     {
       "form": "4",
@@ -36,10 +36,10 @@
   ],
   "error": null,
   "prev_close": 198.13,
-  "change": 0.07,
-  "change_pct": 0.035,
+  "change": -2.5784,
+  "change_pct": -1.301,
   "currency": "USD",
   "exchange": "NASDAQ-GS",
-  "volume": 7174281.163412,
+  "volume": 1443342.502691,
   "quote_source": "nasdaq-stocks"
 }
