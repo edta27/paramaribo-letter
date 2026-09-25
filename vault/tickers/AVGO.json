@@ -1,8 +1,14 @@
 {
   "ticker": "AVGO",
-  "updated_at": "2026-09-25T20:13:56Z",
-  "price": 352.77,
+  "updated_at": "2026-09-25T23:47:15Z",
+  "price": 353.418,
   "filings": [
+    {
+      "form": "4",
+      "filing_date": "2026-09-25",
+      "accession": "0001104659-26-110983",
+      "url": "https://www.sec.gov/Archives/edgar/data/1730168/000110465926110983/xslF345X06/tm2626134-1_4seq1.xml"
+    },
     {
       "form": "4",
       "filing_date": "2026-09-17",
@@ -26,20 +32,14 @@
       "filing_date": "2026-09-02",
       "accession": "0001730168-26-000076",
       "url": "https://www.sec.gov/Archives/edgar/data/1730168/000173016826000076/avgo-20260902.htm"
-    },
-    {
-      "form": "4",
-      "filing_date": "2026-07-14",
-      "accession": "0001730168-26-000072",
-      "url": "https://www.sec.gov/Archives/edgar/data/1730168/000173016826000072/xslF345X06/wk-form4_1784075275.xml"
     }
   ],
   "error": null,
   "prev_close": 352.81,
-  "change": -0.04,
-  "change_pct": -0.011,
+  "change": 0.608,
+  "change_pct": 0.172,
   "currency": "USD",
   "exchange": "NASDAQ-GS",
-  "volume": 15581629.05538,
+  "volume": 16248714.559782,
   "quote_source": "nasdaq-stocks"
 }
