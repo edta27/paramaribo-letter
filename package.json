@@ -1,0 +1,8 @@
+{
+  "name": "paramaribo-letter",
+  "private": true,
+  "description": "Static site. middleware.js rewrites /issue?id= to prerendered HTML.",
+  "dependencies": {
+    "@vercel/functions": "3.9.9"
+  }
+}

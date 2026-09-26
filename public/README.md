@@ -16,6 +16,8 @@ python3 -m http.server 8766 --directory public
 
 Open http://127.0.0.1:8766/
 
+`--rebuild` also writes `public/issue-pages/*.html`. On Vercel, `/issue?id=` is rewritten to that file so the title, canonical, and social tags are in the first HTML response.
+
 To add an issue without touching old ones:
 
 ```bash
