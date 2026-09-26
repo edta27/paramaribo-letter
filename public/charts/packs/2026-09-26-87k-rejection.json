@@ -1,0 +1,81 @@
+{
+  "id": "2026-09-26-87k-rejection",
+  "date": "2026-09-26",
+  "kicker": "Chart Desk · Issue 27",
+  "title": "Bitcoin's $87k rejection: $82–83k held",
+  "dek": "Coinbase price, Farside ETF flows, and OKX positioning through the first support test after the $87.4k sweep.",
+  "asOf": "2026-09-26T05:01:00Z",
+  "cadence": "follow-up",
+  "thesis": "The $87.4k door failed. The $82–83k door held. The tail is not confirmed.",
+  "stakes": "ETF inflows stayed positive and slowed. Next evidence is a reclaim of $86k — or a close through $82k, then $80k.",
+  "levels": ["$85–86k", "$82–83k", "$80k", "$77k", "$74–76k", "$71–72k", "~$57.7k"],
+  "letterId": "2026-09-26-87k-rejection",
+  "letterUrl": "/issue?id=2026-09-26-87k-rejection",
+  "letterLabel": "Vol. 1 · Issue 27",
+  "subscribeHook": "When $82k fails — or $86k is reclaimed — the letter updates the sequence. Charts stay free here; the call moves by email.",
+  "sourceNote": "Issue 27 charts use Coinbase Exchange UTC candles, Farside Investors US-session ETF flows, and OKX public BTC-USDT perpetual open-interest/funding data. The 23 September ETF row is the completed Farside print (+$346.9M), not Issue 26's preliminary +$32.4M. Weekend blanks are not zeroes. Educational scenario research; no leverage.",
+  "briefs": [
+    {
+      "id": "btc-rejection-price",
+      "asset": "BTC",
+      "headline": "The first named support door held",
+      "lede": "A $82,709 low on 24 September is a test, not acceptance through $82k.",
+      "bodyHtml": "<p><strong>Fact.</strong> Coinbase's 24 September candle traded to $82,709 and closed at $84,385. The 25 September candle closed at $84,093 after a $85,250 high.</p><p><strong>Read.</strong> $87.4k has behaved like a sweep so far. The next doors remain $86k on the upside and $82k, then $80k, on the downside.</p>",
+      "charts": [
+        {
+          "title": "BTC daily range [USD] vs close",
+          "bars": {
+            "label": "Daily high–low range [USD]",
+            "unsigned": true,
+            "data": [[1789430400000,3355.26],[1789516800000,1588.46],[1789603200000,1183.54],[1789689600000,5183.01],[1789776000000,1102.52],[1789862400000,1387.04],[1789948800000,6559.58],[1790035200000,1674.72],[1790121600000,3769.81],[1790208000000,2220.82],[1790294400000,2158.81]]
+          },
+          "line": {
+            "label": "BTC-USD close [USD]",
+            "data": [[1789430400000,75584.17],[1789516800000,76144.99],[1789603200000,76348.74],[1789689600000,80875.04],[1789776000000,81233.91],[1789862400000,81159.64],[1789948800000,86594.94],[1790035200000,86198.05],[1790121600000,84378.31],[1790208000000,84385.46],[1790294400000,84093.13]]
+          }
+        }
+      ]
+    },
+    {
+      "id": "btc-rejection-flows",
+      "asset": "BTC · SPOT DEMAND",
+      "headline": "The sign stayed green; the impulse faded",
+      "lede": "Seven reported inflow sessions, including a completed +$346.9M on 23 September, while price stalled under $86k.",
+      "bodyHtml": "<p><strong>Fact.</strong> Farside recorded +$999.0M, +$714.7M, +$346.9M, +$190.7M, and +$134.5M from 21–25 September. Issue 26's 23 September row was a preliminary +$32.4M.</p><p><strong>Read.</strong> ETF absorption divergence is a research watch: vehicle demand up on a cumulative basis, price response down. It is not automatic distribution.</p>",
+      "charts": [
+        {
+          "title": "US spot BTC ETF net flow [US$M] vs BTC close",
+          "bars": {
+            "label": "Farside daily net flow [US$M]",
+            "data": [[1789430400000,-450.4],[1789516800000,-295.9],[1789603200000,159.5],[1789689600000,433.0],[1789776000000,null],[1789862400000,null],[1789948800000,999.0],[1790035200000,714.7],[1790121600000,346.9],[1790208000000,190.7],[1790294400000,134.5]]
+          },
+          "line": {
+            "label": "BTC-USD close [USD]",
+            "data": [[1789430400000,75584.17],[1789516800000,76144.99],[1789603200000,76348.74],[1789689600000,80875.04],[1789776000000,81233.91],[1789862400000,81159.64],[1789948800000,86594.94],[1790035200000,86198.05],[1790121600000,84378.31],[1790208000000,84385.46],[1790294400000,84093.13]]
+          }
+        }
+      ]
+    },
+    {
+      "id": "btc-rejection-positioning",
+      "asset": "BTC · LEVERAGE",
+      "headline": "OI kept coming out after the flush",
+      "lede": "Venue open interest fell from $2.66B to $2.40B; funding cooled toward neutral, including brief negative prints.",
+      "bodyHtml": "<p><strong>Fact.</strong> OKX BTC-USDT perpetual OI was $2.66B on 20 September and $2.40B on 25 September. Average 24 September funding was 0.0010% per eight hours.</p><p><strong>Read.</strong> This is a venue-specific reset. Residual fuel remains above the 15 September baseline.</p>",
+      "charts": [
+        {
+          "title": "OKX open interest [US$B] vs BTC close",
+          "bars": {
+            "label": "OKX BTC-USDT-SWAP OI [US$B]",
+            "unsigned": true,
+            "data": [[1789430400000,2.13885],[1789516800000,2.20777],[1789603200000,2.41676],[1789689600000,2.52925],[1789776000000,2.47369],[1789862400000,2.66122],[1789948800000,2.61442],[1790035200000,2.58059],[1790121600000,2.42755],[1790208000000,2.41033],[1790294400000,2.39853]]
+          },
+          "line": {
+            "label": "BTC-USD close [USD]",
+            "data": [[1789430400000,75584.17],[1789516800000,76144.99],[1789603200000,76348.74],[1789689600000,80875.04],[1789776000000,81233.91],[1789862400000,81159.64],[1789948800000,86594.94],[1790035200000,86198.05],[1790121600000,84378.31],[1790208000000,84385.46],[1790294400000,84093.13]]
+          }
+        }
+      ]
+    }
+  ]
+}

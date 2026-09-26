@@ -1,0 +1,109 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 840" role="img" aria-labelledby="title desc">
+<title id="title">Leverage kept coming out after the flush</title>
+<desc id="desc">Coinbase Bitcoin closing price is shown with OKX BTC-USDT perpetual open interest and average realized funding per eight hours through 25 September 2026.</desc>
+<rect width="1200" height="840" fill="#0e1721"/>
+<style>text{font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}.title{font-size:28px;font-weight:700;fill:#e6edf3}.sub{font-size:15px;fill:#9eb0c1}.axis{font-size:13px;fill:#9eb0c1}.note{font-size:12px;fill:#9eb0c1}.label{font-size:13px;font-weight:600;fill:#e6edf3}</style>
+<text x="56" y="48" class="title">Leverage kept coming out after the flush</text>
+<text x="56" y="76" class="sub">Daily UTC candles · 26 Sep 2026 · 12:01 a.m. CDT / 05:01 UTC · last completed day is 25 Sep</text>
+<rect x="94.0" y="105.0" width="1015.0" height="185.0" rx="8" fill="#122131" stroke="#2a3b4d"/>
+<rect x="94.0" y="330.0" width="1015.0" height="175.0" rx="8" fill="#122131" stroke="#2a3b4d"/>
+<rect x="94.0" y="545.0" width="1015.0" height="180.0" rx="8" fill="#122131" stroke="#2a3b4d"/>
+<line x1="94.0" y1="277.7" x2="1109.0" y2="277.7" stroke="#2a3b4d"/>
+<text x="82.0" y="281.7" class="axis" text-anchor="end">$75k</text>
+<line x1="94.0" y1="216.0" x2="1109.0" y2="216.0" stroke="#2a3b4d"/>
+<text x="82.0" y="220.0" class="axis" text-anchor="end">$80k</text>
+<line x1="94.0" y1="154.3" x2="1109.0" y2="154.3" stroke="#2a3b4d"/>
+<text x="82.0" y="158.3" class="axis" text-anchor="end">$85k</text>
+<line x1="94.0" y1="105.0" x2="1109.0" y2="105.0" stroke="#2a3b4d"/>
+<text x="82.0" y="109.0" class="axis" text-anchor="end">$89k</text>
+<line x1="94.0" y1="487.5" x2="1109.0" y2="487.5" stroke="#2a3b4d"/>
+<text x="82.0" y="491.5" class="axis" text-anchor="end">$2.0B</text>
+<line x1="94.0" y1="417.5" x2="1109.0" y2="417.5" stroke="#2a3b4d"/>
+<text x="82.0" y="421.5" class="axis" text-anchor="end">$2.4B</text>
+<line x1="94.0" y1="347.5" x2="1109.0" y2="347.5" stroke="#2a3b4d"/>
+<text x="82.0" y="351.5" class="axis" text-anchor="end">$2.8B</text>
+<line x1="94.0" y1="699.3" x2="1109.0" y2="699.3" stroke="#2a3b4d"/>
+<text x="82.0" y="703.3" class="axis" text-anchor="end">0.000%</text>
+<line x1="94.0" y1="647.9" x2="1109.0" y2="647.9" stroke="#2a3b4d"/>
+<text x="82.0" y="651.9" class="axis" text-anchor="end">0.004%</text>
+<line x1="94.0" y1="596.4" x2="1109.0" y2="596.4" stroke="#2a3b4d"/>
+<text x="82.0" y="600.4" class="axis" text-anchor="end">0.008%</text>
+<line x1="94.0" y1="545.0" x2="1109.0" y2="545.0" stroke="#2a3b4d"/>
+<text x="82.0" y="549.0" class="axis" text-anchor="end">0.012%</text>
+<line x1="94.0" y1="545.0" x2="94.0" y2="725.0" stroke="#2a3b4d" opacity="0.42"/>
+<text x="94.0" y="750.0" class="axis" text-anchor="middle">09/15</text>
+<line x1="195.5" y1="545.0" x2="195.5" y2="725.0" stroke="#2a3b4d" opacity="0.42"/>
+<text x="195.5" y="750.0" class="axis" text-anchor="middle">09/16</text>
+<line x1="297.0" y1="545.0" x2="297.0" y2="725.0" stroke="#2a3b4d" opacity="0.42"/>
+<text x="297.0" y="750.0" class="axis" text-anchor="middle">09/17</text>
+<line x1="398.5" y1="545.0" x2="398.5" y2="725.0" stroke="#2a3b4d" opacity="0.42"/>
+<text x="398.5" y="750.0" class="axis" text-anchor="middle">09/18</text>
+<line x1="500.0" y1="545.0" x2="500.0" y2="725.0" stroke="#2a3b4d" opacity="0.42"/>
+<text x="500.0" y="750.0" class="axis" text-anchor="middle">09/19</text>
+<line x1="601.5" y1="545.0" x2="601.5" y2="725.0" stroke="#2a3b4d" opacity="0.42"/>
+<text x="601.5" y="750.0" class="axis" text-anchor="middle">09/20</text>
+<line x1="703.0" y1="545.0" x2="703.0" y2="725.0" stroke="#2a3b4d" opacity="0.42"/>
+<text x="703.0" y="750.0" class="axis" text-anchor="middle">09/21</text>
+<line x1="804.5" y1="545.0" x2="804.5" y2="725.0" stroke="#2a3b4d" opacity="0.42"/>
+<text x="804.5" y="750.0" class="axis" text-anchor="middle">09/22</text>
+<line x1="906.0" y1="545.0" x2="906.0" y2="725.0" stroke="#2a3b4d" opacity="0.42"/>
+<text x="906.0" y="750.0" class="axis" text-anchor="middle">09/23</text>
+<line x1="1007.5" y1="545.0" x2="1007.5" y2="725.0" stroke="#2a3b4d" opacity="0.42"/>
+<text x="1007.5" y="750.0" class="axis" text-anchor="middle">09/24</text>
+<line x1="1109.0" y1="545.0" x2="1109.0" y2="725.0" stroke="#2a3b4d" opacity="0.42"/>
+<text x="1109.0" y="750.0" class="axis" text-anchor="middle">09/25</text>
+<text x="106" y="129" class="label">BTC-USD close</text>
+<text x="106" y="354" class="label">OKX BTC-USDT-SWAP open interest · US$ billions</text>
+<text x="106" y="569" class="label">OKX realized funding · average per 8 hours</text>
+<rect x="68.2" y="638.2" width="51.7" height="61.1" fill="#f1b56f" opacity="0.88" rx="3"/>
+<text x="94.0" y="630.2" class="note" text-anchor="middle">0.005%</text>
+<rect x="169.7" y="647.1" width="51.7" height="52.2" fill="#f1b56f" opacity="0.88" rx="3"/>
+<text x="195.5" y="639.1" class="note" text-anchor="middle">0.004%</text>
+<rect x="271.2" y="602.4" width="51.7" height="96.9" fill="#f1b56f" opacity="0.88" rx="3"/>
+<text x="297.0" y="594.4" class="note" text-anchor="middle">0.008%</text>
+<rect x="372.7" y="602.6" width="51.7" height="96.7" fill="#f1b56f" opacity="0.88" rx="3"/>
+<text x="398.5" y="594.6" class="note" text-anchor="middle">0.008%</text>
+<rect x="474.2" y="570.7" width="51.7" height="128.6" fill="#f1b56f" opacity="0.88" rx="3"/>
+<text x="500.0" y="562.7" class="note" text-anchor="middle">0.010%</text>
+<rect x="575.7" y="579.9" width="51.7" height="119.4" fill="#f1b56f" opacity="0.88" rx="3"/>
+<text x="601.5" y="571.9" class="note" text-anchor="middle">0.009%</text>
+<rect x="677.2" y="608.1" width="51.7" height="91.2" fill="#f1b56f" opacity="0.88" rx="3"/>
+<text x="703.0" y="600.1" class="note" text-anchor="middle">0.007%</text>
+<rect x="778.7" y="590.3" width="51.7" height="109.0" fill="#f1b56f" opacity="0.88" rx="3"/>
+<text x="804.5" y="582.3" class="note" text-anchor="middle">0.008%</text>
+<rect x="880.2" y="634.0" width="51.7" height="65.3" fill="#f1b56f" opacity="0.88" rx="3"/>
+<text x="906.0" y="626.0" class="note" text-anchor="middle">0.005%</text>
+<rect x="981.7" y="685.9" width="51.7" height="13.4" fill="#f1b56f" opacity="0.88" rx="3"/>
+<text x="1007.5" y="677.9" class="note" text-anchor="middle">0.001%</text>
+<rect x="1083.2" y="655.5" width="51.7" height="43.8" fill="#f1b56f" opacity="0.88" rx="3"/>
+<text x="1109.0" y="647.5" class="note" text-anchor="middle">0.003%</text>
+<polyline points="94.0,270.5 195.5,263.5 297.0,261.0 398.5,205.2 500.0,200.8 601.5,201.7 703.0,134.7 804.5,139.6 906.0,162.0 1007.5,161.9 1109.0,165.5" fill="none" stroke="#7ac7d4" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="94.0,463.2 195.5,451.1 297.0,414.6 398.5,394.9 500.0,404.6 601.5,371.8 703.0,380.0 804.5,385.9 906.0,412.7 1007.5,415.7 1109.0,417.8" fill="none" stroke="#79d3a3" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="94.0" cy="270.5" r="3.5" fill="#7ac7d4"/>
+<circle cx="195.5" cy="263.5" r="3.5" fill="#7ac7d4"/>
+<circle cx="297.0" cy="261.0" r="3.5" fill="#7ac7d4"/>
+<circle cx="398.5" cy="205.2" r="3.5" fill="#7ac7d4"/>
+<circle cx="500.0" cy="200.8" r="3.5" fill="#7ac7d4"/>
+<circle cx="601.5" cy="201.7" r="3.5" fill="#7ac7d4"/>
+<circle cx="703.0" cy="134.7" r="3.5" fill="#7ac7d4"/>
+<circle cx="804.5" cy="139.6" r="3.5" fill="#7ac7d4"/>
+<circle cx="906.0" cy="162.0" r="3.5" fill="#7ac7d4"/>
+<circle cx="1007.5" cy="161.9" r="3.5" fill="#7ac7d4"/>
+<circle cx="1109.0" cy="165.5" r="3.5" fill="#7ac7d4"/>
+<circle cx="94.0" cy="463.2" r="3.5" fill="#79d3a3"/>
+<circle cx="195.5" cy="451.1" r="3.5" fill="#79d3a3"/>
+<circle cx="297.0" cy="414.6" r="3.5" fill="#79d3a3"/>
+<circle cx="398.5" cy="394.9" r="3.5" fill="#79d3a3"/>
+<circle cx="500.0" cy="404.6" r="3.5" fill="#79d3a3"/>
+<circle cx="601.5" cy="371.8" r="3.5" fill="#79d3a3"/>
+<circle cx="703.0" cy="380.0" r="3.5" fill="#79d3a3"/>
+<circle cx="804.5" cy="385.9" r="3.5" fill="#79d3a3"/>
+<circle cx="906.0" cy="412.7" r="3.5" fill="#79d3a3"/>
+<circle cx="1007.5" cy="415.7" r="3.5" fill="#79d3a3"/>
+<circle cx="1109.0" cy="417.8" r="3.5" fill="#79d3a3"/>
+<line x1="1007.5" y1="105.0" x2="1007.5" y2="725.0" stroke="#ef8d8d" stroke-width="1.5" stroke-dasharray="4 5"/>
+<text x="997.5" y="147.0" class="label" text-anchor="end" fill="#ef8d8d">24 Sep $82.7k test</text>
+<text x="104.0" y="791" class="note">OKX OI: $2.66B on 20 Sep → $2.40B on 25 Sep; still above $2.14B on 15 Sep.</text>
+<text x="104.0" y="812" class="note">Funding cooled to 0.0010% average on 24 Sep, with brief negative 8-hour prints; this is not a market-wide total.</text>
+<text x="1109.0" y="818" class="note" text-anchor="end">Sources: Coinbase Exchange + OKX public APIs · 26 Sep 2026 · 12:01 a.m. CDT / 05:01 UTC</text>
+</svg>
