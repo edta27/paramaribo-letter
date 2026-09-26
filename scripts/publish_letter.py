@@ -123,6 +123,9 @@ def main() -> int:
     if args.title:
         add_issue(args)
     write_catalog(list_issues())
+    import render_issue_html
+
+    render_issue_html.render_issue_pages()
     if args.notify:
         import subprocess
 
