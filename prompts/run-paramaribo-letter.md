@@ -32,7 +32,7 @@ For each issue, produce:
 7. A short hook and headline
 
 Then deliver letter-ready files:
-- Suggested id slug, kicker (Vol. 1 · Issue NN), title, dek, cover choice
+- Suggested id slug, kicker (Vol. 1 · Issue NN), title (under ~65 characters; it becomes the page <title>), dek (one plain sentence; it becomes the search and social description), and a **unique cover** (`public/images/cover-{slug}.png`)
 - Body HTML: short opening, facts, scenarios, “Where the agents stood” with one <p> per lens that spoke, levels card, educational disclaimer
 - Forecast row draft for research/forecast-ledger.csv when the issue makes a dated base case
 - One line on what remains insufficient evidence
@@ -43,11 +43,24 @@ Hard rules:
 - No leverage advice. No trade execution.
 - Link material time-sensitive claims to the packet timestamp.
 - Append-only: never overwrite an existing public/issues/ id.
+- Unique cover every issue. Never reuse a photo already on another letter (including masthead.png and shared stock like cover-council.png / cover-pullback.png). Create a new image each time if nothing unused is on disk.
 ```
 
 ## After the draft
 
-From the project root:
+Publish from a checkout of the **website** repo (github.com/edta27/paramaribo-letter), not from investment-research. The website repo has scripts this repo lacks (prerendered issue pages, case pages, topic hubs, sitemap and feed) and site fixes merged by pull request since 2026-09-26. See `prompts/letter-facts.md`.
+
+1. Start from the live site's latest code:
+
+```bash
+git fetch website
+git checkout website-deploy          # or: git checkout -b website-deploy website/main
+git merge --ff-only website/main
+```
+
+2. Bring over **only the new issue's files**: `public/issues/{id}.json`, `public/issues/{id}.body.html`, and the new cover `public/images/cover-{slug}.png` (plus any new chart images the issue uses). Never copy `public/` or `vercel.json` wholesale from investment-research: that reverts SEO, topic pages, signup tracking and design fixes.
+
+   Or create the issue in the website checkout directly:
 
 ```bash
 python3 scripts/publish_letter.py \
@@ -56,21 +69,29 @@ python3 scripts/publish_letter.py \
   --kicker "Vol. 1 · Issue NN" \
   --date YYYY-MM-DD \
   --slug your-slug \
-  --cover images/cover-warsh-morning.png \
+  --cover images/cover-your-new-slug.png \
   --body-file /path/to/body.md
 ```
 
-Or write `public/issues/{id}.json` + `{id}.body.html` directly, then:
+3. If you copied files in, rebuild:
 
 ```bash
 python3 scripts/publish_letter.py --rebuild
 ```
 
-Push the letter site when ready:
+   This one command rebuilds the catalog, prerendered issue pages, homepage feed, case pages, topic hubs, `sitemap.xml` and `feed.xml`. Don't hand-edit any of those outputs.
+
+4. Check `git status`: expect the new issue files plus regenerated pages, sitemap and feed. If `public/index.html`, `styles.css`, `shell.js`, `subscribe.js`, `vercel.json` or `middleware.js` show unexpected changes, stop and find out why before pushing.
+
+5. Commit and push:
 
 ```bash
 git push website HEAD:main
 ```
+
+   A rejected (non-fast-forward) push means `main` moved. Repeat step 1 and rebuild; never force-push.
+
+6. Hand off to Team A (`prompts/run-team-a-growth-loop.md`) with the issue URL `https://www.paramariboletter.com/issue?id={id}`. If the issue moved the support/resistance levels, note that `/topics/bitcoin-support-resistance` needs its "as of Issue NN" intro refreshed (`scripts/topics.json`).
 
 ## Why this role exists
 

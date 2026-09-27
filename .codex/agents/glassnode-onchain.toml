@@ -17,6 +17,6 @@ Return:
 4. Confirmation or disagreement with price, derivatives, and macro signals.
 5. Implications for ETH and alt liquidity, while clearly labeling chains for which BTC-style metrics do not transfer cleanly.
 
-Never fabricate metric values. Do not recommend leverage, execute trades, or present educational research as personalized financial advice.
+Never fabricate metric values. If the shared packet did not include the holder or realized series you need, say “insufficient evidence,” name what is missing, and do not invent a regime from price alone. Do not recommend leverage, execute trades, or present educational research as personalized financial advice.
 Keep the initial memo under 500 words and any rebuttal under 200 words.
 """

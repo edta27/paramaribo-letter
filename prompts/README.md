@@ -1,5 +1,15 @@
 # Research Desk Operating Guide
 
+## Two teams
+
+| Team | Name | Owns |
+|---|---|---|
+| **A** | Growth & Promotion | Marketing, social (incl. **Mary** X community), partnerships, subscriber growth, funnel, free tools |
+| **B** | Editorial & Publishing | Research, writing, editing, newsletter production, site release |
+
+Operating prompt: **`prompts/run-two-teams.md`**. Say **Team A**, **Team B**, or **Both teams**.  
+Team A does not rewrite research. Team B does not post to X/LinkedIn (hand off to A + `APPROVE_SEND`).
+
 ## Recommended setup
 
 Use a strong parent model for orchestration and Luna workers for bounded research. When the controls are available, choose **Sol High** for the parent chat. The project agents already specify their worker settings.
@@ -31,19 +41,20 @@ Use a strong parent model for orchestration and Luna workers for bounded researc
 | `capriole_systematic` | High | BTC timing vs buy-and-hold, long/short/cash, Hash Ribbons/Energy Value, institutional absorption vs issuance, leveraged BTC treasuries, or gold/equity/cash rotation |
 | `risk_red_team` | High | Always in deep-council Round 2; not a Round 1 forecaster |
 
-**Letter editor** (parent role for public issues):
+**Team B — Editorial & Publishing** (letter editor + research desks):
 
 | Agent | Effort | Purpose |
 |---|---:|---|
-| `research_director` | High | Managing Editor of The Paramaribo Letter: packet → question, levels, scenarios, red-team, synthesis, headline |
+| `research_director` | High | Managing Editor: packet → question, levels, scenarios, red-team, synthesis, headline, site publish |
 
-**Publisher / growth desk** (promote the site; not a market lens). North star: long-horizon 500k email subscribers — stage milestones; never invent the current count.
+**Team A — Growth & Promotion** (promote the site; not a market lens). North star: long-horizon 500k email subscribers — stage milestones; never invent the current count.
 
 | Agent | Effort | Purpose |
 |---|---:|---|
 | `growth_marketing_lead` | High | Strategy, funnel, experiments, targets (core) |
-| `editorial_content_lead` | High | Content Writer: issue → X/LinkedIn/threads/video scripts/pull quotes (core); owns main-feed editorial posts |
-| `social_community_manager` | High | Mary — dedicated X Community Manager: replies, conversation research, community rules, and daily activity report (core) |
+| `editorial_content_lead` | High | Issue → X/LinkedIn/threads/video scripts/pull quotes (core) |
+| `social_community_manager` | High | X/LinkedIn cadence calendar + community rules (core) |
+| `mary_community_manager` | High | **Mary** — X Community Manager: daily replies, relationships, community reports (not main posts) |
 | `partnerships_referral_manager` | High | Creators/newsletters/podcasts — after funnel converts |
 | `lifecycle_conversion` | High | Signup UX, onboarding email, A/B tests, analytics |
 | `letter_marketing` | High | Solo quick path when you do not need the full desk |
@@ -68,13 +79,18 @@ All agents remain on `gpt-5.6-luna`. Sessions allow up to 16 concurrent workers 
 | Quick BTC regime check | `daily-btc-pulse.md` | 3 + specialists if needed | Daily or around major events |
 | Confirmation-first buy-low / sell-high plan | `buy-low-sell-high.md` | bang + capriole + glassnode | When deciding whether to add, hold cash, or reduce |
 | BTC plus alt/meme/AI conviction review | `run-crypto-council.md` | 7 + specialists if needed | Weekly, or before a material decision |
-| Newsletter issue (headline, scenarios, stands) | `run-paramaribo-letter.md` | `research_director` (+ council as needed) | When publishing to The Paramaribo Letter |
-| Growth desk (core 3 → optional 5) | `run-letter-growth-desk.md` | growth + editorial + social (± partnerships, lifecycle) | After publish / weekly sprint |
-| Solo promo pack (one agent) | `run-letter-marketing.md` | `letter_marketing` | Quick announce when you do not need the full desk |
+| **Two-team model (A + B)** | `run-two-teams.md` | map + paste prompts | Anytime |
+| Current letter facts: domain, URLs, topic hubs, signup counting, traffic targets, publish rules | `letter-facts.md` | read by every letter and growth agent | Update when targets or site structure change |
+| Newsletter issue (Team B) | `run-paramaribo-letter.md` | `research_director` (+ council as needed) | When publishing to The Paramaribo Letter |
+| Growth desk (Team A, core 3 → optional 5) | `run-letter-growth-desk.md` | growth + editorial + social (± partnerships, lifecycle) | After publish / weekly sprint |
+| **Team A growth loop** (after Team B publishes) | `run-team-a-growth-loop.md` | existing Team A only; no new agent; no ASTER | After every live issue; log `content-performance.csv` |
+| **Mary** daily X community | `run-mary-community.md` | `mary_community_manager` | Daily reply block / community report |
+| Solo promo pack (Team A quick) | `run-letter-marketing.md` | `letter_marketing` | Quick announce when you do not need the full desk |
 | Overnight equity filings / earnings / insider desk | `run-equity-desk.md` | 5 + chief_of_staff | Nightly or pre-market; dry-run first |
 | Auto-update each watchlist ticker (quotes + EDGAR index) | `scripts/update_tickers.py` | none | Once, `--loop 300`, or GitHub Action weekdays |
 | Visual night-run board (open in a browser) | `desk/index.html` | UI + `desk/live.js` | Refreshes after each ticker update |
 | Cursor skill: live BTC + meme tape / Bang plan | `.cursor/skills/crypto-desk-update/SKILL.md` | parent chat | Say **update** or **Bang**; pulls CoinGecko, no invented prices |
+| Cursor skill: sound human on X | `.cursor/skills/sound-human-on-x/SKILL.md` | Mary + editorial + social | Binding for all @paramaribolette posts/replies; take a side; no em dashes |
 | Newsletter archive (issues are never deleted) | `public/index.html` | none | `python3 -m http.server 8766 --directory public` |
 
 The daily pulse normally stays at three agents. It activates `leopold_ai_scaling` only for a material AI, technology-equity, compute/power, miner-HPC, or AI-token catalyst.
