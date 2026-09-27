@@ -126,6 +126,9 @@ def main() -> int:
     import render_issue_html
 
     render_issue_html.render_issue_pages()
+    import build_topics
+
+    build_topics.main()
     import build_feeds
 
     build_feeds.main()

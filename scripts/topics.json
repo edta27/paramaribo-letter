@@ -1,0 +1,151 @@
+[
+  {
+    "slug": "bitcoin-four-year-cycle",
+    "name": "The four-year cycle",
+    "title": "Bitcoin's Four-Year Cycle in 2026: Is It Still Working?",
+    "description": "Is Bitcoin's four-year cycle still working in 2026? Cycle tops, bear-market lows, the 2018 and 2022 analogues, and what spot ETFs change, tracked letter by letter.",
+    "dek": "Every prior Bitcoin bear market bottomed about a year after its cycle top. This page collects the letter's work on whether 2026 is rhyming with that history or breaking it.",
+    "intro": [
+      "Bitcoin's four-year cycle is the idea that price moves in a repeating rhythm around the halving: a run to a new all-time high, a deep bear market, a bottom roughly a year after the top, then recovery. It is the most shared chart in crypto, and it rests on a very small sample.",
+      "The three mature cycles the letter measures against are 2013 to 2015 (about 410 days from top to low, roughly −85%), 2017 to 2018 (about 363 days, roughly −83%) and 2021 to 2022 (about 376 days, roughly −77%). This cycle topped near $126,000 on 6 October 2025. The 2026 low so far is about $57,700 on 1 July, only around 268 days after the top and about −54% deep. That is early and shallow against every prior cycle.",
+      "The letter's working view is that the four-year playbook is a weak prior, not a law. Three observations cannot make a statistical rule, and spot ETFs, larger institutional plumbing and a different rate regime can either compress the cycle or amplify a late drawdown. The desk keeps two models side by side: Model A, where $58k was the bottom and the cycle is compressing, and Model B, where the final 2026 low is still ahead in the October to November window. Neither is treated as an appointment.",
+      "What would decide it is sequence, not the calendar: whether support levels fail one after another with rising forced selling, or hold while ETF demand persists."
+    ],
+    "questions": [
+      "Did Bitcoin already bottom in 2026?",
+      "Is 2026 repeating 2018 or 2022?",
+      "Do spot ETFs break the four-year cycle?",
+      "When did past Bitcoin bear markets bottom?"
+    ],
+    "pattern": "four[- ]year|halving|cycle (?:top|low|bottom|high)|bear[- ]market|\\b(?:2014|2015|2018|2022)\\b|cycle compression|Model [AB]\\b",
+    "min_hits": 4,
+    "pinned": [
+      "2026-09-02-four-year-cycle-on-trial",
+      "2026-09-26-87k-rejection",
+      "2026-09-11-twenty-five-looked-strong"
+    ],
+    "include": [
+      "2026-08-28-y-thirty-eight-floor"
+    ]
+  },
+  {
+    "slug": "bitcoin-crash-scenarios",
+    "name": "Crash and bottom scenarios",
+    "title": "How Low Can Bitcoin Go? 2026 Crash and Bottom Scenarios",
+    "description": "Could Bitcoin crash to $46k, $38k or $28k in 2026? Scenario weights, the difference between vulnerability and probability, and what a real capitulation would need to show.",
+    "dek": "Viral posts call for $38k or $28k Bitcoin. The letter puts each crash call on trial: what the tape shows, what it would take, and how much weight it deserves.",
+    "intro": [
+      "Every Bitcoin drawdown brings a wave of crash targets: $46k, $38k, $28k. Some come from shrinking-drawdown extrapolations, some from macro worry about expensive equities, high yields and leverage. The letter's job is to separate a crash mechanism from a crash probability.",
+      "The desk's rule is that vulnerability is not probability. Elevated valuations, rising yields and rebuilt leverage can make a market fragile, but none of them is evidence that a cascade is likely on its own. A crash call has to be earned in sequence: each support level fails on a daily close, liquidations rise in intensity, ETF demand turns into sustained redemptions, and the 2026 low near $57,700 breaks without a reclaim.",
+      "Through September 2026 the letter's base case has been correction, not collapse. A 10% to 20% pullback stays live; a new cycle low is weighted as a tail of roughly 15%; extreme targets like $28k to $38k stay severe-tail references until every door above them fails. The issues below show how those weights were set and changed as each new data point arrived, including where the desk was wrong.",
+      "If you want the short version, read the pinned issues first. They lay out the scenario weights, the falsification tests and the case for and against $58k having been the bottom."
+    ],
+    "questions": [
+      "Will Bitcoin crash to $38k or $28k?",
+      "What would a real Bitcoin capitulation look like?",
+      "Is the 2026 Bitcoin bottom in?",
+      "How likely is a new Bitcoin cycle low?"
+    ],
+    "pattern": "crash|capitulat|cascade|\\bbottom\\b|\\btail\\b|\\$(?:28|38|46)k|new cycle low",
+    "min_hits": 12,
+    "pinned": [
+      "2026-09-01-crash-stack-on-trial",
+      "2026-09-07-crash-is-the-tail",
+      "2026-09-17-dont-skip-to-28k"
+    ],
+    "include": [
+      "2026-08-22-the-window"
+    ]
+  },
+  {
+    "slug": "bitcoin-etf-flows-leverage",
+    "name": "ETF flows and leverage",
+    "title": "Bitcoin ETF Flows, Open Interest and Funding: Reading the Demand Tape",
+    "description": "How to read US spot Bitcoin ETF inflows and outflows, perpetual open interest, funding rates and liquidations, with dated examples from the 2026 tape.",
+    "dek": "ETF creations show cash demand. Open interest and funding show borrowed demand. The letter reads both to tell a healthy move from a squeeze that can reverse.",
+    "intro": [
+      "Two kinds of buying move Bitcoin. Cash demand shows up in US spot Bitcoin ETF creations. Borrowed demand shows up in perpetual futures: open interest, funding rates and liquidations. A rally built on the first tends to hold; a rally built on the second can reverse as fast as it came.",
+      "The letter tracks daily spot ETF flows from Farside's table and venue open interest and funding from exchanges such as OKX. In September 2026, for example, ETFs swung from about −$450M and −$296M in outflows to seven straight sessions of inflows worth about $3B, peaking near $999M in a day and then slowing each session. Price rejected at $87k while flows were still positive. Positive and slowing can be true at the same time.",
+      "The desk avoids slogans like \"inflows before crashes are bearish\". The useful question is the transmission: who the marginal seller is, whether creations are absorbed, and whether leverage rebuilt faster than cash came in. A drop in open interest with cooling funding after a squeeze is a reset; the same drop with support levels failing and liquidations rising is the start of a cascade. From a distance they look alike, which is why the letter waits for daily closes.",
+      "The issues below walk through each turn in the tape, from the missing bid in mid-September to the squeeze to $87k and the deleveraging wave that followed."
+    ],
+    "questions": [
+      "What do Bitcoin ETF inflows mean for price?",
+      "How do funding rates and open interest affect Bitcoin?",
+      "Why did Bitcoin fall while ETFs had inflows?",
+      "What is a leverage reset?"
+    ],
+    "pattern": "\\bETFs?\\b|open interest|\\bOI\\b|funding|liquidat|leverage|creations|redemptions|\\bCVD\\b",
+    "min_hits": 15,
+    "pinned": [
+      "2026-09-26-87k-rejection",
+      "2026-09-18-the-bid-went-missing",
+      "2026-09-22-the-87k-door"
+    ],
+    "include": []
+  },
+  {
+    "slug": "bitcoin-macro-fed-yen",
+    "name": "The Fed, yields and the yen",
+    "title": "Bitcoin and Macro: The Fed, Treasury Yields, the Yen Carry Trade and Liquidity",
+    "description": "How the Fed, Treasury yields, the dollar, the yen carry trade and global M2 liquidity move Bitcoin, tested against the 2026 tape instead of slogans.",
+    "dek": "Rate hikes, a 5% ten-year, a thirty-year high in Japanese yields and a ripping yen. The letter tests which macro channels actually reach Bitcoin and which are stories.",
+    "intro": [
+      "Macro explains a lot of Bitcoin's big moves, and it also produces a lot of bad shortcuts. \"Strong yen, sell Bitcoin.\" \"Fed hikes, crypto crashes.\" \"Global M2 is rising, so Bitcoin must follow.\" The letter tests each channel against the actual tape before giving it weight.",
+      "In 2026 the backdrop has been hostile: the Fed hiked in September to a 3.75% to 4.00% range, the US ten-year yield pushed above 5%, and Japan's ten-year government bond yield hit a thirty-year high while the yen strengthened sharply. Higher yields raise the hurdle rate for an asset that pays nothing and tighten financial conditions, but they do not liquidate Bitcoin on a one-day beta.",
+      "The letter's September 2026 work on the yen found that Bitcoin was not trading as a daily yen carry trade sleeve. The dollar was the clearer daily link, and the yen channel was episodic: it can fire under disorder, as in August 2024, without driving the average day. Keeping the mechanisms separate (yen funding, dollar and global risk beta, and bond-market fiscal stress) avoids confusing a central bank date with a tradable signal.",
+      "Global M2 stays the main bullish counterargument in the letter's models. The issues below cover the Warsh speech, the Fed hike, the yen shock and how each fed into the scenario weights."
+    ],
+    "questions": [
+      "Does the yen carry trade move Bitcoin?",
+      "How do Fed rate hikes affect Bitcoin?",
+      "Why do Treasury yields matter for Bitcoin?",
+      "Does global M2 liquidity predict Bitcoin?"
+    ],
+    "pattern": "\\bFed\\b|FOMC|Warsh|Powell|Jackson Hole|rate (?:hike|cut)|\\byields?\\b|\\byen\\b|\\bJPY\\b|\\bBOJ\\b|\\bJGB\\b|\\bDXY\\b|\\bdollar\\b|\\bM2\\b|liquidity|\\bPCE\\b|\\bCPI\\b",
+    "min_hits": 12,
+    "pinned": [
+      "2026-09-03-yen-carry-sleeve",
+      "2026-08-28-warsh-morning",
+      "2026-09-17-dont-skip-to-28k"
+    ],
+    "include": [
+      "2026-08-26-full-bench",
+      "2026-08-27-after-the-prints",
+      "2026-08-28-what-voo-owns"
+    ]
+  },
+  {
+    "slug": "bitcoin-support-resistance",
+    "name": "Price levels and the confirmation road",
+    "title": "Bitcoin Support and Resistance Levels: The Map From $57.7k to $87k",
+    "description": "The Bitcoin support and resistance levels the letter watches, from the $87k rejection and $82–83k to $77k, $72k and the 2026 low near $57.7k, and what a daily close through each means.",
+    "dek": "The letter maps Bitcoin as a ladder of levels. Each one is a door: a daily close through it changes the odds, a wick through it does not.",
+    "intro": [
+      "The letter reads Bitcoin price as a confirmation road: a ladder of support and resistance levels, each with a rule for what confirms it and what invalidates it. The core discipline is that a wick is not a daily close. A level only counts as broken when price closes through it and fails to reclaim it.",
+      "As of Issue 27 (26 September 2026), the ladder runs from the $87.4k sweep that was rejected, through $85k to $86k (lost as a holding zone), $82k to $83k (tested and held on a daily close), $80k, $77k, the $74k to $76k process band, $71k to $72k near the 50-day average, and the 2026 low near $57,700. Below that, $38k is kept only as a severe-tail reference. Weekly structure matters too: May's $82,792 weekly high was a key test through early September.",
+      "The rule for reading the ladder is sequence. Relief rallies and lower highs can appear anywhere, but a bearish path has to fail each door in turn with rising intensity, and a bullish path has to hold daily closes while leverage resets and spot demand returns. Skipping straight from $77k to $28k in the headlines is exactly what the letter tries not to do.",
+      "The issues below show the map as it was drawn at each point in time, so you can check what was written down in advance against what happened."
+    ],
+    "questions": [
+      "What are Bitcoin's key support levels right now?",
+      "Is $80k support for Bitcoin?",
+      "What does a daily close above $86k mean?",
+      "Why does a wick not count as a breakout?"
+    ],
+    "pattern": "\\$\\d{2}(?:[.,]\\d+)?k\\b|\\$\\d{2},\\d{3}|daily close|weekly close|support|resistance|reclaim",
+    "min_hits": 20,
+    "pinned": [
+      "2026-09-26-87k-rejection",
+      "2026-09-06-may-highs-still-live",
+      "2026-09-04-eighty-one-probe"
+    ],
+    "include": [
+      "2026-08-24-second-probe",
+      "2026-08-25-bang-stopped",
+      "2026-08-30-stall-not-a-floor",
+      "2026-08-28-zz-bang-clear-map",
+      "2026-08-28-x-bang-scalp-long"
+    ]
+  }
+]
