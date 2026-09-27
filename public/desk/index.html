@@ -39,6 +39,7 @@
       min-height: 100%;
       display: grid;
       grid-template-rows: auto auto 1fr auto auto;
+      grid-template-columns: minmax(0, 1fr);
       border: 1px solid var(--line);
     }
     header {
@@ -199,6 +200,15 @@
       padding: 6px 14px; border-top: 1px solid var(--line);
     }
     .demo { color: var(--yellow); }
+    @media (max-width: 760px) {
+      header { grid-template-columns: 1fr; }
+      .kpis { justify-content: flex-start; flex-wrap: wrap; gap: 14px; }
+      .night, footer.metrics { grid-template-columns: minmax(0, 1fr); }
+      .brief { border-left: 0; border-top: 1px solid var(--line); }
+      footer.metrics > section { border-right: 0; border-bottom: 1px solid var(--line); overflow-x: auto; }
+      .swarm { overflow-x: auto; }
+      .foot { flex-wrap: wrap; gap: 6px; }
+    }
   </style>
   <!-- Vercel Web Analytics -->
   <script>
