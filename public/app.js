@@ -20,7 +20,7 @@ function esc(s) {
 function cardHTML(row) {
   return `
     <a class="feed-card" href="/issue?id=${encodeURIComponent(row.id)}">
-      <img src="${row.cover}" alt="">
+      <img src="${row.cover}" alt="" loading="lazy" decoding="async">
       <div>
         <div class="feed-kicker">${row.kicker || ""}</div>
         <h2>${row.title}</h2>

@@ -6,6 +6,9 @@ from __future__ import annotations
 import html
 import json
 import xml.etree.ElementTree as ET
+from datetime import date as Date
+from email.utils import format_datetime
+from datetime import datetime, timezone
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -36,8 +39,6 @@ def write_sitemap(issues: list[dict]) -> None:
     add(f"{SITE}/charts", None, "0.75")
     add(f"{SITE}/cases", None, "0.8")
     add(f"{SITE}/desk", None, "0.6")
-    add(f"{SITE}/unsubscribe", None, "0.3")
-    add(f"{SITE}/feed.xml", None, "0.4")
     cases_path = PUBLIC / "cases" / "catalog.json"
     cases = []
     if cases_path.exists():
@@ -56,14 +57,22 @@ def write_sitemap(issues: list[dict]) -> None:
     print(f"wrote {out.relative_to(ROOT)} ({len(list(urlset))} urls)")
 
 
+def rfc822(iso: str) -> str:
+    """RSS 2.0 wants RFC 822 dates; readers and validators reject bare YYYY-MM-DD."""
+    try:
+        day = Date.fromisoformat(iso)
+    except ValueError:
+        return ""
+    return format_datetime(datetime(day.year, day.month, day.day, 12, tzinfo=timezone.utc))
+
+
 def write_rss(issues: list[dict]) -> None:
     items = []
     for issue in issues[:50]:
         link = f"{SITE}/issue?id={html.escape(issue['id'], quote=True)}"
         title = html.escape(issue.get("title") or issue["id"])
         dek = html.escape(issue.get("dek") or "")
-        date = issue.get("date") or ""
-        # RSS 2.0 pubDate is fine as YYYY-MM-DD for our readers; keep simple
+        date = rfc822(issue.get("date") or "")
         items.append(
             f"""    <item>
       <title>{title}</title>
@@ -75,12 +84,13 @@ def write_rss(issues: list[dict]) -> None:
         )
     body = "\n".join(items)
     xml = f"""<?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>The Paramaribo Letter</title>
     <link>{SITE}/</link>
     <description>Desk notes from a multi-agent research council on Bitcoin, macro liquidity, equities, and event risk. Educational scenario research, not advice.</description>
     <language>en-us</language>
+    <atom:link href="{SITE}/feed.xml" rel="self" type="application/rss+xml" />
     <docs>{SITE}/feed.xml</docs>
 {body}
   </channel>

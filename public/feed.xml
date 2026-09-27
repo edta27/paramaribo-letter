@@ -1,198 +1,199 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>The Paramaribo Letter</title>
     <link>https://www.paramariboletter.com/</link>
     <description>Desk notes from a multi-agent research council on Bitcoin, macro liquidity, equities, and event risk. Educational scenario research, not advice.</description>
     <language>en-us</language>
+    <atom:link href="https://www.paramariboletter.com/feed.xml" rel="self" type="application/rss+xml" />
     <docs>https://www.paramariboletter.com/feed.xml</docs>
     <item>
       <title>Bitcoin&#x27;s $87K Rejection: The 2026 Cycle Is Starting to Show Its Shape</title>
       <link>https://www.paramariboletter.com/issue?id=2026-09-26-87k-rejection</link>
       <guid isPermaLink="true">https://www.paramariboletter.com/issue?id=2026-09-26-87k-rejection</guid>
-      <pubDate>2026-09-26</pubDate>
+      <pubDate>Sat, 26 Sep 2026 12:00:00 +0000</pubDate>
       <description>Bitcoin recovered from roughly $58k to $87k, ETF inflows surged, leverage rebuilt, then the first meaningful deleveraging wave arrived. $82–83k held. The tail is not here. Several pieces of the map written down in advance have begun to appear.</description>
     </item>
     <item>
       <title>Still early, but the shape is showing</title>
       <link>https://www.paramariboletter.com/issue?id=2026-09-23-still-early-shape</link>
       <guid isPermaLink="true">https://www.paramariboletter.com/issue?id=2026-09-23-still-early-shape</guid>
-      <pubDate>2026-09-23</pubDate>
+      <pubDate>Wed, 23 Sep 2026 12:00:00 +0000</pubDate>
       <description>Bitcoin squeezed toward $87.4k, rebuilt confidence, then produced the first meaningful deleveraging wave. September is too early to call a tail.</description>
     </item>
     <item>
       <title>The $87k move cleared the door, not the room</title>
       <link>https://www.paramariboletter.com/issue?id=2026-09-22-the-87k-door</link>
       <guid isPermaLink="true">https://www.paramariboletter.com/issue?id=2026-09-22-the-87k-door</guid>
-      <pubDate>2026-09-22</pubDate>
+      <pubDate>Tue, 22 Sep 2026 12:00:00 +0000</pubDate>
       <description>Bitcoin cleared $81.5k and reached $87k, but the second daily close and $86k support test are still missing. ETF flows helped; the squeeze mattered.</description>
     </item>
     <item>
       <title>The bid went missing</title>
       <link>https://www.paramariboletter.com/issue?id=2026-09-18-the-bid-went-missing</link>
       <guid isPermaLink="true">https://www.paramariboletter.com/issue?id=2026-09-18-the-bid-went-missing</guid>
-      <pubDate>2026-09-18</pubDate>
+      <pubDate>Fri, 18 Sep 2026 12:00:00 +0000</pubDate>
       <description>Issue 23 could not grade demand. The tape is in: ETF outflows, weak spot CVD, open interest still high. Next pool is $74.6k, then $71–72k. Still not $28k.</description>
     </item>
     <item>
       <title>Don&#x27;t skip to $28k</title>
       <link>https://www.paramariboletter.com/issue?id=2026-09-17-dont-skip-to-28k</link>
       <guid isPermaLink="true">https://www.paramariboletter.com/issue?id=2026-09-17-dont-skip-to-28k</guid>
-      <pubDate>2026-09-17</pubDate>
+      <pubDate>Thu, 17 Sep 2026 12:00:00 +0000</pubDate>
       <description>Bitcoin last ~$76.6k. Daily $77k is gone. The Fed hiked 25 bp. Next argument is $72k and the 50-day — not a leap to $28k.</description>
     </item>
     <item>
       <title>2025 looked strong the night before the wick</title>
       <link>https://www.paramariboletter.com/issue?id=2026-09-11-twenty-five-looked-strong</link>
       <guid isPermaLink="true">https://www.paramariboletter.com/issue?id=2026-09-11-twenty-five-looked-strong</guid>
-      <pubDate>2026-09-11</pubDate>
+      <pubDate>Fri, 11 Sep 2026 12:00:00 +0000</pubDate>
       <description>Bitcoin last ~$76.9k is testing $77k. PENGU is down about 14% on the week versus Bitcoin about 5%. That is not September 2025&#x27;s costume. A rebound toward $80–82k with PENGU limp would rhyme more, not less.</description>
     </item>
     <item>
       <title>Crash is the tail, not the base</title>
       <link>https://www.paramariboletter.com/issue?id=2026-09-07-crash-is-the-tail</link>
       <guid isPermaLink="true">https://www.paramariboletter.com/issue?id=2026-09-07-crash-is-the-tail</guid>
-      <pubDate>2026-09-07</pubDate>
+      <pubDate>Mon, 07 Sep 2026 12:00:00 +0000</pubDate>
       <description>Bitcoin last ~$79.9k, above 50- and 200-day averages near $69k. Desk: no crash from here. A 10–20% correction is live. A new cycle low below $57,748 is a 15% tail.</description>
     </item>
     <item>
       <title>May&#x27;s $82.8k weekly high is still unprinted</title>
       <link>https://www.paramariboletter.com/issue?id=2026-09-06-may-highs-still-live</link>
       <guid isPermaLink="true">https://www.paramariboletter.com/issue?id=2026-09-06-may-highs-still-live</guid>
-      <pubDate>2026-09-06</pubDate>
+      <pubDate>Sun, 06 Sep 2026 12:00:00 +0000</pubDate>
       <description>Bitcoin last ~$79.9k after a Sep 3 Daily close at $81,272 that lost $80k the next session. Desk: chop and local-high sweeps first. A clean HTF break of May needs a weekly close through $82,792, not another wick.</description>
     </item>
     <item>
       <title>$82k and $77k in the same day is a probe, not a stall break</title>
       <link>https://www.paramariboletter.com/issue?id=2026-09-04-eighty-one-probe</link>
       <guid isPermaLink="true">https://www.paramariboletter.com/issue?id=2026-09-04-eighty-one-probe</guid>
-      <pubDate>2026-09-04</pubDate>
+      <pubDate>Fri, 04 Sep 2026 12:00:00 +0000</pubDate>
       <description>Bitcoin tagged $82,108 and $77,107 in one 24h window and last ~$80.8k. Desk: that is a probe of $81–82k. Stall break still needs Daily acceptance through the old failure zone, not a wick.</description>
     </item>
     <item>
       <title>Japan hit 3%. The yen ripped. Bitcoin did not act like a carry trade.</title>
       <link>https://www.paramariboletter.com/issue?id=2026-09-03-yen-carry-sleeve</link>
       <guid isPermaLink="true">https://www.paramariboletter.com/issue?id=2026-09-03-yen-carry-sleeve</guid>
-      <pubDate>2026-09-03</pubDate>
+      <pubDate>Thu, 03 Sep 2026 12:00:00 +0000</pubDate>
       <description>JGB 10Y tagged a thirty-year high. USD/JPY fell hard toward 156. Desk-computed return correlations and a same-session experiment say BTC is not a daily yen-carry sleeve right now — episodic under disorder, not sizeable into BOJ.</description>
     </item>
     <item>
       <title>Four-year cycle on trial: is 2026 rhyming with 2018 — or has Bitcoin changed?</title>
       <link>https://www.paramariboletter.com/issue?id=2026-09-02-four-year-cycle-on-trial</link>
       <guid isPermaLink="true">https://www.paramariboletter.com/issue?id=2026-09-02-four-year-cycle-on-trial</guid>
-      <pubDate>2026-09-02</pubDate>
+      <pubDate>Wed, 02 Sep 2026 12:00:00 +0000</pubDate>
       <description>BTC topped near $126k, tagged the low-$60ks, rebounded toward $80–81k, and is now testing the $77k stall. Desk synthesis: the four-year playbook is a weak prior, not a law — cash until a Daily close.</description>
     </item>
     <item>
       <title>The crash stack on trial: waiting near $79k is not a $46k ticket</title>
       <link>https://www.paramariboletter.com/issue?id=2026-09-01-crash-stack-on-trial</link>
       <guid isPermaLink="true">https://www.paramariboletter.com/issue?id=2026-09-01-crash-stack-on-trial</guid>
-      <pubDate>2026-09-01</pubDate>
+      <pubDate>Tue, 01 Sep 2026 12:00:00 +0000</pubDate>
       <description>Elevated equities, yields, debt, geopolitics, and leverage may create vulnerability — that is not the same as a probable Bitcoin cascade to $46k. Desk synthesis: cash until a Daily close; $46k stays a tail node.</description>
     </item>
     <item>
       <title>The price of waiting: what See’s teaches about Bitcoin near $79k</title>
       <link>https://www.paramariboletter.com/issue?id=2026-08-31-zz-price-of-waiting</link>
       <guid isPermaLink="true">https://www.paramariboletter.com/issue?id=2026-08-31-zz-price-of-waiting</guid>
-      <pubDate>2026-08-31</pubDate>
+      <pubDate>Mon, 31 Aug 2026 12:00:00 +0000</pubDate>
       <description>A great asset can be worth owning and still not be worth buying at this print. Full bench on whether waiting for substantially lower BTC — including a $46k deep node — is +EV with only today’s packet, or the See’s $25 million ceiling in reverse.</description>
     </item>
     <item>
       <title>Two tapes: AI bid, Bitcoin still in the $77–80k stall</title>
       <link>https://www.paramariboletter.com/issue?id=2026-08-31-two-tapes</link>
       <guid isPermaLink="true">https://www.paramariboletter.com/issue?id=2026-08-31-two-tapes</guid>
-      <pubDate>2026-08-31</pubDate>
+      <pubDate>Mon, 31 Aug 2026 12:00:00 +0000</pubDate>
       <description>Early Monday, BTC ~$78.2k is still Issue 13’s box. MSFT and META printed a 5d bid; NVDA has not reclaimed ~$228. Until a Daily close or a live ETF print, they are not one trade.</description>
     </item>
     <item>
       <title>The $77–80k stall is not a floor</title>
       <link>https://www.paramariboletter.com/issue?id=2026-08-30-stall-not-a-floor</link>
       <guid isPermaLink="true">https://www.paramariboletter.com/issue?id=2026-08-30-stall-not-a-floor</guid>
-      <pubDate>2026-08-30</pubDate>
+      <pubDate>Sun, 30 Aug 2026 12:00:00 +0000</pubDate>
       <description>After Warsh, a snapped ETF streak, and a failed ~$81–81.5k high, the weekend is quiet. That is not confirmation. Full bench: cash until a Daily close.</description>
     </item>
     <item>
       <title>Bang’s clear map: 78.8k, then 71.7–72.3k</title>
       <link>https://www.paramariboletter.com/issue?id=2026-08-28-zz-bang-clear-map</link>
       <guid isPermaLink="true">https://www.paramariboletter.com/issue?id=2026-08-28-zz-bang-clear-map</guid>
-      <pubDate>2026-08-28</pubDate>
+      <pubDate>Fri, 28 Aug 2026 12:00:00 +0000</pubDate>
       <description>After Warsh, spot ~$77.6k. His update: first TP at 78.8k; if bulls fail that zone, final TP 71.7–72.3k for clearer bias. Full bench on process, not a dated crash.</description>
     </item>
     <item>
       <title>Warsh printed. Social still wants 71k or 100k.</title>
       <link>https://www.paramariboletter.com/issue?id=2026-08-28-z-warsh-social-tape</link>
       <guid isPermaLink="true">https://www.paramariboletter.com/issue?id=2026-08-28-z-warsh-social-tape</guid>
-      <pubDate>2026-08-28</pubDate>
+      <pubDate>Fri, 28 Aug 2026 12:00:00 +0000</pubDate>
       <description>Highest-view #BTC posts today: AltstreetBet says 71–73k is the rebuy toward 85–100k; a Cowen quote-post says higher soon. Spot ~$77.4k after a hawkish Jackson Hole. Full bench.</description>
     </item>
     <item>
       <title>$38k is a viral line, not a measured bottom</title>
       <link>https://www.paramariboletter.com/issue?id=2026-08-28-y-thirty-eight-floor</link>
       <guid isPermaLink="true">https://www.paramariboletter.com/issue?id=2026-08-28-y-thirty-eight-floor</guid>
-      <pubDate>2026-08-28</pubDate>
+      <pubDate>Fri, 28 Aug 2026 12:00:00 +0000</pubDate>
       <description>Sherlockwhale’s most-engaged post of the year extrapolates four shrinking bear drawdowns into a ~70% cut from $126k. Spot is ~$79.5k. Full bench on the sample, not the likes.</description>
     </item>
     <item>
       <title>Bang’s 77,777 long is a limit, not a chase</title>
       <link>https://www.paramariboletter.com/issue?id=2026-08-28-x-bang-scalp-long</link>
       <guid isPermaLink="true">https://www.paramariboletter.com/issue?id=2026-08-28-x-bang-scalp-long</guid>
-      <pubDate>2026-08-28</pubDate>
+      <pubDate>Fri, 28 Aug 2026 12:00:00 +0000</pubDate>
       <description>He is still holding TP1 at 78.8k and posted a scalp long limit at 77,777 with a stop at 77,333. Spot is near $79,300. Warsh is still ahead. Full bench.</description>
     </item>
     <item>
       <title>Desk note: VOO already owns the Nvidia day</title>
       <link>https://www.paramariboletter.com/issue?id=2026-08-28-what-voo-owns</link>
       <guid isPermaLink="true">https://www.paramariboletter.com/issue?id=2026-08-28-what-voo-owns</guid>
-      <pubDate>2026-08-28</pubDate>
+      <pubDate>Fri, 28 Aug 2026 12:00:00 +0000</pubDate>
       <description>Vanguard’s S&amp;P 500 ETF semi-annual through June 30 shows $1.68T and 38% information technology. That is concentration already on the books — not a Warsh catalyst.</description>
     </item>
     <item>
       <title>Warsh morning: Nvidia is done, the box is not</title>
       <link>https://www.paramariboletter.com/issue?id=2026-08-28-warsh-morning</link>
       <guid isPermaLink="true">https://www.paramariboletter.com/issue?id=2026-08-28-warsh-morning</guid>
-      <pubDate>2026-08-28</pubDate>
+      <pubDate>Fri, 28 Aug 2026 12:00:00 +0000</pubDate>
       <description>Thursday was an AI session. Friday is a speech. Bitcoin ~$79,800 inside $70k–$82k. Full bench, each lens on its own line, cash until a Daily close.</description>
     </item>
     <item>
       <title>September is a box, not a date</title>
       <link>https://www.paramariboletter.com/issue?id=2026-08-27-september-box</link>
       <guid isPermaLink="true">https://www.paramariboletter.com/issue?id=2026-08-27-september-box</guid>
-      <pubDate>2026-08-27</pubDate>
+      <pubDate>Thu, 27 Aug 2026 12:00:00 +0000</pubDate>
       <description>Bang tagged 77.2k and left the long unfilled. Nvidia ripped. Warsh is tomorrow. The month ahead is still $70k–$82k two-way.</description>
     </item>
     <item>
       <title>The prints landed. The box did not move.</title>
       <link>https://www.paramariboletter.com/issue?id=2026-08-27-after-the-prints</link>
       <guid isPermaLink="true">https://www.paramariboletter.com/issue?id=2026-08-27-after-the-prints</guid>
-      <pubDate>2026-08-27</pubDate>
+      <pubDate>Thu, 27 Aug 2026 12:00:00 +0000</pubDate>
       <description>PCE ran hot. Nvidia beat. Bitcoin closed $79,018. That is not a Daily through eighty, and it is not seventy-two.</description>
     </item>
     <item>
       <title>The bench on Bang, hours before Nvidia</title>
       <link>https://www.paramariboletter.com/issue?id=2026-08-26-full-bench</link>
       <guid isPermaLink="true">https://www.paramariboletter.com/issue?id=2026-08-26-full-bench</guid>
-      <pubDate>2026-08-26</pubDate>
+      <pubDate>Wed, 26 Aug 2026 12:00:00 +0000</pubDate>
       <description>Sixteen lenses, one disagreement: wait for 71.7–72.4k, or let PCE and Warsh decide. Pre-positioning is the error.</description>
     </item>
     <item>
       <title>His short is already dead</title>
       <link>https://www.paramariboletter.com/issue?id=2026-08-25-bang-stopped</link>
       <guid isPermaLink="true">https://www.paramariboletter.com/issue?id=2026-08-25-bang-stopped</guid>
-      <pubDate>2026-08-25</pubDate>
+      <pubDate>Tue, 25 Aug 2026 12:00:00 +0000</pubDate>
       <description>Bang’s August card: 66.5k short delivered, 62.2k long missed, 78.5k short stopped. He wants 71.7–72.4k next. Spot is not there yet.</description>
     </item>
     <item>
       <title>A second probe of eighty</title>
       <link>https://www.paramariboletter.com/issue?id=2026-08-24-second-probe</link>
       <guid isPermaLink="true">https://www.paramariboletter.com/issue?id=2026-08-24-second-probe</guid>
-      <pubDate>2026-08-24</pubDate>
+      <pubDate>Mon, 24 Aug 2026 12:00:00 +0000</pubDate>
       <description>Monday afternoon retested the round number. A wick is not a Daily close. Cash Cat ripped anyway.</description>
     </item>
     <item>
       <title>The crash is a window, not a date</title>
       <link>https://www.paramariboletter.com/issue?id=2026-08-22-the-window</link>
       <guid isPermaLink="true">https://www.paramariboletter.com/issue?id=2026-08-22-the-window</guid>
-      <pubDate>2026-08-22</pubDate>
+      <pubDate>Sat, 22 Aug 2026 12:00:00 +0000</pubDate>
       <description>A full-bench read after Bitcoin’s five-day squeeze. Local panic clusters around events. It does not print on a slogan.</description>
     </item>
   </channel>
