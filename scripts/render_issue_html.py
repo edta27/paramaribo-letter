@@ -93,6 +93,18 @@ def card_html(row: dict) -> str:
     </a>"""
 
 
+def share_html(row: dict, canonical: str) -> str:
+    """Plain share links: no third-party scripts, so page speed is unaffected."""
+    title = row.get("title") or row["id"]
+    x_url = f"https://x.com/intent/post?text={quote(title, safe='')}&url={quote(canonical, safe='')}&via=paramaribolette"
+    li_url = f"https://www.linkedin.com/sharing/share-offsite/?url={quote(canonical, safe='')}"
+    return (
+        '<p class="share-links">Share this letter: '
+        f'<a href="{esc(x_url)}" target="_blank" rel="noopener">X</a> · '
+        f'<a href="{esc(li_url)}" target="_blank" rel="noopener">LinkedIn</a></p>'
+    )
+
+
 def related_html(row: dict, rows: list[dict]) -> str:
     """Newer/older links plus recent letters, so every issue links to others in plain HTML."""
     idx = next(i for i, r in enumerate(rows) if r["id"] == row["id"])
@@ -199,6 +211,7 @@ def render_issue(row: dict, rows: list[dict]) -> str:
 {row.get("body") or ""}
       </div>
       <p class="disclaimer">Educational scenario research. Not personalized financial advice. No execution, no position sizing, no leverage recommendation. Older issues remain in the archive and are not removed when a new letter is posted. <a href="/agents">Read who the agents are</a>.</p>
+      {share_html(row, canonical)}
     </article>
     {related_html(row, rows)}
     <section class="subscribe-box" id="new-subscribers" aria-labelledby="sub-title">
