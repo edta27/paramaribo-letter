@@ -40,16 +40,26 @@
     <p class="side-foot">Educational research. Not advice.</p>
   `;
 
+  const svg = (d) =>
+    `<svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${d}</svg>`;
+  const ICONS = {
+    menu: svg('<path d="M4 6h16M4 12h16M4 18h16"/>'),
+    search: svg('<circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/>'),
+    sun: svg('<circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/>').replace("<svg", '<svg class="i-sun"'),
+    moon: svg('<path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/>').replace("<svg", '<svg class="i-moon"'),
+  };
+
   const top = document.createElement("header");
   top.className = "portal-top";
   top.innerHTML = `
-    <button type="button" class="icon-btn side-toggle" aria-label="Open menu">☰</button>
+    <button type="button" class="icon-btn side-toggle" aria-label="Open menu" aria-controls="portal-side" aria-expanded="false">${ICONS.menu}</button>
     <button type="button" class="search-trigger" data-open-search>
-      <span>Search research</span>
+      ${ICONS.search}
+      <span>Search <span class="search-long">research</span></span>
       <kbd>⌘K</kbd>
     </button>
     <div class="top-actions">
-      <button type="button" class="icon-btn" data-theme-toggle aria-label="Toggle theme">Theme</button>
+      <button type="button" class="icon-btn theme-btn" data-theme-toggle aria-label="Switch light or dark theme">${ICONS.sun}${ICONS.moon}</button>
       <a class="btn btn-primary" href="${document.getElementById("new-subscribers") ? "#new-subscribers" : "/#new-subscribers"}">Subscribe</a>
     </div>
   `;
@@ -70,9 +80,19 @@
   scrim.className = "side-scrim";
   scrim.hidden = true;
 
+  const stage = document.querySelector(".portal-stage");
+  const skip = document.createElement("a");
+  skip.className = "skip-link";
+  skip.textContent = "Skip to content";
+  if (stage) {
+    if (!stage.id) stage.id = "main";
+    if (!document.querySelector("main, [role=main]")) stage.setAttribute("role", "main");
+    skip.href = "#" + stage.id;
+  }
+
   fontLink();
   document.body.classList.add("is-portal");
-  document.body.prepend(scrim, side, top);
+  document.body.prepend(...(stage ? [skip] : []), scrim, side, top);
   document.body.appendChild(modal);
 
   function setTheme(next) {
@@ -95,10 +115,12 @@
   function closeSide() {
     document.body.classList.remove("side-open");
     scrim.hidden = true;
+    toggle.setAttribute("aria-expanded", "false");
   }
   toggle.addEventListener("click", () => {
-    document.body.classList.toggle("side-open");
-    scrim.hidden = !document.body.classList.contains("side-open");
+    const open = document.body.classList.toggle("side-open");
+    scrim.hidden = !open;
+    toggle.setAttribute("aria-expanded", String(open));
   });
   scrim.addEventListener("click", closeSide);
 
