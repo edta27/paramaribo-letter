@@ -2,5 +2,6 @@ User-agent: *
 Allow: /
 Disallow: /api/
 Disallow: /issue-pages/
+Disallow: /case-pages/
 
 Sitemap: https://www.paramariboletter.com/sitemap.xml

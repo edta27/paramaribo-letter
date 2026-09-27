@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>You are on the list · The Paramaribo Letter</title>
+  <meta name="robots" content="noindex" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="icon" href="/favicon-32.png" type="image/png" sizes="32x32" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <link rel="stylesheet" href="/styles.css" />
+  <script>
+    try {
+      var t = localStorage.getItem("paramaribo-theme");
+      document.documentElement.dataset.theme = t === "light" ? "light" : "dark";
+    } catch (e) {
+      document.documentElement.dataset.theme = "dark";
+    }
+  </script>
+  <script>
+    window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+  </script>
+  <script defer src="/_vercel/insights/script.js"></script>
+  <script defer src="/clarity.js"></script>
+</head>
+<body data-nav="subscribe">
+  <div class="portal-stage wrap">
+    <section class="subscribe-box subscribe-hook thanks-card" aria-labelledby="thanks-title">
+      <h1 id="thanks-title" data-thanks-title>You are on the list</h1>
+      <p class="subscribe-lede" data-thanks-lede>
+        The next letter lands in your inbox when it posts. Every past letter stays free on the site.
+      </p>
+      <ul class="thanks-next">
+        <li>If the first letter lands in Promotions or Spam, move it to your inbox so the next ones follow.</li>
+        <li>Know someone who watches the same levels? Send them the letter you just read.</li>
+      </ul>
+      <div class="thanks-actions">
+        <a class="btn btn-primary" href="/" data-thanks-back>Continue reading</a>
+        <a class="btn" href="https://www.linkedin.com/newsletters/the-paramaribo-letter-7498641775679426560/" target="_blank" rel="noopener">Follow on LinkedIn</a>
+        <a class="btn" href="https://x.com/paramaribolette" target="_blank" rel="noopener">Follow on X</a>
+      </div>
+      <p class="subscribe-unsub">Changed your mind? <a href="/unsubscribe">Unsubscribe</a> any time. Educational only, not advice.</p>
+    </section>
+
+    <footer class="site">
+      <div>© The Paramaribo Letter</div>
+      <div><a href="/">Feed</a> · <a href="/charts">Charts</a> · <a href="/cases">Case studies</a></div>
+    </footer>
+  </div>
+  <script src="/catalog.js"></script>
+  <script src="/subscribe.js"></script>
+  <script src="/shell.js"></script>
+  <script>
+    (function () {
+      var params = new URLSearchParams(window.location.search);
+      var from = params.get("from") || "";
+      var via = params.get("via") || "unknown";
+      var already = params.get("already") === "1";
+      // Only same-site paths, never an outside redirect.
+      if (/^\/(?!\/)/.test(from) && from.indexOf("/subscribed") !== 0) {
+        document.querySelector("[data-thanks-back]").setAttribute("href", from);
+      }
+      if (already) {
+        document.querySelector("[data-thanks-title]").textContent = "You were already on the list";
+        document.querySelector("[data-thanks-lede]").textContent =
+          "Nothing else to do. The next letter still lands in your inbox when it posts.";
+      }
+      if (params.has("via") && window.ParamariboSubscribe) {
+        window.ParamariboSubscribe.track("subscribe_complete", {
+          form_location: via,
+          page: from.split("?")[0] || "unknown",
+          outcome: already ? "already_subscribed" : "new_subscriber",
+        });
+      }
+    })();
+  </script>
+</body>
+</html>

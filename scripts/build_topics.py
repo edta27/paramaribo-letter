@@ -148,20 +148,21 @@ def head_html(title: str, description: str, canonical: str, extra_ld: str) -> st
     window.va = window.va || function () {{ (window.vaq = window.vaq || []).push(arguments); }};
   </script>
   <script defer src="/_vercel/insights/script.js"></script>
+  <script defer src="/clarity.js"></script>
 </head>"""
 
 
-SUBSCRIBE_AND_FOOTER = """    <section class="subscribe-box" id="new-subscribers" aria-labelledby="sub-title">
-      <h2 id="sub-title">Subscribe</h2>
-      <p class="subscribe-lede">Email when the next letter posts. Educational research only.</p>
-      <form class="subscribe-form" data-subscribe-form>
+SUBSCRIBE_AND_FOOTER = """    <section class="subscribe-box subscribe-hook" id="new-subscribers" aria-labelledby="sub-title">
+      <h2 id="sub-title">Get the next letter by email</h2>
+      <p class="subscribe-lede">Each letter writes the levels down before the tape decides, then checks them in the next one. Free, no spam, one click to leave.</p>
+      <form class="subscribe-form" data-subscribe-form data-sub-location="topic">
         <label class="sr-only" for="sub-email">Email</label>
         <input id="sub-email" name="email" type="email" required placeholder="you@example.com" autocomplete="email" />
         <input class="hp" name="company" type="text" tabindex="-1" autocomplete="off" aria-hidden="true" />
-        <button class="btn btn-primary" type="submit">Subscribe</button>
+        <button class="btn btn-primary" type="submit">Email me the next letter</button>
       </form>
       <p class="subscribe-status" data-sub-status aria-live="polite"></p>
-      <p class="subscribe-unsub">Already on the list? <a href="/unsubscribe">Unsubscribe</a>.</p>
+      <p class="subscribe-unsub">Already on the list? <a href="/unsubscribe">Unsubscribe</a>. Educational research only.</p>
     </section>
     <footer class="site">
       <div>© The Paramaribo Letter</div>

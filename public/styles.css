@@ -261,7 +261,7 @@ button, input { font-family: inherit; }
   color: var(--mute);
 }
 
-.btn, .subscribe-form .btn, .sub-modal-btn {
+.btn, .subscribe-form .btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -276,7 +276,7 @@ button, input { font-family: inherit; }
   background: var(--text);
   color: var(--page);
 }
-.btn-primary, .subscribe-form .btn, .sub-modal-btn {
+.btn-primary, .subscribe-form .btn {
   background: var(--accent-2);
   color: var(--on-accent);
 }
@@ -533,48 +533,45 @@ footer.site {
   text-decoration: none;
 }
 .subscribe-unsub a:hover { text-decoration: underline; }
-body.sub-modal-open { overflow: hidden; }
-.sub-modal {
+.issue-sub-cta {
+  margin: 10px 0 0;
+  font-size: 14px;
+}
+.issue-sub-cta a { color: var(--accent); text-decoration: none; font-weight: 600; }
+.issue-sub-cta a:hover { text-decoration: underline; }
+.sub-bar {
   position: fixed;
-  inset: 0;
-  z-index: 80;
-  display: grid;
-  place-items: center;
-  padding: 24px;
-}
-.sub-modal[hidden] { display: none !important; }
-.sub-modal-backdrop {
-  position: absolute;
-  inset: 0;
-  background: rgb(14 16 18 / 0.72);
-}
-.sub-modal-card {
-  position: relative;
-  width: min(420px, 100%);
+  left: 50%;
+  bottom: 16px;
+  transform: translateX(-50%);
+  z-index: 60;
+  width: min(640px, calc(100% - 24px));
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 10px 10px 16px;
   background: var(--base);
-  border: 1px solid var(--stroke);
+  border: 1px solid color-mix(in srgb, var(--accent) 45%, var(--stroke));
   border-radius: 12px;
-  padding: 28px 26px 22px;
+  box-shadow: 0 10px 30px rgb(0 0 0 / 0.35);
 }
-.sub-modal-kicker {
-  margin: 0 0 8px;
-  font-size: 11px;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
+.sub-bar[hidden] { display: none; }
+.sub-bar-text { margin: 0; flex: 1; font-size: 14px; line-height: 1.35; color: var(--text); }
+.sub-bar-go { white-space: nowrap; }
+.sub-bar-close {
+  background: none;
+  border: 0;
   color: var(--mute);
+  font-size: 22px;
+  line-height: 1;
+  padding: 4px 6px;
+  cursor: pointer;
 }
-.sub-modal-card h2 {
-  margin: 0 0 10px;
-  font-size: 24px;
-  color: var(--text);
-}
-.sub-modal-body {
-  margin: 0 0 20px;
-  font-size: 16px;
-  line-height: 1.45;
-  color: var(--text-2);
-}
-.sub-modal-foot { margin: 14px 0 0; font-size: 12px; color: var(--mute); }
+.sub-bar-close:hover { color: var(--text); }
+.thanks-card h1 { font-size: 30px; margin: 0 0 10px; }
+.thanks-card .subscribe-lede { max-width: 560px; }
+.thanks-next { margin: 0 0 18px; padding-left: 20px; color: var(--text-2); line-height: 1.6; }
+.thanks-actions { display: flex; flex-wrap: wrap; gap: 10px; margin: 0 0 8px; }
 .sr-only {
   position: absolute;
   width: 1px;

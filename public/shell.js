@@ -50,7 +50,7 @@
     </button>
     <div class="top-actions">
       <button type="button" class="icon-btn" data-theme-toggle aria-label="Toggle theme">Theme</button>
-      <a class="btn btn-primary" href="/#new-subscribers">Subscribe</a>
+      <a class="btn btn-primary" href="${document.getElementById("new-subscribers") ? "#new-subscribers" : "/#new-subscribers"}">Subscribe</a>
     </div>
   `;
 
