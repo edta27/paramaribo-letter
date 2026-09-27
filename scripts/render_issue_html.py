@@ -198,6 +198,7 @@ def render_issue(row: dict, rows: list[dict]) -> str:
     window.va = window.va || function () {{ (window.vaq = window.vaq || []).push(arguments); }};
   </script>
   <script defer src="/_vercel/insights/script.js"></script>
+  <script defer src="/clarity.js"></script>
 </head>
 <body data-nav="feed">
   <div class="portal-stage wrap">
@@ -206,6 +207,7 @@ def render_issue(row: dict, rows: list[dict]) -> str:
       <h1 id="title">{esc(title)}</h1>
       <p class="lede" id="dek">{esc(dek)}</p>
       <div class="meta" id="meta">{esc(meta_line)}</div>
+      <p class="issue-sub-cta"><a href="#new-subscribers">Get the next letter by email →</a></p>
       <img class="cover" id="cover" src="{esc(cover_src)}" alt="{esc(title)}" />
       <div class="body" id="body">
 {row.get("body") or ""}
@@ -213,19 +215,19 @@ def render_issue(row: dict, rows: list[dict]) -> str:
       <p class="disclaimer">Educational scenario research. Not personalized financial advice. No execution, no position sizing, no leverage recommendation. Older issues remain in the archive and are not removed when a new letter is posted. <a href="/agents">Read who the agents are</a>.</p>
       {share_html(row, canonical)}
     </article>
-    {related_html(row, rows)}
-    <section class="subscribe-box" id="new-subscribers" aria-labelledby="sub-title">
-      <h2 id="sub-title">Subscribe</h2>
-      <p class="subscribe-lede">Email when the next letter posts. Educational research only.</p>
-      <form class="subscribe-form" data-subscribe-form>
+    <section class="subscribe-box subscribe-hook" id="new-subscribers" aria-labelledby="sub-title">
+      <h2 id="sub-title">Get the next letter by email</h2>
+      <p class="subscribe-lede">Each letter writes the levels down before the tape decides, then checks them in the next one. Free, no spam, one click to leave.</p>
+      <form class="subscribe-form" data-subscribe-form data-sub-location="issue-end">
         <label class="sr-only" for="sub-email">Email</label>
         <input id="sub-email" name="email" type="email" required placeholder="you@example.com" autocomplete="email" />
         <input class="hp" name="company" type="text" tabindex="-1" autocomplete="off" aria-hidden="true" />
-        <button class="btn btn-primary" type="submit">Subscribe</button>
+        <button class="btn btn-primary" type="submit">Email me the next letter</button>
       </form>
       <p class="subscribe-status" data-sub-status aria-live="polite"></p>
-      <p class="subscribe-unsub">Already on the list? <a href="/unsubscribe">Unsubscribe</a>.</p>
+      <p class="subscribe-unsub">Already on the list? <a href="/unsubscribe">Unsubscribe</a>. Educational research only.</p>
     </section>
+    {related_html(row, rows)}
     <footer class="site">
       <div>© The Paramaribo Letter</div>
       <div><a href="/#new-subscribers">Subscribe</a> · <a href="/unsubscribe">Unsubscribe</a> · <a href="/agents">Agents</a></div>

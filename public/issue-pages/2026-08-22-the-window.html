@@ -67,6 +67,7 @@
     window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
   </script>
   <script defer src="/_vercel/insights/script.js"></script>
+  <script defer src="/clarity.js"></script>
 </head>
 <body data-nav="feed">
   <div class="portal-stage wrap">
@@ -75,6 +76,7 @@
       <h1 id="title">The crash is a window, not a date</h1>
       <p class="lede" id="dek">A full-bench read after Bitcoin’s five-day squeeze. Local panic clusters around events. It does not print on a slogan.</p>
       <div class="meta" id="meta">August 22, 2026 · The Paramaribo Letter</div>
+      <p class="issue-sub-cta"><a href="#new-subscribers">Get the next letter by email →</a></p>
       <img class="cover" id="cover" src="/images/cover-squeeze.png" alt="The crash is a window, not a date" />
       <div class="body" id="body">
 <p>As of Saturday 22 August, Bitcoin had run from the low sixties to the high seventies in a week. The question in the room was not “is the market interesting.” It was “when does this crash.”</p>
@@ -98,6 +100,18 @@
       <p class="disclaimer">Educational scenario research. Not personalized financial advice. No execution, no position sizing, no leverage recommendation. Older issues remain in the archive and are not removed when a new letter is posted. <a href="/agents">Read who the agents are</a>.</p>
       <p class="share-links">Share this letter: <a href="https://x.com/intent/post?text=The%20crash%20is%20a%20window%2C%20not%20a%20date&amp;url=https%3A%2F%2Fwww.paramariboletter.com%2Fissue%3Fid%3D2026-08-22-the-window&amp;via=paramaribolette" target="_blank" rel="noopener">X</a> · <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.paramariboletter.com%2Fissue%3Fid%3D2026-08-22-the-window" target="_blank" rel="noopener">LinkedIn</a></p>
     </article>
+    <section class="subscribe-box subscribe-hook" id="new-subscribers" aria-labelledby="sub-title">
+      <h2 id="sub-title">Get the next letter by email</h2>
+      <p class="subscribe-lede">Each letter writes the levels down before the tape decides, then checks them in the next one. Free, no spam, one click to leave.</p>
+      <form class="subscribe-form" data-subscribe-form data-sub-location="issue-end">
+        <label class="sr-only" for="sub-email">Email</label>
+        <input id="sub-email" name="email" type="email" required placeholder="you@example.com" autocomplete="email" />
+        <input class="hp" name="company" type="text" tabindex="-1" autocomplete="off" aria-hidden="true" />
+        <button class="btn btn-primary" type="submit">Email me the next letter</button>
+      </form>
+      <p class="subscribe-status" data-sub-status aria-live="polite"></p>
+      <p class="subscribe-unsub">Already on the list? <a href="/unsubscribe">Unsubscribe</a>. Educational research only.</p>
+    </section>
     <nav class="more-letters" aria-label="More letters">
       <div class="more-letters-nav">
         <a rel="next" href="/issue?id=2026-08-24-second-probe">Next: A second probe of eighty →</a>
@@ -112,18 +126,6 @@
       </ul>
       <p><a href="/">All letters</a> · <a href="/charts">Charts</a> · <a href="/cases">Case studies</a></p>
     </nav>
-    <section class="subscribe-box" id="new-subscribers" aria-labelledby="sub-title">
-      <h2 id="sub-title">Subscribe</h2>
-      <p class="subscribe-lede">Email when the next letter posts. Educational research only.</p>
-      <form class="subscribe-form" data-subscribe-form>
-        <label class="sr-only" for="sub-email">Email</label>
-        <input id="sub-email" name="email" type="email" required placeholder="you@example.com" autocomplete="email" />
-        <input class="hp" name="company" type="text" tabindex="-1" autocomplete="off" aria-hidden="true" />
-        <button class="btn btn-primary" type="submit">Subscribe</button>
-      </form>
-      <p class="subscribe-status" data-sub-status aria-live="polite"></p>
-      <p class="subscribe-unsub">Already on the list? <a href="/unsubscribe">Unsubscribe</a>.</p>
-    </section>
     <footer class="site">
       <div>© The Paramaribo Letter</div>
       <div><a href="/#new-subscribers">Subscribe</a> · <a href="/unsubscribe">Unsubscribe</a> · <a href="/agents">Agents</a></div>
