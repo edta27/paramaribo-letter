@@ -976,3 +976,17 @@ pre.note {
   border-radius: 8px;
   background: #000;
 }
+
+/* Plain-HTML links between letters (scripts/render_issue_html.py) */
+.more-letters {
+  width: min(760px, 100%);
+  margin: 2.5rem auto 0;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--stroke);
+}
+.more-letters h2 { font-size: 1.05rem; margin: 1.5rem 0 0.75rem; }
+.more-letters ul { list-style: none; padding: 0; margin: 0; }
+.more-letters li { margin: 0 0 0.6rem; }
+.more-letters-nav { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 0.75rem; }
+.more-letters-date { color: var(--mute); font-size: 0.85em; white-space: nowrap; }
+.share-links { margin-top: 1rem; font-size: 0.95rem; color: var(--mute); }
