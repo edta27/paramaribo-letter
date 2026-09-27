@@ -39,6 +39,10 @@ def write_sitemap(issues: list[dict]) -> None:
     add(f"{SITE}/charts", None, "0.75")
     add(f"{SITE}/cases", None, "0.8")
     add(f"{SITE}/desk", None, "0.6")
+    import build_topics
+
+    for loc, lastmod in build_topics.sitemap_entries():
+        add(loc, lastmod, "0.85")
     cases_path = PUBLIC / "cases" / "catalog.json"
     cases = []
     if cases_path.exists():

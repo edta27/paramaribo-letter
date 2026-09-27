@@ -13,6 +13,8 @@ from datetime import date
 from pathlib import Path
 from urllib.parse import quote
 
+import build_topics
+
 ROOT = Path(__file__).resolve().parents[1]
 PUBLIC = ROOT / "public"
 ISSUES = PUBLIC / "issues"
@@ -105,7 +107,7 @@ def share_html(row: dict, canonical: str) -> str:
     )
 
 
-def related_html(row: dict, rows: list[dict]) -> str:
+def related_html(row: dict, rows: list[dict], topic_links: str = "") -> str:
     """Newer/older links plus recent letters, so every issue links to others in plain HTML."""
     idx = next(i for i, r in enumerate(rows) if r["id"] == row["id"])
     newer = rows[idx - 1] if idx > 0 else None
@@ -131,7 +133,8 @@ def related_html(row: dict, rows: list[dict]) -> str:
       <ul>
 {items}
       </ul>
-      <p><a href="/">All letters</a> · <a href="/charts">Charts</a> · <a href="/cases">Case studies</a></p>
+      {topic_links}
+      <p><a href="/">All letters</a> · <a href="/topics">Topics</a> · <a href="/charts">Charts</a> · <a href="/cases">Case studies</a></p>
     </nav>"""
 
 
@@ -149,7 +152,7 @@ def load_issues() -> list[dict]:
     return rows
 
 
-def render_issue(row: dict, rows: list[dict]) -> str:
+def render_issue(row: dict, rows: list[dict], topic_links: str = "") -> str:
     issue_id = row["id"]
     title = row.get("title") or issue_id
     dek = row.get("dek") or title
@@ -227,7 +230,7 @@ def render_issue(row: dict, rows: list[dict]) -> str:
       <p class="subscribe-status" data-sub-status aria-live="polite"></p>
       <p class="subscribe-unsub">Already on the list? <a href="/unsubscribe">Unsubscribe</a>. Educational research only.</p>
     </section>
-    {related_html(row, rows)}
+    {related_html(row, rows, topic_links)}
     <footer class="site">
       <div>© The Paramaribo Letter</div>
       <div><a href="/#new-subscribers">Subscribe</a> · <a href="/unsubscribe">Unsubscribe</a> · <a href="/agents">Agents</a></div>
@@ -290,12 +293,15 @@ def write_index_feed(rows: list[dict]) -> None:
 
 def render_issue_pages() -> list[dict]:
     rows = load_issues()
+    topics = build_topics.load_topics()
+    assigned = build_topics.assign(rows, topics)
     OUT.mkdir(parents=True, exist_ok=True)
     keep = set()
     for row in rows:
         issue_id = row["id"]
         dest = OUT / f"{issue_id}.html"
-        dest.write_text(render_issue(row, rows))
+        links = build_topics.topic_links_html(build_topics.topics_for_issue(issue_id, assigned, topics))
+        dest.write_text(render_issue(row, rows, links))
         keep.add(dest.name)
         print(f"wrote {dest.relative_to(ROOT)}")
     for stale in OUT.glob("*.html"):
