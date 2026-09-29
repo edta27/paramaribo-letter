@@ -1,7 +1,7 @@
 {
   "ticker": "GOOGL",
-  "updated_at": "2026-09-28T17:19:46Z",
-  "price": 341.5101,
+  "updated_at": "2026-09-29T00:49:08Z",
+  "price": 342.4,
   "filings": [
     {
       "form": "4",
@@ -35,11 +35,11 @@
     }
   ],
   "error": null,
-  "prev_close": 343.92,
-  "change": -2.4099,
-  "change_pct": -0.701,
+  "prev_close": 342.75,
+  "change": -0.35,
+  "change_pct": -0.102,
   "currency": "USD",
   "exchange": "NASDAQ-GS",
-  "volume": 9195087.31316,
+  "volume": 19318163.993823,
   "quote_source": "nasdaq-stocks"
 }
