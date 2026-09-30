@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 820" role="img" aria-labelledby="title desc">
+<title id="title">$82–83k was probed again. The ETF impulse faded.</title>
+<desc id="desc">Daily Coinbase BTC-USD candles from 15 through 29 September 2026, with Farside US spot Bitcoin ETF net flows. The $87,397 high rejected; $82,510 printed on 28 September; ETF prints decelerated from +$999M to +$31M then +$66M.</desc>
+<rect width="1200" height="820" fill="#0e1721"/>
+<style>text{font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}.title{font-size:28px;font-weight:700;fill:#e6edf3}.sub{font-size:15px;fill:#9eb0c1}.axis{font-size:13px;fill:#9eb0c1}.note{font-size:12px;fill:#9eb0c1}.label{font-size:13px;font-weight:600;fill:#e6edf3}</style>
+<text x="56" y="48" class="title">$82–83k was probed again. The ETF impulse faded.</text>
+<text x="56" y="76" class="sub">Coinbase daily UTC candles + Farside US-session ETF flows · last completed day is 29 Sep · 30 Sep is partial</text>
+<rect x="94.0" y="108.0" width="1015.0" height="300.0" rx="8" fill="#122131" stroke="#2a3b4d"/>
+<rect x="94.0" y="448.0" width="1015.0" height="250.0" rx="8" fill="#122131" stroke="#2a3b4d"/>
+<line x1="94.0" y1="374.7" x2="1109.0" y2="374.7" stroke="#2a3b4d"/>
+<text x="82.0" y="378.7" class="axis" text-anchor="end">$74k</text>
+<line x1="94.0" y1="324.7" x2="1109.0" y2="324.7" stroke="#2a3b4d"/>
+<text x="82.0" y="328.7" class="axis" text-anchor="end">$77k</text>
+<line x1="94.0" y1="241.3" x2="1109.0" y2="241.3" stroke="#2a3b4d"/>
+<text x="82.0" y="245.3" class="axis" text-anchor="end">$82k</text>
+<line x1="94.0" y1="174.7" x2="1109.0" y2="174.7" stroke="#2a3b4d"/>
+<text x="82.0" y="178.7" class="axis" text-anchor="end">$86k</text>
+<line x1="94.0" y1="151.3" x2="1109.0" y2="151.3" stroke="#2a3b4d"/>
+<text x="82.0" y="155.3" class="axis" text-anchor="end">$87k</text>
+<line x1="94.0" y1="690.4" x2="1109.0" y2="690.4" stroke="#2a3b4d"/>
+<text x="82.0" y="694.4" class="axis" text-anchor="end">$-500M</text>
+<line x1="94.0" y1="614.7" x2="1109.0" y2="614.7" stroke="#2a3b4d"/>
+<text x="82.0" y="618.7" class="axis" text-anchor="end">$0M</text>
+<line x1="94.0" y1="538.9" x2="1109.0" y2="538.9" stroke="#2a3b4d"/>
+<text x="82.0" y="542.9" class="axis" text-anchor="end">$500M</text>
+<line x1="94.0" y1="463.2" x2="1109.0" y2="463.2" stroke="#2a3b4d"/>
+<text x="82.0" y="467.2" class="axis" text-anchor="end">$1.0B</text>
+<line x1="94.0" y1="174.7" x2="1109.0" y2="174.7" stroke="#7ac7d4" stroke-width="1.4" stroke-dasharray="7 5"/>
+<text x="1117.0" y="178.7" class="label" fill="#7ac7d4">$86k</text>
+<line x1="94.0" y1="241.3" x2="1109.0" y2="241.3" stroke="#e8d36c" stroke-width="1.4" stroke-dasharray="7 5"/>
+<text x="1117.0" y="245.3" class="label" fill="#e8d36c">$82k</text>
+<line x1="94.0" y1="324.7" x2="1109.0" y2="324.7" stroke="#9eb0c1" stroke-width="1.4" stroke-dasharray="5 5"/>
+<text x="1117.0" y="328.7" class="label" fill="#9eb0c1">$77k</text>
+<line x1="94.0" y1="304.0" x2="94.0" y2="359.9" stroke="#ef8d8d" stroke-width="1.8"/>
+<rect x="80.0" y="305.1" width="28" height="43.2" fill="#ef8d8d" opacity="0.92" stroke="#ef8d8d"/>
+<rect x="76.4" y="614.7" width="35.2" height="68.2" fill="#ef8d8d" opacity="0.86" rx="3"/>
+<text x="94.0" y="698.9" class="note" text-anchor="middle">-450</text>
+<text x="94.0" y="722.0" class="axis" text-anchor="middle">09-15</text>
+<line x1="166.5" y1="333.0" x2="166.5" y2="359.5" stroke="#79d3a3" stroke-width="1.8"/>
+<rect x="152.5" y="338.9" width="28" height="9.3" fill="#79d3a3" opacity="0.92" stroke="#79d3a3"/>
+<rect x="148.9" y="614.7" width="35.2" height="44.8" fill="#ef8d8d" opacity="0.86" rx="3"/>
+<text x="166.5" y="675.5" class="note" text-anchor="middle">-296</text>
+<line x1="239.0" y1="322.9" x2="239.0" y2="342.6" stroke="#79d3a3" stroke-width="1.8"/>
+<rect x="225.0" y="335.5" width="28" height="3.4" fill="#79d3a3" opacity="0.92" stroke="#79d3a3"/>
+<rect x="221.4" y="590.5" width="35.2" height="24.2" fill="#79d3a3" opacity="0.86" rx="3"/>
+<text x="239.0" y="582.5" class="note" text-anchor="middle">+160</text>
+<line x1="311.5" y1="251.5" x2="311.5" y2="337.9" stroke="#79d3a3" stroke-width="1.8"/>
+<rect x="297.5" y="260.1" width="28" height="75.4" fill="#79d3a3" opacity="0.92" stroke="#79d3a3"/>
+<rect x="293.9" y="549.1" width="35.2" height="65.6" fill="#79d3a3" opacity="0.86" rx="3"/>
+<text x="311.5" y="541.1" class="note" text-anchor="middle">+433</text>
+<line x1="384.0" y1="242.6" x2="384.0" y2="261.0" stroke="#79d3a3" stroke-width="1.8"/>
+<rect x="370.0" y="254.1" width="28" height="6.0" fill="#79d3a3" opacity="0.92" stroke="#79d3a3"/>
+<line x1="456.5" y1="250.1" x2="456.5" y2="273.2" stroke="#ef8d8d" stroke-width="1.8"/>
+<rect x="442.5" y="254.1" width="28" height="2.5" fill="#ef8d8d" opacity="0.92" stroke="#ef8d8d"/>
+<line x1="529.0" y1="151.4" x2="529.0" y2="260.7" stroke="#79d3a3" stroke-width="1.8"/>
+<rect x="515.0" y="164.8" width="28" height="90.6" fill="#79d3a3" opacity="0.92" stroke="#79d3a3"/>
+<rect x="511.4" y="463.3" width="35.2" height="151.4" fill="#79d3a3" opacity="0.86" rx="3"/>
+<text x="529.0" y="455.3" class="note" text-anchor="middle">+999</text>
+<text x="529.0" y="722.0" class="axis" text-anchor="middle">09-21</text>
+<line x1="601.5" y1="162.4" x2="601.5" y2="190.3" stroke="#ef8d8d" stroke-width="1.8"/>
+<rect x="587.5" y="164.8" width="28" height="6.6" fill="#ef8d8d" opacity="0.92" stroke="#ef8d8d"/>
+<rect x="583.9" y="506.4" width="35.2" height="108.3" fill="#79d3a3" opacity="0.86" rx="3"/>
+<text x="601.5" y="498.4" class="note" text-anchor="middle">+715</text>
+<line x1="674.0" y1="153.3" x2="674.0" y2="216.1" stroke="#ef8d8d" stroke-width="1.8"/>
+<rect x="660.0" y="171.4" width="28" height="30.3" fill="#ef8d8d" opacity="0.92" stroke="#ef8d8d"/>
+<rect x="656.4" y="562.1" width="35.2" height="52.6" fill="#79d3a3" opacity="0.86" rx="3"/>
+<text x="674.0" y="554.1" class="note" text-anchor="middle">+347</text>
+<line x1="746.5" y1="192.5" x2="746.5" y2="229.5" stroke="#79d3a3" stroke-width="1.8"/>
+<rect x="732.5" y="201.6" width="28" height="2.5" fill="#79d3a3" opacity="0.92" stroke="#79d3a3"/>
+<rect x="728.9" y="585.8" width="35.2" height="28.9" fill="#79d3a3" opacity="0.86" rx="3"/>
+<text x="746.5" y="577.8" class="note" text-anchor="middle">+191</text>
+<text x="746.5" y="722.0" class="axis" text-anchor="middle">09-24</text>
+<line x1="819.0" y1="187.2" x2="819.0" y2="223.1" stroke="#ef8d8d" stroke-width="1.8"/>
+<rect x="805.0" y="201.6" width="28" height="4.9" fill="#ef8d8d" opacity="0.92" stroke="#ef8d8d"/>
+<rect x="801.4" y="594.3" width="35.2" height="20.4" fill="#79d3a3" opacity="0.86" rx="3"/>
+<text x="819.0" y="586.3" class="note" text-anchor="middle">+134</text>
+<line x1="891.5" y1="200.2" x2="891.5" y2="211.7" stroke="#79d3a3" stroke-width="1.8"/>
+<rect x="877.5" y="201.1" width="28" height="5.4" fill="#79d3a3" opacity="0.92" stroke="#79d3a3"/>
+<line x1="964.0" y1="188.7" x2="964.0" y2="206.1" stroke="#79d3a3" stroke-width="1.8"/>
+<rect x="950.0" y="200.3" width="28" height="2.5" fill="#79d3a3" opacity="0.92" stroke="#79d3a3"/>
+<line x1="1036.5" y1="191.5" x2="1036.5" y2="232.8" stroke="#ef8d8d" stroke-width="1.8"/>
+<rect x="1022.5" y="200.3" width="28" height="16.8" fill="#ef8d8d" opacity="0.92" stroke="#ef8d8d"/>
+<rect x="1018.9" y="610.0" width="35.2" height="4.7" fill="#79d3a3" opacity="0.86" rx="3"/>
+<text x="1036.5" y="602.0" class="note" text-anchor="middle">+31</text>
+<text x="1036.5" y="722.0" class="axis" text-anchor="middle">09-28</text>
+<line x1="1109.0" y1="198.7" x2="1109.0" y2="229.1" stroke="#79d3a3" stroke-width="1.8"/>
+<rect x="1095.0" y="214.0" width="28" height="3.0" fill="#79d3a3" opacity="0.92" stroke="#79d3a3"/>
+<rect x="1091.4" y="604.6" width="35.2" height="10.0" fill="#79d3a3" opacity="0.86" rx="3"/>
+<text x="1109.0" y="596.6" class="note" text-anchor="middle">+66</text>
+<text x="1109.0" y="722.0" class="axis" text-anchor="middle">09-29</text>
+<line x1="94.0" y1="614.7" x2="1109.0" y2="614.7" stroke="#9eb0c1"/>
+<text x="106" y="132" class="label">BTC-USD daily range</text>
+<text x="106" y="472" class="label">Farside US spot BTC ETF net flow · US$ millions · weekend blanks are not zeroes</text>
+<text x="104.0" y="773" class="note">28 Sep low $82,510, close $83,457. 29 Sep low $82,736, close $83,638. No completed close above $86k since 22 Sep. No completed close below $82k.</text>
+<text x="104.0" y="795" class="note">ETF slope after 21 Sep: +$999M → +$715M → +$347M → +$191M → +$135M → +$31M → +$66M. Sign still green. Impulse gone.</text>
+<text x="1109.0" y="798" class="note" text-anchor="end">Sources: Coinbase Exchange + Farside Investors · 30 Sep 2026 · 1:45 a.m. CDT / 06:45 UTC</text>
+</svg>

@@ -1,0 +1,76 @@
+{
+  "id": "2026-09-30-the-crash-that-doesnt-wait",
+  "date": "2026-09-30",
+  "kicker": "Chart Desk · Issue 28",
+  "title": "The crash that doesn't wait: what daily candles hid",
+  "dek": "October 2025's ten-minute Coinbase hole, the monthly candle that hid it, and the $82–83k box with fading ETF impulse through 29 September 2026.",
+  "asOf": "2026-09-30T06:45:00Z",
+  "cadence": "special",
+  "thesis": "The setup can take months. The event may take hours. $82–83k has held twice. This is a hypothesis about speed, not a crash forecast.",
+  "stakes": "ETF inflows are still green and no longer accelerating. Yields are the hostile tape. Next evidence is a reclaim of $86k — or a close through $82k, possibly through several gates at once.",
+  "levels": ["$85–86k", "$82–83k", "$80k", "$77k", "$74–76k", "$68–72k", "~$60–63k", "~$57.7k"],
+  "letterId": "2026-09-30-the-crash-that-doesnt-wait",
+  "letterUrl": "/issue?id=2026-09-30-the-crash-that-doesnt-wait",
+  "letterLabel": "Vol. 1 · Issue 28",
+  "subscribeHook": "If several doors fail in one session — or $86k is reclaimed — the letter updates the sequence. Charts stay free here; the call moves by email.",
+  "sourceNote": "Issue 28 charts use Coinbase Exchange UTC candles (5-minute 10 Oct 2025; daily October 2025; daily 15–29 Sep 2026) and Farside Investors US-session ETF flows. Weekend blanks are not zeroes. 30 September 2026 is a partial UTC day and is not plotted as a completed close. Educational scenario research; no leverage.",
+  "briefs": [
+    {
+      "id": "btc-crash-clock-wick",
+      "asset": "BTC · 10 OCT 2025",
+      "headline": "The $107,000 print lasted about a minute",
+      "lede": "Coinbase's 21:00 UTC hour on 10 October 2025 opened $114,324 and closed $113,875. The $107,000 low lived inside that hour.",
+      "bodyHtml": "<p><strong>Fact.</strong> The 1-minute low printed $107,000 at 21:26 UTC. By 21:30 the 5-minute bar was already recovering through $114,000. The daily candle closed $112,980.</p><p><strong>Read.</strong> Daily and hourly closes hid a ten-minute liquidity hole. October 2025 is a mechanics reference, not a four-year-cycle bottom.</p>",
+      "charts": [
+        {
+          "title": "BTC 5-minute range [USD] vs close · 10 Oct 2025 20:50–21:55 UTC",
+          "bars": {
+            "label": "5-minute high–low range [USD]",
+            "unsigned": true,
+            "data": [[1760129400000,1757],[1760129700000,2617],[1760130000000,845],[1760130300000,800],[1760130600000,4642],[1760130900000,4668],[1760131200000,3711],[1760131500000,4466],[1760131800000,5270],[1760132100000,3918],[1760132400000,1301],[1760132700000,2342],[1760133000000,1015],[1760133300000,1032]]
+          },
+          "line": {
+            "label": "BTC-USD 5-minute close [USD]",
+            "data": [[1760129400000,115434],[1760129700000,114317],[1760130000000,115094],[1760130300000,114476],[1760130600000,112287],[1760130900000,108922],[1760131200000,109092],[1760131500000,110077],[1760131800000,114480],[1760132100000,111792],[1760132400000,112133],[1760132700000,113483],[1760133000000,113331],[1760133300000,113875]]
+          }
+        }
+      ]
+    },
+    {
+      "id": "btc-crash-clock-october",
+      "asset": "BTC · OCT 2025 MONTH",
+      "headline": "October closed −4%. The month was not calm.",
+      "lede": "From the 30 September close to the 31 October close, Bitcoin fell 4.0% while traveling 18% from the monthly high to the intra-month low.",
+      "bodyHtml": "<p><strong>Fact.</strong> October 2025 Coinbase high $126,296 (6 Oct), 10 Oct low $107,000, 17 Oct low $103,517, month close $109,555.</p><p><strong>Read.</strong> Monthly return does not measure tail risk. A later green October would not, by itself, falsify a compressed event inside the month.</p>",
+      "charts": [
+        {
+          "title": "BTC daily close [USD] · October 2025",
+          "line": {
+            "label": "BTC-USD close [USD]",
+            "data": [[1759276800000,118659.97],[1759363200000,120621.32],[1759449600000,122318.40],[1759536000000,122458.56],[1759622400000,123520.79],[1759708800000,124720.09],[1759795200000,121393.95],[1759881600000,123343.25],[1759968000000,121714.51],[1760054400000,112980.28],[1760140800000,110768.89],[1760227200000,115067.98],[1760313600000,115274.03],[1760400000000,113068.00],[1760486400000,110804.12],[1760572800000,108198.00],[1760659200000,106463.30],[1760745600000,107208.91],[1760832000000,108676.78],[1760918400000,110568.06],[1761004800000,108362.27],[1761091200000,107585.98],[1761177600000,110116.03],[1761264000000,111042.13],[1761350400000,111666.21],[1761436800000,114548.09],[1761523200000,114087.06],[1761609600000,112906.75],[1761696000000,110032.13],[1761782400000,108308.18],[1761868800000,109555.27]]
+          }
+        }
+      ]
+    },
+    {
+      "id": "btc-crash-clock-now",
+      "asset": "BTC · SPOT DEMAND",
+      "headline": "The door held again. The impulse faded.",
+      "lede": "28 September low $82,510, close $83,457. Farside +$31.0M then +$66.2M after the $999M impulse.",
+      "bodyHtml": "<p><strong>Fact.</strong> No completed close below $82k. No completed close above $86k since 22 September. ETF sign still green; daily prints have decayed to tens of millions.</p><p><strong>Read.</strong> Gates are observation points, not scheduled stops. H-COMPRESSION is a speed hypothesis inside the structural path, not the base case.</p>",
+      "charts": [
+        {
+          "title": "US spot BTC ETF net flow [US$M] vs BTC close",
+          "bars": {
+            "label": "Farside daily net flow [US$M]",
+            "data": [[1789430400000,-450.4],[1789516800000,-295.9],[1789603200000,159.5],[1789689600000,433.0],[1789776000000,null],[1789862400000,null],[1789948800000,999.0],[1790035200000,714.7],[1790121600000,346.9],[1790208000000,190.7],[1790294400000,134.5],[1790380800000,null],[1790467200000,null],[1790553600000,31.0],[1790640000000,66.2]]
+          },
+          "line": {
+            "label": "BTC-USD close [USD]",
+            "data": [[1789430400000,75584.17],[1789516800000,76144.99],[1789603200000,76348.74],[1789689600000,80875.04],[1789776000000,81233.91],[1789862400000,81159.64],[1789948800000,86594.94],[1790035200000,86198.05],[1790121600000,84378.31],[1790208000000,84385.46],[1790294400000,84093.13],[1790380800000,84416.65],[1790467200000,84462.14],[1790553600000,83456.74],[1790640000000,83638.42]]
+          }
+        }
+      ]
+    }
+  ]
+}
