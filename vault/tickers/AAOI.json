@@ -1,7 +1,7 @@
 {
   "ticker": "AAOI",
-  "updated_at": "2026-09-30T21:12:25Z",
-  "price": 99.2999,
+  "updated_at": "2026-10-01T15:59:37Z",
+  "price": 105.23,
   "filings": [
     {
       "form": "4",
@@ -36,10 +36,10 @@
   ],
   "error": null,
   "prev_close": 99.26,
-  "change": 0.0399,
-  "change_pct": 0.04,
+  "change": 5.97,
+  "change_pct": 6.015,
   "currency": "USD",
   "exchange": "NASDAQ-GM",
-  "volume": 5787453.85928,
+  "volume": 5388230.715568,
   "quote_source": "nasdaq-stocks"
 }
