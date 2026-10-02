@@ -1,7 +1,7 @@
 {
   "ticker": "QQQ",
-  "updated_at": "2026-10-02T15:20:36Z",
-  "price": 748.885,
+  "updated_at": "2026-10-02T21:09:08Z",
+  "price": 749.3202,
   "filings": [
     {
       "form": "8-K",
@@ -17,11 +17,11 @@
     }
   ],
   "error": null,
-  "prev_close": 742.03,
-  "change": 6.855,
-  "change_pct": 0.924,
+  "prev_close": 749.58,
+  "change": -0.2598,
+  "change_pct": -0.035,
   "currency": "USD",
   "exchange": "NASDAQ-GM",
-  "volume": 15517095.76271,
+  "volume": 34429558.034065,
   "quote_source": "nasdaq-etf"
 }
