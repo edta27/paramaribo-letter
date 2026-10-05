@@ -25,7 +25,8 @@
       "2026-09-11-twenty-five-looked-strong"
     ],
     "include": [
-      "2026-08-28-y-thirty-eight-floor"
+      "2026-08-28-y-thirty-eight-floor",
+      "2026-09-30-the-crash-that-doesnt-wait"
     ]
   },
   {
@@ -49,12 +50,14 @@
     "pattern": "crash|capitulat|cascade|\\bbottom\\b|\\btail\\b|\\$(?:28|38|46)k|new cycle low",
     "min_hits": 12,
     "pinned": [
+      "2026-09-30-the-crash-that-doesnt-wait",
       "2026-09-01-crash-stack-on-trial",
-      "2026-09-07-crash-is-the-tail",
-      "2026-09-17-dont-skip-to-28k"
+      "2026-09-07-crash-is-the-tail"
     ],
     "include": [
-      "2026-08-22-the-window"
+      "2026-08-22-the-window",
+      "2026-09-17-dont-skip-to-28k",
+      "2026-09-30-the-crash-that-doesnt-wait"
     ]
   },
   {
@@ -118,34 +121,35 @@
   {
     "slug": "bitcoin-support-resistance",
     "name": "Price levels and the confirmation road",
-    "title": "Bitcoin Support and Resistance Levels: The Map From $57.7k to $87k",
-    "description": "The Bitcoin support and resistance levels the letter watches, from the $87k rejection and $82–83k to $77k, $72k and the 2026 low near $57.7k, and what a daily close through each means.",
+    "title": "Bitcoin Support and Resistance Levels: The Map From $38k to $87k",
+    "description": "The Bitcoin support and resistance levels the letter watches, from the $87k rejection and $82k to $77k, $72k, the $60k power-law area and the 2026 low near $57.7k, and what a daily close through each means.",
     "dek": "The letter maps Bitcoin as a ladder of levels. Each one is a door: a daily close through it changes the odds, a wick through it does not.",
     "intro": [
       "The letter reads Bitcoin price as a confirmation road: a ladder of support and resistance levels, each with a rule for what confirms it and what invalidates it. The core discipline is that a wick is not a daily close. A level only counts as broken when price closes through it and fails to reclaim it.",
-      "As of Issue 27 (26 September 2026), the ladder runs from the $87.4k sweep that was rejected, through $85k to $86k (lost as a holding zone), $82k to $83k (tested and held on a daily close), $80k, $77k, the $74k to $76k process band, $71k to $72k near the 50-day average, and the 2026 low near $57,700. Below that, $38k is kept only as a severe-tail reference. Weekly structure matters too: May's $82,792 weekly high was a key test through early September.",
-      "The rule for reading the ladder is sequence. Relief rallies and lower highs can appear anywhere, but a bearish path has to fail each door in turn with rising intensity, and a bullish path has to hold daily closes while leverage resets and spot demand returns. Skipping straight from $77k to $28k in the headlines is exactly what the letter tries not to do.",
+      "As of Issue 28 (30 September 2026), the ladder runs from the $87.4k sweep that was rejected and $85k to $86k overhead, down through $82k, $80k, $77k and $72k near the 50-day average, to the $60k power-law area and the 2026 low near $57,700. The $60k area matters because it is where many desks are waiting: Fidelity's Jurrien Timmer treats a hold there as consistent with a new cyclical bull market, and a sustained break above roughly $80.5k as confirmation of a double bottom. Below the 2026 low, $50k and $46k are observation points and $38k is kept only as a severe-tail reference.",
+      "The rule for reading the ladder is sequence, with one caveat Issue 28 adds: these levels are gates, not scheduled stops. October 2025 showed that forced selling can cross several of them before a daily candle closes, so a fast break may not pause at each door. A bearish path still has to show failures with rising intensity, and a bullish path has to hold daily closes while leverage resets and spot demand returns. Skipping straight from $77k to $28k in the headlines is exactly what the letter tries not to do.",
       "The issues below show the map as it was drawn at each point in time, so you can check what was written down in advance against what happened."
     ],
     "questions": [
       "What are Bitcoin's key support levels right now?",
+      "What is the $60k power-law level for Bitcoin?",
       "Is $80k support for Bitcoin?",
-      "What does a daily close above $86k mean?",
       "Why does a wick not count as a breakout?"
     ],
     "pattern": "\\$\\d{2}(?:[.,]\\d+)?k\\b|\\$\\d{2},\\d{3}|daily close|weekly close|support|resistance|reclaim",
     "min_hits": 20,
     "pinned": [
+      "2026-09-30-the-crash-that-doesnt-wait",
       "2026-09-26-87k-rejection",
-      "2026-09-06-may-highs-still-live",
-      "2026-09-04-eighty-one-probe"
+      "2026-09-06-may-highs-still-live"
     ],
     "include": [
       "2026-08-24-second-probe",
       "2026-08-25-bang-stopped",
-      "2026-08-30-stall-not-a-floor",
+      "2026-08-28-x-bang-scalp-long",
       "2026-08-28-zz-bang-clear-map",
-      "2026-08-28-x-bang-scalp-long"
+      "2026-08-30-stall-not-a-floor",
+      "2026-09-30-the-crash-that-doesnt-wait"
     ]
   }
 ]
