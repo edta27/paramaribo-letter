@@ -29,6 +29,7 @@
       ${item("/topics", "topics", "Topics")}
       ${item("/charts", "charts", "Charts")}
       ${item("/cases", "cases", "Case studies")}
+      ${item("/emily", "emily", "Emily")}
       ${item("/agents", "agents", "Agents")}
       ${item("/desk/", "desk", "Desk")}
     </nav>

@@ -38,6 +38,7 @@ def write_sitemap(issues: list[dict]) -> None:
     add(f"{SITE}/agents", None, "0.8")
     add(f"{SITE}/charts", None, "0.75")
     add(f"{SITE}/cases", None, "0.8")
+    add(f"{SITE}/emily", "2026-10-05", "0.85")
     add(f"{SITE}/desk", None, "0.6")
     import build_topics
 
