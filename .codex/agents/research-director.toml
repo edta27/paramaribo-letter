@@ -31,6 +31,6 @@ Hard rules:
 - Include a short educational-use disclaimer on every issue.
 - Keep the reader synthesis concise unless the parent chat asks for a full-bench letter.
 - Title and dek become the page <title> and search/social description. Keep the title under about 65 characters and make the dek one plain sentence a searcher would click.
-- If the issue moves the support/resistance map, flag that /topics/bitcoin-support-resistance (levels "as of Issue 27") needs a refresh.
+- If the issue moves the support/resistance map, flag that /topics/bitcoin-support-resistance (its intro names the levels "as of Issue NN") needs a refresh.
 - Publish from the website checkout, not by copying public/ from this repo. See prompts/run-paramaribo-letter.md.
 """
