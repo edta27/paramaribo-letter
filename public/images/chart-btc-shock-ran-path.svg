@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 740" role="img" aria-labelledby="title desc">
+<title id="title">One close above $86k. Not two. Thin volume.</title>
+<desc id="desc">Daily Coinbase BTC-USD candles from 22 September through 4 October 2026. The $82,510 low held. 2 October swept $87,249 and closed $84,505. 4 October closed $86,507 on 2,623 BTC.</desc>
+<rect width="1200" height="740" fill="#0e1721"/>
+<style>text{font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}.title{font-size:28px;font-weight:700;fill:#e6edf3}.sub{font-size:15px;fill:#9eb0c1}.axis{font-size:13px;fill:#9eb0c1}.note{font-size:12px;fill:#9eb0c1}.label{font-size:13px;font-weight:600;fill:#e6edf3}</style>
+<text x="56" y="48" class="title">One close above $86k. Not two. Thin volume.</text>
+<text x="56" y="76" class="sub">Coinbase daily UTC candles · 22 Sep–4 Oct 2026 · last completed day is 4 Oct · 5 Oct is partial</text>
+<rect x="94.0" y="108.0" width="1015.0" height="510.0" rx="8" fill="#122131" stroke="#2a3b4d"/>
+<line x1="94.0" y1="504.7" x2="1109.0" y2="504.7" stroke="#2a3b4d"/>
+<text x="82.0" y="508.7" class="axis" text-anchor="end">$82k</text>
+<line x1="94.0" y1="399.8" x2="1109.0" y2="399.8" stroke="#2a3b4d"/>
+<text x="82.0" y="403.8" class="axis" text-anchor="end">$84k</text>
+<line x1="94.0" y1="278.0" x2="1109.0" y2="278.0" stroke="#2a3b4d"/>
+<text x="82.0" y="282.0" class="axis" text-anchor="end">$86k</text>
+<line x1="94.0" y1="198.7" x2="1109.0" y2="198.7" stroke="#2a3b4d"/>
+<text x="82.0" y="202.7" class="axis" text-anchor="end">$87k</text>
+<line x1="94.0" y1="198.8" x2="1109.0" y2="198.8" stroke="#9eb0c1" stroke-width="1.4" stroke-dasharray="5 5"/>
+<text x="1117.0" y="202.8" class="label" fill="#9eb0c1">$87.4k</text>
+<line x1="94.0" y1="278.0" x2="1109.0" y2="278.0" stroke="#7ac7d4" stroke-width="1.4" stroke-dasharray="7 5"/>
+<text x="1117.0" y="282.0" class="label" fill="#7ac7d4">$86k</text>
+<line x1="94.0" y1="504.7" x2="1109.0" y2="504.7" stroke="#e8d36c" stroke-width="1.4" stroke-dasharray="7 5"/>
+<text x="1117.0" y="508.7" class="label" fill="#e8d36c">$82k</text>
+<line x1="94.0" y1="236.4" x2="94.0" y2="331.3" stroke="#ef8d8d" stroke-width="1.8"/>
+<rect x="78.0" y="244.3" width="32" height="22.5" fill="#ef8d8d" opacity="0.92" stroke="#ef8d8d"/>
+<text x="94.0" y="642.0" class="axis" text-anchor="middle">09-22</text>
+<line x1="178.6" y1="205.3" x2="178.6" y2="418.9" stroke="#ef8d8d" stroke-width="1.8"/>
+<rect x="162.6" y="266.8" width="32" height="103.1" fill="#ef8d8d" opacity="0.92" stroke="#ef8d8d"/>
+<line x1="263.2" y1="338.6" x2="263.2" y2="464.5" stroke="#79d3a3" stroke-width="1.8"/>
+<rect x="247.2" y="369.5" width="32" height="2.5" fill="#79d3a3" opacity="0.92" stroke="#79d3a3"/>
+<line x1="347.8" y1="320.5" x2="347.8" y2="442.8" stroke="#ef8d8d" stroke-width="1.8"/>
+<rect x="331.8" y="369.5" width="32" height="16.6" fill="#ef8d8d" opacity="0.92" stroke="#ef8d8d"/>
+<line x1="432.3" y1="364.7" x2="432.3" y2="403.9" stroke="#79d3a3" stroke-width="1.8"/>
+<rect x="416.3" y="367.7" width="32" height="18.3" fill="#79d3a3" opacity="0.92" stroke="#79d3a3"/>
+<line x1="516.9" y1="325.7" x2="516.9" y2="384.9" stroke="#79d3a3" stroke-width="1.8"/>
+<rect x="500.9" y="365.1" width="32" height="2.6" fill="#79d3a3" opacity="0.92" stroke="#79d3a3"/>
+<line x1="601.5" y1="335.1" x2="601.5" y2="475.7" stroke="#ef8d8d" stroke-width="1.8"/>
+<rect x="585.5" y="365.1" width="32" height="57.0" fill="#ef8d8d" opacity="0.92" stroke="#ef8d8d"/>
+<text x="601.5" y="642.0" class="axis" text-anchor="middle">09-28</text>
+<line x1="686.1" y1="359.8" x2="686.1" y2="463.0" stroke="#79d3a3" stroke-width="1.8"/>
+<rect x="670.1" y="411.8" width="32" height="10.3" fill="#79d3a3" opacity="0.92" stroke="#79d3a3"/>
+<line x1="770.7" y1="299.9" x2="770.7" y2="453.0" stroke="#ef8d8d" stroke-width="1.8"/>
+<rect x="754.7" y="411.8" width="32" height="4.7" fill="#ef8d8d" opacity="0.92" stroke="#ef8d8d"/>
+<text x="770.7" y="642.0" class="axis" text-anchor="middle">09-30</text>
+<line x1="855.2" y1="320.8" x2="855.2" y2="441.9" stroke="#79d3a3" stroke-width="1.8"/>
+<rect x="839.2" y="343.2" width="32" height="73.2" fill="#79d3a3" opacity="0.92" stroke="#79d3a3"/>
+<line x1="939.8" y1="207.2" x2="939.8" y2="399.8" stroke="#ef8d8d" stroke-width="1.8"/>
+<rect x="923.8" y="343.2" width="32" height="19.5" fill="#ef8d8d" opacity="0.92" stroke="#ef8d8d"/>
+<text x="939.8" y="642.0" class="axis" text-anchor="middle">10-02</text>
+<line x1="1024.4" y1="333.4" x2="1024.4" y2="367.2" stroke="#79d3a3" stroke-width="1.8"/>
+<rect x="1008.4" y="349.3" width="32" height="13.4" fill="#79d3a3" opacity="0.92" stroke="#79d3a3"/>
+<line x1="1109.0" y1="233.1" x2="1109.0" y2="351.7" stroke="#79d3a3" stroke-width="1.8"/>
+<rect x="1093.0" y="249.3" width="32" height="100.0" fill="#79d3a3" opacity="0.92" stroke="#79d3a3"/>
+<text x="1109.0" y="642.0" class="axis" text-anchor="middle">10-04</text>
+<text x="104.0" y="693" class="note">28 Sep low $82,510. 2 Oct high $87,249, close $84,505, volume 8,762 BTC. 4 Oct close $86,507, volume 2,623 BTC (Sunday).</text>
+<text x="1109.0" y="718" class="note" text-anchor="end">Source: Coinbase Exchange BTC-USD · retrieved 5 Oct 2026 · 8:20 a.m. CDT / 13:20 UTC</text>
+</svg>

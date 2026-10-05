@@ -1,5 +1,30 @@
 [
   {
+    "id": "2026-10-05-the-shock-ran",
+    "date": "2026-10-05",
+    "kicker": "Chart Desk \u00b7 Issue 29",
+    "title": "The shock ran. The door held.",
+    "dek": "2 October 2026 hourly wick from $87,249 to $83,850, the daily box since 22 September, and Farside ETF flows through the first red session and the two-day bid that followed.",
+    "asOf": "2026-10-05T13:20:00Z",
+    "cadence": "follow-up",
+    "thesis": "A jobs print traveled in hours, not minutes. $82\u201383k held. One Sunday close above $86k is not acceptance.",
+    "stakes": "Next evidence is a second UTC close above $86k with volume \u2014 or a close through $82k. Yields are still hostile.",
+    "levels": [
+      "$87.4k",
+      "$86k",
+      "$82\u201383k",
+      "$80k",
+      "$77k",
+      "~$57.7k"
+    ],
+    "letterId": "2026-10-05-the-shock-ran",
+    "letterUrl": "/issue?id=2026-10-05-the-shock-ran",
+    "letterLabel": "Vol. 1 \u00b7 Issue 29",
+    "subscribeHook": "A second close above $86k \u2014 or a close through $82k \u2014 updates the sequence. Charts stay free here; the call moves by email.",
+    "sourceNote": "Issue 29 charts use Coinbase Exchange UTC candles (hourly 2 Oct 2026; daily 22 Sep\u20134 Oct) and Farside Investors US-session ETF flows. 5 October is a partial UTC day and an incomplete Farside row. Weekend blanks are not zeroes. Educational scenario research; no leverage.",
+    "packUrl": "/charts/packs/2026-10-05-the-shock-ran.json"
+  },
+  {
     "id": "2026-09-30-the-crash-that-doesnt-wait",
     "date": "2026-09-30",
     "kicker": "Chart Desk \u00b7 Issue 28",

@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 740" role="img" aria-labelledby="title desc">
+<title id="title">The bid went red for one session, then returned</title>
+<desc id="desc">Coinbase Bitcoin closing price compared with Farside US spot Bitcoin ETF net flows. 30 September printed −$148.7M. 1–2 October printed +$102.7M and +$189.9M.</desc>
+<rect width="1200" height="740" fill="#0e1721"/>
+<style>text{font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}.title{font-size:28px;font-weight:700;fill:#e6edf3}.sub{font-size:15px;fill:#9eb0c1}.axis{font-size:13px;fill:#9eb0c1}.note{font-size:12px;fill:#9eb0c1}.label{font-size:13px;font-weight:600;fill:#e6edf3}</style>
+<text x="56" y="48" class="title">The bid went red for one session, then returned</text>
+<text x="56" y="76" class="sub">Coinbase daily closes + Farside US-session ETF flows · weekend blanks are not zeroes · 5 Oct Farside row is incomplete</text>
+<rect x="94.0" y="108.0" width="1015.0" height="240.0" rx="8" fill="#122131" stroke="#2a3b4d"/>
+<rect x="94.0" y="405.0" width="1015.0" height="220.0" rx="8" fill="#122131" stroke="#2a3b4d"/>
+<line x1="94.0" y1="316.0" x2="1109.0" y2="316.0" stroke="#2a3b4d"/>
+<text x="82.0" y="320.0" class="axis" text-anchor="end">$82k</text>
+<line x1="94.0" y1="252.0" x2="1109.0" y2="252.0" stroke="#2a3b4d"/>
+<text x="82.0" y="256.0" class="axis" text-anchor="end">$84k</text>
+<line x1="94.0" y1="188.0" x2="1109.0" y2="188.0" stroke="#2a3b4d"/>
+<text x="82.0" y="192.0" class="axis" text-anchor="end">$86k</text>
+<line x1="94.0" y1="124.0" x2="1109.0" y2="124.0" stroke="#2a3b4d"/>
+<text x="82.0" y="128.0" class="axis" text-anchor="end">$88k</text>
+<line x1="94.0" y1="581.0" x2="1109.0" y2="581.0" stroke="#2a3b4d"/>
+<text x="82.0" y="585.0" class="axis" text-anchor="end">$-150M</text>
+<line x1="94.0" y1="515.0" x2="1109.0" y2="515.0" stroke="#2a3b4d"/>
+<text x="82.0" y="519.0" class="axis" text-anchor="end">$0M</text>
+<line x1="94.0" y1="471.0" x2="1109.0" y2="471.0" stroke="#2a3b4d"/>
+<text x="82.0" y="475.0" class="axis" text-anchor="end">$100M</text>
+<line x1="94.0" y1="427.0" x2="1109.0" y2="427.0" stroke="#2a3b4d"/>
+<text x="82.0" y="431.0" class="axis" text-anchor="end">$200M</text>
+<rect x="73.7" y="200.5" width="40.6" height="314.5" fill="#79d3a3" opacity="0.86" rx="3"/>
+<text x="94.0" y="192.5" class="note" text-anchor="middle">+715</text>
+<text x="94.0" y="649.0" class="axis" text-anchor="middle">09-22</text>
+<rect x="158.3" y="362.4" width="40.6" height="152.6" fill="#79d3a3" opacity="0.86" rx="3"/>
+<text x="178.6" y="354.4" class="note" text-anchor="middle">+347</text>
+<rect x="242.9" y="431.1" width="40.6" height="83.9" fill="#79d3a3" opacity="0.86" rx="3"/>
+<text x="263.2" y="423.1" class="note" text-anchor="middle">+191</text>
+<rect x="327.4" y="455.8" width="40.6" height="59.2" fill="#79d3a3" opacity="0.86" rx="3"/>
+<text x="347.8" y="447.8" class="note" text-anchor="middle">+134</text>
+<text x="347.8" y="649.0" class="axis" text-anchor="middle">09-25</text>
+<rect x="581.2" y="501.4" width="40.6" height="13.6" fill="#79d3a3" opacity="0.86" rx="3"/>
+<text x="601.5" y="493.4" class="note" text-anchor="middle">+31</text>
+<rect x="665.8" y="485.9" width="40.6" height="29.1" fill="#79d3a3" opacity="0.86" rx="3"/>
+<text x="686.1" y="477.9" class="note" text-anchor="middle">+66</text>
+<rect x="750.4" y="515.0" width="40.6" height="65.4" fill="#ef8d8d" opacity="0.86" rx="3"/>
+<text x="770.7" y="596.4" class="note" text-anchor="middle">-149</text>
+<text x="770.7" y="649.0" class="axis" text-anchor="middle">09-30</text>
+<rect x="835.0" y="469.8" width="40.6" height="45.2" fill="#79d3a3" opacity="0.86" rx="3"/>
+<text x="855.2" y="461.8" class="note" text-anchor="middle">+103</text>
+<rect x="919.5" y="431.4" width="40.6" height="83.6" fill="#79d3a3" opacity="0.86" rx="3"/>
+<text x="939.8" y="423.4" class="note" text-anchor="middle">+190</text>
+<text x="939.8" y="649.0" class="axis" text-anchor="middle">10-02</text>
+<text x="1109.0" y="649.0" class="axis" text-anchor="middle">10-04</text>
+<polyline points="94.0,181.7 178.6,239.9 263.2,239.7 347.8,249.0 432.3,238.7 516.9,237.2 601.5,269.4 686.1,263.6 770.7,266.2 855.2,224.8 939.8,235.8 1024.4,228.2 1109.0,171.8" fill="none" stroke="#7ac7d4" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="94.0" cy="181.7" r="3.5" fill="#7ac7d4"/>
+<circle cx="178.6" cy="239.9" r="3.5" fill="#7ac7d4"/>
+<circle cx="263.2" cy="239.7" r="3.5" fill="#7ac7d4"/>
+<circle cx="347.8" cy="249.0" r="3.5" fill="#7ac7d4"/>
+<circle cx="432.3" cy="238.7" r="3.5" fill="#7ac7d4"/>
+<circle cx="516.9" cy="237.2" r="3.5" fill="#7ac7d4"/>
+<circle cx="601.5" cy="269.4" r="3.5" fill="#7ac7d4"/>
+<circle cx="686.1" cy="263.6" r="3.5" fill="#7ac7d4"/>
+<circle cx="770.7" cy="266.2" r="3.5" fill="#7ac7d4"/>
+<circle cx="855.2" cy="224.8" r="3.5" fill="#7ac7d4"/>
+<circle cx="939.8" cy="235.8" r="3.5" fill="#7ac7d4"/>
+<circle cx="1024.4" cy="228.2" r="3.5" fill="#7ac7d4"/>
+<circle cx="1109.0" cy="171.8" r="3.5" fill="#7ac7d4"/>
+<line x1="94.0" y1="515.0" x2="1109.0" y2="515.0" stroke="#9eb0c1"/>
+<text x="106" y="132" class="label">BTC-USD close</text>
+<text x="106" y="429" class="label">Farside US spot BTC ETF net flow · US$ millions</text>
+<text x="104.0" y="693" class="note">30 Sep −$148.7M ended a nine-session green streak. 1 Oct IBIT +$195.6M against FBTC −$60.7M. 2 Oct completed +$189.9M, not the provisional +$31.7M in some secondary trackers.</text>
+<text x="1109.0" y="718" class="note" text-anchor="end">Sources: Coinbase Exchange + Farside Investors · 5 Oct 2026 · 8:20 a.m. CDT / 13:20 UTC</text>
+</svg>

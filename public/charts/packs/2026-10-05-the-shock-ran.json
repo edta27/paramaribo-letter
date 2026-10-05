@@ -1,0 +1,81 @@
+{
+  "id": "2026-10-05-the-shock-ran",
+  "date": "2026-10-05",
+  "kicker": "Chart Desk · Issue 29",
+  "title": "The shock ran. The door held.",
+  "dek": "2 October 2026 hourly wick from $87,249 to $83,850, the daily box since 22 September, and Farside ETF flows through the first red session and the two-day bid that followed.",
+  "asOf": "2026-10-05T13:20:00Z",
+  "cadence": "follow-up",
+  "thesis": "A jobs print traveled in hours, not minutes. $82–83k held. One Sunday close above $86k is not acceptance.",
+  "stakes": "Next evidence is a second UTC close above $86k with volume — or a close through $82k. Yields are still hostile.",
+  "levels": ["$87.4k", "$86k", "$82–83k", "$80k", "$77k", "~$57.7k"],
+  "letterId": "2026-10-05-the-shock-ran",
+  "letterUrl": "/issue?id=2026-10-05-the-shock-ran",
+  "letterLabel": "Vol. 1 · Issue 29",
+  "subscribeHook": "A second close above $86k — or a close through $82k — updates the sequence. Charts stay free here; the call moves by email.",
+  "sourceNote": "Issue 29 charts use Coinbase Exchange UTC candles (hourly 2 Oct 2026; daily 22 Sep–4 Oct) and Farside Investors US-session ETF flows. 5 October is a partial UTC day and an incomplete Farside row. Weekend blanks are not zeroes. Educational scenario research; no leverage.",
+  "briefs": [
+    {
+      "id": "btc-shock-hours",
+      "asset": "BTC · 2 OCT 2026",
+      "headline": "Six hours is not ten minutes",
+      "lede": "The 5-minute high $87,249 at 12:30 UTC became a $83,850 low at 18:45 UTC. $82k was not tagged.",
+      "bodyHtml": "<p><strong>Fact.</strong> Peak-to-trough 3.9% in 375 minutes on Coinbase. Daily close $84,505 hid the range.</p><p><strong>Read.</strong> Speed printed. The cascade through named gates did not.</p>",
+      "charts": [
+        {
+          "title": "BTC hourly range [USD] vs close · 2 Oct 2026",
+          "bars": {
+            "label": "Hourly high–low range [USD]",
+            "unsigned": true,
+            "data": [[1790899200000,261],[1790902800000,478],[1790906400000,366],[1790910000000,391],[1790913600000,1463],[1790917200000,810],[1790920800000,239],[1790924400000,413],[1790928000000,571],[1790931600000,328],[1790935200000,338],[1790938800000,304],[1790942400000,960],[1790946000000,728],[1790949600000,1464],[1790953200000,631],[1790956800000,505],[1790960400000,774],[1790964000000,1047],[1790967600000,376],[1790971200000,332],[1790974800000,139],[1790978400000,117],[1790982000000,108]]
+          },
+          "line": {
+            "label": "BTC-USD hourly close [USD]",
+            "data": [[1790899200000,84763],[1790902800000,84877],[1790906400000,85165],[1790910000000,85484],[1790913600000,86632],[1790917200000,85980],[1790920800000,85964],[1790924400000,86089],[1790928000000,86236],[1790931600000,86352],[1790935200000,86281],[1790938800000,86412],[1790942400000,86803],[1790946000000,86564],[1790949600000,85676],[1790953200000,85322],[1790956800000,85144],[1790960400000,84760],[1790964000000,84238],[1790967600000,84292],[1790971200000,84431],[1790974800000,84514],[1790978400000,84550],[1790982000000,84505]]
+          }
+        }
+      ]
+    },
+    {
+      "id": "btc-shock-path",
+      "asset": "BTC",
+      "headline": "One close above $86k. Not two.",
+      "lede": "4 October closed $86,507 on 2,623 BTC. 2 October had already rejected $87,249 on 8,762 BTC.",
+      "bodyHtml": "<p><strong>Fact.</strong> No completed close below $82k. Deepest probe remains 28 September $82,510.</p><p><strong>Read.</strong> Issue 28's upgrade rule has not printed. A Sunday close is a close with an asterisk.</p>",
+      "charts": [
+        {
+          "title": "BTC daily range [USD] vs close",
+          "bars": {
+            "label": "Daily high–low range [USD]",
+            "unsigned": true,
+            "data": [[1790035200000,1674.72],[1790121600000,3769.81],[1790208000000,2220.82],[1790294400000,2158.81],[1790380800000,692.67],[1790467200000,1044.94],[1790553600000,2481.63],[1790640000000,1821.01],[1790726400000,2701.86],[1790812800000,2136.97],[1790899200000,3399.03],[1790985600000,596.50],[1791072000000,2092.79]]
+          },
+          "line": {
+            "label": "BTC-USD close [USD]",
+            "data": [[1790035200000,86198.05],[1790121600000,84378.31],[1790208000000,84385.46],[1790294400000,84093.13],[1790380800000,84416.65],[1790467200000,84462.14],[1790553600000,83456.74],[1790640000000,83638.42],[1790726400000,83556.14],[1790812800000,84848.73],[1790899200000,84504.88],[1790985600000,84742.22],[1791072000000,86507.11]]
+          }
+        }
+      ]
+    },
+    {
+      "id": "btc-shock-flows",
+      "asset": "BTC · SPOT DEMAND",
+      "headline": "The bid blinked, then returned",
+      "lede": "30 September −$148.7M ended the streak. 1–2 October printed +$102.7M and +$189.9M.",
+      "bodyHtml": "<p><strong>Fact.</strong> Farside's completed 2 October row is +$189.9M, not the provisional +$31.7M some secondary trackers showed.</p><p><strong>Read.</strong> One red day is not a regime. Two green days are not a new $999M impulse.</p>",
+      "charts": [
+        {
+          "title": "US spot BTC ETF net flow [US$M] vs BTC close",
+          "bars": {
+            "label": "Farside daily net flow [US$M]",
+            "data": [[1790035200000,714.7],[1790121600000,346.9],[1790208000000,190.7],[1790294400000,134.5],[1790380800000,null],[1790467200000,null],[1790553600000,31.0],[1790640000000,66.2],[1790726400000,-148.7],[1790812800000,102.7],[1790899200000,189.9],[1790985600000,null],[1791072000000,null]]
+          },
+          "line": {
+            "label": "BTC-USD close [USD]",
+            "data": [[1790035200000,86198.05],[1790121600000,84378.31],[1790208000000,84385.46],[1790294400000,84093.13],[1790380800000,84416.65],[1790467200000,84462.14],[1790553600000,83456.74],[1790640000000,83638.42],[1790726400000,83556.14],[1790812800000,84848.73],[1790899200000,84504.88],[1790985600000,84742.22],[1791072000000,86507.11]]
+          }
+        }
+      ]
+    }
+  ]
+}
