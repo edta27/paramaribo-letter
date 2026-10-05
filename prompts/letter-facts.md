@@ -1,6 +1,6 @@
 # Paramaribo Letter — current facts (read first)
 
-Every letter and growth agent reads this file before producing anything. When it disagrees with an older doc, prompt, or agent file, **this file wins**. Last updated: **2026-09-27**. Numbers below are dated; if the user pastes newer ones, use theirs.
+Every letter and growth agent reads this file before producing anything. When it disagrees with an older doc, prompt, or agent file, **this file wins**. Last updated: **2026-10-05**. Numbers below are dated; if the user pastes newer ones, use theirs.
 
 ## Site
 
@@ -19,6 +19,7 @@ Every letter and growth agent reads this file before producing anything. When it
 - **edta27/paramaribo-letter is the source of truth for site code** since 2026-09-26. It has code this repo (investment-research) does not: `scripts/render_issue_html.py`, `scripts/render_case_html.py`, `scripts/build_topics.py`, `scripts/topics.json`, `middleware.js`, `public/topics/`, `public/subscribed.html`, `public/clarity.js`, and newer `public/index.html`, `styles.css`, `shell.js`, `subscribe.js`, `vercel.json`.
 - **Never copy `public/` or `vercel.json` wholesale from investment-research onto the website branch.** It would silently revert SEO, topic pages, signup tracking, and design fixes. Bring over only the new issue files (see `prompts/run-paramaribo-letter.md`, "After the draft").
 - In the website checkout, `python3 scripts/publish_letter.py` rebuilds everything in one go: catalog, prerendered issue pages, case pages, homepage feed, topic hubs, `sitemap.xml`, `feed.xml`. Don't hand-edit generated issue pages, `middleware.js`, the homepage feed, or the topics row.
+- Safety net: a "Rebuild generated site pages" GitHub Action on paramaribo-letter reruns `publish_letter.py --rebuild` after any push touching issues or catalog. It catches mistakes; it is not a reason to skip the rebuild. Full hands-off steps: `prompts/issue-newsletter-hands-off.md`, step 5.
 - Site changes (SEO, topic pages, signup prompts, design) also land as pull requests on paramaribo-letter from Claude threads in Michael's project. Always `git fetch website` and start from `website/main` before publishing, or the push is rejected.
 
 ## Signups and measurement
@@ -57,4 +58,4 @@ Nothing goes out to X, LinkedIn, email, Reddit, or partners unless Michael write
 
 ## Latest issue
 
-Read `public/catalog.json` (first entry is the newest). As of 2026-09-27: **Issue 27**, `2026-09-26-87k-rejection`. The `/topics/bitcoin-support-resistance` intro names levels "as of Issue 27"; when a new issue moves the level map, flag that it needs a refresh.
+Read `public/catalog.json` (first entry is the newest). As of 2026-10-05: **Issue 28**, `2026-09-30-the-crash-that-doesnt-wait`. The `/topics/bitcoin-support-resistance` intro names levels "as of Issue 28"; when a new issue moves the level map, flag that it needs a refresh.
