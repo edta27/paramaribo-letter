@@ -1,0 +1,64 @@
+name: Rebuild generated site pages
+
+# Safety net for publishes that add issue files without running
+# scripts/publish_letter.py (Issue 28 shipped that way and had no prerendered
+# page). Regenerates issue and case pages, middleware.js, the homepage feed,
+# topic hubs, sitemap.xml and feed.xml, and commits only if something changed.
+#
+# Pushes made with GITHUB_TOKEN do not trigger other workflows, so this commit
+# never re-runs "Notify letter subscribers". That workflow also only emails
+# when the featured issue id in catalog.json changes.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "public/issues/**"
+      - "public/cases/**"
+      - "public/catalog.json"
+      - "scripts/publish_letter.py"
+      - "scripts/render_issue_html.py"
+      - "scripts/render_case_html.py"
+      - "scripts/build_feeds.py"
+      - "scripts/build_topics.py"
+      - "scripts/topics.json"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: rebuild-site
+  cancel-in-progress: false
+
+jobs:
+  rebuild:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Rebuild everything publish_letter.py generates
+        run: python3 scripts/publish_letter.py --rebuild
+
+      - name: Commit regenerated pages
+        run: |
+          git config user.name "site-rebuild-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          rm -rf scripts/__pycache__
+          git add -A public middleware.js
+          if git diff --staged --quiet; then
+            echo "Generated pages already up to date"
+            exit 0
+          fi
+          git diff --staged --stat
+          git commit -m "Rebuild generated site pages after publish"
+          for attempt in 1 2 3 4; do
+            git push && exit 0
+            sleep $((attempt * 5))
+            git pull --rebase origin main
+          done
+          exit 1

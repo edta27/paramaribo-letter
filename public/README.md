@@ -18,6 +18,8 @@ Open http://127.0.0.1:8766/
 
 `--rebuild` also writes `public/issue-pages/*.html`. On Vercel, `/issue?id=` is rewritten to that file so the title, canonical, and social tags are in the first HTML response.
 
+Always publish with `publish_letter.py`; don't hand-edit `catalog.js`, the homepage feed, `feed.xml` or `sitemap.xml`. If an issue lands on `main` without that step, the **Rebuild generated site pages** GitHub Action regenerates everything and commits it. It never re-sends the subscriber email.
+
 To add an issue without touching old ones:
 
 ```bash
