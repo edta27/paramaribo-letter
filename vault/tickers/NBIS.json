@@ -1,8 +1,26 @@
 {
   "ticker": "NBIS",
-  "updated_at": "2026-10-02T21:09:07Z",
-  "price": 242.42,
+  "updated_at": "2026-10-05T17:50:07Z",
+  "price": 233.09,
   "filings": [
+    {
+      "form": "4",
+      "filing_date": "2026-10-05",
+      "accession": "0001513845-26-000124",
+      "url": "https://www.sec.gov/Archives/edgar/data/1513845/000151384526000124/xslF345X06/form4.xml"
+    },
+    {
+      "form": "4",
+      "filing_date": "2026-10-05",
+      "accession": "0001513845-26-000122",
+      "url": "https://www.sec.gov/Archives/edgar/data/1513845/000151384526000122/xslF345X06/form4.xml"
+    },
+    {
+      "form": "4",
+      "filing_date": "2026-10-05",
+      "accession": "0001513845-26-000120",
+      "url": "https://www.sec.gov/Archives/edgar/data/1513845/000151384526000120/xslF345X06/form4.xml"
+    },
     {
       "form": "6-K",
       "filing_date": "2026-10-01",
@@ -14,32 +32,14 @@
       "filing_date": "2026-10-01",
       "accession": "0001513845-26-000118",
       "url": "https://www.sec.gov/Archives/edgar/data/1513845/000151384526000118/xslF345X06/form4.xml"
-    },
-    {
-      "form": "4",
-      "filing_date": "2026-09-21",
-      "accession": "0001513845-26-000116",
-      "url": "https://www.sec.gov/Archives/edgar/data/1513845/000151384526000116/xslF345X06/form4.xml"
-    },
-    {
-      "form": "4",
-      "filing_date": "2026-09-17",
-      "accession": "0001513845-26-000114",
-      "url": "https://www.sec.gov/Archives/edgar/data/1513845/000151384526000114/xslF345X06/form4.xml"
-    },
-    {
-      "form": "4",
-      "filing_date": "2026-09-16",
-      "accession": "0001513845-26-000112",
-      "url": "https://www.sec.gov/Archives/edgar/data/1513845/000151384526000112/xslF345X06/form4.xml"
     }
   ],
   "error": null,
   "prev_close": 242.81,
-  "change": -0.39,
-  "change_pct": -0.161,
+  "change": -9.72,
+  "change_pct": -4.003,
   "currency": "USD",
   "exchange": "NASDAQ-GS",
-  "volume": 12227758.194607,
+  "volume": 9407812.730935,
   "quote_source": "nasdaq-stocks"
 }

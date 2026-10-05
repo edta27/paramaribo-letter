@@ -1,45 +1,45 @@
 {
   "ticker": "WMT",
-  "updated_at": "2026-10-02T21:09:07Z",
-  "price": 104.2892,
+  "updated_at": "2026-10-05T17:50:08Z",
+  "price": 104.76,
   "filings": [
     {
       "form": "4",
-      "filing_date": "2026-09-18",
-      "accession": "0001696737-26-000019",
-      "url": "https://www.sec.gov/Archives/edgar/data/104169/000169673726000019/xslF345X06/wk-form4_1789764067.xml"
+      "filing_date": "2026-10-02",
+      "accession": "0000104169-26-000161",
+      "url": "https://www.sec.gov/Archives/edgar/data/104169/000010416926000161/xslF345X06/wk-form4_1790976925.xml"
     },
     {
       "form": "4",
-      "filing_date": "2026-09-18",
-      "accession": "0001992808-26-000027",
-      "url": "https://www.sec.gov/Archives/edgar/data/104169/000199280826000027/xslF345X06/wk-form4_1789763762.xml"
+      "filing_date": "2026-10-02",
+      "accession": "0000104169-26-000160",
+      "url": "https://www.sec.gov/Archives/edgar/data/104169/000010416926000160/xslF345X06/wk-form4_1790976918.xml"
     },
     {
       "form": "4",
-      "filing_date": "2026-09-09",
-      "accession": "0002058309-26-000017",
-      "url": "https://www.sec.gov/Archives/edgar/data/104169/000205830926000017/xslF345X06/wk-form4_1788988410.xml"
+      "filing_date": "2026-10-02",
+      "accession": "0000104169-26-000159",
+      "url": "https://www.sec.gov/Archives/edgar/data/104169/000010416926000159/xslF345X06/wk-form4_1790976910.xml"
     },
     {
       "form": "4",
-      "filing_date": "2026-09-09",
-      "accession": "0002110643-26-000018",
-      "url": "https://www.sec.gov/Archives/edgar/data/104169/000211064326000018/xslF345X06/wk-form4_1788988391.xml"
+      "filing_date": "2026-10-02",
+      "accession": "0001550608-26-000023",
+      "url": "https://www.sec.gov/Archives/edgar/data/104169/000155060826000023/xslF345X06/wk-form4_1790976851.xml"
     },
     {
       "form": "4",
-      "filing_date": "2026-09-09",
-      "accession": "0002110304-26-000021",
-      "url": "https://www.sec.gov/Archives/edgar/data/104169/000211030426000021/xslF345X06/wk-form4_1788988237.xml"
+      "filing_date": "2026-10-02",
+      "accession": "0001183428-26-000009",
+      "url": "https://www.sec.gov/Archives/edgar/data/104169/000118342826000009/xslF345X06/wk-form4_1790976845.xml"
     }
   ],
   "error": null,
   "prev_close": 104.26,
-  "change": 0.0292,
-  "change_pct": 0.028,
+  "change": 0.5,
+  "change_pct": 0.48,
   "currency": "USD",
   "exchange": "NASDAQ-GS",
-  "volume": 22975188.233786,
+  "volume": 7733973.79695,
   "quote_source": "nasdaq-stocks"
 }
