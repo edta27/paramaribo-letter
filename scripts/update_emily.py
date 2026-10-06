@@ -347,8 +347,6 @@ def coinmarketcap_derivatives(api_key: str) -> dict[str, Any]:
     if not isinstance(pairs, list) or not pairs:
         raise RuntimeError("CoinMarketCap returned no BTC derivative market pairs")
 
-    btc_open_interest = 0.0
-    btc_oi_pairs = 0
     funding_weighted = 0.0
     funding_weight = 0.0
     basis_weighted = 0.0
@@ -373,8 +371,7 @@ def coinmarketcap_derivatives(api_key: str) -> dict[str, Any]:
             ),
             None,
         )
-        if not usd_quote:
-            usd_quote = next((row for row in quotes if isinstance(row, dict)), None)
+        any_quote = usd_quote or next((row for row in quotes if isinstance(row, dict)), None)
         usd_reported = next(
             (
                 row for row in reported
@@ -391,25 +388,16 @@ def coinmarketcap_derivatives(api_key: str) -> dict[str, Any]:
         exchange = pair.get("exchange", {})
         if isinstance(exchange, dict) and exchange.get("exchange_name"):
             venues.add(str(exchange["exchange_name"]))
-        latest = usd_quote.get("last_updated") if usd_quote else None
+        latest = any_quote.get("last_updated") if any_quote else None
         if latest:
             latest_updates.append(str(latest))
 
-        oi = None
+        # Pair-level open interest is not consistently USD-normalized across
+        # inverse, quanto and linear contracts. Use converted USD volume only
+        # as the cross-pair weighting input; the exchange aggregate above is
+        # the authoritative USD open-interest observation.
+        weight = None
         if usd_quote:
-            try:
-                candidate = finite(
-                    usd_quote.get("open_interest", usd_quote.get("open_interest_usd"))
-                )
-                if candidate > 0:
-                    oi = candidate
-                    btc_open_interest += candidate
-                    btc_oi_pairs += 1
-            except (TypeError, ValueError):
-                pass
-
-        weight = oi
-        if not isinstance(weight, (int, float)) and usd_quote:
             try:
                 candidate = finite(usd_quote.get("volume_24h"))
                 if candidate > 0:
@@ -465,7 +453,7 @@ def coinmarketcap_derivatives(api_key: str) -> dict[str, Any]:
     return {
         "global_open_interest_usd": global_open_interest,
         "global_derivatives_venues": exchange_count,
-        "btc_open_interest_usd": btc_open_interest if btc_oi_pairs else None,
+        "btc_open_interest_usd": None,
         "btc_weighted_funding_pct": funding_weighted / funding_weight * 100 if funding_weight else None,
         "btc_weighted_basis_pct": basis_weighted / basis_weight * 100 if basis_weight else None,
         "btc_market_pairs": accepted_pairs,
