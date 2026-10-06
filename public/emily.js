@@ -95,8 +95,8 @@
         <h2>The propagation layer</h2>
         <ul>
           <li>Fear &amp; Greed: ${esc(fgi.value)} · ${esc(fgi.classification)}.</li>
-          <li>Aggregated BTC derivatives open interest: ${usd(agg.btc_open_interest_usd)} · ${n(agg.btc_open_interest_to_market_cap_pct, 2)}% of BTC market cap across ${esc(agg.btc_venues)} venues.</li>
-          <li>Aggregated BTC funding: ${signed(agg.btc_weighted_funding_pct, "%", 4)} · basis ${signed(agg.btc_weighted_basis_pct, "%", 3)}.</li>
+          <li>Global derivatives open interest: ${usd(agg.global_open_interest_usd)} · ${n(agg.global_open_interest_to_market_cap_pct, 2)}% of crypto market cap across ${esc(agg.global_derivatives_venues)} venues.</li>
+          <li>BTC cross-venue funding: ${signed(agg.btc_weighted_funding_pct, "%", 4)} · basis ${signed(agg.btc_weighted_basis_pct, "%", 3)} across ${esc(agg.btc_venues)} venues.</li>
           <li>Global liquidations: ${usd(agg.global_liquidations_24h_usd)} over 24 hours · BTC ${usd(agg.btc_liquidations_24h_usd)}.</li>
           <li>OKX cross-check: funding ${signed(d.funding_8h_pct, "%", 4)} · open interest ${usd(d.oi_usd)} · seven-day change ${signed(d.oi_change_7d_pct)}.</li>
           <li>USD stablecoin supply: ${usd(st.supply_usd)} · seven-day change ${signed(st.change_7d_pct)}.</li>

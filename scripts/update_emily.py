@@ -281,7 +281,58 @@ def cmc_json(path: str, api_key: str, params: dict[str, Any] | None = None) -> d
 
 
 def coinmarketcap_derivatives(api_key: str) -> dict[str, Any]:
-    """Fetch free, aggregated BTC derivatives and liquidation observations."""
+    """Fetch free, cross-venue derivatives and BTC liquidation observations.
+
+    CoinMarketCap's exchange feed publishes market-wide USD open interest. Its
+    BTC pair feed is still useful for funding and basis, but some Basic-plan
+    responses omit converted pair-level open interest. Treat those as two
+    different observations instead of manufacturing a BTC aggregate.
+    """
+    exchanges_payload = cmc_json(
+        "/v5/exchange/derivatives/list",
+        api_key,
+        {"limit": 250, "convert": "USD"},
+    )
+    exchanges_data = exchanges_payload.get("data", {})
+    exchanges = (
+        exchanges_data.get("exchanges", [])
+        if isinstance(exchanges_data, dict)
+        else exchanges_data
+    )
+    if not isinstance(exchanges, list) or not exchanges:
+        raise RuntimeError("CoinMarketCap returned no derivative exchanges")
+
+    global_open_interest = 0.0
+    exchange_count = 0
+    latest_updates: list[str] = []
+    for exchange in exchanges:
+        if not isinstance(exchange, dict):
+            continue
+        quotes = exchange.get("quotes", [])
+        if isinstance(quotes, dict):
+            quotes = [quotes]
+        usd_quote = next(
+            (row for row in quotes if isinstance(row, dict) and row.get("symbol") == "USD"),
+            None,
+        )
+        if not usd_quote:
+            continue
+        raw_oi = usd_quote.get("open_interest_usd", usd_quote.get("open_interest"))
+        try:
+            oi = finite(raw_oi)
+        except (TypeError, ValueError):
+            continue
+        if oi <= 0:
+            continue
+        global_open_interest += oi
+        exchange_count += 1
+        latest = usd_quote.get("last_updated") or exchange.get("last_updated")
+        if latest:
+            latest_updates.append(str(latest))
+
+    if global_open_interest <= 0 or exchange_count == 0:
+        raise RuntimeError("CoinMarketCap aggregate derivative open interest is unavailable")
+
     pairs_payload = cmc_json(
         "/v5/cryptocurrency/derivatives/market-pairs/list/latest",
         api_key,
@@ -292,15 +343,13 @@ def coinmarketcap_derivatives(api_key: str) -> dict[str, Any]:
     if not isinstance(pairs, list) or not pairs:
         raise RuntimeError("CoinMarketCap returned no BTC derivative market pairs")
 
-    total_oi = 0.0
-    perpetual_oi = 0.0
-    futures_oi = 0.0
+    btc_open_interest = 0.0
+    btc_oi_pairs = 0
     funding_weighted = 0.0
     funding_weight = 0.0
     basis_weighted = 0.0
     basis_weight = 0.0
     venues: set[str] = set()
-    latest_updates: list[str] = []
     accepted_pairs = 0
 
     for pair in pairs:
@@ -316,43 +365,52 @@ def coinmarketcap_derivatives(api_key: str) -> dict[str, Any]:
             (row for row in reported if isinstance(row, dict) and row.get("symbol") == "USD"),
             None,
         )
-        if not usd_quote:
-            continue
-        try:
-            oi = finite(usd_quote["open_interest"])
-        except (KeyError, TypeError, ValueError):
-            continue
-        if oi <= 0:
-            continue
         accepted_pairs += 1
-        total_oi += oi
-        category = str(pair.get("category", "")).lower()
-        if category == "perpetual":
-            perpetual_oi += oi
-        elif category == "futures":
-            futures_oi += oi
         exchange = pair.get("exchange", {})
         if isinstance(exchange, dict) and exchange.get("exchange_name"):
             venues.add(str(exchange["exchange_name"]))
-        latest = usd_quote.get("last_updated")
+        latest = usd_quote.get("last_updated") if usd_quote else None
         if latest:
             latest_updates.append(str(latest))
+
+        oi = None
+        if usd_quote:
+            try:
+                candidate = finite(usd_quote.get("open_interest"))
+                if candidate > 0:
+                    oi = candidate
+                    btc_open_interest += candidate
+                    btc_oi_pairs += 1
+            except (TypeError, ValueError):
+                pass
+
+        weight = oi
+        if not isinstance(weight, (int, float)) and usd_quote:
+            try:
+                candidate = finite(usd_quote.get("volume_24h"))
+                if candidate > 0:
+                    weight = candidate
+            except (TypeError, ValueError):
+                pass
+        if not isinstance(weight, (int, float)) or weight <= 0:
+            weight = 1.0
+
         if usd_reported:
             try:
                 funding = finite(usd_reported["funding_rate"])
-                funding_weighted += funding * oi
-                funding_weight += oi
+                funding_weighted += funding * weight
+                funding_weight += weight
             except (KeyError, TypeError, ValueError):
                 pass
             try:
                 basis = finite(usd_reported["index_basis"])
-                basis_weighted += basis * oi
-                basis_weight += oi
+                basis_weighted += basis * weight
+                basis_weight += weight
             except (KeyError, TypeError, ValueError):
                 pass
 
-    if total_oi <= 0 or accepted_pairs == 0:
-        raise RuntimeError("CoinMarketCap BTC derivative open interest is unavailable")
+    if accepted_pairs == 0:
+        raise RuntimeError("CoinMarketCap BTC derivative market pairs are unavailable")
 
     global_liq_payload = cmc_json(
         "/v5/derivatives/liquidations/quotes/latest", api_key, {"convert": "USD"}
@@ -381,9 +439,9 @@ def coinmarketcap_derivatives(api_key: str) -> dict[str, Any]:
         raise RuntimeError("CoinMarketCap BTC liquidations are unavailable")
 
     return {
-        "btc_open_interest_usd": total_oi,
-        "btc_perpetual_open_interest_usd": perpetual_oi,
-        "btc_futures_open_interest_usd": futures_oi,
+        "global_open_interest_usd": global_open_interest,
+        "global_derivatives_venues": exchange_count,
+        "btc_open_interest_usd": btc_open_interest if btc_oi_pairs else None,
         "btc_weighted_funding_pct": funding_weighted / funding_weight * 100 if funding_weight else None,
         "btc_weighted_basis_pct": basis_weighted / basis_weight * 100 if basis_weight else None,
         "btc_market_pairs": accepted_pairs,
@@ -620,11 +678,11 @@ def vulnerability_and_active(
         if isinstance(basis, (int, float)):
             magnitude = abs(basis)
             cmc_bits.append(0.9 if magnitude >= 0.5 else 0.72 if magnitude >= 0.25 else 0.52 if magnitude >= 0.1 else 0.3)
-        aggregate_oi = cmc_deriv.get("btc_open_interest_usd")
-        btc_market_cap = market.get("btc", {}).get("market_cap")
-        if isinstance(aggregate_oi, (int, float)) and isinstance(btc_market_cap, (int, float)) and btc_market_cap > 0:
-            oi_ratio = aggregate_oi / btc_market_cap * 100
-            cmc_bits.append(0.9 if oi_ratio >= 5 else 0.75 if oi_ratio >= 4 else 0.58 if oi_ratio >= 3 else 0.4 if oi_ratio >= 2 else 0.22)
+        aggregate_oi = cmc_deriv.get("global_open_interest_usd")
+        total_market_cap = market.get("market_cap")
+        if isinstance(aggregate_oi, (int, float)) and isinstance(total_market_cap, (int, float)) and total_market_cap > 0:
+            oi_ratio = aggregate_oi / total_market_cap * 100
+            cmc_bits.append(0.9 if oi_ratio >= 18 else 0.75 if oi_ratio >= 14 else 0.58 if oi_ratio >= 10 else 0.4 if oi_ratio >= 7 else 0.22)
         if cmc_bits:
             cmc_leverage = statistics.mean(cmc_bits)
 
@@ -861,8 +919,8 @@ def main() -> None:
 
     equity_rates = equity_rates_divergence(macro)
     if cmc_deriv:
-        cmc_deriv["btc_open_interest_to_market_cap_pct"] = (
-            cmc_deriv["btc_open_interest_usd"] / market["btc"]["market_cap"] * 100
+        cmc_deriv["global_open_interest_to_market_cap_pct"] = (
+            cmc_deriv["global_open_interest_usd"] / market["market_cap"] * 100
         )
     rotation, rotation_regime, dominance_read = rotation_score(market, previous)
     vulnerability, active, vulnerability_detail, active_detail = vulnerability_and_active(
