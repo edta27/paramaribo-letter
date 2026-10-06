@@ -275,7 +275,7 @@ def cmc_json(path: str, api_key: str, params: dict[str, Any] | None = None) -> d
     if not isinstance(payload, dict):
         raise RuntimeError("CoinMarketCap returned an unexpected response")
     status = payload.get("status", {})
-    if isinstance(status, dict) and status.get("error_code") not in (None, 0):
+    if isinstance(status, dict) and status.get("error_code") not in (None, 0, "0"):
         raise RuntimeError(f"CoinMarketCap error {status.get('error_code')}: {status.get('error_message')}")
     return payload
 
