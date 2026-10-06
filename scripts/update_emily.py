@@ -312,7 +312,11 @@ def coinmarketcap_derivatives(api_key: str) -> dict[str, Any]:
         if isinstance(quotes, dict):
             quotes = [quotes]
         usd_quote = next(
-            (row for row in quotes if isinstance(row, dict) and row.get("symbol") == "USD"),
+            (
+                row for row in quotes
+                if isinstance(row, dict)
+                and (row.get("convert_symbol") == "USD" or row.get("symbol") == "USD")
+            ),
             None,
         )
         if not usd_quote:
