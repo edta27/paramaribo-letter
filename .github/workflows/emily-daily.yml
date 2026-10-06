@@ -1,0 +1,40 @@
+name: Emily daily market update
+
+on:
+  workflow_dispatch:
+  schedule:
+    # 14:10 UTC is 8:10 AM Central Standard Time / 9:10 AM Central Daylight Time.
+    - cron: "10 14 * * *"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: emily-daily-market-update
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Build Emily's free daily market snapshot
+        run: python3 scripts/update_emily.py
+
+      - name: Commit the verified snapshot for the live site
+        run: |
+          git config user.name "emily-market-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add public/emily-live.js public/emily-history.json
+          if git diff --staged --quiet; then
+            echo "No Emily changes"
+          else
+            git commit -m "Refresh Emily daily market snapshot"
+            git push
+          fi

@@ -1114,7 +1114,10 @@ pre.note {
 .emily-stat-note { display: block; color: var(--text-2); font-size: 13px; line-height: 1.4; margin-top: 8px; }
 .emily-meter { height: 6px; margin-top: 12px; overflow: hidden; border-radius: 999px; background: var(--sunken); }
 .emily-meter > span { display: block; height: 100%; border-radius: inherit; background: var(--accent); }
+.emily-meter--yellow > span { background: #eab308; }
 .emily-meter--amber > span { background: #f59e0b; }
+.emily-meter--orange > span { background: #f97316; }
+.emily-meter--red > span { background: #ef4444; }
 .emily-meter--green > span { background: var(--success); }
 .emily-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; margin: 0 0 28px; }
 .emily-panel {
