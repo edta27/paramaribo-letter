@@ -6,5 +6,13 @@
     "rotation": 30,
     "updated_at": "2026-10-06T05:20:19.442931Z",
     "vulnerability": 41
+  },
+  {
+    "active": 13,
+    "btc_dominance": 56.42,
+    "btc_price_usd": 85650.28748216758,
+    "rotation": 26,
+    "updated_at": "2026-10-06T05:22:44.503313Z",
+    "vulnerability": 41
   }
 ]
