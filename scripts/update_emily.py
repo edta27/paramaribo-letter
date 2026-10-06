@@ -108,8 +108,15 @@ def save_history(row: dict[str, Any]) -> None:
                 rows = [item for item in loaded if isinstance(item, dict)]
         except (OSError, json.JSONDecodeError):
             rows = []
-    rows.append(row)
-    rows = rows[-180:]
+    # Manual verification runs should not create several observations for the
+    # same day. Keep the latest successfully validated snapshot per UTC date.
+    by_day: dict[str, dict[str, Any]] = {}
+    for item in [*rows, row]:
+        stamp = str(item.get("updated_at", ""))
+        key = stamp[:10] if len(stamp) >= 10 else stamp
+        if key:
+            by_day[key] = item
+    rows = sorted(by_day.values(), key=lambda item: str(item.get("updated_at", "")))[-180:]
     HISTORY_PATH.write_text(json.dumps(rows, indent=2, sort_keys=True) + "\n", encoding="utf-8")
 
 
@@ -281,9 +288,12 @@ def fred_series(series_id: str) -> dict[str, Any]:
     if not values:
         raise RuntimeError(f"FRED {series_id} has no recent values")
     previous = values[-6][1] if len(values) >= 6 else values[0][1]
+    previous_three = values[-4][1] if len(values) >= 4 else values[0][1]
     return {
         "date": values[-1][0],
         "value": values[-1][1],
+        "change_3obs_pct": pct_change(values[-1][1], previous_three),
+        "change_3obs": values[-1][1] - previous_three,
         "change_5obs_pct": pct_change(values[-1][1], previous),
         "change_5obs": values[-1][1] - previous,
     }
@@ -341,6 +351,7 @@ def vulnerability_and_active(
     deriv: dict[str, Any] | None,
     stable: dict[str, Any] | None,
     macro: dict[str, dict[str, Any]],
+    consumer: dict[str, Any] | None,
 ) -> tuple[int, int, list[dict[str, Any]], list[dict[str, Any]]]:
     # Vulnerability measures how quickly a future shock could propagate. It is
     # deliberately separate from evidence that a panic is already underway.
@@ -395,12 +406,28 @@ def vulnerability_and_active(
     liquidity_bits.append(0.72 if ratio < 2 else 0.52 if ratio < 3 else 0.32 if ratio < 5 else 0.2)
     liquidity_risk = statistics.mean(liquidity_bits)
 
+    consumer_risk = None
+    if consumer:
+        consumer_bits: list[float] = []
+        gap = consumer.get("spending_income_gap_3obs_pp")
+        if isinstance(gap, (int, float)):
+            consumer_bits.append(0.92 if gap >= 1.5 else 0.75 if gap >= 0.75 else 0.55 if gap >= 0.25 else 0.3 if gap >= 0 else 0.18)
+        saving_rate = consumer.get("saving_rate_pct")
+        if isinstance(saving_rate, (int, float)):
+            consumer_bits.append(0.92 if saving_rate < 3 else 0.76 if saving_rate < 4 else 0.58 if saving_rate < 5 else 0.38 if saving_rate < 6 else 0.2)
+        sentiment_value = consumer.get("sentiment_index")
+        if isinstance(sentiment_value, (int, float)):
+            consumer_bits.append(0.88 if sentiment_value < 60 else 0.72 if sentiment_value < 70 else 0.56 if sentiment_value < 80 else 0.4 if sentiment_value < 90 else 0.22)
+        if consumer_bits:
+            consumer_risk = statistics.mean(consumer_bits)
+
     vulnerability, vulnerability_detail = weighted_score([
         ("Leverage and crowding", leverage, 25),
         ("Momentum and sentiment", sentiment, 15),
         ("Crypto concentration", concentration, 15),
-        ("Cross-market transmission", macro_risk, 30),
-        ("Liquidity and absorption", liquidity_risk, 15),
+        ("Cross-market transmission", macro_risk, 25),
+        ("Liquidity and absorption", liquidity_risk, 10),
+        ("Consumer exhaustion", consumer_risk, 10),
     ])
 
     price_damage = 0.05
@@ -508,9 +535,45 @@ def main() -> None:
         if result:
             macro[key] = result
 
+    consumer_series: dict[str, dict[str, Any]] = {}
+    for key, series_id, label in (
+        ("real_spending", "PCEC96", "Real consumer spending"),
+        ("real_income", "DSPIC96", "Real disposable personal income"),
+        ("saving_rate", "PSAVERT", "Personal saving rate"),
+        ("sentiment", "UMCSENT", "University of Michigan consumer sentiment"),
+    ):
+        result = optional(label, lambda sid=series_id: fred_series(sid), gaps)
+        if result:
+            consumer_series[key] = result
+
+    consumer = None
+    if {"real_spending", "real_income", "saving_rate", "sentiment"}.issubset(consumer_series):
+        spending_change = consumer_series["real_spending"].get("change_3obs_pct")
+        income_change = consumer_series["real_income"].get("change_3obs_pct")
+        if isinstance(spending_change, (int, float)) and isinstance(income_change, (int, float)):
+            gap = spending_change - income_change
+            saving_rate = consumer_series["saving_rate"]["value"]
+            sentiment_index = consumer_series["sentiment"]["value"]
+            raw_risk = statistics.mean([
+                92 if gap >= 1.5 else 75 if gap >= 0.75 else 55 if gap >= 0.25 else 30 if gap >= 0 else 18,
+                92 if saving_rate < 3 else 76 if saving_rate < 4 else 58 if saving_rate < 5 else 38 if saving_rate < 6 else 20,
+                88 if sentiment_index < 60 else 72 if sentiment_index < 70 else 56 if sentiment_index < 80 else 40 if sentiment_index < 90 else 22,
+            ])
+            consumer = {
+                "score": round(raw_risk),
+                "band": band(round(raw_risk))[0],
+                "real_spending_change_3obs_pct": spending_change,
+                "real_income_change_3obs_pct": income_change,
+                "spending_income_gap_3obs_pp": gap,
+                "saving_rate_pct": saving_rate,
+                "sentiment_index": sentiment_index,
+                "date": min(row["date"] for row in consumer_series.values()),
+                "source_note": "FRED series sourced from BEA and the University of Michigan",
+            }
+
     rotation, rotation_regime, dominance_read = rotation_score(market, previous)
     vulnerability, active, vulnerability_detail, active_detail = vulnerability_and_active(
-        market, fgi, deriv, stable, macro
+        market, fgi, deriv, stable, macro, consumer
     )
     vulnerability_band, vulnerability_slug = band(vulnerability)
     active_band, active_slug = band(active)
@@ -582,6 +645,7 @@ def main() -> None:
         "derivatives": deriv,
         "stablecoins": stable,
         "macro": macro,
+        "consumer": consumer,
         "model": {
             "vulnerability_components": vulnerability_detail,
             "active_components": active_detail,
@@ -594,6 +658,7 @@ def main() -> None:
             {"label": "Alternative.me Fear & Greed", "url": "https://alternative.me/crypto/fear-and-greed-index/"},
             {"label": "OKX public market data", "url": "https://www.okx.com/docs-v5/en/"},
             {"label": "Federal Reserve Economic Data", "url": "https://fred.stlouisfed.org/"},
+            {"label": "BEA consumer spending and income", "url": "https://www.bea.gov/data/consumer-spending/main"},
             {"label": "DefiLlama stablecoins", "url": "https://defillama.com/stablecoins"},
         ],
     }

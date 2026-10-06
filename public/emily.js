@@ -44,6 +44,7 @@
   const d = data.derivatives || {};
   const st = data.stablecoins || {};
   const m = data.macro || {};
+  const consumer = data.consumer || {};
   const model = data.model || {};
   const sourceLinks = (data.sources || []).map((item) =>
     `<a href="${esc(item.url)}">${esc(item.label)}</a>`).join(" · ");
@@ -97,6 +98,25 @@
           <li>USD stablecoin supply: ${usd(st.supply_usd)} · seven-day change ${signed(st.change_7d_pct)}.</li>
         </ul>
         <p><strong>Read:</strong> these figures test crowding and absorption; unavailable values remain unknown.</p>
+      </article>
+
+      <article class="emily-panel emily-panel--wide">
+        <div class="feed-kicker">Consumer exhaustion</div>
+        <h2>Are households spending beyond their income support?</h2>
+        <div class="emily-table-wrap">
+          <table class="emily-table">
+            <thead><tr><th>Evidence</th><th>Latest reading</th><th>Interpretation</th></tr></thead>
+            <tbody>
+              <tr><td>Real consumer spending</td><td>${signed(consumer.real_spending_change_3obs_pct)}</td><td>Three-observation change in inflation-adjusted spending.</td></tr>
+              <tr><td>Real disposable income</td><td>${signed(consumer.real_income_change_3obs_pct)}</td><td>The income available to sustain that spending.</td></tr>
+              <tr><td>Spending minus income</td><td>${signed(consumer.spending_income_gap_3obs_pp, " pp")}</td><td>A persistent positive gap can signal reliance on saving or credit.</td></tr>
+              <tr><td>Personal saving rate</td><td>${n(consumer.saving_rate_pct, 1)}%</td><td>A thinner household buffer raises sensitivity to a labor or price shock.</td></tr>
+              <tr><td>Consumer sentiment</td><td>${n(consumer.sentiment_index, 1)}</td><td>Soft data can weaken before hard spending rolls over.</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p><strong>Consumer Exhaustion score:</strong> ${esc(consumer.score)} / 100 · ${esc(consumer.band)}. It raises panic vulnerability only when spending-income divergence, low saving and weak sentiment agree.</p>
+        <p class="emily-updated">Latest monthly observation set through ${esc(consumer.date)}. This is a slow-moving vulnerability signal, not evidence of active panic.</p>
       </article>
 
       <article class="emily-panel emily-panel--wide">
