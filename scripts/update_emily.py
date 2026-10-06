@@ -361,14 +361,32 @@ def coinmarketcap_derivatives(api_key: str) -> dict[str, Any]:
             continue
         quotes = pair.get("quotes", [])
         reported = pair.get("exchange_reported_quotes", [])
+        if isinstance(quotes, dict):
+            quotes = [quotes]
+        if isinstance(reported, dict):
+            reported = [reported]
         usd_quote = next(
-            (row for row in quotes if isinstance(row, dict) and row.get("symbol") == "USD"),
+            (
+                row for row in quotes
+                if isinstance(row, dict)
+                and (row.get("symbol") == "USD" or row.get("convert_symbol") == "USD")
+            ),
             None,
         )
+        if not usd_quote:
+            usd_quote = next((row for row in quotes if isinstance(row, dict)), None)
         usd_reported = next(
-            (row for row in reported if isinstance(row, dict) and row.get("symbol") == "USD"),
+            (
+                row for row in reported
+                if isinstance(row, dict)
+                and (row.get("symbol") == "USD" or row.get("convert_symbol") == "USD")
+            ),
             None,
         )
+        if not usd_reported:
+            # Funding and basis are rates, so the native quote denomination
+            # does not change their interpretation.
+            usd_reported = next((row for row in reported if isinstance(row, dict)), None)
         accepted_pairs += 1
         exchange = pair.get("exchange", {})
         if isinstance(exchange, dict) and exchange.get("exchange_name"):
@@ -380,7 +398,9 @@ def coinmarketcap_derivatives(api_key: str) -> dict[str, Any]:
         oi = None
         if usd_quote:
             try:
-                candidate = finite(usd_quote.get("open_interest"))
+                candidate = finite(
+                    usd_quote.get("open_interest", usd_quote.get("open_interest_usd"))
+                )
                 if candidate > 0:
                     oi = candidate
                     btc_open_interest += candidate
