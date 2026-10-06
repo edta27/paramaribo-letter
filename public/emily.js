@@ -45,6 +45,7 @@
   const st = data.stablecoins || {};
   const m = data.macro || {};
   const consumer = data.consumer || {};
+  const equityRates = data.equity_rates || {};
   const model = data.model || {};
   const sourceLinks = (data.sources || []).map((item) =>
     `<a href="${esc(item.url)}">${esc(item.label)}</a>`).join(" · ");
@@ -120,6 +121,25 @@
       </article>
 
       <article class="emily-panel emily-panel--wide">
+        <div class="feed-kicker">Equity–rates divergence</div>
+        <h2>Are growth equities ignoring expensive money?</h2>
+        <div class="emily-table-wrap">
+          <table class="emily-table">
+            <thead><tr><th>Evidence</th><th>Latest reading</th><th>Interpretation</th></tr></thead>
+            <tbody>
+              <tr><td>Nasdaq momentum</td><td>${signed(equityRates.nasdaq_change_5obs_pct)}</td><td>Strong growth-stock momentum can conceal weakening participation elsewhere.</td></tr>
+              <tr><td>Distance from 45-day high</td><td>${signed(equityRates.nasdaq_distance_from_45d_high_pct)}</td><td>A reading near zero means the Nasdaq remains close to its recent high.</td></tr>
+              <tr><td>10-year Treasury</td><td>${n(equityRates.ten_year_yield_pct, 2)}% · ${signed(equityRates.ten_year_change_5obs_bp, " bp", 0)}</td><td>High or rising long yields increase the discount rate applied to future earnings.</td></tr>
+              <tr><td>Nasdaq minus S&amp;P 500</td><td>${signed(equityRates.nasdaq_vs_sp500_5obs_pp, " pp")}</td><td>A leadership proxy—not a full breadth measure—for whether growth stocks are doing most of the lifting.</td></tr>
+              <tr><td>Shock pricing</td><td>VIX ${n(equityRates.vix, 2)} · HY ${n(equityRates.hy_spread_pct, 2)}%</td><td>Calm volatility and credit alongside expensive money can indicate latent complacency.</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p><strong>Equity–Rates Divergence score:</strong> ${esc(equityRates.score)} / 100 · ${esc(equityRates.band)}. ${esc(equityRates.interpretation)}</p>
+        <p class="emily-updated">Latest available observation: ${esc(equityRates.latest_date)}. This module contributes to panic vulnerability but never raises active panic by itself.</p>
+      </article>
+
+      <article class="emily-panel emily-panel--wide">
         <div class="feed-kicker">Surrounding markets</div>
         <h2>Is stress synchronizing?</h2>
         <div class="emily-table-wrap">
@@ -147,6 +167,7 @@
           <li>Stablecoin contraction, depegs or exchange withdrawal stress.</li>
           <li>Higher funding and open interest without matching spot participation.</li>
           <li>Oil, yields and the dollar tightening financial conditions together.</li>
+          <li>A Nasdaq near its highs while long yields rise, followed by weakening leadership, volatility or credit confirmation.</li>
         </ul>
       </article>
 
@@ -159,6 +180,7 @@
           <li>Calm equity volatility and tight credit spreads.</li>
           <li>Open interest resetting without price damage.</li>
           <li>Lower yields and energy prices without a growth shock.</li>
+          <li>Broader equity participation or falling yields that resolves the equity–rates divergence.</li>
         </ul>
       </article>
 

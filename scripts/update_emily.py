@@ -289,6 +289,8 @@ def fred_series(series_id: str) -> dict[str, Any]:
         raise RuntimeError(f"FRED {series_id} has no recent values")
     previous = values[-6][1] if len(values) >= 6 else values[0][1]
     previous_three = values[-4][1] if len(values) >= 4 else values[0][1]
+    window_high = max(value for _, value in values)
+    window_low = min(value for _, value in values)
     return {
         "date": values[-1][0],
         "value": values[-1][1],
@@ -296,6 +298,10 @@ def fred_series(series_id: str) -> dict[str, Any]:
         "change_3obs": values[-1][1] - previous_three,
         "change_5obs_pct": pct_change(values[-1][1], previous),
         "change_5obs": values[-1][1] - previous,
+        "window_high": window_high,
+        "window_low": window_low,
+        "distance_from_window_high_pct": pct_change(values[-1][1], window_high),
+        "observations": len(values),
     }
 
 
@@ -345,6 +351,92 @@ def weighted_score(components: list[tuple[str, float, float]]) -> tuple[int, lis
     return score, detail
 
 
+def equity_rates_divergence(macro: dict[str, dict[str, Any]]) -> dict[str, Any] | None:
+    """Measure latent fragility when strong growth equities defy expensive money.
+
+    This is not a sell signal and not evidence of active panic. It measures an
+    unstable combination: a Nasdaq near its recent high, high or rising long
+    yields, growth-stock leadership, and calm volatility or credit markets.
+    """
+    nasdaq = macro.get("nasdaq")
+    ten_year = macro.get("ten_year")
+    if not nasdaq or not ten_year:
+        return None
+
+    distance = nasdaq.get("distance_from_window_high_pct")
+    proximity_risk = None
+    if isinstance(distance, (int, float)):
+        below_high = abs(min(0.0, distance))
+        proximity_risk = (
+            0.85 if below_high <= 0.25 else
+            0.75 if below_high <= 1 else
+            0.58 if below_high <= 3 else
+            0.4 if below_high <= 6 else
+            0.22
+        )
+    nasdaq_move = nasdaq.get("change_5obs_pct")
+    momentum_risk = None
+    if isinstance(nasdaq_move, (int, float)):
+        momentum_risk = 0.8 if nasdaq_move >= 2 else 0.68 if nasdaq_move >= 0 else 0.45 if nasdaq_move >= -2 else 0.24
+    equity_parts = [value for value in (proximity_risk, momentum_risk) if value is not None]
+    equity_strength = statistics.mean(equity_parts) if equity_parts else None
+
+    yield_level = ten_year["value"]
+    level_risk = 0.85 if yield_level >= 5.25 else 0.75 if yield_level >= 5 else 0.6 if yield_level >= 4.5 else 0.42 if yield_level >= 4 else 0.24
+    yield_change = ten_year.get("change_5obs")
+    change_risk = None
+    if isinstance(yield_change, (int, float)):
+        change_risk = 0.85 if yield_change >= 0.25 else 0.7 if yield_change >= 0.15 else 0.5 if yield_change >= 0.05 else 0.32 if yield_change >= 0 else 0.18
+    rate_pressure = statistics.mean([level_risk, change_risk]) if change_risk is not None else level_risk
+
+    sp500 = macro.get("sp500")
+    leadership_gap = None
+    leadership_risk = None
+    if sp500:
+        nasdaq_change = nasdaq.get("change_5obs_pct")
+        sp500_change = sp500.get("change_5obs_pct")
+        if isinstance(nasdaq_change, (int, float)) and isinstance(sp500_change, (int, float)):
+            leadership_gap = nasdaq_change - sp500_change
+            leadership_risk = 0.8 if leadership_gap >= 2 else 0.65 if leadership_gap >= 1 else 0.5 if leadership_gap >= 0 else 0.34 if leadership_gap >= -1 else 0.2
+
+    calm_bits: list[float] = []
+    if "vix" in macro:
+        vix = macro["vix"]["value"]
+        calm_bits.append(0.8 if vix < 14 else 0.65 if vix < 17 else 0.5 if vix < 20 else 0.32 if vix < 25 else 0.18)
+    if "hy" in macro:
+        spread = macro["hy"]["value"]
+        calm_bits.append(0.75 if spread < 3 else 0.6 if spread < 3.5 else 0.45 if spread < 4 else 0.28 if spread < 5 else 0.15)
+    complacency = statistics.mean(calm_bits) if calm_bits else None
+
+    score, components = weighted_score([
+        ("Nasdaq strength", equity_strength, 30),
+        ("Long-rate pressure", rate_pressure, 35),
+        ("Growth leadership proxy", leadership_risk, 15),
+        ("Volatility and credit calm", complacency, 20),
+    ])
+    score_band, score_slug = band(score)
+    dates = [
+        row.get("date") for row in (nasdaq, ten_year, sp500, macro.get("vix"), macro.get("hy"))
+        if row and row.get("date")
+    ]
+    return {
+        "score": score,
+        "band": score_band,
+        "slug": score_slug,
+        "nasdaq_value": nasdaq["value"],
+        "nasdaq_change_5obs_pct": nasdaq.get("change_5obs_pct"),
+        "nasdaq_distance_from_45d_high_pct": distance,
+        "ten_year_yield_pct": yield_level,
+        "ten_year_change_5obs_bp": yield_change * 100 if isinstance(yield_change, (int, float)) else None,
+        "nasdaq_vs_sp500_5obs_pp": leadership_gap,
+        "vix": macro.get("vix", {}).get("value"),
+        "hy_spread_pct": macro.get("hy", {}).get("value"),
+        "latest_date": max(dates) if dates else None,
+        "components": components,
+        "interpretation": "Latent valuation and concentration vulnerability; not evidence of active panic.",
+    }
+
+
 def vulnerability_and_active(
     market: dict[str, Any],
     fgi: dict[str, Any] | None,
@@ -352,6 +444,7 @@ def vulnerability_and_active(
     stable: dict[str, Any] | None,
     macro: dict[str, dict[str, Any]],
     consumer: dict[str, Any] | None,
+    equity_rates: dict[str, Any] | None,
 ) -> tuple[int, int, list[dict[str, Any]], list[dict[str, Any]]]:
     # Vulnerability measures how quickly a future shock could propagate. It is
     # deliberately separate from evidence that a panic is already underway.
@@ -422,12 +515,13 @@ def vulnerability_and_active(
             consumer_risk = statistics.mean(consumer_bits)
 
     vulnerability, vulnerability_detail = weighted_score([
-        ("Leverage and crowding", leverage, 25),
-        ("Momentum and sentiment", sentiment, 15),
-        ("Crypto concentration", concentration, 15),
-        ("Cross-market transmission", macro_risk, 25),
+        ("Leverage and crowding", leverage, 23),
+        ("Momentum and sentiment", sentiment, 14),
+        ("Crypto concentration", concentration, 13),
+        ("Cross-market transmission", macro_risk, 22),
         ("Liquidity and absorption", liquidity_risk, 10),
         ("Consumer exhaustion", consumer_risk, 10),
+        ("Equity-rates divergence", equity_rates["score"] / 100 if equity_rates else None, 8),
     ])
 
     price_damage = 0.05
@@ -530,6 +624,7 @@ def main() -> None:
         ("oil", "DCOILWTICO", "WTI oil"),
         ("dollar", "DTWEXBGS", "Broad dollar index"),
         ("sp500", "SP500", "S&P 500"),
+        ("nasdaq", "NASDAQCOM", "Nasdaq Composite"),
     ):
         result = optional(label, lambda sid=series_id: fred_series(sid), gaps)
         if result:
@@ -571,9 +666,10 @@ def main() -> None:
                 "source_note": "FRED series sourced from BEA and the University of Michigan",
             }
 
+    equity_rates = equity_rates_divergence(macro)
     rotation, rotation_regime, dominance_read = rotation_score(market, previous)
     vulnerability, active, vulnerability_detail, active_detail = vulnerability_and_active(
-        market, fgi, deriv, stable, macro, consumer
+        market, fgi, deriv, stable, macro, consumer, equity_rates
     )
     vulnerability_band, vulnerability_slug = band(vulnerability)
     active_band, active_slug = band(active)
@@ -605,7 +701,7 @@ def main() -> None:
         notes.append(f"Missing optional feeds today: {len(gaps)}. The model published only because more than 60% of each panic score remained observable.")
 
     snapshot = {
-        "schema_version": 1,
+        "schema_version": 2,
         "updated_at": now.isoformat().replace("+00:00", "Z"),
         "source_updated_at": market["source_updated_at"],
         "quality": quality,
@@ -646,6 +742,7 @@ def main() -> None:
         "stablecoins": stable,
         "macro": macro,
         "consumer": consumer,
+        "equity_rates": equity_rates,
         "model": {
             "vulnerability_components": vulnerability_detail,
             "active_components": active_detail,
@@ -658,6 +755,7 @@ def main() -> None:
             {"label": "Alternative.me Fear & Greed", "url": "https://alternative.me/crypto/fear-and-greed-index/"},
             {"label": "OKX public market data", "url": "https://www.okx.com/docs-v5/en/"},
             {"label": "Federal Reserve Economic Data", "url": "https://fred.stlouisfed.org/"},
+            {"label": "Nasdaq Composite via FRED", "url": "https://fred.stlouisfed.org/series/NASDAQCOM"},
             {"label": "BEA consumer spending and income", "url": "https://www.bea.gov/data/consumer-spending/main"},
             {"label": "DefiLlama stablecoins", "url": "https://defillama.com/stablecoins"},
         ],
@@ -675,6 +773,7 @@ def main() -> None:
         "rotation": rotation,
         "vulnerability": vulnerability,
         "active": active,
+        "equity_rates_divergence": equity_rates["score"] if equity_rates else None,
         "btc_price_usd": market["btc"]["price"],
     })
     print(
