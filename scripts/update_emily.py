@@ -14,6 +14,7 @@ import html
 import io
 import json
 import math
+import os
 import statistics
 import sys
 import time
@@ -42,11 +43,23 @@ DERIVATIVES = {
 }
 
 
-def fetch(url: str, *, timeout: int = 25, attempts: int = 3) -> bytes:
+def fetch(
+    url: str,
+    *,
+    timeout: int = 25,
+    attempts: int = 3,
+    headers: dict[str, str] | None = None,
+) -> bytes:
     last: Exception | None = None
     for attempt in range(attempts):
         try:
-            req = Request(url, headers={"Accept": "application/json,text/csv,*/*", "User-Agent": USER_AGENT})
+            request_headers = {
+                "Accept": "application/json,text/csv,*/*",
+                "User-Agent": USER_AGENT,
+            }
+            if headers:
+                request_headers.update(headers)
+            req = Request(url, headers=request_headers)
             with urlopen(req, timeout=timeout) as response:
                 if response.status != 200:
                     raise RuntimeError(f"HTTP {response.status} from {url}")
@@ -58,9 +71,9 @@ def fetch(url: str, *, timeout: int = 25, attempts: int = 3) -> bytes:
     raise RuntimeError(f"Could not fetch {url}: {last}")
 
 
-def get_json(url: str) -> Any:
+def get_json(url: str, *, headers: dict[str, str] | None = None) -> Any:
     try:
-        return json.loads(fetch(url).decode("utf-8"))
+        return json.loads(fetch(url, headers=headers).decode("utf-8"))
     except (UnicodeDecodeError, json.JSONDecodeError) as exc:
         raise RuntimeError(f"Invalid JSON from {url}: {exc}") from exc
 
@@ -250,6 +263,143 @@ def okx_derivatives() -> dict[str, Any]:
             if oi_time else None
         ),
         "venue": "OKX BTC-USDT perpetual and OKX BTC aggregate",
+    }
+
+
+def cmc_json(path: str, api_key: str, params: dict[str, Any] | None = None) -> dict[str, Any]:
+    query = f"?{urlencode(params)}" if params else ""
+    payload = get_json(
+        f"https://pro-api.coinmarketcap.com{path}{query}",
+        headers={"X-CMC_PRO_API_KEY": api_key},
+    )
+    if not isinstance(payload, dict):
+        raise RuntimeError("CoinMarketCap returned an unexpected response")
+    status = payload.get("status", {})
+    if isinstance(status, dict) and status.get("error_code") not in (None, 0):
+        raise RuntimeError(f"CoinMarketCap error {status.get('error_code')}: {status.get('error_message')}")
+    return payload
+
+
+def coinmarketcap_derivatives(api_key: str) -> dict[str, Any]:
+    """Fetch free, aggregated BTC derivatives and liquidation observations."""
+    pairs_payload = cmc_json(
+        "/v5/cryptocurrency/derivatives/market-pairs/list/latest",
+        api_key,
+        {"crypto_id": 1, "limit": 250, "category": "all", "convert": "USD"},
+    )
+    pairs_data = pairs_payload.get("data", {})
+    pairs = pairs_data.get("market_pairs", []) if isinstance(pairs_data, dict) else []
+    if not isinstance(pairs, list) or not pairs:
+        raise RuntimeError("CoinMarketCap returned no BTC derivative market pairs")
+
+    total_oi = 0.0
+    perpetual_oi = 0.0
+    futures_oi = 0.0
+    funding_weighted = 0.0
+    funding_weight = 0.0
+    basis_weighted = 0.0
+    basis_weight = 0.0
+    venues: set[str] = set()
+    latest_updates: list[str] = []
+    accepted_pairs = 0
+
+    for pair in pairs:
+        if not isinstance(pair, dict) or pair.get("outlier_detected") is True:
+            continue
+        quotes = pair.get("quotes", [])
+        reported = pair.get("exchange_reported_quotes", [])
+        usd_quote = next(
+            (row for row in quotes if isinstance(row, dict) and row.get("symbol") == "USD"),
+            None,
+        )
+        usd_reported = next(
+            (row for row in reported if isinstance(row, dict) and row.get("symbol") == "USD"),
+            None,
+        )
+        if not usd_quote:
+            continue
+        try:
+            oi = finite(usd_quote["open_interest"])
+        except (KeyError, TypeError, ValueError):
+            continue
+        if oi <= 0:
+            continue
+        accepted_pairs += 1
+        total_oi += oi
+        category = str(pair.get("category", "")).lower()
+        if category == "perpetual":
+            perpetual_oi += oi
+        elif category == "futures":
+            futures_oi += oi
+        exchange = pair.get("exchange", {})
+        if isinstance(exchange, dict) and exchange.get("exchange_name"):
+            venues.add(str(exchange["exchange_name"]))
+        latest = usd_quote.get("last_updated")
+        if latest:
+            latest_updates.append(str(latest))
+        if usd_reported:
+            try:
+                funding = finite(usd_reported["funding_rate"])
+                funding_weighted += funding * oi
+                funding_weight += oi
+            except (KeyError, TypeError, ValueError):
+                pass
+            try:
+                basis = finite(usd_reported["index_basis"])
+                basis_weighted += basis * oi
+                basis_weight += oi
+            except (KeyError, TypeError, ValueError):
+                pass
+
+    if total_oi <= 0 or accepted_pairs == 0:
+        raise RuntimeError("CoinMarketCap BTC derivative open interest is unavailable")
+
+    global_liq_payload = cmc_json(
+        "/v5/derivatives/liquidations/quotes/latest", api_key, {"convert": "USD"}
+    )
+    global_quotes = global_liq_payload.get("data", {}).get("quotes", [])
+    global_liq = next(
+        (row for row in global_quotes if isinstance(row, dict) and row.get("symbol") == "USD"),
+        None,
+    )
+    if not global_liq:
+        raise RuntimeError("CoinMarketCap global liquidations are unavailable")
+
+    btc_liq_payload = cmc_json(
+        "/v5/derivatives/liquidations/cryptocurrency/list/latest",
+        api_key,
+        {"crypto_id": 1, "limit": 1, "convert": "USD"},
+    )
+    cryptocurrencies = btc_liq_payload.get("data", {}).get("cryptocurrencies", [])
+    btc_row = cryptocurrencies[0] if cryptocurrencies and isinstance(cryptocurrencies[0], dict) else None
+    btc_quotes = btc_row.get("quotes", []) if btc_row else []
+    btc_liq = next(
+        (row for row in btc_quotes if isinstance(row, dict) and row.get("symbol") == "USD"),
+        None,
+    )
+    if not btc_liq:
+        raise RuntimeError("CoinMarketCap BTC liquidations are unavailable")
+
+    return {
+        "btc_open_interest_usd": total_oi,
+        "btc_perpetual_open_interest_usd": perpetual_oi,
+        "btc_futures_open_interest_usd": futures_oi,
+        "btc_weighted_funding_pct": funding_weighted / funding_weight * 100 if funding_weight else None,
+        "btc_weighted_basis_pct": basis_weighted / basis_weight * 100 if basis_weight else None,
+        "btc_market_pairs": accepted_pairs,
+        "btc_venues": len(venues),
+        "global_liquidations_1h_usd": finite(global_liq["total_liquidations_1h"]),
+        "global_liquidations_24h_usd": finite(global_liq["total_liquidations_24h"]),
+        "global_long_liquidations_24h_usd": finite(global_liq["long_liquidations_24h"]),
+        "global_short_liquidations_24h_usd": finite(global_liq["short_liquidations_24h"]),
+        "btc_liquidations_1h_usd": finite(btc_liq["total_liquidations_1h"]),
+        "btc_liquidations_24h_usd": finite(btc_liq["total_liquidations_24h"]),
+        "btc_long_liquidations_24h_usd": finite(btc_liq["long_liquidations_24h"]),
+        "btc_short_liquidations_24h_usd": finite(btc_liq["short_liquidations_24h"]),
+        "updated_at": max(
+            [*latest_updates, str(global_liq.get("last_updated", "")), str(btc_liq.get("last_updated", ""))]
+        ),
+        "source": "CoinMarketCap aggregated derivatives and liquidations",
     }
 
 
@@ -445,10 +595,11 @@ def vulnerability_and_active(
     macro: dict[str, dict[str, Any]],
     consumer: dict[str, Any] | None,
     equity_rates: dict[str, Any] | None,
+    cmc_deriv: dict[str, Any] | None,
 ) -> tuple[int, int, list[dict[str, Any]], list[dict[str, Any]]]:
     # Vulnerability measures how quickly a future shock could propagate. It is
     # deliberately separate from evidence that a panic is already underway.
-    leverage = None
+    okx_leverage = None
     if deriv:
         funding = deriv["funding_8h_pct"]
         funding_risk = 0.95 if funding >= 0.05 else 0.78 if funding >= 0.03 else 0.58 if funding >= 0.015 else 0.35 if funding >= 0.005 else 0.5 if funding <= -0.03 else 0.2
@@ -456,7 +607,31 @@ def vulnerability_and_active(
         oi_risk = 0.45
         if isinstance(oi_change, (int, float)):
             oi_risk = 1.0 if oi_change >= 15 else 0.82 if oi_change >= 8 else 0.62 if oi_change >= 3 else 0.42 if oi_change >= 0 else 0.28
-        leverage = clamp((funding_risk * 0.45 + oi_risk * 0.55), 0, 1)
+        okx_leverage = clamp((funding_risk * 0.45 + oi_risk * 0.55), 0, 1)
+
+    cmc_leverage = None
+    if cmc_deriv:
+        cmc_bits: list[float] = []
+        funding = cmc_deriv.get("btc_weighted_funding_pct")
+        if isinstance(funding, (int, float)):
+            magnitude = abs(funding)
+            cmc_bits.append(0.95 if magnitude >= 0.05 else 0.78 if magnitude >= 0.03 else 0.58 if magnitude >= 0.015 else 0.35 if magnitude >= 0.005 else 0.2)
+        basis = cmc_deriv.get("btc_weighted_basis_pct")
+        if isinstance(basis, (int, float)):
+            magnitude = abs(basis)
+            cmc_bits.append(0.9 if magnitude >= 0.5 else 0.72 if magnitude >= 0.25 else 0.52 if magnitude >= 0.1 else 0.3)
+        aggregate_oi = cmc_deriv.get("btc_open_interest_usd")
+        btc_market_cap = market.get("btc", {}).get("market_cap")
+        if isinstance(aggregate_oi, (int, float)) and isinstance(btc_market_cap, (int, float)) and btc_market_cap > 0:
+            oi_ratio = aggregate_oi / btc_market_cap * 100
+            cmc_bits.append(0.9 if oi_ratio >= 5 else 0.75 if oi_ratio >= 4 else 0.58 if oi_ratio >= 3 else 0.4 if oi_ratio >= 2 else 0.22)
+        if cmc_bits:
+            cmc_leverage = statistics.mean(cmc_bits)
+
+    if okx_leverage is not None and cmc_leverage is not None:
+        leverage = okx_leverage * 0.45 + cmc_leverage * 0.55
+    else:
+        leverage = cmc_leverage if cmc_leverage is not None else okx_leverage
 
     sentiment = None
     if fgi:
@@ -559,6 +734,17 @@ def vulnerability_and_active(
             deleveraging = 0.9 if oi_change <= -20 and c7 < 0 else 0.65 if oi_change <= -10 and c7 < 0 else 0.42 if funding <= -0.03 else 0.1
         else:
             deleveraging = 0.42 if funding <= -0.03 else 0.1
+    if cmc_deriv:
+        global_24h = cmc_deriv.get("global_liquidations_24h_usd")
+        btc_24h = cmc_deriv.get("btc_liquidations_24h_usd")
+        liquidation_bits: list[float] = []
+        if isinstance(global_24h, (int, float)):
+            liquidation_bits.append(1.0 if global_24h >= 3_000_000_000 else 0.82 if global_24h >= 1_500_000_000 else 0.62 if global_24h >= 750_000_000 else 0.38 if global_24h >= 300_000_000 else 0.12)
+        if isinstance(btc_24h, (int, float)):
+            liquidation_bits.append(1.0 if btc_24h >= 1_000_000_000 else 0.82 if btc_24h >= 500_000_000 else 0.62 if btc_24h >= 250_000_000 else 0.38 if btc_24h >= 100_000_000 else 0.12)
+        if liquidation_bits:
+            liquidation_risk = statistics.mean(liquidation_bits)
+            deleveraging = max(deleveraging or 0, liquidation_risk)
     stable_stress = None
     if stable and isinstance(stable.get("change_7d_pct"), (int, float)):
         change = stable["change_7d_pct"]
@@ -615,6 +801,13 @@ def main() -> None:
     fgi = optional("Fear & Greed", fear_greed, gaps)
     deriv = optional("OKX derivatives", okx_derivatives, gaps)
     stable = optional("Stablecoin supply", stablecoins, gaps)
+    cmc_api_key = os.environ.get("CMC_API_KEY", "").strip()
+    cmc_deriv = (
+        optional("CoinMarketCap derivatives", lambda: coinmarketcap_derivatives(cmc_api_key), gaps)
+        if cmc_api_key else None
+    )
+    if not cmc_api_key:
+        gaps.append("CoinMarketCap derivatives: CMC_API_KEY is not configured")
 
     macro: dict[str, dict[str, Any]] = {}
     for key, series_id, label in (
@@ -667,9 +860,13 @@ def main() -> None:
             }
 
     equity_rates = equity_rates_divergence(macro)
+    if cmc_deriv:
+        cmc_deriv["btc_open_interest_to_market_cap_pct"] = (
+            cmc_deriv["btc_open_interest_usd"] / market["btc"]["market_cap"] * 100
+        )
     rotation, rotation_regime, dominance_read = rotation_score(market, previous)
     vulnerability, active, vulnerability_detail, active_detail = vulnerability_and_active(
-        market, fgi, deriv, stable, macro, consumer, equity_rates
+        market, fgi, deriv, stable, macro, consumer, equity_rates, cmc_deriv
     )
     vulnerability_band, vulnerability_slug = band(vulnerability)
     active_band, active_slug = band(active)
@@ -739,6 +936,7 @@ def main() -> None:
         },
         "sentiment": fgi,
         "derivatives": deriv,
+        "aggregated_derivatives": cmc_deriv,
         "stablecoins": stable,
         "macro": macro,
         "consumer": consumer,
@@ -754,6 +952,7 @@ def main() -> None:
             {"label": "CoinPaprika", "url": "https://api.coinpaprika.com/"},
             {"label": "Alternative.me Fear & Greed", "url": "https://alternative.me/crypto/fear-and-greed-index/"},
             {"label": "OKX public market data", "url": "https://www.okx.com/docs-v5/en/"},
+            {"label": "CoinMarketCap derivatives", "url": "https://coinmarketcap.com/charts/derivatives/"},
             {"label": "Federal Reserve Economic Data", "url": "https://fred.stlouisfed.org/"},
             {"label": "Nasdaq Composite via FRED", "url": "https://fred.stlouisfed.org/series/NASDAQCOM"},
             {"label": "BEA consumer spending and income", "url": "https://www.bea.gov/data/consumer-spending/main"},

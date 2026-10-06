@@ -25,6 +25,8 @@ jobs:
           python-version: "3.12"
 
       - name: Build Emily's free daily market snapshot
+        env:
+          CMC_API_KEY: ${{ secrets.CMC_API_KEY }}
         run: python3 scripts/update_emily.py
 
       - name: Commit the verified snapshot for the live site

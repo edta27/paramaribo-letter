@@ -42,6 +42,7 @@
   const s = data.scores || {};
   const fgi = data.sentiment || {};
   const d = data.derivatives || {};
+  const agg = data.aggregated_derivatives || {};
   const st = data.stablecoins || {};
   const m = data.macro || {};
   const consumer = data.consumer || {};
@@ -94,11 +95,13 @@
         <h2>The propagation layer</h2>
         <ul>
           <li>Fear &amp; Greed: ${esc(fgi.value)} · ${esc(fgi.classification)}.</li>
-          <li>OKX BTC funding: ${signed(d.funding_8h_pct, "%", 4)} per eight hours.</li>
-          <li>OKX BTC aggregate open interest: ${usd(d.oi_usd)} · seven-day change ${signed(d.oi_change_7d_pct)}.</li>
+          <li>Aggregated BTC derivatives open interest: ${usd(agg.btc_open_interest_usd)} · ${n(agg.btc_open_interest_to_market_cap_pct, 2)}% of BTC market cap across ${esc(agg.btc_venues)} venues.</li>
+          <li>Aggregated BTC funding: ${signed(agg.btc_weighted_funding_pct, "%", 4)} · basis ${signed(agg.btc_weighted_basis_pct, "%", 3)}.</li>
+          <li>Global liquidations: ${usd(agg.global_liquidations_24h_usd)} over 24 hours · BTC ${usd(agg.btc_liquidations_24h_usd)}.</li>
+          <li>OKX cross-check: funding ${signed(d.funding_8h_pct, "%", 4)} · open interest ${usd(d.oi_usd)} · seven-day change ${signed(d.oi_change_7d_pct)}.</li>
           <li>USD stablecoin supply: ${usd(st.supply_usd)} · seven-day change ${signed(st.change_7d_pct)}.</li>
         </ul>
-        <p><strong>Read:</strong> these figures test crowding and absorption; unavailable values remain unknown.</p>
+        <p><strong>Read:</strong> CoinMarketCap supplies the cross-venue view; OKX remains an independent venue check. Missing values remain unknown.</p>
       </article>
 
       <article class="emily-panel emily-panel--wide">
@@ -188,7 +191,7 @@
         <div class="feed-kicker">Method and limits</div>
         <h2>Free data, fail-closed publishing</h2>
         <p>Emily separates market vulnerability from active panic. Required BTC and breadth data must be fresh. Optional feeds that fail are disclosed and removed from the calculation; they never become artificial green signals. If too little evidence remains, the daily job fails and yesterday's page stays in place.</p>
-        <p>ETF flows, full consolidated derivatives, order-book depth, shipping and breaking geopolitical news still require an event-driven research review. X posts are not used in the automatic score because reliable automated access is not free.</p>
+        <p>ETF flows, options positioning, order-book depth, shipping and breaking geopolitical news still require an event-driven research review. X posts are not used in the automatic score because reliable automated access is not free.</p>
       </article>
     </section>
 
