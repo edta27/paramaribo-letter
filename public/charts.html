@@ -28,39 +28,76 @@
   <script defer src="/_vercel/insights/script.js"></script>
   <script defer src="/clarity.js"></script>
 </head>
-<body data-nav="charts">
+<body class="charts-page" data-nav="charts">
   <div class="portal-stage wrap">
     <section class="feed-head">
-      <h1>Charts</h1>
-      <span class="feed-toggle">Thesis first · tape below · event-driven</span>
+      <div>
+        <span class="chart-page-eyebrow">Emily's research desk</span>
+        <h1>Market dashboard</h1>
+      </div>
+      <span class="feed-toggle"><i class="chart-live-dot" aria-hidden="true"></i> Free data · daily refresh</span>
     </section>
+
+    <nav class="chart-jump-nav" aria-label="Chart sections">
+      <a href="#tape">Current tape</a>
+      <a href="#cycle-atlas">Cycle &amp; on-chain</a>
+      <a href="#chart-archive-title">Prior calls</a>
+    </nav>
 
     <div id="chart-meta" class="chart-meta"></div>
 
-    <section class="subscribe-box subscribe-hook" id="new-subscribers" aria-labelledby="sub-title">
-      <h2 id="sub-title">Get the next Daily close</h2>
-      <p class="subscribe-lede" id="subscribe-hook-copy">
-        When the stall breaks — or fails — the letter hits your inbox the same day. Charts stay free here; the call moves by email.
-      </p>
-      <form class="subscribe-form" data-subscribe-form data-sub-location="charts">
-        <label class="sr-only" for="sub-email">Email</label>
-        <input id="sub-email" name="email" type="email" required placeholder="you@example.com" autocomplete="email" />
-        <input class="hp" name="company" type="text" tabindex="-1" autocomplete="off" aria-hidden="true" />
-        <button class="btn btn-primary" type="submit">Email me the next close</button>
-      </form>
-      <p class="subscribe-status" data-sub-status aria-live="polite"></p>
-      <p class="subscribe-unsub">Already on the list? <a href="/unsubscribe">Unsubscribe</a>. Educational only — not advice.</p>
+    <section class="chart-section" aria-labelledby="tape">
+      <div class="chart-section-head">
+        <div>
+          <span>01 · NOW</span>
+          <h2 id="tape">The tape under the call</h2>
+        </div>
+        <p>Fast indicators for price, flows, leverage and surrounding markets.</p>
+      </div>
+      <div id="chart-desk" class="chart-desk"></div>
     </section>
 
-    <h2 class="roster-title" id="tape">The tape under the call</h2>
-    <div id="chart-desk" class="chart-desk"></div>
+    <section class="chart-section" aria-labelledby="cycle-atlas">
+      <div class="chart-section-head">
+        <div>
+          <span>02 · CONTEXT</span>
+          <h2 id="cycle-atlas">Cycle &amp; on-chain atlas</h2>
+        </div>
+        <p id="chart-atlas-note" class="chart-atlas-note">Loading long-horizon research charts…</p>
+      </div>
+      <div id="chart-atlas" class="chart-desk chart-desk--atlas"></div>
+    </section>
 
-    <h2 class="roster-title" id="cycle-atlas">Cycle &amp; on-chain atlas</h2>
-    <p id="chart-atlas-note" class="chart-atlas-note">Loading long-horizon research charts…</p>
-    <div id="chart-atlas" class="chart-desk"></div>
+    <section class="subscribe-box subscribe-hook charts-subscribe" id="new-subscribers" aria-labelledby="sub-title">
+      <div>
+        <span class="chart-page-eyebrow">Signal, not noise</span>
+        <h2 id="sub-title">Get the next Daily close</h2>
+        <p class="subscribe-lede" id="subscribe-hook-copy">
+          When the stall breaks — or fails — the letter hits your inbox the same day. Charts stay free here; the call moves by email.
+        </p>
+      </div>
+      <div>
+        <form class="subscribe-form" data-subscribe-form data-sub-location="charts">
+          <label class="sr-only" for="sub-email">Email</label>
+          <input id="sub-email" name="email" type="email" required placeholder="you@example.com" autocomplete="email" />
+          <input class="hp" name="company" type="text" tabindex="-1" autocomplete="off" aria-hidden="true" />
+          <button class="btn btn-primary" type="submit">Email me the next close</button>
+        </form>
+        <p class="subscribe-status" data-sub-status aria-live="polite"></p>
+        <p class="subscribe-unsub">Already subscribed? <a href="/unsubscribe">Unsubscribe</a>. Educational only — not advice.</p>
+      </div>
+    </section>
 
-    <h2 class="roster-title">Prior weeks</h2>
-    <div id="chart-archive" class="chart-archive"></div>
+    <section class="chart-section chart-section--archive" aria-labelledby="chart-archive-title">
+      <div class="chart-section-head">
+        <div>
+          <span>03 · TRACK RECORD</span>
+          <h2 id="chart-archive-title">Prior calls</h2>
+        </div>
+        <p>Select a prior desk view to compare the thesis with what followed.</p>
+      </div>
+      <div id="chart-archive" class="chart-archive"></div>
+    </section>
 
     <p class="disclaimer">
       Chart Desk is educational scenario research. Charts use independently sourced market data identified in each pack.

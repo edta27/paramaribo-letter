@@ -19,6 +19,20 @@
     return `${day}, ${time} UTC`;
   }
 
+  function fmtAsOf(value) {
+    const d = new Date(value);
+    if (!Number.isFinite(d.getTime())) return String(value || "");
+    return d.toLocaleString("en-US", {
+      timeZone: "UTC",
+      month: "short",
+      day: "numeric",
+      year: "numeric",
+      hour: "numeric",
+      minute: "2-digit",
+      timeZoneName: "short",
+    });
+  }
+
   function asTime(ts) {
     return Math.floor(Number(ts) / 1000);
   }
@@ -313,12 +327,17 @@
       })
       .join("");
     return `
-      <article class="chart-brief" data-brief="${esc(brief.id)}">
-        <div class="chart-brief-kicker">${esc(brief.asset || "Desk")}</div>
-        <h2>${esc(brief.headline || "")}</h2>
-        <p class="chart-brief-lede">${esc(brief.lede || "")}</p>
-        <div class="chart-brief-body">${brief.bodyHtml || ""}</div>
+      <article class="chart-brief${(brief.charts || []).length > 1 ? " chart-brief--wide" : ""}" data-brief="${esc(brief.id)}">
+        <header class="chart-brief-head">
+          <div class="chart-brief-kicker">${esc(brief.asset || "Desk")}</div>
+          <h2>${esc(brief.headline || "")}</h2>
+          <p class="chart-brief-lede">${esc(brief.lede || "")}</p>
+        </header>
         <div class="chart-stack">${chartBlocks}</div>
+        <details class="chart-analysis">
+          <summary>Emily's interpretation <span>Read analysis</span></summary>
+          <div class="chart-brief-body">${brief.bodyHtml || ""}</div>
+        </details>
       </article>`;
   }
 
@@ -345,15 +364,20 @@
 
     meta.innerHTML = `
       <div class="thesis-card">
-        <div class="thesis-eyebrow">Current call · Desk</div>
-        <h1 class="thesis-title">${esc(thesis)}</h1>
-        <p class="thesis-stakes">${esc(stakes)}</p>
-        ${levelsHtml(pack.levels)}
-        <div class="thesis-actions">
-          <a class="btn btn-primary" href="${esc(letterUrl)}">${esc(letterLabel)}</a>
-          <a class="btn" href="#tape">See the tape ↓</a>
+        <div class="thesis-copy">
+          <div class="thesis-eyebrow"><i class="chart-live-dot" aria-hidden="true"></i> Current market call</div>
+          <h2 class="thesis-title">${esc(thesis)}</h2>
+          <p class="thesis-stakes">${esc(stakes)}</p>
         </div>
-        <p class="meta">As-of ${esc(pack.asOf || pack.date)} · ${esc(pack.cadence || "weekly")} · pack <code>${esc(pack.id)}</code></p>
+        <div class="thesis-rail">
+          <span class="thesis-rail-label">Decision levels</span>
+          ${levelsHtml(pack.levels)}
+          <div class="thesis-actions">
+            <a class="btn btn-primary" href="${esc(letterUrl)}">${esc(letterLabel)}</a>
+            <a class="btn" href="#tape">Open dashboard ↓</a>
+          </div>
+          <p class="meta">Updated ${esc(fmtAsOf(pack.asOf || pack.date))} · ${esc(pack.cadence || "weekly")}</p>
+        </div>
       </div>
       <details class="source-details">
         <summary>Sources &amp; method</summary>
@@ -381,7 +405,7 @@
     const note = document.getElementById("chart-atlas-note");
     if (!root) return;
     activeAtlas = atlas;
-    if (note) note.textContent = `${atlas.dek || "Long-horizon research charts."} As-of ${atlas.asOf || atlas.date}.`;
+    if (note) note.textContent = `${atlas.dek || "Long-horizon research charts."} Updated ${fmtAsOf(atlas.asOf || atlas.date)}.`;
     root.innerHTML = (atlas.briefs || []).map(briefHtml).join("");
     (atlas.briefs || []).forEach((brief) => {
       (brief.charts || []).forEach((spec, i) => {

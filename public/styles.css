@@ -770,15 +770,62 @@ pre.note {
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { transition: none !important; animation: none !important; scroll-behavior: auto !important; }
 }
-.chart-meta { margin-bottom: 18px; }
+.charts-page .portal-stage { max-width: 1220px; }
+.chart-meta { margin-bottom: 42px; }
+.chart-page-eyebrow {
+  display: block;
+  color: var(--accent);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.13em;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+}
+.charts-page .feed-head { align-items: flex-end; margin-bottom: 14px; }
+.charts-page .feed-head h1 { font-family: var(--serif); font-size: clamp(28px, 4vw, 42px); }
+.chart-live-dot {
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--success);
+  box-shadow: 0 0 0 4px color-mix(in srgb, var(--success) 14%, transparent);
+}
+.chart-jump-nav {
+  display: flex;
+  gap: 6px;
+  margin: 0 0 18px;
+  padding: 5px;
+  width: fit-content;
+  border: 1px solid var(--stroke-subtle);
+  border-radius: 10px;
+  background: var(--sunken);
+}
+.chart-jump-nav a {
+  color: var(--mute);
+  font-size: 12px;
+  font-weight: 600;
+  padding: 7px 10px;
+  border-radius: 7px;
+  text-decoration: none;
+}
+.chart-jump-nav a:hover,
+.chart-jump-nav a:focus-visible { color: var(--text); background: var(--raised); }
 .thesis-card {
   background: linear-gradient(160deg, var(--raised), var(--base));
   border: 1px solid var(--stroke);
-  border-radius: 14px;
-  padding: 22px 22px 18px;
+  border-radius: 16px;
+  padding: 26px;
   margin-bottom: 12px;
+  display: grid;
+  grid-template-columns: minmax(0, 1.65fr) minmax(260px, 0.85fr);
+  gap: 28px;
+  box-shadow: 0 18px 50px color-mix(in srgb, #000 15%, transparent);
 }
 .thesis-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 9px;
   font-size: 11px;
   letter-spacing: 0.12em;
   text-transform: uppercase;
@@ -792,7 +839,7 @@ pre.note {
   line-height: 1.15;
   letter-spacing: -0.03em;
   margin: 0 0 12px;
-  max-width: 28ch;
+  max-width: 30ch;
 }
 .thesis-stakes {
   margin: 0 0 16px;
@@ -807,7 +854,7 @@ pre.note {
   flex-wrap: wrap;
   gap: 8px;
   padding: 0;
-  margin: 0 0 18px;
+  margin: 0 0 20px;
 }
 .thesis-levels li {
   font-size: 12px;
@@ -824,6 +871,20 @@ pre.note {
   flex-wrap: wrap;
   gap: 10px;
   margin-bottom: 12px;
+}
+.thesis-rail {
+  border-left: 1px solid var(--stroke);
+  padding-left: 24px;
+  align-self: stretch;
+}
+.thesis-rail-label {
+  display: block;
+  color: var(--mute);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  margin: 2px 0 10px;
+  text-transform: uppercase;
 }
 .thesis-actions .btn {
   height: 40px;
@@ -845,13 +906,54 @@ pre.note {
   box-shadow: 0 0 0 1px color-mix(in srgb, var(--accent) 18%, transparent);
 }
 .subscribe-hook h2 { font-size: 22px; }
-.chart-desk { display: flex; flex-direction: column; gap: 28px; margin: 18px 0 36px; }
-.chart-brief {
-  background: var(--base);
-  border: 1px solid var(--stroke-subtle);
-  border-radius: var(--radius);
-  padding: 20px;
+.chart-section { margin: 0 0 52px; scroll-margin-top: calc(var(--top) + 14px); }
+.chart-section-head {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 28px;
+  margin: 0 0 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--stroke);
 }
+.chart-section-head > div > span {
+  display: block;
+  color: var(--accent);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  margin-bottom: 5px;
+}
+.chart-section-head h2 {
+  font-family: var(--serif);
+  font-size: clamp(23px, 3vw, 30px);
+  letter-spacing: -0.025em;
+  line-height: 1.15;
+  margin: 0;
+}
+.chart-section-head > p {
+  color: var(--mute);
+  font-size: 12px;
+  line-height: 1.5;
+  margin: 0;
+  max-width: 44ch;
+  text-align: right;
+}
+.chart-desk {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  margin: 0;
+}
+.chart-brief {
+  min-width: 0;
+  background: linear-gradient(155deg, color-mix(in srgb, var(--raised) 36%, var(--base)), var(--base));
+  border: 1px solid var(--stroke-subtle);
+  border-radius: 14px;
+  padding: 16px;
+  box-shadow: 0 10px 30px color-mix(in srgb, #000 9%, transparent);
+}
+.chart-brief--wide { grid-column: 1 / -1; }
 .chart-brief-kicker {
   font-size: 11px;
   letter-spacing: 0.1em;
@@ -862,31 +964,31 @@ pre.note {
 }
 .chart-brief h2 {
   font-family: var(--serif);
-  font-size: 22px;
-  margin: 0 0 10px;
+  font-size: 21px;
+  margin: 0 0 7px;
   letter-spacing: -0.02em;
   line-height: 1.25;
 }
 .chart-brief-lede {
-  margin: 0 0 14px;
+  margin: 0;
   color: var(--text-2);
   font-size: 15px;
   line-height: 1.45;
 }
 .chart-brief-body p {
-  font-size: 15px;
+  font-size: 13px;
   line-height: 1.55;
   margin: 0 0 0.9em;
   color: var(--text-2);
 }
-.chart-stack { display: flex; flex-direction: column; gap: 14px; margin-top: 8px; }
-.chart-atlas-note { color: var(--mute); font-size: 13px; line-height: 1.55; margin: -10px 0 18px; }
+.chart-stack { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(420px, 100%), 1fr)); gap: 12px; margin-top: 15px; }
+.chart-atlas-note { color: var(--mute); font-size: 12px; line-height: 1.5; margin: 0; }
 .chart-panel {
   background: var(--sunken);
   border: 1px solid var(--stroke-subtle);
-  border-radius: 8px;
-  padding: 12px;
-  min-height: 450px;
+  border-radius: 10px;
+  padding: 10px;
+  min-width: 0;
 }
 .chart-panel-head {
   display: flex;
@@ -910,7 +1012,8 @@ pre.note {
 }
 .chart-fit:hover,
 .chart-fit:focus-visible { border-color: var(--accent); color: var(--text); }
-.lwc-chart { width: 100%; height: 350px; position: relative; }
+.lwc-chart { width: 100%; height: 290px; position: relative; }
+.chart-brief--wide .lwc-chart { height: 320px; }
 .chart-crosshair-readout { min-height: 18px; margin: 8px 0 0; color: var(--mute); font-size: 12px; line-height: 1.45; }
 .chart-crosshair-readout strong { color: var(--text-2); }
 .chart-data-table { margin-top: 8px; border-top: 1px solid var(--stroke-subtle); padding-top: 8px; }
@@ -923,9 +1026,31 @@ pre.note {
 .chart-data-table td:first-child { text-align: left; }
 .chart-data-table th { position: sticky; top: 0; background: var(--sunken); color: var(--mute); }
 .chart-loading { color: var(--mute); }
-.chart-archive {
+.chart-analysis {
+  margin-top: 12px;
+  border-top: 1px solid var(--stroke-subtle);
+  padding-top: 10px;
+}
+.chart-analysis summary {
   display: flex;
-  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  color: var(--text-2);
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 650;
+  list-style: none;
+}
+.chart-analysis summary::-webkit-details-marker { display: none; }
+.chart-analysis summary span { color: var(--accent); font-size: 0; font-weight: 600; }
+.chart-analysis summary span::after { content: "Read analysis"; font-size: 11px; }
+.chart-analysis[open] summary span { color: var(--mute); }
+.chart-analysis[open] summary span::after { content: "Hide analysis"; }
+.chart-analysis .chart-brief-body { padding: 12px 2px 0; }
+.chart-archive {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 8px;
   margin: 0 0 32px;
 }
@@ -945,6 +1070,45 @@ pre.note {
 }
 .chart-archive-item strong { display: block; font-size: 14px; margin-bottom: 4px; }
 .chart-archive-item span { font-size: 12px; color: var(--mute); }
+.charts-subscribe {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(360px, 0.9fr);
+  gap: 32px;
+  align-items: center;
+  margin: 0 0 52px;
+  padding: 24px;
+}
+.charts-subscribe h2 { margin: 0 0 7px; }
+.charts-subscribe .subscribe-lede { margin-bottom: 0; }
+.charts-subscribe .subscribe-unsub { margin-bottom: 0; }
+
+@media (max-width: 900px) {
+  .thesis-card { grid-template-columns: 1fr; gap: 20px; }
+  .thesis-rail { border-left: 0; border-top: 1px solid var(--stroke); padding: 18px 0 0; }
+  .chart-desk { grid-template-columns: 1fr; }
+  .chart-brief--wide { grid-column: auto; }
+  .chart-archive { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .charts-subscribe { grid-template-columns: 1fr; gap: 18px; }
+}
+
+@media (max-width: 620px) {
+  .charts-page .feed-head { align-items: flex-start; }
+  .charts-page .feed-toggle { margin-top: 7px; }
+  .chart-jump-nav { width: 100%; overflow-x: auto; }
+  .chart-jump-nav a { flex: 0 0 auto; }
+  .thesis-card { padding: 20px; }
+  .thesis-actions .btn { flex: 1 1 140px; }
+  .chart-section { margin-bottom: 38px; }
+  .chart-section-head { align-items: flex-start; flex-direction: column; gap: 7px; }
+  .chart-section-head > p { text-align: left; }
+  .chart-brief { padding: 12px; }
+  .chart-brief h2 { font-size: 20px; }
+  .lwc-chart,
+  .chart-brief--wide .lwc-chart { height: 270px; }
+  .chart-panel-head span { display: none; }
+  .chart-archive { grid-template-columns: 1fr; }
+  .charts-subscribe { padding: 20px; }
+}
 
 .cases-intro {
   font-size: 16px;
