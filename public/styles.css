@@ -880,6 +880,7 @@ pre.note {
   color: var(--text-2);
 }
 .chart-stack { display: flex; flex-direction: column; gap: 14px; margin-top: 8px; }
+.chart-atlas-note { color: var(--mute); font-size: 13px; line-height: 1.55; margin: -10px 0 18px; }
 .chart-panel {
   background: var(--sunken);
   border: 1px solid var(--stroke-subtle);
