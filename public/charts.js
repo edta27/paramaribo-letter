@@ -152,7 +152,7 @@
         return {
           time,
           value,
-          color: bars.unsigned || value >= 0 ? "rgba(50, 213, 131, 0.72)" : "rgba(249, 112, 102, 0.78)",
+          color: bars.unsigned ? t.accent : value >= 0 ? "rgba(50, 213, 131, 0.72)" : "rgba(249, 112, 102, 0.78)",
         };
       });
 
@@ -274,13 +274,13 @@
   }
 
   async function loadPack(id) {
-    const res = await fetch(`/charts/packs/${encodeURIComponent(id)}.json`);
+    const res = await fetch(`/charts/packs/${encodeURIComponent(id)}.json`, { cache: "no-store" });
     if (!res.ok) throw new Error("Could not load chart pack.");
     return res.json();
   }
 
   async function loadCatalog() {
-    const res = await fetch("/charts/catalog.json");
+    const res = await fetch("/charts/catalog.json", { cache: "no-store" });
     if (!res.ok) throw new Error("Could not load chart catalog.");
     return res.json();
   }

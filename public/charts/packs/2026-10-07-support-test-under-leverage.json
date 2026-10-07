@@ -1,0 +1,102 @@
+{
+  "id": "2026-10-07-support-test-under-leverage",
+  "date": "2026-10-07",
+  "kicker": "Chart Desk · Live update",
+  "title": "The reclaim failed; leverage is now the pressure point",
+  "dek": "Coinbase price structure, Farside ETF flows, OKX open interest, and the U.S. 10-year yield through 7 October 2026.",
+  "asOf": "2026-10-07T18:40:05Z",
+  "cadence": "event-driven",
+  "thesis": "The $86k reclaim failed. BTC is testing $82–83k intraday while open interest is 9.4% higher than a week ago.",
+  "stakes": "The current move is a long-led forced unwind, not yet a synchronized cross-market panic. A completed UTC close below $82k would confirm the next door.",
+  "levels": ["$86k", "$85.5k Oct 6 close", "$82–83k", "$80k", "$77k", "~$57.7k"],
+  "letterId": "2026-10-05-the-shock-ran",
+  "letterUrl": "/issue?id=2026-10-05-the-shock-ran",
+  "letterLabel": "Vol. 1 · Issue 29",
+  "subscribeHook": "A completed close below $82k — or a clean reclaim of $86k — updates the sequence. Charts stay free here; the call moves by email.",
+  "sourceNote": "Coinbase Exchange BTC-USD daily UTC candles through the partial 7 October session; Farside Investors US-session ETF flows through 6 October; OKX public BTC aggregate open-interest observations through 7 October 16:00 UTC; U.S. 10-year yield from FRED through 5 October; CoinMarketCap liquidation snapshot and Emily cross-market snapshot at 18:29 UTC. The 7 October candle is partial and the Farside row is incomplete; blanks are not zeroes. Educational scenario research; no leverage.",
+  "briefs": [
+    {
+      "id": "btc-live-support-test",
+      "asset": "BTC · LIVE SUPPORT TEST",
+      "headline": "$82–83k is being tested, not yet lost",
+      "lede": "6 October reached $86,698 but closed at $85,540. The partial 7 October candle is near $83,261 after touching $82,717.",
+      "bodyHtml": "<p><strong>Fact.</strong> The only completed close above $86k was 4 October. The next two completed sessions closed back below it. At 18:40 UTC on 7 October, BTC was down about 2.7% from the prior close, but the daily candle was still open.</p><p><strong>Read.</strong> The reclaim failed and the first support door is under pressure. A wick into $82–83k is not the same as a completed close below $82k.</p><p><strong>Decision rule.</strong> A completed UTC close below $82k opens $80k, then $77k. Acceptance back above $86k would invalidate the immediate breakdown path.</p>",
+      "charts": [
+        {
+          "title": "BTC daily range [USD] vs close/current · 7 Oct partial",
+          "bars": {
+            "label": "Daily high–low range [USD]",
+            "unsigned": true,
+            "data": [[1790035200000,1674.72],[1790121600000,3769.81],[1790208000000,2220.82],[1790294400000,2158.81],[1790380800000,692.67],[1790467200000,1044.94],[1790553600000,2481.63],[1790640000000,1821.01],[1790726400000,2701.86],[1790812800000,2136.97],[1790899200000,3399.03],[1790985600000,596.50],[1791072000000,2092.79],[1791158400000,2051.80],[1791244800000,1598.34],[1791331200000,2883.81]]
+          },
+          "line": {
+            "label": "BTC-USD close/current [USD]",
+            "data": [[1790035200000,86198.05],[1790121600000,84378.31],[1790208000000,84385.46],[1790294400000,84093.13],[1790380800000,84416.65],[1790467200000,84462.14],[1790553600000,83456.74],[1790640000000,83638.42],[1790726400000,83556.14],[1790812800000,84848.73],[1790899200000,84504.88],[1790985600000,84742.22],[1791072000000,86507.11],[1791158400000,85748.96],[1791244800000,85539.77],[1791331200000,83260.83]]
+          }
+        }
+      ]
+    },
+    {
+      "id": "btc-live-etf-flows",
+      "asset": "BTC · SPOT DEMAND",
+      "headline": "ETF demand flipped back to green, but not with breakout force",
+      "lede": "Farside recorded −$89.8M on 5 October and +$118.8M on 6 October: a two-session net of only +$29.0M.",
+      "bodyHtml": "<p><strong>Fact.</strong> The 6 October inflow reversed the prior day's outflow, but it remained far below the +$999.0M impulse on 21 September. The 7 October row was incomplete at retrieval and is shown as missing, not zero.</p><p><strong>Read.</strong> ETF demand is mixed and modest. It neither confirms a durable cash bid nor proves distribution by itself.</p><p><strong>Watch.</strong> Repeated outflows alongside a completed break below $82k would strengthen the downside case. Strong inflows with a reclaim of $86k would weaken it.</p>",
+      "charts": [
+        {
+          "title": "US spot BTC ETF net flow [US$M] vs BTC close/current",
+          "bars": {
+            "label": "Farside daily net flow [US$M]",
+            "data": [[1790035200000,714.7],[1790121600000,346.9],[1790208000000,190.7],[1790294400000,134.5],[1790380800000,null],[1790467200000,null],[1790553600000,31.0],[1790640000000,66.2],[1790726400000,-148.7],[1790812800000,102.7],[1790899200000,189.9],[1790985600000,null],[1791072000000,null],[1791158400000,-89.8],[1791244800000,118.8],[1791331200000,null]]
+          },
+          "line": {
+            "label": "BTC-USD close/current [USD]",
+            "data": [[1790035200000,86198.05],[1790121600000,84378.31],[1790208000000,84385.46],[1790294400000,84093.13],[1790380800000,84416.65],[1790467200000,84462.14],[1790553600000,83456.74],[1790640000000,83638.42],[1790726400000,83556.14],[1790812800000,84848.73],[1790899200000,84504.88],[1790985600000,84742.22],[1791072000000,86507.11],[1791158400000,85748.96],[1791244800000,85539.77],[1791331200000,83260.83]]
+          }
+        }
+      ]
+    },
+    {
+      "id": "btc-live-leverage",
+      "asset": "BTC · LEVERAGE",
+      "headline": "Leverage rebuilt faster than price",
+      "lede": "OKX aggregate BTC open interest rose from $3.06B on 30 September to $3.34B on 7 October, while BTC was roughly flat over that span before today's partial selloff.",
+      "bodyHtml": "<p><strong>Fact.</strong> OKX open interest is up about 9.4% in seven days and average recent BTC-USDT perpetual funding is still positive at roughly 0.0035% per eight hours. CoinMarketCap's 18:29 UTC snapshot showed about $954M of 24-hour crypto liquidations, approximately 94% longs; BTC accounted for about $409M.</p><p><strong>Read.</strong> This is the clearest active stress signal: a crowded long unwind can accelerate a support break. It is not, by itself, evidence of market-wide panic.</p><p><strong>Watch.</strong> Falling price with stubborn or rising open interest is the dangerous combination. Falling open interest with support holding would indicate leverage is clearing.</p>",
+      "charts": [
+        {
+          "title": "OKX BTC aggregate open interest [US$B] vs BTC close/current",
+          "bars": {
+            "label": "OKX BTC open interest [US$B]",
+            "unsigned": true,
+            "data": [[1790035200000,3.40374],[1790121600000,3.34117],[1790208000000,3.17472],[1790294400000,3.15624],[1790380800000,3.12495],[1790467200000,3.10667],[1790553600000,3.15167],[1790640000000,3.09155],[1790726400000,3.05572],[1790812800000,3.15725],[1790899200000,3.25456],[1790985600000,3.16161],[1791072000000,3.18040],[1791158400000,3.20706],[1791244800000,3.32570],[1791331200000,3.34426]]
+          },
+          "line": {
+            "label": "BTC-USD close/current [USD]",
+            "data": [[1790035200000,86198.05],[1790121600000,84378.31],[1790208000000,84385.46],[1790294400000,84093.13],[1790380800000,84416.65],[1790467200000,84462.14],[1790553600000,83456.74],[1790640000000,83638.42],[1790726400000,83556.14],[1790812800000,84848.73],[1790899200000,84504.88],[1790985600000,84742.22],[1791072000000,86507.11],[1791158400000,85748.96],[1791244800000,85539.77],[1791331200000,83260.83]]
+          }
+        }
+      ]
+    },
+    {
+      "id": "btc-live-macro",
+      "asset": "MACRO · SURROUNDING MARKET",
+      "headline": "Rates are hostile; the rest of the market is not in panic",
+      "lede": "The U.S. 10-year yield reached 5.31% on 5 October while Nasdaq and the S&P 500 remained near their 45-day highs.",
+      "bodyHtml": "<p><strong>Fact.</strong> FRED's latest 10-year yield observation was 5.31%, up 7 basis points over five observations. Emily's latest cross-market snapshot showed VIX at 15.01 and the U.S. high-yield spread at 3.03%, with neither signaling synchronized stress.</p><p><strong>Read.</strong> High rates create valuation and liquidity vulnerability, but calm volatility and credit argue against calling this a broad panic. The current evidence fits a crypto-led leverage event.</p><p><strong>Wildcard.</strong> Reprice quickly if volatility, credit spreads, equities, and BTC begin deteriorating together; that transmission would turn a crypto unwind into a broader event.</p>",
+      "charts": [
+        {
+          "title": "U.S. 10-year yield [%] vs BTC close · latest FRED value 5 Oct",
+          "bars": {
+            "label": "U.S. 10-year yield [%]",
+            "unsigned": true,
+            "data": [[1790035200000,4.96],[1790121600000,5.11],[1790208000000,5.18],[1790294400000,5.17],[1790380800000,null],[1790467200000,null],[1790553600000,5.24],[1790640000000,5.26],[1790726400000,5.29],[1790812800000,5.24],[1790899200000,5.28],[1790985600000,null],[1791072000000,null],[1791158400000,5.31],[1791244800000,null],[1791331200000,null]]
+          },
+          "line": {
+            "label": "BTC-USD close/current [USD]",
+            "data": [[1790035200000,86198.05],[1790121600000,84378.31],[1790208000000,84385.46],[1790294400000,84093.13],[1790380800000,84416.65],[1790467200000,84462.14],[1790553600000,83456.74],[1790640000000,83638.42],[1790726400000,83556.14],[1790812800000,84848.73],[1790899200000,84504.88],[1790985600000,84742.22],[1791072000000,86507.11],[1791158400000,85748.96],[1791244800000,85539.77],[1791331200000,83260.83]]
+          }
+        }
+      ]
+    }
+  ]
+}

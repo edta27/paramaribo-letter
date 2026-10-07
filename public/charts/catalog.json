@@ -1,5 +1,30 @@
 [
   {
+    "id": "2026-10-07-support-test-under-leverage",
+    "date": "2026-10-07",
+    "kicker": "Chart Desk · Live update",
+    "title": "The reclaim failed; leverage is now the pressure point",
+    "dek": "Coinbase price structure, Farside ETF flows, OKX open interest, and the U.S. 10-year yield through 7 October 2026.",
+    "asOf": "2026-10-07T18:40:05Z",
+    "cadence": "event-driven",
+    "thesis": "The $86k reclaim failed. BTC is testing $82–83k intraday while open interest is 9.4% higher than a week ago.",
+    "stakes": "The current move is a long-led forced unwind, not yet a synchronized cross-market panic. A completed UTC close below $82k would confirm the next door.",
+    "levels": [
+      "$86k",
+      "$85.5k Oct 6 close",
+      "$82–83k",
+      "$80k",
+      "$77k",
+      "~$57.7k"
+    ],
+    "letterId": "2026-10-05-the-shock-ran",
+    "letterUrl": "/issue?id=2026-10-05-the-shock-ran",
+    "letterLabel": "Vol. 1 · Issue 29",
+    "subscribeHook": "A completed close below $82k — or a clean reclaim of $86k — updates the sequence. Charts stay free here; the call moves by email.",
+    "sourceNote": "Coinbase Exchange BTC-USD daily UTC candles through the partial 7 October session; Farside Investors US-session ETF flows through 6 October; OKX public BTC aggregate open-interest observations through 7 October 16:00 UTC; U.S. 10-year yield from FRED through 5 October; CoinMarketCap liquidation snapshot and Emily cross-market snapshot at 18:29 UTC. The 7 October candle is partial and the Farside row is incomplete; blanks are not zeroes. Educational scenario research; no leverage.",
+    "packUrl": "/charts/packs/2026-10-07-support-test-under-leverage.json"
+  },
+  {
     "id": "2026-10-05-the-shock-ran",
     "date": "2026-10-05",
     "kicker": "Chart Desk \u00b7 Issue 29",
