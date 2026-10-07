@@ -884,9 +884,43 @@ pre.note {
   background: var(--sunken);
   border: 1px solid var(--stroke-subtle);
   border-radius: 8px;
-  padding: 12px 12px 8px;
-  height: 300px;
+  padding: 12px;
+  min-height: 450px;
 }
+.chart-panel-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 10px;
+}
+.chart-panel-head strong { display: block; font-size: 13px; line-height: 1.4; }
+.chart-panel-head span { display: block; color: var(--mute); font-size: 11px; line-height: 1.4; margin-top: 3px; }
+.chart-fit {
+  flex: 0 0 auto;
+  border: 1px solid var(--stroke);
+  border-radius: 7px;
+  background: var(--base);
+  color: var(--text-2);
+  padding: 6px 9px;
+  font: inherit;
+  font-size: 11px;
+  cursor: pointer;
+}
+.chart-fit:hover,
+.chart-fit:focus-visible { border-color: var(--accent); color: var(--text); }
+.lwc-chart { width: 100%; height: 350px; position: relative; }
+.chart-crosshair-readout { min-height: 18px; margin: 8px 0 0; color: var(--mute); font-size: 12px; line-height: 1.45; }
+.chart-crosshair-readout strong { color: var(--text-2); }
+.chart-data-table { margin-top: 8px; border-top: 1px solid var(--stroke-subtle); padding-top: 8px; }
+.chart-data-table summary { color: var(--mute); font-size: 12px; cursor: pointer; }
+.chart-data-scroll { overflow-x: auto; max-height: 260px; margin-top: 8px; }
+.chart-data-table table { width: 100%; border-collapse: collapse; font-size: 12px; }
+.chart-data-table th,
+.chart-data-table td { padding: 7px 8px; text-align: right; border-bottom: 1px solid var(--stroke-subtle); white-space: nowrap; }
+.chart-data-table th:first-child,
+.chart-data-table td:first-child { text-align: left; }
+.chart-data-table th { position: sticky; top: 0; background: var(--sunken); color: var(--mute); }
 .chart-loading { color: var(--mute); }
 .chart-archive {
   display: flex;
@@ -1034,7 +1068,9 @@ pre.note {
   .hero, .grid { grid-template-columns: 1fr; }
   .issue-page .cover { height: 200px; }
   .brand { font-size: 28px; }
-  .chart-panel { height: 260px; }
+  .chart-panel { min-height: 410px; padding: 10px; }
+  .lwc-chart { height: 310px; }
+  .chart-panel-head { gap: 8px; }
 }
 
 .case-page .case-figure img {
