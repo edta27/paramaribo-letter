@@ -38,6 +38,54 @@
       <div class="emily-meter emily-meter--${esc(slug)}" aria-label="${esc(aria)}"><span style="width:${Math.max(0, Math.min(100, Number(score) || 0))}%"></span></div>
     </article>`;
 
+  const deltaText = (value, suffix = "") => {
+    if (!Number.isFinite(Number(value))) return "—";
+    const number = Number(value);
+    return `${number > 0 ? "+" : ""}${number.toFixed(1).replace(".0", "")}${suffix}`;
+  };
+
+  const dailyChangeCard = (label, value, note, tone) => `
+    <article class="emily-change-card emily-change-card--${esc(tone)}">
+      <span>${esc(label)}</span>
+      <strong>${esc(value)}</strong>
+      <p>${esc(note)}</p>
+    </article>`;
+
+  async function renderDailyChange() {
+    const target = document.getElementById("emily-change-grid");
+    const copy = document.getElementById("emily-change-copy");
+    if (!target || !copy) return;
+    try {
+      const response = await fetch("/emily-history.json", { cache: "no-store" });
+      if (!response.ok) throw new Error("History unavailable");
+      const history = await response.json();
+      const currentTime = new Date(data.updated_at).getTime();
+      const previous = (Array.isArray(history) ? history : [])
+        .filter((row) => new Date(row.updated_at).getTime() < currentTime)
+        .sort((a, b) => new Date(b.updated_at) - new Date(a.updated_at))[0];
+      if (!previous) throw new Error("No prior snapshot");
+
+      const btcMove = (Number(data.crypto.btc_price_usd) / Number(previous.btc_price_usd) - 1) * 100;
+      const rotationMove = Number(data.scores.rotation) - Number(previous.rotation);
+      const vulnerabilityMove = Number(data.scores.vulnerability) - Number(previous.vulnerability);
+      const activeMove = Number(data.scores.active) - Number(previous.active);
+      const priorLabel = new Intl.DateTimeFormat("en-US", {
+        timeZone: "America/Chicago", month: "short", day: "numeric", hour: "numeric", minute: "2-digit"
+      }).format(new Date(previous.updated_at));
+
+      copy.textContent = `Compared with the prior automated snapshot from ${priorLabel} Central.`;
+      target.innerHTML = [
+        dailyChangeCard("BTC price", deltaText(btcMove, "%"), btcMove < 0 ? "Price weakened between snapshots." : "Price strengthened between snapshots.", btcMove < 0 ? "risk" : "calm"),
+        dailyChangeCard("Alt rotation", deltaText(rotationMove, " pts"), rotationMove < 0 ? "Breadth weakened toward Bitcoin shelter." : "Participation broadened beyond Bitcoin.", rotationMove < 0 ? "risk" : "calm"),
+        dailyChangeCard("Vulnerability", deltaText(vulnerabilityMove, " pts"), vulnerabilityMove > 0 ? "Shock-transmission capacity increased." : "Structural fragility eased.", vulnerabilityMove > 0 ? "watch" : "calm"),
+        dailyChangeCard("Active panic", deltaText(activeMove, " pts"), activeMove > 0 ? `Stress evidence rose; the current band remains ${data.scores.active_band.toLowerCase()}.` : "Visible panic evidence receded.", activeMove > 0 ? "watch" : "calm"),
+      ].join("");
+    } catch (error) {
+      copy.textContent = "The daily comparison will appear after two valid automated snapshots are available.";
+      target.innerHTML = dailyChangeCard("Baseline", "Established", "Today's verified reading is the starting comparison point.", "neutral");
+    }
+  }
+
   const c = data.crypto || {};
   const s = data.scores || {};
   const fgi = data.sentiment || {};
@@ -63,8 +111,16 @@
   const dollar = m.dollar ? signed(m.dollar.change_5obs_pct) : "unknown";
 
   root.innerHTML = `
-    <section class="emily-hero">
-      <div class="thesis-eyebrow">Emily · Daily automated market intelligence</div>
+    <nav class="chart-jump-nav emily-jump-nav" aria-label="Emily dashboard sections">
+      <a href="#emily-summary">Today</a>
+      <a href="#emily-core">Market structure</a>
+      <a href="#emily-context">Broader context</a>
+      <a href="#emily-rules">Decision rules</a>
+      <a href="#emily-method">Method</a>
+    </nav>
+
+    <section class="emily-hero" id="emily-summary">
+      <div class="thesis-eyebrow"><i class="chart-live-dot" aria-hidden="true"></i> Emily · Daily automated market intelligence</div>
       <h1>${esc(data.headline)}</h1>
       <p class="lede">${esc(data.summary)}</p>
       <p class="emily-updated">Updated <time datetime="${esc(data.updated_at)}">${esc(when(data.updated_at))}</time> · ${esc(data.quality)} · Decision: <span class="emily-call">${esc(data.decision)}</span></p>
@@ -76,9 +132,25 @@
       ${metric("Active panic", s.active, `${s.active_band}. Is synchronized panic visible now?`, s.active_slug, `Active panic ${s.active} out of 100`)}
     </section>
 
-    <div class="note">The vulnerability meter is not a crash probability. It measures the structure available to transmit a future surprise. The active-panic meter requires current evidence of price damage, volatility, credit stress, deleveraging and liquidity contraction.</div>
+    <section class="emily-change" aria-labelledby="emily-change-title">
+      <div class="emily-change-head">
+        <div>
+          <span class="chart-page-eyebrow">Since the last snapshot</span>
+          <h2 id="emily-change-title">What changed today?</h2>
+        </div>
+        <p id="emily-change-copy">Loading the prior verified snapshot…</p>
+      </div>
+      <div id="emily-change-grid" class="emily-change-grid" aria-live="polite"></div>
+    </section>
 
-    <section class="emily-grid">
+    <div class="note emily-meter-note"><strong>How to read this:</strong> vulnerability is not a crash probability. It measures the structure available to transmit a future surprise; active panic requires visible price damage, volatility, credit stress, deleveraging and liquidity contraction.</div>
+
+    <section class="emily-section" id="emily-core" aria-labelledby="emily-core-title">
+      <div class="chart-section-head emily-section-head">
+        <div><span>01 · CURRENT STRUCTURE</span><h2 id="emily-core-title">What the market is doing now</h2></div>
+        <p>The two highest-frequency modules remain open by default.</p>
+      </div>
+      <div class="emily-grid emily-grid--primary">
       <article class="emily-panel">
         <div class="feed-kicker">Daily crypto structure</div>
         <h2>Bitcoin and participation</h2>
@@ -105,9 +177,22 @@
         <p><strong>Read:</strong> CoinMarketCap supplies the cross-venue view; OKX remains an independent venue check. Missing values remain unknown.</p>
       </article>
 
-      <article class="emily-panel emily-panel--wide">
-        <div class="feed-kicker">Consumer exhaustion</div>
-        <h2>Are households spending beyond their income support?</h2>
+      </div>
+    </section>
+
+    <section class="emily-section" id="emily-context" aria-labelledby="emily-context-title">
+      <div class="chart-section-head emily-section-head">
+        <div><span>02 · BROADER CONTEXT</span><h2 id="emily-context-title">The slower transmission map</h2></div>
+        <p>Open a module when you need its full evidence table and methodology.</p>
+      </div>
+      <div class="emily-grid emily-grid--disclosures">
+
+      <details class="emily-panel emily-panel--wide emily-disclosure">
+        <summary>
+          <span><small>Consumer exhaustion</small><strong>Are households spending beyond their income support?</strong></span>
+          <span class="emily-disclosure-status">${esc(consumer.score)} / 100 · ${esc(consumer.band)}</span>
+        </summary>
+        <div class="emily-disclosure-body">
         <div class="emily-table-wrap">
           <table class="emily-table">
             <thead><tr><th>Evidence</th><th>Latest reading</th><th>Interpretation</th></tr></thead>
@@ -122,11 +207,15 @@
         </div>
         <p><strong>Consumer Exhaustion score:</strong> ${esc(consumer.score)} / 100 · ${esc(consumer.band)}. It raises panic vulnerability only when spending-income divergence, low saving and weak sentiment agree.</p>
         <p class="emily-updated">Latest monthly observation set through ${esc(consumer.date)}. This is a slow-moving vulnerability signal, not evidence of active panic.</p>
-      </article>
+        </div>
+      </details>
 
-      <article class="emily-panel emily-panel--wide">
-        <div class="feed-kicker">Equity–rates divergence</div>
-        <h2>Are growth equities ignoring expensive money?</h2>
+      <details class="emily-panel emily-panel--wide emily-disclosure">
+        <summary>
+          <span><small>Equity–rates divergence</small><strong>Are growth equities ignoring expensive money?</strong></span>
+          <span class="emily-disclosure-status">${esc(equityRates.score)} / 100 · ${esc(equityRates.band)}</span>
+        </summary>
+        <div class="emily-disclosure-body">
         <div class="emily-table-wrap">
           <table class="emily-table">
             <thead><tr><th>Evidence</th><th>Latest reading</th><th>Interpretation</th></tr></thead>
@@ -141,11 +230,15 @@
         </div>
         <p><strong>Equity–Rates Divergence score:</strong> ${esc(equityRates.score)} / 100 · ${esc(equityRates.band)}. ${esc(equityRates.interpretation)}</p>
         <p class="emily-updated">Latest available observation: ${esc(equityRates.latest_date)}. This module contributes to panic vulnerability but never raises active panic by itself.</p>
-      </article>
+        </div>
+      </details>
 
-      <article class="emily-panel emily-panel--wide">
-        <div class="feed-kicker">Surrounding markets</div>
-        <h2>Is stress synchronizing?</h2>
+      <details class="emily-panel emily-panel--wide emily-disclosure">
+        <summary>
+          <span><small>Surrounding markets</small><strong>Is stress synchronizing?</strong></span>
+          <span class="emily-disclosure-status">VIX ${esc(vix)} · HY ${esc(hy)}</span>
+        </summary>
+        <div class="emily-disclosure-body">
         <div class="emily-table-wrap">
           <table class="emily-table">
             <thead><tr><th>Channel</th><th>Latest</th><th>Why it matters</th></tr></thead>
@@ -160,11 +253,15 @@
           </table>
         </div>
         <p class="emily-updated">Latest available macro date: ${esc(model.latest_macro_date)}. Traditional-market feeds naturally lag on weekends and holidays.</p>
-      </article>
+        </div>
+      </details>
 
-      <article class="emily-panel emily-panel--wide">
-        <div class="feed-kicker">Wildcard early warning</div>
-        <h2>What could abruptly change the regime?</h2>
+      <details class="emily-panel emily-panel--wide emily-disclosure">
+        <summary>
+          <span><small>Wildcard early warning</small><strong>What could abruptly change the regime?</strong></span>
+          <span class="emily-disclosure-status">Gate · ${esc(wildcard.market_gate)}</span>
+        </summary>
+        <div class="emily-disclosure-body">
         <p><strong>External-event evidence:</strong> ${esc(wildcard.evidence_state)}. <strong>Jump risk:</strong> ${esc(wildcard.jump_risk)}. <strong>Market-transmission gate:</strong> ${esc(wildcard.market_gate)}.</p>
         <p>${esc(wildcard.market_read)}</p>
         <div class="emily-table-wrap">
@@ -188,7 +285,18 @@
           <li><strong>Financial plumbing:</strong> stablecoin, exchange, ETF or funding stress → market depth loss → forced deleveraging.</li>
         </ul>
         <p class="emily-updated">Rule: the wildcard state never changes because a story sounds frightening. It changes only when independent evidence crosses a defined gate. A low observed state is not the same as low jump risk.</p>
-      </article>
+        </div>
+      </details>
+
+      </div>
+    </section>
+
+    <section class="emily-section" id="emily-rules" aria-labelledby="emily-rules-title">
+      <div class="chart-section-head emily-section-head">
+        <div><span>03 · DECISION RULES</span><h2 id="emily-rules-title">What changes Emily's position</h2></div>
+        <p>Precommitted evidence gates keep the call from moving with the mood.</p>
+      </div>
+      <div class="emily-grid emily-grid--rules">
 
       <article class="emily-panel">
         <div class="feed-kicker">Escalation test</div>
@@ -216,20 +324,40 @@
         </ul>
       </article>
 
-      <article class="emily-panel emily-panel--wide">
-        <div class="feed-kicker">Method and limits</div>
-        <h2>Free data, fail-closed publishing</h2>
+      </div>
+    </section>
+
+    <section class="emily-section" id="emily-method" aria-labelledby="emily-method-title">
+      <div class="chart-section-head emily-section-head">
+        <div><span>04 · TRANSPARENCY</span><h2 id="emily-method-title">Method, limits and sources</h2></div>
+        <p>The full calculation boundaries and research trail remain available.</p>
+      </div>
+      <div class="emily-grid emily-grid--disclosures">
+      <details class="emily-panel emily-panel--wide emily-disclosure">
+        <summary>
+          <span><small>Method and limits</small><strong>Free data, fail-closed publishing</strong></span>
+          <span class="emily-disclosure-status">View method</span>
+        </summary>
+        <div class="emily-disclosure-body">
         <p>Emily separates market vulnerability from active panic. Required BTC and breadth data must be fresh. Optional feeds that fail are disclosed and removed from the calculation; they never become artificial green signals. If too little evidence remains, the daily job fails and yesterday's page stays in place.</p>
         <p>ETF flows, options positioning, order-book depth, shipping, public-health developments and breaking geopolitical news still require an event-driven research review. X posts are not used in the automatic score because reliable automated access is not free.</p>
         <p>The Wildcard Early Warning module is deliberately separate from the Panic Meter. Unverified external-event claims cannot raise the automated market score; verified consequences can trigger a full reassessment.</p>
-      </article>
-    </section>
+        </div>
+      </details>
 
-    <section class="emily-panel">
-      <div class="feed-kicker">Research trail</div>
-      <h2>Sources behind today's automated desk</h2>
+      <details class="emily-panel emily-panel--wide emily-disclosure">
+        <summary>
+          <span><small>Research trail</small><strong>Sources behind today's automated desk</strong></span>
+          <span class="emily-disclosure-status">${esc(data.quality)} · View sources</span>
+        </summary>
+        <div class="emily-disclosure-body">
       <p class="emily-sources">${sourceLinks}</p>
       ${gaps}
       <p class="emily-sources"><strong>Model note:</strong> This is an evidence meter, not a statistically calibrated crash probability and not personalized financial advice.</p>
+        </div>
+      </details>
+      </div>
     </section>`;
+
+  renderDailyChange();
 })();
