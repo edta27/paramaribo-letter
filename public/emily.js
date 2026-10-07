@@ -47,6 +47,7 @@
   const m = data.macro || {};
   const consumer = data.consumer || {};
   const equityRates = data.equity_rates || {};
+  const wildcard = data.wildcard || {};
   const model = data.model || {};
   const sourceLinks = (data.sources || []).map((item) =>
     `<a href="${esc(item.url)}">${esc(item.label)}</a>`).join(" · ");
@@ -161,6 +162,34 @@
         <p class="emily-updated">Latest available macro date: ${esc(model.latest_macro_date)}. Traditional-market feeds naturally lag on weekends and holidays.</p>
       </article>
 
+      <article class="emily-panel emily-panel--wide">
+        <div class="feed-kicker">Wildcard early warning</div>
+        <h2>What could abruptly change the regime?</h2>
+        <p><strong>External-event evidence:</strong> ${esc(wildcard.evidence_state)}. <strong>Jump risk:</strong> ${esc(wildcard.jump_risk)}. <strong>Market-transmission gate:</strong> ${esc(wildcard.market_gate)}.</p>
+        <p>${esc(wildcard.market_read)}</p>
+        <div class="emily-table-wrap">
+          <table class="emily-table">
+            <thead><tr><th>State</th><th>Evidence requirement</th><th>Examples Emily watches</th></tr></thead>
+            <tbody>
+              <tr><td>0 · Unverified signal</td><td>A claim, isolated event or anomaly without independent confirmation.</td><td>Rumors, a single report or an unexplained market move.</td></tr>
+              <tr><td>1 · Verified first-order event</td><td>Multiple credible sources establish that the event occurred.</td><td>Confirmed outbreak, policy action, conflict or infrastructure failure.</td></tr>
+              <tr><td>2 · Sustained transmission</td><td>The effect persists beyond its origin instead of remaining contained.</td><td>Secondary spread, supply interruption, funding stress or repeated operational failures.</td></tr>
+              <tr><td>3 · Geographic or sector expansion</td><td>Independent regions, industries or financial channels become affected.</td><td>Cross-border spread, shipping rerouting, energy/fertilizer shock or banking contagion.</td></tr>
+              <tr><td>4 · Behavioral or policy response</td><td>Households, firms or governments materially change behavior.</td><td>Travel restrictions, closures, emergency policy, sanctions, tariffs or inventory hoarding.</td></tr>
+              <tr><td>5 · Macro-market shock</td><td>Credit, volatility, equities, commodities and crypto reprice together.</td><td>Liquidity withdrawal, forced deleveraging and discontinuous price gaps.</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <h3>Candidate transmission paths</h3>
+        <ul>
+          <li><strong>Public health:</strong> transmission → behavioral restrictions → growth and liquidity shock.</li>
+          <li><strong>Geopolitics and shipping:</strong> chokepoint disruption → freight, oil and fertilizer → inflation and rates.</li>
+          <li><strong>Trade and policy:</strong> enacted tariffs, sanctions or capital controls → dollar, yields, earnings and risk appetite.</li>
+          <li><strong>Financial plumbing:</strong> stablecoin, exchange, ETF or funding stress → market depth loss → forced deleveraging.</li>
+        </ul>
+        <p class="emily-updated">Rule: the wildcard state never changes because a story sounds frightening. It changes only when independent evidence crosses a defined gate. A low observed state is not the same as low jump risk.</p>
+      </article>
+
       <article class="emily-panel">
         <div class="feed-kicker">Escalation test</div>
         <h2>Would raise the meter</h2>
@@ -191,7 +220,8 @@
         <div class="feed-kicker">Method and limits</div>
         <h2>Free data, fail-closed publishing</h2>
         <p>Emily separates market vulnerability from active panic. Required BTC and breadth data must be fresh. Optional feeds that fail are disclosed and removed from the calculation; they never become artificial green signals. If too little evidence remains, the daily job fails and yesterday's page stays in place.</p>
-        <p>ETF flows, options positioning, order-book depth, shipping and breaking geopolitical news still require an event-driven research review. X posts are not used in the automatic score because reliable automated access is not free.</p>
+        <p>ETF flows, options positioning, order-book depth, shipping, public-health developments and breaking geopolitical news still require an event-driven research review. X posts are not used in the automatic score because reliable automated access is not free.</p>
+        <p>The Wildcard Early Warning module is deliberately separate from the Panic Meter. Unverified external-event claims cannot raise the automated market score; verified consequences can trigger a full reassessment.</p>
       </article>
     </section>
 

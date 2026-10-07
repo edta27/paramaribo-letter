@@ -957,6 +957,25 @@ def main() -> None:
         decision = "WAIT"
         headline = "No active panic. Keep watching the structure."
 
+    if active >= 60:
+        wildcard_market_gate = "Triggered"
+        wildcard_market_read = (
+            "Macro-market stress is synchronized. Investigate whether an external catalyst "
+            "is driving the move; the cause remains unassigned until independently verified."
+        )
+    elif active >= 25:
+        wildcard_market_gate = "Watch"
+        wildcard_market_read = (
+            "Some transmission evidence is visible, but it has not reached a synchronized "
+            "macro-shock state."
+        )
+    else:
+        wildcard_market_gate = "Not triggered"
+        wildcard_market_read = (
+            "The automated feeds do not show synchronized cross-market transmission. This "
+            "does not rule out jump risk from a new, unobserved event."
+        )
+
     source_dates = [row["date"] for row in macro.values() if row.get("date")]
     quality = "DQ-A" if not gaps else "DQ-B" if len(gaps) <= 2 else "DQ-C"
     notes = [
@@ -1011,6 +1030,13 @@ def main() -> None:
         "macro": macro,
         "consumer": consumer,
         "equity_rates": equity_rates,
+        "wildcard": {
+            "evidence_state": "Unscored — requires an event-driven verification review",
+            "jump_risk": "Unscored",
+            "market_gate": wildcard_market_gate,
+            "market_read": wildcard_market_read,
+            "active_panic_reference": active,
+        },
         "model": {
             "vulnerability_components": vulnerability_detail,
             "active_components": active_detail,
