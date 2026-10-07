@@ -113,7 +113,8 @@
   const treasuryTotal = Number.isFinite(Number(treasury.total_holdings_btc))
     ? `${(Number(treasury.total_holdings_btc) / 1e6).toFixed(2)}M BTC`
     : "Awaiting snapshot";
-  const treasuryDelta = Number.isFinite(Number(treasury.change_since_last_snapshot_btc))
+  const treasuryDelta = treasury.change_since_last_snapshot_btc != null
+    && Number.isFinite(Number(treasury.change_since_last_snapshot_btc))
     ? `${deltaText(treasury.change_since_last_snapshot_btc, " BTC")} since prior snapshot`
     : "Baseline being established";
 
