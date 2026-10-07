@@ -92,6 +92,7 @@
   const d = data.derivatives || {};
   const agg = data.aggregated_derivatives || {};
   const st = data.stablecoins || {};
+  const treasury = data.corporate_treasuries || {};
   const m = data.macro || {};
   const consumer = data.consumer || {};
   const equityRates = data.equity_rates || {};
@@ -109,6 +110,12 @@
   const oil = m.oil ? `$${n(m.oil.value, 2)}` : "unknown";
   const sp = m.sp500 ? signed(m.sp500.change_5obs_pct) : "unknown";
   const dollar = m.dollar ? signed(m.dollar.change_5obs_pct) : "unknown";
+  const treasuryTotal = Number.isFinite(Number(treasury.total_holdings_btc))
+    ? `${(Number(treasury.total_holdings_btc) / 1e6).toFixed(2)}M BTC`
+    : "Awaiting snapshot";
+  const treasuryDelta = Number.isFinite(Number(treasury.change_since_last_snapshot_btc))
+    ? `${deltaText(treasury.change_since_last_snapshot_btc, " BTC")} since prior snapshot`
+    : "Baseline being established";
 
   root.innerHTML = `
     <nav class="chart-jump-nav emily-jump-nav" aria-label="Emily dashboard sections">
@@ -258,6 +265,30 @@
 
       <details class="emily-panel emily-panel--wide emily-disclosure">
         <summary>
+          <span><small>Corporate treasury concentration</small><strong>Who is absorbing Bitcoin supply—and how concentrated is it?</strong></span>
+          <span class="emily-disclosure-status">${esc(treasuryTotal)} · ${n(treasury.top_holder_share_pct, 1)}% top holder</span>
+        </summary>
+        <div class="emily-disclosure-body">
+        <div class="emily-table-wrap">
+          <table class="emily-table">
+            <thead><tr><th>Evidence</th><th>Latest reading</th><th>Interpretation</th></tr></thead>
+            <tbody>
+              <tr><td>Public companies</td><td>${esc(treasury.company_count)}</td><td>Companies included in CoinMarketCap's current public treasury table.</td></tr>
+              <tr><td>Total holdings</td><td>${Number.isFinite(Number(treasury.total_holdings_btc)) ? `${Number(treasury.total_holdings_btc).toLocaleString()} BTC` : "—"}</td><td>${n(treasury.share_of_max_supply_pct, 2)}% of Bitcoin's fixed 21 million maximum supply.</td></tr>
+              <tr><td>Largest holder</td><td>${esc(treasury.top_holder?.name)} · ${Number.isFinite(Number(treasury.top_holder?.holdings_btc)) ? `${Number(treasury.top_holder.holdings_btc).toLocaleString()} BTC` : "—"}</td><td>${n(treasury.top_holder_share_pct, 2)}% of reported public-company holdings.</td></tr>
+              <tr><td>Top-ten concentration</td><td>${n(treasury.top_10_share_pct, 2)}%</td><td>Higher concentration makes aggregate treasury demand more dependent on a small number of issuers.</td></tr>
+              <tr><td>Largest country exposure</td><td>${esc(treasury.top_country)} · ${n(treasury.top_country_share_pct, 1)}%</td><td>Shows the jurisdiction where reported corporate holdings are most concentrated.</td></tr>
+              <tr><td>Daily history</td><td>${esc(treasuryDelta)}</td><td>A change appears after two valid Emily snapshots; it is not inferred when the source is unavailable.</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p><strong>Read:</strong> corporate accumulation can absorb liquid supply, while concentrated ownership can create reflexive risk if a major holder faces financing pressure. This context does not change Active Panic by itself.</p>
+        <p class="emily-updated">Latest source-table observation: ${esc(treasury.latest_disclosure_date)}. ${esc(treasury.source_caveat)} The feed is optional and fail-closed.</p>
+        </div>
+      </details>
+
+      <details class="emily-panel emily-panel--wide emily-disclosure">
+        <summary>
           <span><small>Wildcard early warning</small><strong>What could abruptly change the regime?</strong></span>
           <span class="emily-disclosure-status">Gate · ${esc(wildcard.market_gate)}</span>
         </summary>
@@ -340,7 +371,7 @@
         </summary>
         <div class="emily-disclosure-body">
         <p>Emily separates market vulnerability from active panic. Required BTC and breadth data must be fresh. Optional feeds that fail are disclosed and removed from the calculation; they never become artificial green signals. If too little evidence remains, the daily job fails and yesterday's page stays in place.</p>
-        <p>ETF flows, options positioning, order-book depth, shipping, public-health developments and breaking geopolitical news still require an event-driven research review. X posts are not used in the automatic score because reliable automated access is not free.</p>
+        <p>ETF flows, options positioning, order-book depth, shipping, public-health developments and breaking geopolitical news still require an event-driven research review. Corporate treasury holdings are displayed as secondary structural context and do not alter Active Panic by themselves. X posts are not used in the automatic score because reliable automated access is not free.</p>
         <p>The Wildcard Early Warning module is deliberately separate from the Panic Meter. Unverified external-event claims cannot raise the automated market score; verified consequences can trigger a full reassessment.</p>
         </div>
       </details>

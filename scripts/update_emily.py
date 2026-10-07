@@ -280,6 +280,93 @@ def cmc_json(path: str, api_key: str, params: dict[str, Any] | None = None) -> d
     return payload
 
 
+def coinmarketcap_treasuries() -> dict[str, Any]:
+    """Fetch CoinMarketCap's public-company Bitcoin treasury table.
+
+    This is a free, unauthenticated website data feed rather than a documented
+    Pro API contract. Keep it optional, validate its shape strictly, and never
+    let an outage or schema change become a favorable market signal.
+    """
+    query = urlencode({
+        "id": 1,
+        "start": 1,
+        "limit": 1000,
+        "sort": "holdings",
+        "sortType": "desc",
+    })
+    payload = get_json(
+        f"https://api.coinmarketcap.com/data-api/v3/coin-treasury/table?{query}"
+    )
+    if not isinstance(payload, dict):
+        raise RuntimeError("CoinMarketCap treasury feed returned an unexpected response")
+    status = payload.get("status", {})
+    if not isinstance(status, dict) or status.get("error_code") not in (0, "0"):
+        raise RuntimeError(
+            f"CoinMarketCap treasury error: {status.get('error_message', 'unknown')}"
+        )
+    data = payload.get("data", {})
+    rows = data.get("data", []) if isinstance(data, dict) else []
+    if not isinstance(rows, list) or not rows:
+        raise RuntimeError("CoinMarketCap treasury feed returned no companies")
+
+    companies: list[dict[str, Any]] = []
+    country_holdings: dict[str, float] = {}
+    disclosure_dates: list[str] = []
+    for row in rows:
+        if not isinstance(row, dict):
+            continue
+        try:
+            holdings = finite(row.get("holdings"))
+        except (TypeError, ValueError):
+            continue
+        if holdings <= 0:
+            continue
+        country = str(row.get("country") or "Unknown").strip() or "Unknown"
+        data_as_of = str(row.get("dataAsOf") or "").strip() or None
+        if data_as_of:
+            disclosure_dates.append(data_as_of)
+        company = {
+            "name": str(row.get("companyName") or "Unknown company").strip(),
+            "ticker": str(row.get("ticker") or "").strip() or None,
+            "country": country,
+            "holdings_btc": holdings,
+            "data_as_of": data_as_of,
+            "source_url": str(row.get("doc") or "").strip() or None,
+        }
+        companies.append(company)
+        country_holdings[country] = country_holdings.get(country, 0) + holdings
+
+    if len(companies) < 10:
+        raise RuntimeError("CoinMarketCap treasury feed failed the minimum-row check")
+    companies.sort(key=lambda row: row["holdings_btc"], reverse=True)
+    total_holdings = sum(row["holdings_btc"] for row in companies)
+    if total_holdings <= 0:
+        raise RuntimeError("CoinMarketCap treasury feed has no positive holdings")
+    top_holder = companies[0]
+    top_country, top_country_holdings = max(country_holdings.items(), key=lambda row: row[1])
+    reported_total = data.get("totalCount") if isinstance(data, dict) else None
+    try:
+        company_count = int(reported_total)
+    except (TypeError, ValueError):
+        company_count = len(companies)
+
+    return {
+        "company_count": company_count,
+        "total_holdings_btc": total_holdings,
+        "share_of_max_supply_pct": total_holdings / 21_000_000 * 100,
+        "top_holder": top_holder,
+        "top_holder_share_pct": top_holder["holdings_btc"] / total_holdings * 100,
+        "top_10_share_pct": sum(row["holdings_btc"] for row in companies[:10]) / total_holdings * 100,
+        "top_country": top_country,
+        "top_country_share_pct": top_country_holdings / total_holdings * 100,
+        "latest_disclosure_date": max(disclosure_dates) if disclosure_dates else None,
+        "feed_timestamp": status.get("timestamp"),
+        "credit_count": status.get("credit_count"),
+        "source_type": "CoinMarketCap public website data feed",
+        "source_caveat": "AI-sourced secondary dataset; verify material company changes against filings.",
+    }
+
+
 def coinmarketcap_derivatives(api_key: str) -> dict[str, Any]:
     """Fetch free, cross-venue derivatives and BTC liquidation observations.
 
@@ -878,6 +965,20 @@ def main() -> None:
     )
     if not cmc_api_key:
         gaps.append("CoinMarketCap derivatives: CMC_API_KEY is not configured")
+    treasury = optional(
+        "CoinMarketCap corporate treasuries", coinmarketcap_treasuries, gaps
+    )
+    if treasury and previous:
+        previous_total = previous.get("treasury_total_btc")
+        previous_top_share = previous.get("treasury_top_holder_share_pct")
+        treasury["change_since_last_snapshot_btc"] = (
+            treasury["total_holdings_btc"] - float(previous_total)
+            if isinstance(previous_total, (int, float)) else None
+        )
+        treasury["top_holder_share_change_pp"] = (
+            treasury["top_holder_share_pct"] - float(previous_top_share)
+            if isinstance(previous_top_share, (int, float)) else None
+        )
 
     macro: dict[str, dict[str, Any]] = {}
     for key, series_id, label in (
@@ -1027,6 +1128,7 @@ def main() -> None:
         "derivatives": deriv,
         "aggregated_derivatives": cmc_deriv,
         "stablecoins": stable,
+        "corporate_treasuries": treasury,
         "macro": macro,
         "consumer": consumer,
         "equity_rates": equity_rates,
@@ -1049,6 +1151,7 @@ def main() -> None:
             {"label": "Alternative.me Fear & Greed", "url": "https://alternative.me/crypto/fear-and-greed-index/"},
             {"label": "OKX public market data", "url": "https://www.okx.com/docs-v5/en/"},
             {"label": "CoinMarketCap derivatives", "url": "https://coinmarketcap.com/charts/derivatives/"},
+            {"label": "CoinMarketCap Bitcoin treasuries", "url": "https://coinmarketcap.com/charts/bitcoin-treasuries/"},
             {"label": "Federal Reserve Economic Data", "url": "https://fred.stlouisfed.org/"},
             {"label": "Nasdaq Composite via FRED", "url": "https://fred.stlouisfed.org/series/NASDAQCOM"},
             {"label": "BEA consumer spending and income", "url": "https://www.bea.gov/data/consumer-spending/main"},
@@ -1069,6 +1172,8 @@ def main() -> None:
         "vulnerability": vulnerability,
         "active": active,
         "equity_rates_divergence": equity_rates["score"] if equity_rates else None,
+        "treasury_total_btc": treasury["total_holdings_btc"] if treasury else None,
+        "treasury_top_holder_share_pct": treasury["top_holder_share_pct"] if treasury else None,
         "btc_price_usd": market["btc"]["price"],
     })
     print(
