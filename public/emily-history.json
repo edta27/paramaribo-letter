@@ -10,11 +10,13 @@
   },
   {
     "active": 24,
-    "btc_dominance": 56.56,
-    "btc_price_usd": 83288.57771597756,
+    "btc_dominance": 56.55,
+    "btc_price_usd": 83424.74538959173,
     "equity_rates_divergence": 71,
-    "rotation": 17,
-    "updated_at": "2026-10-07T18:29:37.924866Z",
-    "vulnerability": 53
+    "rotation": 26,
+    "treasury_top_holder_share_pct": 62.51750438257875,
+    "treasury_total_btc": 1349662.0,
+    "updated_at": "2026-10-07T19:27:48.499890Z",
+    "vulnerability": 51
   }
 ]
