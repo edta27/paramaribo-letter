@@ -1,7 +1,7 @@
 {
   "ticker": "NVDA",
-  "updated_at": "2026-10-08T16:07:10Z",
-  "price": 235.2826,
+  "updated_at": "2026-10-08T21:48:28Z",
+  "price": 231.0795,
   "filings": [
     {
       "form": "4",
@@ -35,11 +35,11 @@
     }
   ],
   "error": null,
-  "prev_close": 237.47,
-  "change": -2.1874,
-  "change_pct": -0.921,
+  "prev_close": 230.48,
+  "change": 0.5995,
+  "change_pct": 0.26,
   "currency": "USD",
   "exchange": "NASDAQ-GS",
-  "volume": 36292657.261403,
+  "volume": 118238168.798375,
   "quote_source": "nasdaq-stocks"
 }
