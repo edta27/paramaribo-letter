@@ -3,8 +3,13 @@ name: Emily daily market update
 on:
   workflow_dispatch:
   schedule:
-    # 14:10 UTC is 8:10 AM Central Standard Time / 9:10 AM Central Daylight Time.
-    - cron: "10 14 * * *"
+    # Avoid the busiest minutes at the top of the hour. GitHub may delay or
+    # drop scheduled jobs during periods of heavy Actions load.
+    # 14:37 UTC is 8:37 AM Central Standard Time / 9:37 AM Central Daylight Time.
+    - cron: "37 14 * * *"
+    # Free same-day fallback if the morning scheduler is delayed or skipped.
+    # 20:23 UTC is 2:23 PM Central Standard Time / 3:23 PM Central Daylight Time.
+    - cron: "23 20 * * *"
 
 permissions:
   contents: write
