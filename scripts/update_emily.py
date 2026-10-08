@@ -102,12 +102,20 @@ def threshold(value: float, levels: tuple[tuple[float, int], ...]) -> int:
     return 0
 
 
-def last_history() -> dict[str, Any] | None:
+def last_history(before_day: str | None = None) -> dict[str, Any] | None:
     if not HISTORY_PATH.exists():
         return None
     try:
         rows = json.loads(HISTORY_PATH.read_text(encoding="utf-8"))
-        return rows[-1] if isinstance(rows, list) and rows else None
+        if not isinstance(rows, list):
+            return None
+        candidates = [item for item in rows if isinstance(item, dict)]
+        if before_day:
+            candidates = [
+                item for item in candidates
+                if str(item.get("updated_at", ""))[:10] < before_day
+            ]
+        return candidates[-1] if candidates else None
     except (OSError, json.JSONDecodeError):
         return None
 
@@ -753,7 +761,8 @@ def vulnerability_and_active(
     consumer: dict[str, Any] | None,
     equity_rates: dict[str, Any] | None,
     cmc_deriv: dict[str, Any] | None,
-) -> tuple[int, int, list[dict[str, Any]], list[dict[str, Any]]]:
+    previous: dict[str, Any] | None,
+) -> tuple[int, int, list[dict[str, Any]], list[dict[str, Any]], bool]:
     # Vulnerability measures how quickly a future shock could propagate. It is
     # deliberately separate from evidence that a panic is already underway.
     okx_leverage = None
@@ -902,6 +911,23 @@ def vulnerability_and_active(
         if liquidation_bits:
             liquidation_risk = statistics.mean(liquidation_bits)
             deleveraging = max(deleveraging or 0, liquidation_risk)
+    deleveraging_carried = False
+    if not cmc_deriv and previous:
+        previous_deleveraging = previous.get("forced_deleveraging_risk")
+        previous_stamp = str(previous.get("updated_at", ""))
+        try:
+            previous_time = datetime.fromisoformat(previous_stamp.replace("Z", "+00:00"))
+            previous_age = datetime.now(timezone.utc) - previous_time.astimezone(timezone.utc)
+        except (TypeError, ValueError):
+            previous_age = timedelta.max
+        if (
+            isinstance(previous_deleveraging, (int, float))
+            and previous_age <= timedelta(hours=72)
+        ):
+            carried_risk = clamp(float(previous_deleveraging) / 100, 0, 1)
+            if deleveraging is None or carried_risk > deleveraging:
+                deleveraging = carried_risk
+                deleveraging_carried = True
     stable_stress = None
     if stable and isinstance(stable.get("change_7d_pct"), (int, float)):
         change = stable["change_7d_pct"]
@@ -915,7 +941,12 @@ def vulnerability_and_active(
         ("Forced deleveraging", deleveraging, 10),
         ("Stablecoin contraction", stable_stress, 5),
     ])
-    return vulnerability, active, vulnerability_detail, active_detail
+    if deleveraging_carried:
+        for item in active_detail:
+            if item["name"] == "Forced deleveraging":
+                item["stale"] = True
+                item["source"] = "Last verified liquidation snapshot (maximum 72-hour carry)"
+    return vulnerability, active, vulnerability_detail, active_detail, deleveraging_carried
 
 
 def band(score: int) -> tuple[str, str]:
@@ -952,7 +983,7 @@ def optional(label: str, fn: Any, gaps: list[str]) -> Any:
 
 def main() -> None:
     now = datetime.now(timezone.utc)
-    previous = last_history()
+    previous = last_history(before_day=now.date().isoformat())
     market = coinpaprika()  # Required: failure preserves yesterday's published file.
     gaps: list[str] = []
     fgi = optional("Fear & Greed", fear_greed, gaps)
@@ -1036,8 +1067,8 @@ def main() -> None:
             cmc_deriv["global_open_interest_usd"] / market["market_cap"] * 100
         )
     rotation, rotation_regime, dominance_read = rotation_score(market, previous)
-    vulnerability, active, vulnerability_detail, active_detail = vulnerability_and_active(
-        market, fgi, deriv, stable, macro, consumer, equity_rates, cmc_deriv
+    vulnerability, active, vulnerability_detail, active_detail, deleveraging_carried = vulnerability_and_active(
+        market, fgi, deriv, stable, macro, consumer, equity_rates, cmc_deriv, previous
     )
     vulnerability_band, vulnerability_slug = band(vulnerability)
     active_band, active_slug = band(active)
@@ -1086,6 +1117,11 @@ def main() -> None:
     ]
     if gaps:
         notes.append(f"Missing optional feeds today: {len(gaps)}. The model published only because more than 60% of each panic score remained observable.")
+    if deleveraging_carried:
+        notes.append(
+            "CoinMarketCap liquidation data was unavailable, so forced-deleveraging risk was "
+            "held at the last verified level instead of being treated as safer."
+        )
 
     snapshot = {
         "schema_version": 2,
@@ -1171,6 +1207,10 @@ def main() -> None:
         "rotation": rotation,
         "vulnerability": vulnerability,
         "active": active,
+        "forced_deleveraging_risk": next(
+            (item["risk"] for item in active_detail if item["name"] == "Forced deleveraging"),
+            None,
+        ),
         "equity_rates_divergence": equity_rates["score"] if equity_rates else None,
         "treasury_total_btc": treasury["total_holdings_btc"] if treasury else None,
         "treasury_top_holder_share_pct": treasury["top_holder_share_pct"] if treasury else None,

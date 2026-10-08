@@ -100,9 +100,13 @@
   const model = data.model || {};
   const sourceLinks = (data.sources || []).map((item) =>
     `<a href="${esc(item.url)}">${esc(item.label)}</a>`).join(" · ");
-  const gaps = (model.missing || []).length
+  const staleComponents = (model.active_components || []).filter((item) => item.stale);
+  const staleCoverage = staleComponents.length
+    ? `<p class="emily-sources"><strong>Conservative carry-forward:</strong> ${staleComponents.map((item) => `${esc(item.name)} — ${esc(item.source || "last verified observation")}`).join(" · ")}</p>`
+    : "";
+  const gaps = ((model.missing || []).length
     ? `<p class="emily-sources"><strong>Unavailable today:</strong> ${esc(model.missing.join(" · "))}</p>`
-    : `<p class="emily-sources"><strong>Coverage:</strong> all configured free feeds returned usable observations.</p>`;
+    : `<p class="emily-sources"><strong>Coverage:</strong> all configured free feeds returned usable observations.</p>`) + staleCoverage;
 
   const vix = m.vix ? n(m.vix.value, 2) : "unknown";
   const ten = m.ten_year ? `${n(m.ten_year.value, 2)}%` : "unknown";
