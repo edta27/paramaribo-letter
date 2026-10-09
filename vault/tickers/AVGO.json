@@ -1,7 +1,7 @@
 {
   "ticker": "AVGO",
-  "updated_at": "2026-10-08T21:48:28Z",
-  "price": 361.5,
+  "updated_at": "2026-10-09T15:48:48Z",
+  "price": 363.4602,
   "filings": [
     {
       "form": "4",
@@ -36,10 +36,10 @@
   ],
   "error": null,
   "prev_close": 360.14,
-  "change": 1.36,
-  "change_pct": 0.378,
+  "change": 3.3202,
+  "change_pct": 0.922,
   "currency": "USD",
   "exchange": "NASDAQ-GS",
-  "volume": 27027739.755253,
+  "volume": 6291447.897563,
   "quote_source": "nasdaq-stocks"
 }
