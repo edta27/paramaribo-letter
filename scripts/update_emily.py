@@ -1168,6 +1168,25 @@ def main() -> None:
         "macro": macro,
         "consumer": consumer,
         "equity_rates": equity_rates,
+        "wef_global_risks": {
+            "report": "Global Risks Report 2026",
+            "published_date": "2026-01-14",
+            "context_type": "Annual expert survey — structural context, not a live market feed",
+            "immediate_risks": [
+                {"rank": 1, "label": "Geoeconomic confrontation", "respondent_share_pct": 18},
+                {"rank": 2, "label": "State-based armed conflict", "respondent_share_pct": 14},
+                {"rank": 3, "label": "Extreme weather", "respondent_share_pct": 8},
+                {"rank": 4, "label": "Societal polarization", "respondent_share_pct": 7},
+                {"rank": 5, "label": "Misinformation and disinformation", "respondent_share_pct": 7},
+            ],
+            "market_use": (
+                "Use these categories to widen the wildcard search across trade, sanctions, conflict, "
+                "weather, infrastructure and information shocks. Escalate only after independent "
+                "evidence and observable market transmission appear."
+            ),
+            "score_effect": "Context only — no direct contribution to the Panic Meter",
+            "url": "https://www.weforum.org/publications/global-risks-report-2026/",
+        },
         "wildcard": {
             "evidence_state": "Unscored — requires an event-driven verification review",
             "jump_risk": "Unscored",
@@ -1192,6 +1211,7 @@ def main() -> None:
             {"label": "Nasdaq Composite via FRED", "url": "https://fred.stlouisfed.org/series/NASDAQCOM"},
             {"label": "BEA consumer spending and income", "url": "https://www.bea.gov/data/consumer-spending/main"},
             {"label": "DefiLlama stablecoins", "url": "https://defillama.com/stablecoins"},
+            {"label": "World Economic Forum Global Risks Report 2026", "url": "https://www.weforum.org/publications/global-risks-report-2026/"},
         ],
     }
 

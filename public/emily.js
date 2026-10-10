@@ -96,6 +96,21 @@
   const m = data.macro || {};
   const consumer = data.consumer || {};
   const equityRates = data.equity_rates || {};
+  const wef = data.wef_global_risks || {
+    report: "Global Risks Report 2026",
+    published_date: "2026-01-14",
+    context_type: "Annual expert survey — structural context, not a live market feed",
+    immediate_risks: [
+      { rank: 1, label: "Geoeconomic confrontation", respondent_share_pct: 18 },
+      { rank: 2, label: "State-based armed conflict", respondent_share_pct: 14 },
+      { rank: 3, label: "Extreme weather", respondent_share_pct: 8 },
+      { rank: 4, label: "Societal polarization", respondent_share_pct: 7 },
+      { rank: 5, label: "Misinformation and disinformation", respondent_share_pct: 7 },
+    ],
+    market_use: "Use these categories to widen the wildcard search across trade, sanctions, conflict, weather, infrastructure and information shocks. Escalate only after independent evidence and observable market transmission appear.",
+    score_effect: "Context only — no direct contribution to the Panic Meter",
+    url: "https://www.weforum.org/publications/global-risks-report-2026/",
+  };
   const wildcard = data.wildcard || {};
   const model = data.model || {};
   const sourceLinks = (data.sources || []).map((item) =>
@@ -219,6 +234,26 @@
         </div>
         <p><strong>Consumer Exhaustion score:</strong> ${esc(consumer.score)} / 100 · ${esc(consumer.band)}. It raises panic vulnerability only when spending-income divergence, low saving and weak sentiment agree.</p>
         <p class="emily-updated">Latest monthly observation set through ${esc(consumer.date)}. This is a slow-moving vulnerability signal, not evidence of active panic.</p>
+        </div>
+      </details>
+
+      <details class="emily-panel emily-panel--wide emily-disclosure">
+        <summary>
+          <span><small>World Economic Forum</small><strong>Which global risks could become market wildcards?</strong></span>
+          <span class="emily-disclosure-status">Context only · Annual lens</span>
+        </summary>
+        <div class="emily-disclosure-body">
+        <p><strong>${esc(wef.report)}:</strong> ${esc(wef.context_type)}. Emily uses it to widen the search for possible transmission channels, not to predict an event or mechanically raise the Panic Meter.</p>
+        <div class="emily-table-wrap">
+          <table class="emily-table">
+            <thead><tr><th>2026 rank</th><th>Immediate global risk</th><th>Respondent share</th></tr></thead>
+            <tbody>
+              ${(wef.immediate_risks || []).map((risk) => `<tr><td>#${esc(risk.rank)}</td><td>${esc(risk.label)}</td><td>${n(risk.respondent_share_pct, 0)}%</td></tr>`).join("")}
+            </tbody>
+          </table>
+        </div>
+        <p><strong>How Emily uses it:</strong> ${esc(wef.market_use)}</p>
+        <p class="emily-updated">${esc(wef.score_effect)}. Published ${esc(wef.published_date)} · <a href="${esc(wef.url)}">Read the official WEF report</a>.</p>
         </div>
       </details>
 
@@ -376,7 +411,7 @@
         </summary>
         <div class="emily-disclosure-body">
         <p>Emily separates market vulnerability from active panic. Required BTC and breadth data must be fresh. Optional feeds that fail are disclosed and removed from the calculation; they never become artificial green signals. If too little evidence remains, the daily job fails and yesterday's page stays in place.</p>
-        <p>ETF flows, options positioning, order-book depth, shipping, public-health developments and breaking geopolitical news still require an event-driven research review. Corporate treasury holdings are displayed as secondary structural context and do not alter Active Panic by themselves. X posts are not used in the automatic score because reliable automated access is not free.</p>
+        <p>ETF flows, options positioning, order-book depth, shipping, public-health developments and breaking geopolitical news still require an event-driven research review. Corporate treasury holdings and the World Economic Forum's annual risk survey are displayed as secondary structural context and do not alter Active Panic by themselves. X posts are not used in the automatic score because reliable automated access is not free.</p>
         <p>The Wildcard Early Warning module is deliberately separate from the Panic Meter. Unverified external-event claims cannot raise the automated market score; verified consequences can trigger a full reassessment.</p>
         </div>
       </details>
