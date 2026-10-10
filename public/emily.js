@@ -253,7 +253,7 @@
           </table>
         </div>
         <p><strong>How Emily uses it:</strong> ${esc(wef.market_use)}</p>
-        <p class="emily-updated">${esc(wef.score_effect)}. Published ${esc(wef.published_date)} · <a href="${esc(wef.url)}">Read the official WEF report</a>.</p>
+        <p class="emily-updated">${esc(wef.score_effect)}. Published ${esc(wef.published_date)} · <a href="/case?id=2026-wef-global-risks-map">Read Paramaribo's study case</a> · <a href="${esc(wef.url)}">Official WEF report</a>.</p>
         </div>
       </details>
 

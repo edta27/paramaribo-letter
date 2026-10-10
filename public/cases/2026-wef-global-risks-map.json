@@ -1,0 +1,166 @@
+{
+  "id": "2026-wef-global-risks-map",
+  "date": "2026-10-10",
+  "kicker": "Desk Case Studies · 04",
+  "title": "Global Risks 2026: A Map, Not a Countdown",
+  "subtitle": "What the World Economic Forum's risk survey adds to Emily's panic framework — and what it cannot predict.",
+  "dek": "The World Economic Forum's Global Risks Report 2026 describes an age of competition: geoeconomic confrontation and conflict dominate the near term, while climate and AI risks rise over the decade. This study separates the report's survey evidence from prediction, then translates its six risk themes into observable market-transmission channels for Emily.",
+  "investors": [
+    "The Paramaribo Letter desk"
+  ],
+  "companies": [
+    "World Economic Forum"
+  ],
+  "themes": [
+    "Global risks",
+    "Geoeconomic confrontation",
+    "Economic reckoning",
+    "Critical infrastructure",
+    "AI and quantum",
+    "Wildcard transmission"
+  ],
+  "readingMinutes": 12,
+  "summaryHtml": "<p>The World Economic Forum's <em>Global Risks Report 2026</em> is best read as a structured inventory of perceived global threats, not as a forecast calendar. Its central message is that the world has entered a more competitive, fragmented phase in which trade, finance, technology and supply chains can be used as instruments of state power.</p>\n<p>The immediate ranking is led by <strong>geoeconomic confrontation</strong> and <strong>state-based armed conflict</strong>. Over two years, misinformation, polarization, cyber insecurity and economic stress compound that picture. Over ten years, environmental risks return to the top while adverse AI outcomes make the largest upward move in the entire survey.</p>\n<p>For Emily, the report is useful because it broadens the wildcard search. It is not useful as a live Panic Meter input. A survey cannot tell us when a shock will occur, whether markets are already positioned for it, or how much liquidity is available when it arrives. Those questions still require market evidence: volatility, credit, yields, the dollar, oil, shipping, stablecoins, ETF flows, market depth and forced deleveraging.</p>",
+  "toc": [
+    {
+      "id": "summary",
+      "title": "Executive summary"
+    },
+    {
+      "id": "report",
+      "title": "What the report measures"
+    },
+    {
+      "id": "horizons",
+      "title": "The three time horizons"
+    },
+    {
+      "id": "themes",
+      "title": "The six in-depth themes"
+    },
+    {
+      "id": "market-map",
+      "title": "Translation into market signals"
+    },
+    {
+      "id": "bitcoin",
+      "title": "What it means for Bitcoin"
+    },
+    {
+      "id": "limits",
+      "title": "What the report cannot tell us"
+    },
+    {
+      "id": "emily",
+      "title": "How Emily will use it"
+    },
+    {
+      "id": "takeaways",
+      "title": "Key takeaways"
+    },
+    {
+      "id": "sources",
+      "title": "Sources"
+    }
+  ],
+  "timeline": [
+    {
+      "when": "12 Aug–22 Sep 2025",
+      "what": "The Global Risks Perception Survey collected responses used in the 2026 report.",
+      "source": "WEF methodology and Appendix B"
+    },
+    {
+      "when": "14 Jan 2026",
+      "what": "WEF published the 21st edition of the Global Risks Report.",
+      "source": "World Economic Forum"
+    },
+    {
+      "when": "10 Oct 2026",
+      "what": "Paramaribo converts the report into a structural wildcard map for Emily, without adding it mechanically to the Panic Meter.",
+      "source": "This case"
+    }
+  ],
+  "figures": {
+    "caption": "The report's horizon shift",
+    "columns": [
+      "Horizon",
+      "Leading risks",
+      "What changes",
+      "How Emily uses it"
+    ],
+    "rows": [
+      [
+        "2026 immediate",
+        "Geoeconomic confrontation #1; state conflict #2; extreme weather #3",
+        "Trade, finance, technology and conflict are immediate shock channels",
+        "Scenario inventory; wait for independently verified events"
+      ],
+      [
+        "To 2028",
+        "Geoeconomic confrontation #1; misinformation #2; polarization #3; extreme weather #4",
+        "Economic, societal, cyber and geopolitical risks become mutually reinforcing",
+        "Watch whether market stress spreads across rates, credit, energy, equities and crypto"
+      ],
+      [
+        "To 2036",
+        "Extreme weather #1; biodiversity #2; Earth-system change #3; misinformation #4; AI outcomes #5",
+        "Environmental and technological risks dominate the long horizon",
+        "Track structural exposure and preparedness, not daily panic"
+      ]
+    ],
+    "note": "These are rankings and respondent selections, not event probabilities. The survey frames possible severity across time; it does not forecast dates or market prices."
+  },
+  "bodyHtml": "<h2 id=\"report\">What the report measures</h2>\n<p>The report is built around the Global Risks Perception Survey, supported by the Executive Opinion Survey and expert interviews. WEF defines a global risk as an event or condition capable of materially harming a significant share of global output, population or natural resources.</p>\n<p>The 2025–2026 survey received 1,564 responses and retained <strong>1,302</strong> after quality filters. Of those, 1,105 respondents rated at least one risk for the two- or ten-year severity exercise, and 928 answered the broad world-outlook question. Responses were gathered before publication, from 12 August to 22 September 2025. The supporting Executive Opinion Survey covered more than 11,000 business leaders in 116 economies.</p>\n<p>The design matters. The immediate question asked respondents to choose one of 33 risks most likely to create a material global crisis in 2026. The two- and ten-year rankings asked for severity ratings on a 1–7 scale. These are expert perceptions, not statistically calibrated probabilities.</p>\n<aside class=\"interp\" aria-label=\"Desk interpretation\">\n<p><strong>Desk interpretation.</strong> WEF tells us what informed respondents fear and how those fears change with the horizon. It does not tell us whether markets have already priced a risk, whether the feared event will occur, or whether liquidity can absorb it.</p>\n</aside>\n\n<h2 id=\"horizons\">The three time horizons</h2>\n<h3>Immediate 2026: competition becomes the operating system</h3>\n<p>Geoeconomic confrontation ranks first, selected by 18% of respondents as the risk most likely to produce a material global crisis in 2026. State-based armed conflict follows at 14%. Extreme weather is third at 8%; societal polarization and misinformation/disinformation are fourth and fifth at 7% each.</p>\n<p>The point is not merely that war and trade disputes are dangerous. It is that tariffs, sanctions, export controls, capital restrictions, regulation and supply-chain access increasingly function as strategic instruments. Those mechanisms can travel through prices before they become visible in headline economic data.</p>\n<h3>To 2028: compounding risks</h3>\n<p>Geoeconomic confrontation remains first. Misinformation moves to second, societal polarization third, extreme weather fourth, state conflict fifth and cyber insecurity sixth. Economic downturn rises to #11, an asset-bubble burst to #18 and inflation to #21; all three moved sharply higher from the prior survey.</p>\n<p>The report's warning is about interaction. Trade barriers can raise costs. High debt and refinancing needs can reduce policy room. Misinformation can weaken crisis response. Cyber events can reach physical infrastructure. Conflict can hit shipping and energy. Any one channel may remain contained; several arriving together create the nonlinear outcome Emily is designed to detect.</p>\n<h3>To 2036: climate and technology dominate</h3>\n<p>The ranking changes again over ten years. Extreme weather is first, biodiversity loss second and critical change to Earth systems third. Misinformation ranks fourth and adverse AI outcomes fifth, with AI making the largest rise of all 33 risks between the two-year and ten-year horizons. Natural-resource shortages, inequality, polarization and pollution also remain prominent.</p>\n<p>This is an important correction to short-term attention. Environmental risks were deprioritized in the two-year survey, yet respondents still consider them the most severe group over a decade. The absence of urgency in today's market does not remove long-duration exposure.</p>\n\n<h2 id=\"themes\">The six in-depth themes</h2>\n<ol>\n<li><strong>Multipolarity without multilateralism.</strong> A more fragmented order weakens shared rules and raises the probability that trade, technology, finance and supply chains become instruments of rivalry.</li>\n<li><strong>Values at war.</strong> Polarization, distrust and information disorder weaken the social contract and make coordinated responses harder. Climate action becomes entangled with identity, affordability and national security.</li>\n<li><strong>An economic reckoning.</strong> The report highlights debt refinancing, possible asset or industrial bubbles and renewed inflation. It cites global public and private debt of roughly $251 trillion, or 235% of global GDP, in 2024, with large sovereign and corporate refinancing needs concentrated in 2025–2027.</li>\n<li><strong>Infrastructure endangered.</strong> Ageing grids, water, transport and communications face rising demand, extreme weather, physical attack and cyber-physical failure. Interdependence means a power disruption can become a water, transport, communications or financial disruption.</li>\n<li><strong>Quantum leaps.</strong> Quantum technology offers major benefits but could eventually undermine current public-key cryptography. The immediate issue is not a known 'Q-day'; it is preparation, including crypto-agility and migration toward post-quantum standards.</li>\n<li><strong>AI at large.</strong> WEF focuses on labour displacement, unequal access to infrastructure, information integrity and military escalation. The worst cases are cascading: unemployment affects households and politics; synthetic media weakens trust; automated systems compress decision time during conflict.</li>\n</ol>\n\n<h2 id=\"market-map\">Translation into market signals</h2>\n<table class=\"flags\">\n<thead><tr><th>WEF risk family</th><th>First transmission channel</th><th>What Emily watches</th></tr></thead>\n<tbody>\n<tr><td>Geoeconomic confrontation</td><td>Tariffs, sanctions, export controls, capital restrictions, supply-chain weaponization</td><td>Dollar, long yields, oil, shipping, industrial inputs, equity breadth and earnings revisions</td></tr>\n<tr><td>State conflict</td><td>Energy and freight disruption, cyberattack, fiscal expansion, safe-haven demand</td><td>WTI, volatility, credit spreads, sovereign yields, shipping reroutes and cross-market gaps</td></tr>\n<tr><td>Economic reckoning</td><td>Debt refinancing stress, bubble repricing, boomerang inflation</td><td>High-yield spreads, yield volatility, banking stress, equities, dollar liquidity and ETF flows</td></tr>\n<tr><td>Infrastructure failure</td><td>Power, communications, payments or transport outage</td><td>Operational confirmation, affected regions, duration, market closures, settlement and exchange availability</td></tr>\n<tr><td>Information disorder</td><td>Rumour, synthetic evidence or loss of institutional trust</td><td>Independent confirmation first; price and liquidity effects second. A viral claim alone stays at wildcard state 0</td></tr>\n<tr><td>AI and quantum</td><td>Capex reversal, power demand, labour disruption, cryptographic or military risk</td><td>Technology concentration, energy systems, cyber incidents and verified changes to security standards</td></tr>\n</tbody>\n</table>\n\n<h2 id=\"bitcoin\">What it means for Bitcoin</h2>\n<p>The report contains no Bitcoin price target and should not be converted into one. Most of its risk channels can be bullish, bearish or mixed depending on timing and market structure.</p>\n<ul>\n<li>A geopolitical or banking shock can strengthen the long-run case for scarce, portable assets while still causing immediate liquidation as investors sell what they can.</li>\n<li>Tariffs, energy disruption or fiscal expansion can revive inflation and raise long yields, tightening conditions for risk assets even when the inflation narrative sounds favourable to Bitcoin.</li>\n<li>Infrastructure or cyber incidents become crypto-specific when exchanges, stablecoins, custody, settlement or communications are affected.</li>\n<li>Quantum risk is real as a preparedness issue, but the report does not establish an imminent break of Bitcoin cryptography. Treat migration readiness and credible technical milestones separately from frightening headlines.</li>\n<li>AI concentration and data-centre power demand can affect energy prices, grids and technology valuations; those effects reach Bitcoin through liquidity and cross-asset positioning, not through a simple one-way rule.</li>\n</ul>\n\n<h2 id=\"limits\">What the report cannot tell us</h2>\n<ul>\n<li><strong>No timing.</strong> The rankings do not identify a date, catalyst or countdown.</li>\n<li><strong>No market positioning.</strong> They do not measure leverage, dealer exposure, ETF redemptions, order-book depth or available liquidity.</li>\n<li><strong>No live update.</strong> Survey responses were gathered in August and September 2025. Events after that window are absent unless added in the report's narrative.</li>\n<li><strong>No probability calibration.</strong> A rank reflects respondent choices or average severity ratings, not a measured chance of occurrence.</li>\n<li><strong>Framing and selection matter.</strong> Respondents evaluated a predefined list of 33 risks, and the sample reflects WEF's expert networks rather than the world's population.</li>\n<li><strong>Attention can reverse.</strong> Short-term environmental concern fell even as long-term environmental severity remained dominant. Rankings partly reveal priorities, not only underlying danger.</li>\n</ul>\n\n<h2 id=\"emily\">How Emily will use it</h2>\n<p>Emily will use the WEF report as a <strong>structural scenario library</strong>. Its categories widen the search for shocks and help define possible transmission paths. They do not directly add points to Panic Vulnerability or Active Panic.</p>\n<p>The escalation rule remains:</p>\n<ol>\n<li>Identify a claim or anomaly.</li>\n<li>Verify the first-order event with independent credible sources.</li>\n<li>Test whether the effect persists and spreads across regions or sectors.</li>\n<li>Observe behavioural or policy response.</li>\n<li>Raise the active-panic assessment only when credit, volatility, equities, commodities, liquidity and crypto begin repricing together.</li>\n</ol>\n<p>This keeps the distinction clear: WEF supplies potential causes; Emily measures whether a cause is becoming a market event.</p>\n\n<h2 id=\"takeaways\">Key takeaways</h2>\n<ul>\n<li>The report's defining idea is an age of competition in which economic tools and supply chains become strategic weapons.</li>\n<li>Near-term risk is geopolitical and geoeconomic; long-term risk shifts toward climate and AI.</li>\n<li>The most useful insight is interaction: debt, infrastructure, polarization, cyber risk and conflict can amplify one another.</li>\n<li>The survey is serious evidence about expert perceptions, but it is not a crash probability, live market signal or price model.</li>\n<li>For Emily, the correct use is to expand the wildcard map, then demand observable transmission before changing the Panic Meter.</li>\n</ul>",
+  "sources": [
+    {
+      "title": "World Economic Forum — Global Risks Report 2026",
+      "url": "https://www.weforum.org/publications/global-risks-report-2026/",
+      "kind": "Primary report",
+      "date": "2026-01-14",
+      "note": "Official report landing page, PDF, data and infographics."
+    },
+    {
+      "title": "Global Risks Report 2026 — Key findings",
+      "url": "https://www.weforum.org/publications/global-risks-report-2026/in-full/global-risks-report-2026-key-findings/",
+      "kind": "Primary report section",
+      "date": "2026-01-14",
+      "note": "Risk outlook, horizon comparison and principal rankings."
+    },
+    {
+      "title": "Chapter 1 — Global Risks 2026–2036: The Age of Competition",
+      "url": "https://www.weforum.org/publications/global-risks-report-2026/in-full/global-risks-report-2026-chapter-1/",
+      "kind": "Primary report section",
+      "date": "2026-01-14",
+      "note": "Immediate, two-year and ten-year risk rankings."
+    },
+    {
+      "title": "Chapter 2 — Global risks in-depth",
+      "url": "https://www.weforum.org/publications/global-risks-report-2026/in-full/global-risks-report-2026-chapter-2/",
+      "kind": "Primary report section",
+      "date": "2026-01-14",
+      "note": "Six themes: multipolarity, values, economy, infrastructure, quantum and AI."
+    },
+    {
+      "title": "Global Risks Report 2026 — Overview of methodology",
+      "url": "https://www.weforum.org/publications/global-risks-report-2026/in-full/global-risks-report-2026-overview-of-methodology/",
+      "kind": "Primary methodology",
+      "date": "2026-01-14",
+      "note": "Survey scope, definition of global risk, EOS coverage and expert inputs."
+    },
+    {
+      "title": "Appendix B — Global Risks Perception Survey 2025–2026",
+      "url": "https://www.weforum.org/publications/global-risks-report-2026/in-full/global-risks-report-2026-appendix-b/",
+      "kind": "Primary methodology",
+      "date": "2026-01-14",
+      "note": "Question design, response counts, filters and ranking calculations."
+    },
+    {
+      "title": "Global Risks Report 2026 PDF",
+      "url": "https://reports.weforum.org/docs/WEF_Global_Risks_Report_2026.pdf",
+      "kind": "Primary PDF",
+      "date": "2026-01-14",
+      "note": "Official complete report."
+    }
+  ],
+  "disclaimer": "This case study summarizes and interprets the World Economic Forum's Global Risks Report 2026 for educational research. WEF did not produce or endorse this Paramaribo analysis. Survey rankings represent respondent perceptions, not calibrated event probabilities, investment forecasts or Bitcoin price targets. Emily uses the report as structural context only; no leverage or trade instruction is provided."
+}

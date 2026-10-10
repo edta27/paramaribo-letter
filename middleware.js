@@ -35,6 +35,7 @@ const ISSUE_IDS = new Set([
 ]);
 
 const CASE_IDS = new Set([
+  "2026-wef-global-risks-map",
   "2026-october-files",
   "2026-does-orchestration-stay-scarce",
   "2026-model-no-longer-the-moat",
