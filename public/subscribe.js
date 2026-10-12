@@ -113,23 +113,26 @@
     });
   }
 
-  // A slim bar on letter pages that points readers at the signup box once they
-  // are into the letter, and gets out of the way when the box itself is on screen.
+  // A slim bar on letter pages (and any page marked data-sub-bar) that points
+  // readers at the signup box once they are into the page, and gets out of the way when the box itself is on screen.
   function mountReadBar() {
-    var article = document.querySelector("article.issue-page");
+    var article = document.querySelector("article.issue-page, [data-sub-bar]");
     var box = document.getElementById("new-subscribers");
     if (!article || !box) return;
     if (store(SUBSCRIBED_KEY) === "1") return;
     var dismissed = Number(store(BAR_DISMISSED_KEY) || 0);
     if (dismissed && Date.now() - dismissed < BAR_QUIET_DAYS * 86400000) return;
+    var barLocation = article.dataset.subBar ? pagePath().replace(/^\//, "") + "-bar" : "issue-bar";
 
     var bar = document.createElement("div");
     bar.className = "sub-bar";
     bar.hidden = true;
     bar.innerHTML =
-      '<p class="sub-bar-text">Get the next letter by email. Free, and one click to leave.</p>' +
+      '<p class="sub-bar-text"></p>' +
       '<a class="btn btn-primary sub-bar-go" href="#new-subscribers">Subscribe</a>' +
       '<button type="button" class="sub-bar-close" aria-label="Dismiss">×</button>';
+    bar.querySelector(".sub-bar-text").textContent =
+      article.dataset.subBar || "Get the next letter by email. Free, and one click to leave.";
     document.body.appendChild(bar);
 
     var boxVisible = false;
@@ -141,7 +144,7 @@
       bar.hidden = !show;
       if (show && !shownOnce) {
         shownOnce = true;
-        track("subscribe_bar_view", { form_location: "issue-bar", page: pagePath() });
+        track("subscribe_bar_view", { form_location: barLocation, page: pagePath() });
       }
     }
     if ("IntersectionObserver" in window) {
@@ -154,7 +157,7 @@
 
     bar.querySelector(".sub-bar-go").addEventListener("click", function (event) {
       event.preventDefault();
-      track("subscribe_bar_click", { form_location: "issue-bar", page: pagePath() });
+      track("subscribe_bar_click", { form_location: barLocation, page: pagePath() });
       box.scrollIntoView({ behavior: "smooth", block: "center" });
       var input = box.querySelector('input[name="email"]');
       if (input) input.focus({ preventScroll: true });
