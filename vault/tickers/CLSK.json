@@ -1,7 +1,7 @@
 {
   "ticker": "CLSK",
-  "updated_at": "2026-10-14T14:19:26Z",
-  "price": 9.395,
+  "updated_at": "2026-10-14T20:26:13Z",
+  "price": 9.21,
   "filings": [
     {
       "form": "4",
@@ -35,11 +35,11 @@
     }
   ],
   "error": null,
-  "prev_close": 10.15,
-  "change": -0.755,
-  "change_pct": -7.438,
+  "prev_close": 9.225,
+  "change": -0.015,
+  "change_pct": -0.163,
   "currency": "USD",
   "exchange": "NASDAQ-CM",
-  "volume": 5047330.375997,
+  "volume": 23917160.926354,
   "quote_source": "nasdaq-stocks"
 }
