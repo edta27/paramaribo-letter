@@ -1,8 +1,14 @@
 {
   "ticker": "MSFT",
-  "updated_at": "2026-10-14T20:26:17Z",
-  "price": 532.7967,
+  "updated_at": "2026-10-14T23:39:27Z",
+  "price": 532.2675,
   "filings": [
+    {
+      "form": "4",
+      "filing_date": "2026-10-14",
+      "accession": "0000789019-26-000226",
+      "url": "https://www.sec.gov/Archives/edgar/data/789019/000078901926000226/xslF345X06/form4.xml"
+    },
     {
       "form": "4",
       "filing_date": "2026-09-17",
@@ -26,20 +32,14 @@
       "filing_date": "2026-09-17",
       "accession": "0000789019-26-000221",
       "url": "https://www.sec.gov/Archives/edgar/data/789019/000078901926000221/xslF345X06/form4.xml"
-    },
-    {
-      "form": "4",
-      "filing_date": "2026-09-17",
-      "accession": "0000789019-26-000220",
-      "url": "https://www.sec.gov/Archives/edgar/data/789019/000078901926000220/xslF345X06/form4.xml"
     }
   ],
   "error": null,
   "prev_close": 533.69,
-  "change": -0.8933,
-  "change_pct": -0.167,
+  "change": -1.4225,
+  "change_pct": -0.267,
   "currency": "USD",
   "exchange": "NASDAQ-GS",
-  "volume": 21463175.26504,
+  "volume": 22299633.645373,
   "quote_source": "nasdaq-stocks"
 }

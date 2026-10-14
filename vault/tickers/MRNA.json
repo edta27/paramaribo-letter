@@ -1,7 +1,7 @@
 {
   "ticker": "MRNA",
-  "updated_at": "2026-10-14T20:26:16Z",
-  "price": 225.56,
+  "updated_at": "2026-10-14T23:39:26Z",
+  "price": 224.6479,
   "filings": [
     {
       "form": "4",
@@ -36,10 +36,10 @@
   ],
   "error": null,
   "prev_close": 226.3,
-  "change": -0.74,
-  "change_pct": -0.327,
+  "change": -1.6521,
+  "change_pct": -0.73,
   "currency": "USD",
   "exchange": "NASDAQ-GS",
-  "volume": 16500123.126267,
+  "volume": 16607740.364819,
   "quote_source": "nasdaq-stocks"
 }
