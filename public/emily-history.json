@@ -105,15 +105,15 @@
     "vulnerability": 44
   },
   {
-    "active": 17,
+    "active": 16,
     "btc_dominance": 57.19,
-    "btc_price_usd": 82057.03465579511,
+    "btc_price_usd": 82270.9256621348,
     "equity_rates_divergence": 41,
-    "forced_deleveraging_risk": 62,
+    "forced_deleveraging_risk": 50,
     "rotation": 21,
     "treasury_top_holder_share_pct": 61.98709469976542,
     "treasury_total_btc": 1368430.0,
-    "updated_at": "2026-10-15T18:34:31.326559Z",
+    "updated_at": "2026-10-15T23:07:28.115239Z",
     "vulnerability": 44
   }
 ]
