@@ -112,6 +112,14 @@
     url: "https://www.weforum.org/publications/global-risks-report-2026/",
   };
   const wildcard = data.wildcard || {};
+  const research = window.EMILY_RESEARCH_LEDGER || {
+    updated_at: "—",
+    purpose: "Conversation hypotheses remain separate from automated scores.",
+    competing_models: [],
+    confidence_ladder: [],
+    hypotheses: [],
+    governance_rules: [],
+  };
   const model = data.model || {};
   const sourceLinks = (data.sources || []).map((item) =>
     `<a href="${esc(item.url)}">${esc(item.label)}</a>`).join(" · ");
@@ -142,6 +150,7 @@
       <a href="#emily-summary">Today</a>
       <a href="#emily-core">Market structure</a>
       <a href="#emily-context">Broader context</a>
+      <a href="#emily-research">Research protocol</a>
       <a href="#emily-rules">Decision rules</a>
       <a href="#emily-method">Method</a>
     </nav>
@@ -362,9 +371,79 @@
       </div>
     </section>
 
+    <section class="emily-section" id="emily-research" aria-labelledby="emily-research-title">
+      <div class="chart-section-head emily-section-head">
+        <div><span>03 · CONVERSATION RESEARCH</span><h2 id="emily-research-title">Ideas become testable records</h2></div>
+        <p>${esc(research.purpose)}</p>
+      </div>
+      <div class="emily-grid emily-grid--research">
+
+      <article class="emily-panel">
+        <div class="feed-kicker">Competing models</div>
+        <h2>Two questions, not one answer</h2>
+        <p>The trend can be repairing while the cycle low remains unresolved. Emily keeps those questions separate.</p>
+        <div class="emily-model-stack">
+          ${(research.competing_models || []).map((item) => `
+            <section class="emily-model-card">
+              <div class="emily-model-card-head"><span>${esc(item.label)}</span><strong>${esc(item.state)}</strong></div>
+              <h3>${esc(item.title)}</h3>
+              <p><strong>Confirmation:</strong> ${esc(item.confirmation)}</p>
+              <p><strong>Failure:</strong> ${esc(item.failure)}</p>
+            </section>`).join("")}
+        </div>
+      </article>
+
+      <article class="emily-panel">
+        <div class="feed-kicker">Source confidence</div>
+        <h2>Early does not have to mean careless</h2>
+        <p>Markets can move before official confirmation. Emily therefore grades the evidence source separately from the event's market impact.</p>
+        <div class="emily-table-wrap">
+          <table class="emily-table emily-table--compact">
+            <thead><tr><th>Level</th><th>Evidence</th><th>Treatment</th></tr></thead>
+            <tbody>
+              ${(research.confidence_ladder || []).map((item) => `<tr><td><strong>${esc(item.level)}</strong></td><td>${esc(item.requirement)}</td><td>${esc(item.treatment)}</td></tr>`).join("")}
+            </tbody>
+          </table>
+        </div>
+        <p class="emily-updated">Source confidence never substitutes for price, liquidity, volatility or credit evidence.</p>
+      </article>
+
+      <article class="emily-panel emily-panel--wide">
+        <div class="feed-kicker">Registered hypothesis ledger</div>
+        <h2>No moving the goalposts</h2>
+        <p>These records preserve the useful ideas from the conversation while making their status, deadline and failure conditions visible.</p>
+        <div class="emily-table-wrap">
+          <table class="emily-table emily-ledger-table">
+            <thead><tr><th>Hypothesis</th><th>Status and horizon</th><th>What confirms it</th><th>What invalidates it</th><th>Effect on Emily</th></tr></thead>
+            <tbody>
+              ${(research.hypotheses || []).map((item) => `
+                <tr>
+                  <td><strong>${esc(item.title)}</strong><small>Registered ${esc(item.registered)}</small><span>${esc(item.thesis)}</span></td>
+                  <td><span class="emily-ledger-status">${esc(item.status)}</span><small>${esc(item.horizon)}</small></td>
+                  <td>${esc(item.confirmation)}</td>
+                  <td>${esc(item.invalidation)}</td>
+                  <td>${esc(item.score_effect)}</td>
+                </tr>`).join("")}
+            </tbody>
+          </table>
+        </div>
+        <p class="emily-updated">Ledger reviewed ${esc(research.updated_at)}. These are research hypotheses, not forecasts or trading instructions.</p>
+      </article>
+
+      <article class="emily-panel emily-panel--wide emily-governance">
+        <div class="feed-kicker">Controller rules</div>
+        <h2>How conversation becomes disciplined research</h2>
+        <ol>
+          ${(research.governance_rules || []).map((rule) => `<li>${esc(rule)}</li>`).join("")}
+        </ol>
+      </article>
+
+      </div>
+    </section>
+
     <section class="emily-section" id="emily-rules" aria-labelledby="emily-rules-title">
       <div class="chart-section-head emily-section-head">
-        <div><span>03 · DECISION RULES</span><h2 id="emily-rules-title">What changes Emily's position</h2></div>
+        <div><span>04 · DECISION RULES</span><h2 id="emily-rules-title">What changes Emily's position</h2></div>
         <p>Precommitted evidence gates keep the call from moving with the mood.</p>
       </div>
       <div class="emily-grid emily-grid--rules">
@@ -400,7 +479,7 @@
 
     <section class="emily-section" id="emily-method" aria-labelledby="emily-method-title">
       <div class="chart-section-head emily-section-head">
-        <div><span>04 · TRANSPARENCY</span><h2 id="emily-method-title">Method, limits and sources</h2></div>
+        <div><span>05 · TRANSPARENCY</span><h2 id="emily-method-title">Method, limits and sources</h2></div>
         <p>The full calculation boundaries and research trail remain available.</p>
       </div>
       <div class="emily-grid emily-grid--disclosures">
@@ -413,6 +492,7 @@
         <p>Emily separates market vulnerability from active panic. Required BTC and breadth data must be fresh. Optional feeds that fail are disclosed and removed from the calculation; they never become artificial green signals. If too little evidence remains, the daily job fails and yesterday's page stays in place.</p>
         <p>ETF flows, options positioning, order-book depth, shipping, public-health developments and breaking geopolitical news still require an event-driven research review. Corporate treasury holdings and the World Economic Forum's annual risk survey are displayed as secondary structural context and do not alter Active Panic by themselves. X posts are not used in the automatic score because reliable automated access is not free.</p>
         <p>The Wildcard Early Warning module is deliberately separate from the Panic Meter. Unverified external-event claims cannot raise the automated market score; verified consequences can trigger a full reassessment.</p>
+        <p>Conversation research is stored in a separate hypothesis ledger. Historical comparisons must keep one price source, exchange, timezone and definition of a low or close for the life of the test. Dated theses close at their stated deadline; they are not extended after the fact.</p>
         </div>
       </details>
 
