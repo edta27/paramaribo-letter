@@ -1,0 +1,88 @@
+{
+  "id": "2026-10-16-channels-opened-panic-did-not",
+  "date": "2026-10-16",
+  "kicker": "Chart Desk · Issue 30",
+  "title": "The channels opened. Panic did not.",
+  "dek": "15 October 2026 hourly wick to $79,676, the daily box since 1 October, and Farside ETF flows through the −$825M nine-session bleed.",
+  "asOf": "2026-10-16T14:40:00Z",
+  "cadence": "follow-up",
+  "thesis": "The $86k upgrade failed. $82k is a membrane. $80k was tagged and not kept. Early transmission in vol, oil and Nasdaq desynchronized into Friday.",
+  "stakes": "Next evidence is whether $82k holds as a close — or whether $80k is accepted. Panic is not the base case until the channels travel together.",
+  "levels": [
+    "$86k",
+    "$82k",
+    "$80k",
+    "$77k",
+    "$72k",
+    "~$57.7k"
+  ],
+  "letterId": "2026-10-16-channels-opened-panic-did-not",
+  "letterUrl": "/issue?id=2026-10-16-channels-opened-panic-did-not",
+  "letterLabel": "Vol. 1 · Issue 30",
+  "subscribeHook": "A close through $80k — or two weekday closes back above $86k — updates the sequence. Charts stay free here; the call moves by email.",
+  "sourceNote": "Issue 30 charts use Coinbase Exchange UTC candles (hourly 15 Oct 2026; daily 1–15 Oct) and Farside Investors US-session ETF flows. 16 October is a partial UTC day and an incomplete Farside row. Weekend blanks are not zeroes. Educational scenario research; no leverage.",
+  "briefs": [
+    {
+      "id": "btc-channels-hours",
+      "asset": "BTC · 15 OCT 2026",
+      "headline": "The wick found $80k. The close did not stay there.",
+      "lede": "The 13:00 UTC hour lowed $79,676. The next hour closed $81,780. The UTC day closed $82,131.",
+      "bodyHtml": "<p><strong>Fact.</strong> $80k tagged around the US PPI window. Daily close back above $82k on 7,047 BTC.</p><p><strong>Read.</strong> Tagging is not acceptance. One absorbed pulse is not a panic.</p>",
+      "charts": [
+        {
+          "title": "BTC hourly range [USD] vs close · 15 Oct 2026",
+          "bars": {
+            "label": "Hourly high–low range [USD]",
+            "unsigned": true,
+            "data": [[1792022400000,450.21],[1792026000000,443.54],[1792029600000,1570.50],[1792033200000,814.49],[1792036800000,915.98],[1792040400000,1184.17],[1792044000000,581.05],[1792047600000,746.54],[1792051200000,409.09],[1792054800000,221.41],[1792058400000,408.27],[1792062000000,350.52],[1792065600000,641.57],[1792069200000,1010.59],[1792072800000,1965.96],[1792076400000,899.16],[1792080000000,617.89],[1792083600000,578.97],[1792087200000,347.73],[1792090800000,262.50],[1792094400000,526.53],[1792098000000,447.82],[1792101600000,213.46],[1792105200000,322.53]]
+          },
+          "line": {
+            "label": "BTC-USD hourly close [USD]",
+            "data": [[1792022400000,81556.30],[1792026000000,81540.15],[1792029600000,81415.75],[1792033200000,80811.75],[1792036800000,81492.72],[1792040400000,80487.48],[1792044000000,80786.39],[1792047600000,81432.02],[1792051200000,81270.54],[1792054800000,81161.26],[1792058400000,80934.64],[1792062000000,80882.90],[1792065600000,80445.43],[1792069200000,80104.03],[1792072800000,81779.85],[1792076400000,82332.51],[1792080000000,82022.55],[1792083600000,82338.94],[1792087200000,82315.16],[1792090800000,82299.26],[1792094400000,82022.80],[1792098000000,82337.71],[1792101600000,82363.02],[1792105200000,82131.46]]
+          }
+        }
+      ]
+    },
+    {
+      "id": "btc-channels-path",
+      "asset": "BTC",
+      "headline": "One close above $86k. Then a membrane at $82k.",
+      "lede": "4 October closed $86,507. 8, 12 and 14 October closed below $82k and were reclaimed. 15 October lowed $79,676.",
+      "bodyHtml": "<p><strong>Fact.</strong> Issue 29's second-close upgrade never printed. $82k is no longer a clean daily hold.</p><p><strong>Read.</strong> The floor became a membrane. $80k has been seen and not kept.</p>",
+      "charts": [
+        {
+          "title": "BTC daily range [USD] vs close",
+          "bars": {
+            "label": "Daily high–low range [USD]",
+            "unsigned": true,
+            "data": [[1790812800000,2136.97],[1790899200000,3399.03],[1790985600000,596.50],[1791072000000,2092.79],[1791158400000,2051.80],[1791244800000,1598.34],[1791331200000,2883.81],[1791417600000,3158.72],[1791504000000,1918.97],[1791590400000,635.37],[1791676800000,1396.74],[1791763200000,2627.91],[1791849600000,3142.85],[1791936000000,2729.96],[1792022400000,2879.06]]
+          },
+          "line": {
+            "label": "BTC-USD close [USD]",
+            "data": [[1790812800000,84848.73],[1790899200000,84504.88],[1790985600000,84742.22],[1791072000000,86507.11],[1791158400000,85748.96],[1791244800000,85539.77],[1791331200000,83275.06],[1791417600000,81692.79],[1791504000000,82544.71],[1791590400000,82910.80],[1791676800000,83678.29],[1791763200000,81742.50],[1791849600000,83101.99],[1791936000000,81566.29],[1792022400000,82131.46]]
+          }
+        }
+      ]
+    },
+    {
+      "id": "btc-channels-flows",
+      "asset": "BTC · SPOT DEMAND",
+      "headline": "The bid did not only blink",
+      "lede": "5–15 October completed Farside rows net about −$825M. 7 October printed −$484.9M.",
+      "bodyHtml": "<p><strong>Fact.</strong> 16 October is incomplete and is not a zero. Weekend blanks are not zeroes.</p><p><strong>Read.</strong> Creations are not confirming a Model A advance.</p>",
+      "charts": [
+        {
+          "title": "US spot BTC ETF net flow [US$M] vs BTC close",
+          "bars": {
+            "label": "Farside daily net flow [US$M]",
+            "data": [[1790812800000,102.7],[1790899200000,189.9],[1790985600000,null],[1791072000000,null],[1791158400000,-89.8],[1791244800000,118.8],[1791331200000,-484.9],[1791417600000,-244.1],[1791504000000,21.1],[1791590400000,null],[1791676800000,null],[1791763200000,-65.4],[1791849600000,175.7],[1791936000000,-261.4],[1792022400000,5.1]]
+          },
+          "line": {
+            "label": "BTC-USD close [USD]",
+            "data": [[1790812800000,84848.73],[1790899200000,84504.88],[1790985600000,84742.22],[1791072000000,86507.11],[1791158400000,85748.96],[1791244800000,85539.77],[1791331200000,83275.06],[1791417600000,81692.79],[1791504000000,82544.71],[1791590400000,82910.80],[1791676800000,83678.29],[1791763200000,81742.50],[1791849600000,83101.99],[1791936000000,81566.29],[1792022400000,82131.46]]
+          }
+        }
+      ]
+    }
+  ]
+}

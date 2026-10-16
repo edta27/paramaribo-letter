@@ -1,5 +1,30 @@
 [
   {
+    "id": "2026-10-16-channels-opened-panic-did-not",
+    "date": "2026-10-16",
+    "kicker": "Chart Desk · Issue 30",
+    "title": "The channels opened. Panic did not.",
+    "dek": "15 October 2026 hourly wick to $79,676, the daily box since 1 October, and Farside ETF flows through the −$825M nine-session bleed.",
+    "asOf": "2026-10-16T14:40:00Z",
+    "cadence": "follow-up",
+    "thesis": "The $86k upgrade failed. $82k is a membrane. $80k was tagged and not kept. Early transmission in vol, oil and Nasdaq desynchronized into Friday.",
+    "stakes": "Next evidence is whether $82k holds as a close — or whether $80k is accepted. Panic is not the base case until the channels travel together.",
+    "levels": [
+      "$86k",
+      "$82k",
+      "$80k",
+      "$77k",
+      "$72k",
+      "~$57.7k"
+    ],
+    "letterId": "2026-10-16-channels-opened-panic-did-not",
+    "letterUrl": "/issue?id=2026-10-16-channels-opened-panic-did-not",
+    "letterLabel": "Vol. 1 · Issue 30",
+    "subscribeHook": "A close through $80k — or two weekday closes back above $86k — updates the sequence. Charts stay free here; the call moves by email.",
+    "sourceNote": "Issue 30 charts use Coinbase Exchange UTC candles (hourly 15 Oct 2026; daily 1–15 Oct) and Farside Investors US-session ETF flows. 16 October is a partial UTC day and an incomplete Farside row. Weekend blanks are not zeroes. Educational scenario research; no leverage.",
+    "packUrl": "/charts/packs/2026-10-16-channels-opened-panic-did-not.json"
+  },
+  {
     "id": "2026-10-07-support-test-under-leverage",
     "date": "2026-10-07",
     "kicker": "Chart Desk · Live update",

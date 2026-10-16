@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+<title id="title">The wick found $80k. The close did not stay there.</title>
+<desc id="desc">Hourly Coinbase BTC-USD candles on 15 October 2026. Price reaches $79,676 at 13:00 UTC, then recovers through $82,000 by the afternoon. The UTC daily close is $82,131.</desc>
+<rect width="1200" height="720" fill="#0e1721"/>
+<style>text{font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}.title{font-size:28px;font-weight:700;fill:#e6edf3}.sub{font-size:15px;fill:#9eb0c1}.axis{font-size:13px;fill:#9eb0c1}.note{font-size:12px;fill:#9eb0c1}.label{font-size:13px;font-weight:600;fill:#e6edf3}</style>
+<text x="56" y="48" class="title">The wick found $80k. The close did not stay there.</text>
+<text x="56" y="76" class="sub">Coinbase hourly UTC candles · 15 Oct 2026 · PPI-week low $79,676 to afternoon reclaim</text>
+<rect x="94.0" y="108.0" width="1015.0" height="490.0" rx="8" fill="#122131" stroke="#2a3b4d"/>
+<line x1="94.0" y1="482.8" x2="1109.0" y2="482.8" stroke="#2a3b4d"/>
+<text x="82.0" y="486.8" class="axis" text-anchor="end">$79.7k</text>
+<line x1="94.0" y1="451.0" x2="1109.0" y2="451.0" stroke="#2a3b4d"/>
+<text x="82.0" y="455.0" class="axis" text-anchor="end">$80.0k</text>
+<line x1="94.0" y1="255.0" x2="1109.0" y2="255.0" stroke="#2a3b4d"/>
+<text x="82.0" y="259.0" class="axis" text-anchor="end">$82.0k</text>
+<line x1="94.0" y1="200.6" x2="1109.0" y2="200.6" stroke="#2a3b4d"/>
+<text x="82.0" y="204.6" class="axis" text-anchor="end">$82.6k</text>
+<line x1="94.0" y1="451.0" x2="1109.0" y2="451.0" stroke="#e8d36c" stroke-width="1.4" stroke-dasharray="6 5"/>
+<text x="1117.0" y="455.0" class="label" fill="#e8d36c">$80k</text>
+<line x1="94.0" y1="255.0" x2="1109.0" y2="255.0" stroke="#7ac7d4" stroke-width="1.4" stroke-dasharray="6 5"/>
+<text x="1117.0" y="259.0" class="label" fill="#7ac7d4">$82k</text>
+<line x1="94.0" y1="281.3" x2="94.0" y2="325.4" stroke="#ef8d8d" stroke-width="1.8"/>
+<rect x="81.0" y="297.5" width="26" height="2.5" fill="#ef8d8d" opacity="0.92" stroke="#ef8d8d"/>
+<text x="94.0" y="622.0" class="axis" text-anchor="middle">00:00</text>
+<line x1="138.1" y1="271.6" x2="138.1" y2="315.0" stroke="#ef8d8d" stroke-width="1.8"/>
+<rect x="125.1" y="298.5" width="26" height="2.5" fill="#ef8d8d" opacity="0.92" stroke="#ef8d8d"/>
+<line x1="182.3" y1="284.8" x2="182.3" y2="438.8" stroke="#ef8d8d" stroke-width="1.8"/>
+<rect x="169.3" y="300.1" width="26" height="12.2" fill="#ef8d8d" opacity="0.92" stroke="#ef8d8d"/>
+<line x1="226.4" y1="310.5" x2="226.4" y2="390.3" stroke="#ef8d8d" stroke-width="1.8"/>
+<rect x="213.4" y="311.5" width="26" height="59.9" fill="#ef8d8d" opacity="0.92" stroke="#ef8d8d"/>
+<line x1="270.5" y1="289.8" x2="270.5" y2="379.5" stroke="#79d3a3" stroke-width="1.8"/>
+<rect x="257.5" y="304.7" width="26" height="67.2" fill="#79d3a3" opacity="0.92" stroke="#79d3a3"/>
+<text x="270.5" y="622.0" class="axis" text-anchor="middle">04:00</text>
+<line x1="314.7" y1="295.4" x2="314.7" y2="411.4" stroke="#ef8d8d" stroke-width="1.8"/>
+<rect x="301.7" y="304.7" width="26" height="98.5" fill="#ef8d8d" opacity="0.92" stroke="#ef8d8d"/>
+<line x1="358.8" y1="355.1" x2="358.8" y2="412.0" stroke="#79d3a3" stroke-width="1.8"/>
+<rect x="345.8" y="373.9" width="26" height="29.3" fill="#79d3a3" opacity="0.92" stroke="#79d3a3"/>
+<line x1="402.9" y1="306.4" x2="402.9" y2="379.5" stroke="#79d3a3" stroke-width="1.8"/>
+<rect x="389.9" y="310.7" width="26" height="63.3" fill="#79d3a3" opacity="0.92" stroke="#79d3a3"/>
+<line x1="447.0" y1="306.4" x2="447.0" y2="346.5" stroke="#ef8d8d" stroke-width="1.8"/>
+<rect x="434.0" y="310.7" width="26" height="15.8" fill="#ef8d8d" opacity="0.92" stroke="#ef8d8d"/>
+<text x="447.0" y="622.0" class="axis" text-anchor="middle">08:00</text>
+<line x1="491.2" y1="322.3" x2="491.2" y2="344.0" stroke="#ef8d8d" stroke-width="1.8"/>
+<rect x="478.2" y="326.1" width="26" height="11.1" fill="#ef8d8d" opacity="0.92" stroke="#ef8d8d"/>
+<line x1="535.3" y1="336.5" x2="535.3" y2="376.5" stroke="#ef8d8d" stroke-width="1.8"/>
+<rect x="522.3" y="337.2" width="26" height="22.2" fill="#ef8d8d" opacity="0.92" stroke="#ef8d8d"/>
+<line x1="579.4" y1="344.0" x2="579.4" y2="378.3" stroke="#ef8d8d" stroke-width="1.8"/>
+<rect x="566.4" y="359.4" width="26" height="5.1" fill="#ef8d8d" opacity="0.92" stroke="#ef8d8d"/>
+<line x1="623.6" y1="345.4" x2="623.6" y2="408.3" stroke="#ef8d8d" stroke-width="1.8"/>
+<rect x="610.6" y="364.5" width="26" height="42.9" fill="#ef8d8d" opacity="0.92" stroke="#ef8d8d"/>
+<text x="623.6" y="622.0" class="axis" text-anchor="middle">12:00</text>
+<line x1="667.7" y1="383.7" x2="667.7" y2="482.8" stroke="#ef8d8d" stroke-width="1.8"/>
+<rect x="654.7" y="407.3" width="26" height="33.5" fill="#ef8d8d" opacity="0.92" stroke="#ef8d8d"/>
+<text x="667.7" y="622.0" class="axis" text-anchor="middle">13:00</text>
+<line x1="711.8" y1="257.6" x2="711.8" y2="450.2" stroke="#79d3a3" stroke-width="1.8"/>
+<rect x="698.8" y="276.6" width="26" height="165.1" fill="#79d3a3" opacity="0.92" stroke="#79d3a3"/>
+<line x1="756.0" y1="200.6" x2="756.0" y2="288.7" stroke="#79d3a3" stroke-width="1.8"/>
+<rect x="743.0" y="222.4" width="26" height="54.3" fill="#79d3a3" opacity="0.92" stroke="#79d3a3"/>
+<line x1="800.1" y1="208.5" x2="800.1" y2="269.1" stroke="#ef8d8d" stroke-width="1.8"/>
+<rect x="787.1" y="222.3" width="26" height="30.5" fill="#ef8d8d" opacity="0.92" stroke="#ef8d8d"/>
+<text x="800.1" y="622.0" class="axis" text-anchor="middle">16:00</text>
+<line x1="844.2" y1="201.5" x2="844.2" y2="258.3" stroke="#79d3a3" stroke-width="1.8"/>
+<rect x="831.2" y="221.8" width="26" height="31.0" fill="#79d3a3" opacity="0.92" stroke="#79d3a3"/>
+<line x1="888.3" y1="221.8" x2="888.3" y2="255.9" stroke="#ef8d8d" stroke-width="1.8"/>
+<rect x="875.3" y="221.8" width="26" height="2.5" fill="#ef8d8d" opacity="0.92" stroke="#ef8d8d"/>
+<line x1="932.5" y1="203.3" x2="932.5" y2="229.0" stroke="#ef8d8d" stroke-width="1.8"/>
+<rect x="919.5" y="224.1" width="26" height="2.5" fill="#ef8d8d" opacity="0.92" stroke="#ef8d8d"/>
+<line x1="976.6" y1="219.8" x2="976.6" y2="271.4" stroke="#ef8d8d" stroke-width="1.8"/>
+<rect x="963.6" y="225.7" width="26" height="27.1" fill="#ef8d8d" opacity="0.92" stroke="#ef8d8d"/>
+<text x="976.6" y="622.0" class="axis" text-anchor="middle">20:00</text>
+<line x1="1020.7" y1="219.0" x2="1020.7" y2="262.9" stroke="#79d3a3" stroke-width="1.8"/>
+<rect x="1007.7" y="221.9" width="26" height="30.9" fill="#79d3a3" opacity="0.92" stroke="#79d3a3"/>
+<line x1="1064.9" y1="206.0" x2="1064.9" y2="226.9" stroke="#79d3a3" stroke-width="1.8"/>
+<rect x="1051.9" y="219.4" width="26" height="2.5" fill="#79d3a3" opacity="0.92" stroke="#79d3a3"/>
+<line x1="1109.0" y1="219.4" x2="1109.0" y2="251.0" stroke="#ef8d8d" stroke-width="1.8"/>
+<rect x="1096.0" y="219.4" width="26" height="22.7" fill="#ef8d8d" opacity="0.92" stroke="#ef8d8d"/>
+<text x="1109.0" y="622.0" class="axis" text-anchor="middle">23:00</text>
+<text x="104.0" y="673" class="note">13:00 UTC hour low $79,676. 14:00 UTC hour closed $81,780. Daily close: $82,131 on 7,047 BTC.</text>
+<text x="1109.0" y="698" class="note" text-anchor="end">Source: Coinbase Exchange BTC-USD · retrieved 16 Oct 2026 · 9:40 a.m. CDT / 14:40 UTC</text>
+</svg>
