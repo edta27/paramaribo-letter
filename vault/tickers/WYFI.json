@@ -1,8 +1,26 @@
 {
   "ticker": "WYFI",
-  "updated_at": "2026-10-16T23:14:59Z",
-  "price": 11.75,
+  "updated_at": "2026-10-19T16:10:13Z",
+  "price": 11.95,
   "filings": [
+    {
+      "form": "4",
+      "filing_date": "2026-10-16",
+      "accession": "0001213900-26-110436",
+      "url": "https://www.sec.gov/Archives/edgar/data/2042022/000121390026110436/xslF345X06/ownership.xml"
+    },
+    {
+      "form": "4",
+      "filing_date": "2026-10-16",
+      "accession": "0001213900-26-110434",
+      "url": "https://www.sec.gov/Archives/edgar/data/2042022/000121390026110434/xslF345X06/ownership.xml"
+    },
+    {
+      "form": "4",
+      "filing_date": "2026-10-16",
+      "accession": "0001213900-26-110433",
+      "url": "https://www.sec.gov/Archives/edgar/data/2042022/000121390026110433/xslF345X06/ownership.xml"
+    },
     {
       "form": "8-K",
       "filing_date": "2026-09-14",
@@ -14,32 +32,14 @@
       "filing_date": "2026-09-01",
       "accession": "0001213900-26-096352",
       "url": "https://www.sec.gov/Archives/edgar/data/2042022/000121390026096352/xslF345X06/ownership.xml"
-    },
-    {
-      "form": "8-K/A",
-      "filing_date": "2026-08-26",
-      "accession": "0001213900-26-094022",
-      "url": "https://www.sec.gov/Archives/edgar/data/2042022/000121390026094022/ea0303443-8ka1_whitefiber.htm"
-    },
-    {
-      "form": "8-K",
-      "filing_date": "2026-08-21",
-      "accession": "0001213900-26-092599",
-      "url": "https://www.sec.gov/Archives/edgar/data/2042022/000121390026092599/ea0302925-8k_white.htm"
-    },
-    {
-      "form": "8-K",
-      "filing_date": "2026-08-17",
-      "accession": "0001213900-26-090492",
-      "url": "https://www.sec.gov/Archives/edgar/data/2042022/000121390026090492/ea0302334-8k_whitefiber.htm"
     }
   ],
   "error": null,
   "prev_close": 11.76,
-  "change": -0.01,
-  "change_pct": -0.085,
+  "change": 0.19,
+  "change_pct": 1.616,
   "currency": "USD",
   "exchange": "NASDAQ-CM",
-  "volume": 1867771.561145,
+  "volume": 733544.628281,
   "quote_source": "nasdaq-stocks"
 }
