@@ -1,7 +1,7 @@
 {
   "ticker": "MSFT",
-  "updated_at": "2026-10-21T14:20:18Z",
-  "price": 528.67,
+  "updated_at": "2026-10-21T20:27:15Z",
+  "price": 532.8875,
   "filings": [
     {
       "form": "4",
@@ -35,11 +35,11 @@
     }
   ],
   "error": null,
-  "prev_close": 531.87,
-  "change": -3.2,
-  "change_pct": -0.602,
+  "prev_close": 532.95,
+  "change": -0.0625,
+  "change_pct": -0.012,
   "currency": "USD",
   "exchange": "NASDAQ-GS",
-  "volume": 2840299.826135,
+  "volume": 13789303.57208,
   "quote_source": "nasdaq-stocks"
 }
