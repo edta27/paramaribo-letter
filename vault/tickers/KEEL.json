@@ -1,7 +1,7 @@
 {
   "ticker": "KEEL",
-  "updated_at": "2026-10-21T20:27:12Z",
-  "price": 2.4269,
+  "updated_at": "2026-10-21T23:54:13Z",
+  "price": 2.38,
   "filings": [
     {
       "form": "4",
@@ -36,10 +36,10 @@
   ],
   "error": null,
   "prev_close": 2.4,
-  "change": 0.0269,
-  "change_pct": 1.121,
+  "change": -0.02,
+  "change_pct": -0.833,
   "currency": "USD",
   "exchange": "NASDAQ-GM",
-  "volume": 22073740.013787,
+  "volume": 22623166.71517,
   "quote_source": "nasdaq-stocks"
 }

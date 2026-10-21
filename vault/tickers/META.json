@@ -1,13 +1,19 @@
 {
   "ticker": "META",
-  "updated_at": "2026-10-21T20:27:15Z",
-  "price": 725.5806,
+  "updated_at": "2026-10-21T23:54:17Z",
+  "price": 713.8003,
   "filings": [
     {
       "form": "8-K",
       "filing_date": "2026-10-21",
       "accession": "0001628280-26-066700",
       "url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026066700/meta-20261019.htm"
+    },
+    {
+      "form": "4",
+      "filing_date": "2026-10-21",
+      "accession": "0000950103-26-015980",
+      "url": "https://www.sec.gov/Archives/edgar/data/1326801/000095010326015980/xslF345X06/ownership.xml"
     },
     {
       "form": "4",
@@ -26,20 +32,14 @@
       "filing_date": "2026-09-30",
       "accession": "0000950103-26-014886",
       "url": "https://www.sec.gov/Archives/edgar/data/1326801/000095010326014886/xslF345X06/ownership.xml"
-    },
-    {
-      "form": "4",
-      "filing_date": "2026-09-28",
-      "accession": "0000950103-26-014647",
-      "url": "https://www.sec.gov/Archives/edgar/data/1326801/000095010326014647/xslF345X06/ownership.xml"
     }
   ],
   "error": null,
   "prev_close": 697.52,
-  "change": 28.0606,
-  "change_pct": 4.023,
+  "change": 16.2803,
+  "change_pct": 2.334,
   "currency": "USD",
   "exchange": "NASDAQ-GS",
-  "volume": 24339208.022337,
+  "volume": 29178429.319157,
   "quote_source": "nasdaq-stocks"
 }
