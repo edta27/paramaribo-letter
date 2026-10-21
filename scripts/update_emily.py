@@ -31,6 +31,23 @@ PUBLIC = ROOT / "public"
 LIVE_PATH = PUBLIC / "emily-live.js"
 HISTORY_PATH = PUBLIC / "emily-history.json"
 USER_AGENT = "Paramaribo-Letter-Emily/1.0 (+https://www.paramariboletter.com/emily)"
+FRED_CARRY_MAX_AGE = timedelta(days=7)
+FRED_CARRY_SOURCE = "Last verified FRED print (maximum 7-day carry)"
+MACRO_SERIES = (
+    ("vix", "VIXCLS", "VIX"),
+    ("ten_year", "DGS10", "US 10-year yield"),
+    ("hy", "BAMLH0A0HYM2", "US high-yield spread"),
+    ("oil", "DCOILWTICO", "WTI oil"),
+    ("dollar", "DTWEXBGS", "Broad dollar index"),
+    ("sp500", "SP500", "S&P 500"),
+    ("nasdaq", "NASDAQCOM", "Nasdaq Composite"),
+)
+CONSUMER_SERIES = (
+    ("real_spending", "PCEC96", "Real consumer spending"),
+    ("real_income", "DSPIC96", "Real disposable personal income"),
+    ("saving_rate", "PSAVERT", "Personal saving rate"),
+    ("sentiment", "UMCSENT", "University of Michigan consumer sentiment"),
+)
 
 STABLES = {
     "BUSD", "DAI", "FDUSD", "FRAX", "GUSD", "LUSD", "PYUSD", "RLUSD",
@@ -118,6 +135,110 @@ def last_history(before_day: str | None = None) -> dict[str, Any] | None:
         return candidates[-1] if candidates else None
     except (OSError, json.JSONDecodeError):
         return None
+
+
+def parse_stamp(value: Any) -> datetime | None:
+    try:
+        stamp = datetime.fromisoformat(str(value).replace("Z", "+00:00"))
+    except (TypeError, ValueError):
+        return None
+    if stamp.tzinfo is None:
+        stamp = stamp.replace(tzinfo=timezone.utc)
+    return stamp.astimezone(timezone.utc)
+
+
+def published_snapshot() -> dict[str, Any] | None:
+    """Read the snapshot already on the site. History rows do not keep macro series."""
+    if not LIVE_PATH.exists():
+        return None
+    text = LIVE_PATH.read_text(encoding="utf-8")
+    marker = "window.EMILY_LIVE="
+    start = text.find(marker)
+    if start < 0:
+        return None
+    payload = text[start + len(marker):].strip()
+    if payload.endswith(";"):
+        payload = payload[:-1]
+    try:
+        data = json.loads(payload)
+    except json.JSONDecodeError:
+        return None
+    return data if isinstance(data, dict) else None
+
+
+def carry_is_fresh(anchor: Any, now: datetime) -> bool:
+    stamp = parse_stamp(anchor)
+    if stamp is None:
+        return False
+    age = now - stamp
+    return timedelta(0) <= age <= FRED_CARRY_MAX_AGE
+
+
+def carry_forward_rows(
+    current: dict[str, dict[str, Any]],
+    published: dict[str, Any] | None,
+    keys: list[str],
+    now: datetime,
+) -> list[str]:
+    """Fill missing FRED series from the last verified print.
+
+    A carried row keeps the timestamp of the snapshot that actually fetched it,
+    so a multi-day outage cannot refresh the carry clock by copying itself.
+    """
+    if not published:
+        return []
+    prior = published.get("macro")
+    if not isinstance(prior, dict):
+        return []
+    fetched_at = published.get("updated_at")
+    carried: list[str] = []
+    for key in keys:
+        if key in current:
+            continue
+        row = prior.get(key)
+        if not isinstance(row, dict) or not isinstance(row.get("value"), (int, float)) or not row.get("date"):
+            continue
+        anchor = row.get("carried_from") if row.get("stale") else fetched_at
+        if not carry_is_fresh(anchor, now):
+            continue
+        copied = dict(row)
+        copied["stale"] = True
+        copied["carried_from"] = str(anchor)
+        copied["source"] = FRED_CARRY_SOURCE
+        current[key] = copied
+        carried.append(key)
+    return carried
+
+
+def carry_forward_block(
+    published: dict[str, Any] | None,
+    field: str,
+    now: datetime,
+) -> dict[str, Any] | None:
+    if not published:
+        return None
+    row = published.get(field)
+    if not isinstance(row, dict) or not row.get("date"):
+        return None
+    anchor = row.get("carried_from") if row.get("stale") else published.get("updated_at")
+    if not carry_is_fresh(anchor, now):
+        return None
+    copied = dict(row)
+    copied["stale"] = True
+    copied["carried_from"] = str(anchor)
+    copied["source"] = FRED_CARRY_SOURCE
+    return copied
+
+
+def uses_stale_macro(macro: dict[str, dict[str, Any]], *keys: str) -> bool:
+    return any(isinstance(macro.get(key), dict) and macro[key].get("stale") for key in keys)
+
+
+def mark_stale(detail: list[dict[str, Any]], name: str) -> None:
+    for item in detail:
+        if item["name"] == name:
+            item["stale"] = True
+            item["source"] = FRED_CARRY_SOURCE
 
 
 def save_history(row: dict[str, Any]) -> None:
@@ -590,6 +711,8 @@ def fred_series(series_id: str) -> dict[str, Any]:
     start = (datetime.now(timezone.utc).date() - timedelta(days=45)).isoformat()
     query = urlencode({"id": series_id, "cosd": start})
     text = fetch(f"https://fred.stlouisfed.org/graph/fredgraph.csv?{query}").decode("utf-8")
+    if not text.strip() or text.lstrip()[:1] == "<":
+        raise RuntimeError(f"FRED {series_id} did not return a CSV (feed unavailable)")
     reader = csv.DictReader(io.StringIO(text))
     values: list[tuple[str, float]] = []
     for row in reader:
@@ -946,6 +1069,18 @@ def vulnerability_and_active(
             if item["name"] == "Forced deleveraging":
                 item["stale"] = True
                 item["source"] = "Last verified liquidation snapshot (maximum 72-hour carry)"
+    if uses_stale_macro(macro, "vix", "hy", "ten_year", "oil", "dollar"):
+        mark_stale(vulnerability_detail, "Cross-market transmission")
+    if consumer and consumer.get("stale"):
+        mark_stale(vulnerability_detail, "Consumer exhaustion")
+    if uses_stale_macro(macro, "nasdaq", "ten_year", "vix", "hy", "sp500"):
+        mark_stale(vulnerability_detail, "Equity-rates divergence")
+    if uses_stale_macro(macro, "vix"):
+        mark_stale(active_detail, "Equity volatility")
+    if uses_stale_macro(macro, "hy"):
+        mark_stale(active_detail, "Credit synchronization")
+    if uses_stale_macro(macro, "sp500"):
+        mark_stale(active_detail, "Cross-asset selling")
     return vulnerability, active, vulnerability_detail, active_detail, deleveraging_carried
 
 
@@ -1012,26 +1147,13 @@ def main() -> None:
         )
 
     macro: dict[str, dict[str, Any]] = {}
-    for key, series_id, label in (
-        ("vix", "VIXCLS", "VIX"),
-        ("ten_year", "DGS10", "US 10-year yield"),
-        ("hy", "BAMLH0A0HYM2", "US high-yield spread"),
-        ("oil", "DCOILWTICO", "WTI oil"),
-        ("dollar", "DTWEXBGS", "Broad dollar index"),
-        ("sp500", "SP500", "S&P 500"),
-        ("nasdaq", "NASDAQCOM", "Nasdaq Composite"),
-    ):
+    for key, series_id, label in MACRO_SERIES:
         result = optional(label, lambda sid=series_id: fred_series(sid), gaps)
         if result:
             macro[key] = result
 
     consumer_series: dict[str, dict[str, Any]] = {}
-    for key, series_id, label in (
-        ("real_spending", "PCEC96", "Real consumer spending"),
-        ("real_income", "DSPIC96", "Real disposable personal income"),
-        ("saving_rate", "PSAVERT", "Personal saving rate"),
-        ("sentiment", "UMCSENT", "University of Michigan consumer sentiment"),
-    ):
+    for key, series_id, label in CONSUMER_SERIES:
         result = optional(label, lambda sid=series_id: fred_series(sid), gaps)
         if result:
             consumer_series[key] = result
@@ -1061,7 +1183,27 @@ def main() -> None:
                 "source_note": "FRED series sourced from BEA and the University of Michigan",
             }
 
+    published = published_snapshot()
+    carried_macro = carry_forward_rows(macro, published, [key for key, _, _ in MACRO_SERIES], now)
+    carried_consumer = False
+    if not consumer_series:
+        carried_consumer_row = carry_forward_block(published, "consumer", now)
+        if carried_consumer_row:
+            consumer = carried_consumer_row
+            carried_consumer = True
+    if carried_macro or carried_consumer:
+        replaced = {label for key, _, label in MACRO_SERIES if key in carried_macro}
+        if carried_consumer:
+            replaced.update(label for _, _, label in CONSUMER_SERIES)
+        gaps[:] = [gap for gap in gaps if gap.split(":", 1)[0] not in replaced]
+        gaps.append(
+            "FRED: feed unavailable; held the last verified print instead of treating missing markets as calm"
+        )
+
     equity_rates = equity_rates_divergence(macro)
+    if equity_rates and uses_stale_macro(macro, "nasdaq", "ten_year", "sp500", "vix", "hy"):
+        equity_rates["stale"] = True
+        equity_rates["source"] = FRED_CARRY_SOURCE
     if cmc_deriv:
         cmc_deriv["global_open_interest_to_market_cap_pct"] = (
             cmc_deriv["global_open_interest_usd"] / market["market_cap"] * 100
@@ -1121,6 +1263,11 @@ def main() -> None:
         notes.append(
             "CoinMarketCap liquidation data was unavailable, so forced-deleveraging risk was "
             "held at the last verified level instead of being treated as safer."
+        )
+    if carried_macro or carried_consumer:
+        notes.append(
+            "FRED was unavailable, so those macro readings were held at the last verified "
+            "print instead of being treated as safer."
         )
 
     snapshot = {
