@@ -126,7 +126,7 @@
     "dek": "The letter maps Bitcoin as a ladder of levels. Each one is a door: a daily close through it changes the odds, a wick through it does not.",
     "intro": [
       "The letter reads Bitcoin price as a confirmation road: a ladder of support and resistance levels, each with a rule for what confirms it and what invalidates it. The core discipline is that a wick is not a daily close. A level only counts as broken when price closes through it and fails to reclaim it.",
-      "As of Issue 30 (16 October 2026), the ladder starts overhead with the $87.4k sweep that was rejected and $86k, which printed one close above it and is now resistance. $82k has become a membrane: it was lost on three daily closes in October and reclaimed inside the session each time. $80k has been seen and not kept, tagged on wicks at $80,315 and $79,676 but never accepted on a close. Below that sit $77k, the $74k to $76k band and $72k, which is the working next pool only if $80k is accepted, then the $60k power-law area and the 2026 low near $57,700. Around $35k is kept only as an extreme wildcard that would need a major transmission event, not as a base case.",
+      "As of Issue 31 (23 October 2026), the ladder still starts overhead with the rejected $87.4k sweep and $86k, which has one close above it, on 4 October, and is now resistance. 21 October high was $84,856, a lower high under that door. $82k remains a membrane: since Issue 30 it closed under $82k on 16, 17, 19 and 22 October and back above it on 18, 20 and 21 October. $80k has still not been accepted. The 15 October wick was $79,676. The 22 October low was $80,790. Below that sit $77k, the $74k to $76k band and $72k, which is the working next pool only if $80k is accepted, then the $60k power-law area and the 2026 low near $57,700. Around $35k is kept only as an extreme wildcard that would need a major transmission event, not as a base case.",
       "The rule for reading the ladder is sequence, with one caveat Issue 28 adds: these levels are gates, not scheduled stops. October 2025 showed that forced selling can cross several of them before a daily candle closes, so a fast break may not pause at each door. A bearish path still has to show failures with rising intensity, and a bullish path has to hold daily closes while leverage resets and spot demand returns. Skipping straight from $77k to $28k in the headlines is exactly what the letter tries not to do.",
       "The issues below show the map as it was drawn at each point in time, so you can check what was written down in advance against what happened."
     ],
@@ -139,9 +139,9 @@
     "pattern": "\\$\\d{2}(?:[.,]\\d+)?k\\b|\\$\\d{2},\\d{3}|daily close|weekly close|support|resistance|reclaim",
     "min_hits": 20,
     "pinned": [
+      "2026-10-23-the-outflow-printed",
       "2026-10-16-channels-opened-panic-did-not",
-      "2026-09-30-the-crash-that-doesnt-wait",
-      "2026-09-26-87k-rejection"
+      "2026-09-30-the-crash-that-doesnt-wait"
     ],
     "include": [
       "2026-08-24-second-probe",
@@ -150,7 +150,8 @@
       "2026-08-28-zz-bang-clear-map",
       "2026-08-30-stall-not-a-floor",
       "2026-09-30-the-crash-that-doesnt-wait",
-      "2026-10-16-channels-opened-panic-did-not"
+      "2026-10-16-channels-opened-panic-did-not",
+      "2026-10-23-the-outflow-printed"
     ]
   }
 ]

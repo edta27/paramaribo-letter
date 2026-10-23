@@ -1,5 +1,30 @@
 [
   {
+    "id": "2026-10-23-the-outflow-printed",
+    "date": "2026-10-23",
+    "kicker": "Chart Desk · Issue 31",
+    "title": "The outflow printed. The door did not.",
+    "dek": "22 October 2026 hourly low at $80,790, the daily box since 1 October, and Farside ETF flows through the −$635.6M outflow.",
+    "asOf": "2026-10-23T13:13:48Z",
+    "cadence": "follow-up",
+    "thesis": "The outflow printed. The $80k door did not.",
+    "stakes": "BTC ~$81.6k. 22 Oct close $81,307 after −$635.6M of ETF outflows. $80k was not accepted. WAIT.",
+    "levels": [
+      "$86k",
+      "$84.9k",
+      "$82k",
+      "$80k",
+      "$77k",
+      "~$57.7k"
+    ],
+    "letterId": "2026-10-23-the-outflow-printed",
+    "letterUrl": "/issue?id=2026-10-23-the-outflow-printed",
+    "letterLabel": "Vol. 1 · Issue 31",
+    "subscribeHook": "A completed close through $80k, or two weekday closes back above $86k, updates the sequence. Charts stay free here; the call moves by email.",
+    "sourceNote": "Issue 31 charts use Coinbase Exchange UTC candles (hourly 22 Oct 2026; daily 1–22 Oct) and Farside Investors US-session ETF flows. 23 October is a partial UTC day and an incomplete Farside row. Weekend blanks are not zeroes. Educational scenario research; no leverage.",
+    "packUrl": "/charts/packs/2026-10-23-the-outflow-printed.json"
+  },
+  {
     "id": "2026-10-16-channels-opened-panic-did-not",
     "date": "2026-10-16",
     "kicker": "Chart Desk · Issue 30",
