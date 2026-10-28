@@ -1,7 +1,7 @@
 {
   "ticker": "DE",
-  "updated_at": "2026-10-27T21:07:35Z",
-  "price": 651.0,
+  "updated_at": "2026-10-28T15:43:33Z",
+  "price": 641.98,
   "filings": [
     {
       "form": "4",
@@ -35,11 +35,11 @@
     }
   ],
   "error": null,
-  "prev_close": 639.405,
-  "change": 11.595,
-  "change_pct": 1.813,
+  "prev_close": 639.58,
+  "change": 2.4,
+  "change_pct": 0.375,
   "currency": "USD",
   "exchange": "NYSE",
-  "volume": 772148.843472,
+  "volume": 149815.817183,
   "quote_source": "nasdaq-stocks"
 }
