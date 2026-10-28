@@ -1,8 +1,14 @@
 {
   "ticker": "GOOGL",
-  "updated_at": "2026-10-28T15:43:34Z",
-  "price": 323.71,
+  "updated_at": "2026-10-28T21:30:43Z",
+  "price": 287.54,
   "filings": [
+    {
+      "form": "8-K",
+      "filing_date": "2026-10-28",
+      "accession": "0001652044-26-000080",
+      "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000080/goog-20261028.htm"
+    },
     {
       "form": "4",
       "filing_date": "2026-10-27",
@@ -26,20 +32,14 @@
       "filing_date": "2026-10-27",
       "accession": "0001193125-26-434839",
       "url": "https://www.sec.gov/Archives/edgar/data/1652044/000119312526434839/xslF345X06/ownership.xml"
-    },
-    {
-      "form": "4",
-      "filing_date": "2026-10-27",
-      "accession": "0001193125-26-434837",
-      "url": "https://www.sec.gov/Archives/edgar/data/1652044/000119312526434837/xslF345X06/ownership.xml"
     }
   ],
   "error": null,
-  "prev_close": 320.58,
-  "change": 3.13,
-  "change_pct": 0.976,
+  "prev_close": 324.89,
+  "change": -37.35,
+  "change_pct": -11.496,
   "currency": "USD",
   "exchange": "NASDAQ-GS",
-  "volume": 11821772.244614,
+  "volume": 57997158.678668,
   "quote_source": "nasdaq-stocks"
 }

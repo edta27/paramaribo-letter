@@ -1,8 +1,26 @@
 {
   "ticker": "MSFT",
-  "updated_at": "2026-10-28T15:43:34Z",
-  "price": 527.705,
+  "updated_at": "2026-10-28T21:30:43Z",
+  "price": 550.41,
   "filings": [
+    {
+      "form": "8-K",
+      "filing_date": "2026-10-28",
+      "accession": "0001193125-26-436149",
+      "url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526436149/msft-20261028.htm"
+    },
+    {
+      "form": "10-Q",
+      "filing_date": "2026-10-28",
+      "accession": "0001193125-26-436133",
+      "url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526436133/msft-20260930.htm"
+    },
+    {
+      "form": "8-K",
+      "filing_date": "2026-10-28",
+      "accession": "0001193125-26-436122",
+      "url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526436122/msft-20261028.htm"
+    },
     {
       "form": "4",
       "filing_date": "2026-10-15",
@@ -14,32 +32,14 @@
       "filing_date": "2026-10-14",
       "accession": "0000789019-26-000226",
       "url": "https://www.sec.gov/Archives/edgar/data/789019/000078901926000226/xslF345X06/form4.xml"
-    },
-    {
-      "form": "4",
-      "filing_date": "2026-09-17",
-      "accession": "0000789019-26-000224",
-      "url": "https://www.sec.gov/Archives/edgar/data/789019/000078901926000224/xslF345X06/form4.xml"
-    },
-    {
-      "form": "4",
-      "filing_date": "2026-09-17",
-      "accession": "0000789019-26-000223",
-      "url": "https://www.sec.gov/Archives/edgar/data/789019/000078901926000223/xslF345X06/form4.xml"
-    },
-    {
-      "form": "4",
-      "filing_date": "2026-09-17",
-      "accession": "0000789019-26-000222",
-      "url": "https://www.sec.gov/Archives/edgar/data/789019/000078901926000222/xslF345X06/form4.xml"
     }
   ],
   "error": null,
-  "prev_close": 531.33,
-  "change": -3.625,
-  "change_pct": -0.682,
+  "prev_close": 531.01,
+  "change": 19.4,
+  "change_pct": 3.653,
   "currency": "USD",
   "exchange": "NASDAQ-GS",
-  "volume": 5493816.991612,
+  "volume": 25992421.58359,
   "quote_source": "nasdaq-stocks"
 }
