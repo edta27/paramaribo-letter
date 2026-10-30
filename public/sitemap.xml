@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://www.paramariboletter.com/</loc>
-    <lastmod>2026-10-23</lastmod>
+    <lastmod>2026-10-30</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
@@ -28,12 +28,12 @@
   </url>
   <url>
     <loc>https://www.paramariboletter.com/topics</loc>
-    <lastmod>2026-10-23</lastmod>
+    <lastmod>2026-10-30</lastmod>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://www.paramariboletter.com/topics/bitcoin-four-year-cycle</loc>
-    <lastmod>2026-10-23</lastmod>
+    <lastmod>2026-10-30</lastmod>
     <priority>0.85</priority>
   </url>
   <url>
@@ -43,17 +43,17 @@
   </url>
   <url>
     <loc>https://www.paramariboletter.com/topics/bitcoin-etf-flows-leverage</loc>
-    <lastmod>2026-10-23</lastmod>
+    <lastmod>2026-10-30</lastmod>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://www.paramariboletter.com/topics/bitcoin-macro-fed-yen</loc>
-    <lastmod>2026-10-23</lastmod>
+    <lastmod>2026-10-30</lastmod>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://www.paramariboletter.com/topics/bitcoin-support-resistance</loc>
-    <lastmod>2026-10-23</lastmod>
+    <lastmod>2026-10-30</lastmod>
     <priority>0.85</priority>
   </url>
   <url>
@@ -80,6 +80,11 @@
     <loc>https://www.paramariboletter.com/case?id=1972-sees-candies</loc>
     <lastmod>2026-08-31</lastmod>
     <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.paramariboletter.com/issue?id=2026-10-30-the-door-printed</loc>
+    <lastmod>2026-10-30</lastmod>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.paramariboletter.com/issue?id=2026-10-23-the-outflow-printed</loc>
