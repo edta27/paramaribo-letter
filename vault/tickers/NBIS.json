@@ -1,8 +1,20 @@
 {
   "ticker": "NBIS",
-  "updated_at": "2026-10-30T21:22:48Z",
-  "price": 154.66,
+  "updated_at": "2026-11-02T19:08:21Z",
+  "price": 143.71,
   "filings": [
+    {
+      "form": "4",
+      "filing_date": "2026-11-02",
+      "accession": "0001513845-26-000147",
+      "url": "https://www.sec.gov/Archives/edgar/data/1513845/000151384526000147/xslF345X06/form4.xml"
+    },
+    {
+      "form": "4",
+      "filing_date": "2026-10-30",
+      "accession": "0001513845-26-000145",
+      "url": "https://www.sec.gov/Archives/edgar/data/1513845/000151384526000145/xslF345X06/form4.xml"
+    },
     {
       "form": "4",
       "filing_date": "2026-10-29",
@@ -20,26 +32,14 @@
       "filing_date": "2026-10-22",
       "accession": "0001104659-26-117978",
       "url": "https://www.sec.gov/Archives/edgar/data/1513845/000110465926117978/tm2628078d1_6k.htm"
-    },
-    {
-      "form": "4",
-      "filing_date": "2026-10-21",
-      "accession": "0001513845-26-000136",
-      "url": "https://www.sec.gov/Archives/edgar/data/1513845/000151384526000136/xslF345X06/form4.xml"
-    },
-    {
-      "form": "4",
-      "filing_date": "2026-10-20",
-      "accession": "0001513845-26-000134",
-      "url": "https://www.sec.gov/Archives/edgar/data/1513845/000151384526000134/xslF345X06/form4.xml"
     }
   ],
   "error": null,
   "prev_close": 154.14,
-  "change": 0.52,
-  "change_pct": 0.337,
+  "change": -10.43,
+  "change_pct": -6.767,
   "currency": "USD",
   "exchange": "NASDAQ-GS",
-  "volume": 21430391.41978,
+  "volume": 13016570.831192,
   "quote_source": "nasdaq-stocks"
 }
