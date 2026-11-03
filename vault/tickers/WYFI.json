@@ -1,8 +1,14 @@
 {
   "ticker": "WYFI",
-  "updated_at": "2026-11-03T16:49:02Z",
-  "price": 10.14,
+  "updated_at": "2026-11-03T22:12:18Z",
+  "price": 10.7,
   "filings": [
+    {
+      "form": "8-K",
+      "filing_date": "2026-11-03",
+      "accession": "0001213900-26-115575",
+      "url": "https://www.sec.gov/Archives/edgar/data/2042022/000121390026115575/ea0310639-8k_whitefiber.htm"
+    },
     {
       "form": "4",
       "filing_date": "2026-10-16",
@@ -26,20 +32,14 @@
       "filing_date": "2026-09-14",
       "accession": "0001213900-26-099424",
       "url": "https://www.sec.gov/Archives/edgar/data/2042022/000121390026099424/ea0305257-8k_white.htm"
-    },
-    {
-      "form": "4",
-      "filing_date": "2026-09-01",
-      "accession": "0001213900-26-096352",
-      "url": "https://www.sec.gov/Archives/edgar/data/2042022/000121390026096352/xslF345X06/ownership.xml"
     }
   ],
   "error": null,
-  "prev_close": 9.26,
-  "change": 0.88,
-  "change_pct": 9.503,
+  "prev_close": 10.49,
+  "change": 0.21,
+  "change_pct": 2.002,
   "currency": "USD",
   "exchange": "NASDAQ-CM",
-  "volume": 640836.239184,
+  "volume": 2515384.092892,
   "quote_source": "nasdaq-stocks"
 }

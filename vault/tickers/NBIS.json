@@ -1,7 +1,7 @@
 {
   "ticker": "NBIS",
-  "updated_at": "2026-11-03T16:49:03Z",
-  "price": 148.85,
+  "updated_at": "2026-11-03T22:12:19Z",
+  "price": 155.72,
   "filings": [
     {
       "form": "4",
@@ -35,11 +35,11 @@
     }
   ],
   "error": null,
-  "prev_close": 141.39,
-  "change": 7.46,
-  "change_pct": 5.276,
+  "prev_close": 151.64,
+  "change": 4.08,
+  "change_pct": 2.691,
   "currency": "USD",
   "exchange": "NASDAQ-GS",
-  "volume": 8029619.461229,
+  "volume": 15737173.054151,
   "quote_source": "nasdaq-stocks"
 }
