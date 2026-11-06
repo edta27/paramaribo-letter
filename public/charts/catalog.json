@@ -1,5 +1,30 @@
 [
   {
+    "id": "2026-11-06-the-reclaim-lasted-one-close",
+    "date": "2026-11-06",
+    "kicker": "Chart Desk \u00b7 Issue 33",
+    "title": "The reclaim lasted one close.",
+    "dek": "The 48-hour test of $80,000 failed. 4 November closed at $80,428. 5 November closed at $75,969, and equities traveled with it.",
+    "asOf": "2026-11-06T14:27:47Z",
+    "cadence": "follow-up",
+    "thesis": "The reclaim lasted one close.",
+    "stakes": "BTC ~$75.6k. 4 Nov close $80,428 did not hold. 5 Nov close $75,969. VIX cash close 28.18. The new 48-hour test of $77k is open. WAIT.",
+    "levels": [
+      "$86k",
+      "$80k",
+      "$77k",
+      "$74\u201376k",
+      "$72k",
+      "~$57.7k"
+    ],
+    "letterId": "2026-11-06-the-reclaim-lasted-one-close",
+    "letterUrl": "/issue?id=2026-11-06-the-reclaim-lasted-one-close",
+    "letterLabel": "Vol. 1 \u00b7 Issue 33",
+    "subscribeHook": "A UTC close back above $77k on 6 or 7 November, or a completed close through $74k, updates the sequence. Charts stay free here; the call moves by email.",
+    "sourceNote": "Issue 33 charts use Coinbase Exchange UTC candles (hourly 4\u20135 Nov 2026; daily 15 Oct\u20135 Nov) and completed 4\u20135 November closes from Yahoo Finance for the S&P 500, Nasdaq, Dow, Invesco RSP, SOXX, HYG, January Brent BZF27, and gold futures. 6 November is a partial UTC day and is not plotted. Farside ETF flows were not retrieved. Educational scenario research; no leverage.",
+    "packUrl": "/charts/packs/2026-11-06-the-reclaim-lasted-one-close.json"
+  },
+  {
     "id": "2026-10-30-the-door-printed",
     "date": "2026-10-30",
     "kicker": "Chart Desk \u00b7 Issue 32",
