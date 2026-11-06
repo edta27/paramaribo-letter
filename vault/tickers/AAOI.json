@@ -1,8 +1,20 @@
 {
   "ticker": "AAOI",
-  "updated_at": "2026-11-05T17:04:50Z",
-  "price": 47.96,
+  "updated_at": "2026-11-06T01:21:35Z",
+  "price": 46.9218,
   "filings": [
+    {
+      "form": "10-Q",
+      "filing_date": "2026-11-05",
+      "accession": "0001437749-26-035282",
+      "url": "https://www.sec.gov/Archives/edgar/data/1158114/000143774926035282/aaoi20260930_10q.htm"
+    },
+    {
+      "form": "8-K",
+      "filing_date": "2026-11-05",
+      "accession": "0001683168-26-008351",
+      "url": "https://www.sec.gov/Archives/edgar/data/1158114/000168316826008351/aaoi_8k.htm"
+    },
     {
       "form": "8-K",
       "filing_date": "2026-11-04",
@@ -20,26 +32,14 @@
       "filing_date": "2026-10-26",
       "accession": "0001683168-26-008091",
       "url": "https://www.sec.gov/Archives/edgar/data/1158114/000168316826008091/xslF345X06/ownership.xml"
-    },
-    {
-      "form": "4",
-      "filing_date": "2026-10-26",
-      "accession": "0001683168-26-008090",
-      "url": "https://www.sec.gov/Archives/edgar/data/1158114/000168316826008090/xslF345X06/ownership.xml"
-    },
-    {
-      "form": "4",
-      "filing_date": "2026-10-26",
-      "accession": "0001683168-26-008089",
-      "url": "https://www.sec.gov/Archives/edgar/data/1158114/000168316826008089/xslF345X06/ownership.xml"
     }
   ],
   "error": null,
-  "prev_close": 59.27,
-  "change": -11.31,
-  "change_pct": -19.082,
+  "prev_close": 46.92,
+  "change": 0.0018,
+  "change_pct": 0.004,
   "currency": "USD",
   "exchange": "NASDAQ-GM",
-  "volume": 13654581.536711,
+  "volume": 22745180.257502,
   "quote_source": "nasdaq-stocks"
 }

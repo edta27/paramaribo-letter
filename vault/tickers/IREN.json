@@ -1,8 +1,20 @@
 {
   "ticker": "IREN",
-  "updated_at": "2026-11-05T17:04:49Z",
-  "price": 18.13,
+  "updated_at": "2026-11-06T01:21:33Z",
+  "price": 18.28,
   "filings": [
+    {
+      "form": "10-Q",
+      "filing_date": "2026-11-05",
+      "accession": "0001878848-26-000066",
+      "url": "https://www.sec.gov/Archives/edgar/data/1878848/000187884826000066/iren-20260930.htm"
+    },
+    {
+      "form": "8-K",
+      "filing_date": "2026-11-05",
+      "accession": "0001878848-26-000065",
+      "url": "https://www.sec.gov/Archives/edgar/data/1878848/000187884826000065/iren-20261105.htm"
+    },
     {
       "form": "10-K",
       "filing_date": "2026-08-27",
@@ -20,26 +32,14 @@
       "filing_date": "2026-08-13",
       "accession": "0001140361-26-032638",
       "url": "https://www.sec.gov/Archives/edgar/data/1878848/000114036126032638/ef20080141_8k.htm"
-    },
-    {
-      "form": "8-K",
-      "filing_date": "2026-08-04",
-      "accession": "0001140361-26-031053",
-      "url": "https://www.sec.gov/Archives/edgar/data/1878848/000114036126031053/ny20079234x2_8k.htm"
-    },
-    {
-      "form": "8-K",
-      "filing_date": "2026-07-20",
-      "accession": "0001140361-26-028871",
-      "url": "https://www.sec.gov/Archives/edgar/data/1878848/000114036126028871/ef20078253_8k.htm"
     }
   ],
   "error": null,
-  "prev_close": 21.71,
-  "change": -3.58,
-  "change_pct": -16.49,
+  "prev_close": 18.275,
+  "change": 0.005,
+  "change_pct": 0.027,
   "currency": "USD",
   "exchange": "NASDAQ-GS",
-  "volume": 62074801.142095,
+  "volume": 103912442.532702,
   "quote_source": "nasdaq-stocks"
 }
