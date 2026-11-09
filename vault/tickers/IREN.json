@@ -1,7 +1,7 @@
 {
   "ticker": "IREN",
-  "updated_at": "2026-11-06T21:56:04Z",
-  "price": 21.86,
+  "updated_at": "2026-11-09T19:28:36Z",
+  "price": 21.3487,
   "filings": [
     {
       "form": "10-Q",
@@ -36,10 +36,10 @@
   ],
   "error": null,
   "prev_close": 21.64,
-  "change": 0.22,
-  "change_pct": 1.017,
+  "change": -0.2913,
+  "change_pct": -1.346,
   "currency": "USD",
   "exchange": "NASDAQ-GS",
-  "volume": 112229866.35788,
+  "volume": 62216449.873503,
   "quote_source": "nasdaq-stocks"
 }
