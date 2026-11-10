@@ -1,7 +1,7 @@
 {
   "ticker": "COIN",
-  "updated_at": "2026-11-10T03:08:52Z",
-  "price": 136.1,
+  "updated_at": "2026-11-10T16:56:55Z",
+  "price": null,
   "filings": [
     {
       "form": "10-Q",
@@ -34,12 +34,5 @@
       "url": "https://www.sec.gov/Archives/edgar/data/1679788/000167978826000109/xslF345X06/wk-form4_1790194735.xml"
     }
   ],
-  "error": null,
-  "prev_close": 134.76,
-  "change": 1.34,
-  "change_pct": 0.994,
-  "currency": "USD",
-  "exchange": "NASDAQ-GS",
-  "volume": 6439405.0,
-  "quote_source": "nasdaq-stocks"
+  "error": "quote missing"
 }

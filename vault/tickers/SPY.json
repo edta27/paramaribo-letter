@@ -1,14 +1,14 @@
 {
   "ticker": "SPY",
-  "updated_at": "2026-11-10T03:08:52Z",
-  "price": 752.64,
+  "updated_at": "2026-11-10T16:56:55Z",
+  "price": 746.97,
   "filings": [],
   "error": null,
-  "prev_close": 735.29,
-  "change": 17.35,
-  "change_pct": 2.36,
+  "prev_close": 754.35,
+  "change": -7.38,
+  "change_pct": -0.978,
   "currency": "USD",
-  "exchange": "PSE",
-  "volume": 50281221.0,
-  "quote_source": "nasdaq-etf"
+  "exchange": "PCX",
+  "volume": 15818765,
+  "quote_source": "yahoo-v8"
 }

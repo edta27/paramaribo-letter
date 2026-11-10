@@ -1,8 +1,20 @@
 {
   "ticker": "WYFI",
-  "updated_at": "2026-11-10T03:08:50Z",
-  "price": 9.57,
+  "updated_at": "2026-11-10T16:56:53Z",
+  "price": null,
   "filings": [
+    {
+      "form": "10-Q",
+      "filing_date": "2026-11-10",
+      "accession": "0001213900-26-117728",
+      "url": "https://www.sec.gov/Archives/edgar/data/2042022/000121390026117728/ea0310427-10q_whitefiber.htm"
+    },
+    {
+      "form": "8-K",
+      "filing_date": "2026-11-10",
+      "accession": "0001213900-26-117723",
+      "url": "https://www.sec.gov/Archives/edgar/data/2042022/000121390026117723/ea0311622-8k_whitefiber.htm"
+    },
     {
       "form": "4",
       "filing_date": "2026-11-03",
@@ -20,26 +32,7 @@
       "filing_date": "2026-10-16",
       "accession": "0001213900-26-110436",
       "url": "https://www.sec.gov/Archives/edgar/data/2042022/000121390026110436/xslF345X06/ownership.xml"
-    },
-    {
-      "form": "4",
-      "filing_date": "2026-10-16",
-      "accession": "0001213900-26-110434",
-      "url": "https://www.sec.gov/Archives/edgar/data/2042022/000121390026110434/xslF345X06/ownership.xml"
-    },
-    {
-      "form": "4",
-      "filing_date": "2026-10-16",
-      "accession": "0001213900-26-110433",
-      "url": "https://www.sec.gov/Archives/edgar/data/2042022/000121390026110433/xslF345X06/ownership.xml"
     }
   ],
-  "error": null,
-  "prev_close": 8.88,
-  "change": 0.69,
-  "change_pct": 7.77,
-  "currency": "USD",
-  "exchange": "NASDAQ-CM",
-  "volume": 1799275.0,
-  "quote_source": "nasdaq-stocks"
+  "error": "quote missing"
 }
