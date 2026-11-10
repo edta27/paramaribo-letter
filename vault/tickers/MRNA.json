@@ -1,7 +1,7 @@
 {
   "ticker": "MRNA",
-  "updated_at": "2026-11-10T16:56:56Z",
-  "price": 254.875,
+  "updated_at": "2026-11-10T22:22:44Z",
+  "price": null,
   "filings": [
     {
       "form": "4",
@@ -34,12 +34,5 @@
       "url": "https://www.sec.gov/Archives/edgar/data/1682852/000168285226000185/xslF345X06/form4.xml"
     }
   ],
-  "error": null,
-  "prev_close": 228.44,
-  "change": 26.435,
-  "change_pct": 11.572,
-  "currency": "USD",
-  "exchange": "NMS",
-  "volume": 5212846,
-  "quote_source": "yahoo-v8"
+  "error": "quote missing"
 }

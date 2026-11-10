@@ -1,7 +1,7 @@
 {
   "ticker": "WMT",
-  "updated_at": "2026-11-10T16:56:54Z",
-  "price": 126.08,
+  "updated_at": "2026-11-10T22:22:42Z",
+  "price": null,
   "filings": [
     {
       "form": "13F-HR",
@@ -34,12 +34,5 @@
       "url": "https://www.sec.gov/Archives/edgar/data/104169/000211064326000022/xslF345X06/wk-form4_1793915973.xml"
     }
   ],
-  "error": null,
-  "prev_close": 124.86,
-  "change": 1.22,
-  "change_pct": 0.977,
-  "currency": "USD",
-  "exchange": "NMS",
-  "volume": 5410537,
-  "quote_source": "yahoo-v8"
+  "error": "quote missing"
 }
