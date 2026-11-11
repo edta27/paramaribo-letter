@@ -1,14 +1,7 @@
 {
   "ticker": "SPY",
-  "updated_at": "2026-11-10T22:22:43Z",
-  "price": 749.92,
+  "updated_at": "2026-11-11T17:07:16Z",
+  "price": null,
   "filings": [],
-  "error": null,
-  "prev_close": 754.35,
-  "change": -4.43,
-  "change_pct": -0.587,
-  "currency": "USD",
-  "exchange": "PCX",
-  "volume": 39682369,
-  "quote_source": "yahoo-v8"
+  "error": "quote missing"
 }

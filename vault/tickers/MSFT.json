@@ -1,8 +1,14 @@
 {
   "ticker": "MSFT",
-  "updated_at": "2026-11-10T22:22:44Z",
+  "updated_at": "2026-11-11T17:07:18Z",
   "price": null,
   "filings": [
+    {
+      "form": "4",
+      "filing_date": "2026-11-10",
+      "accession": "0000789019-26-000232",
+      "url": "https://www.sec.gov/Archives/edgar/data/789019/000078901926000232/xslF345X06/form4.xml"
+    },
     {
       "form": "4",
       "filing_date": "2026-11-09",
@@ -26,12 +32,6 @@
       "filing_date": "2026-10-28",
       "accession": "0001193125-26-436149",
       "url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526436149/msft-20261028.htm"
-    },
-    {
-      "form": "10-Q",
-      "filing_date": "2026-10-28",
-      "accession": "0001193125-26-436133",
-      "url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526436133/msft-20260930.htm"
     }
   ],
   "error": "quote missing"

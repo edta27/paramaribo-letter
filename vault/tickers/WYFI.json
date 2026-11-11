@@ -1,8 +1,14 @@
 {
   "ticker": "WYFI",
-  "updated_at": "2026-11-10T22:22:40Z",
+  "updated_at": "2026-11-11T17:07:15Z",
   "price": null,
   "filings": [
+    {
+      "form": "4",
+      "filing_date": "2026-11-10",
+      "accession": "0001213900-26-118218",
+      "url": "https://www.sec.gov/Archives/edgar/data/2042022/000121390026118218/xslF345X06/ownership.xml"
+    },
     {
       "form": "10-Q",
       "filing_date": "2026-11-10",
@@ -26,12 +32,6 @@
       "filing_date": "2026-11-03",
       "accession": "0001213900-26-115575",
       "url": "https://www.sec.gov/Archives/edgar/data/2042022/000121390026115575/ea0310639-8k_whitefiber.htm"
-    },
-    {
-      "form": "4",
-      "filing_date": "2026-10-16",
-      "accession": "0001213900-26-110436",
-      "url": "https://www.sec.gov/Archives/edgar/data/2042022/000121390026110436/xslF345X06/ownership.xml"
     }
   ],
   "error": "quote missing"
