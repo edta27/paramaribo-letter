@@ -1,7 +1,7 @@
 {
   "ticker": "WYFI",
-  "updated_at": "2026-11-11T23:32:51Z",
-  "price": null,
+  "updated_at": "2026-11-12T17:20:24Z",
+  "price": 10.225,
   "filings": [
     {
       "form": "4",
@@ -34,5 +34,12 @@
       "url": "https://www.sec.gov/Archives/edgar/data/2042022/000121390026115575/ea0310639-8k_whitefiber.htm"
     }
   ],
-  "error": "quote missing"
+  "error": null,
+  "prev_close": 10.43,
+  "change": -0.205,
+  "change_pct": -1.965,
+  "currency": "USD",
+  "exchange": "NASDAQ-CM",
+  "volume": 1280870.544884,
+  "quote_source": "nasdaq-stocks"
 }
