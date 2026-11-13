@@ -1,8 +1,26 @@
 {
   "ticker": "META",
-  "updated_at": "2026-11-12T17:20:27Z",
-  "price": 624.63,
+  "updated_at": "2026-11-13T01:40:21Z",
+  "price": 626.1899,
   "filings": [
+    {
+      "form": "4",
+      "filing_date": "2026-11-12",
+      "accession": "0000950103-26-017401",
+      "url": "https://www.sec.gov/Archives/edgar/data/1326801/000095010326017401/xslF345X06/ownership.xml"
+    },
+    {
+      "form": "4",
+      "filing_date": "2026-11-12",
+      "accession": "0000950103-26-017398",
+      "url": "https://www.sec.gov/Archives/edgar/data/1326801/000095010326017398/xslF345X06/ownership.xml"
+    },
+    {
+      "form": "8-K",
+      "filing_date": "2026-11-12",
+      "accession": "0001193125-26-458525",
+      "url": "https://www.sec.gov/Archives/edgar/data/1326801/000119312526458525/d177728d8k.htm"
+    },
     {
       "form": "4",
       "filing_date": "2026-11-06",
@@ -14,32 +32,14 @@
       "filing_date": "2026-11-05",
       "accession": "0001193125-26-450074",
       "url": "https://www.sec.gov/Archives/edgar/data/1326801/000119312526450074/d166273d8k.htm"
-    },
-    {
-      "form": "4",
-      "filing_date": "2026-11-04",
-      "accession": "0000950103-26-016962",
-      "url": "https://www.sec.gov/Archives/edgar/data/1326801/000095010326016962/xslF345X06/ownership.xml"
-    },
-    {
-      "form": "4",
-      "filing_date": "2026-11-04",
-      "accession": "0001160077-26-000013",
-      "url": "https://www.sec.gov/Archives/edgar/data/1326801/000116007726000013/xslF345X06/form4-11042026_091132.xml"
-    },
-    {
-      "form": "8-K",
-      "filing_date": "2026-10-29",
-      "accession": "0001193125-26-438017",
-      "url": "https://www.sec.gov/Archives/edgar/data/1326801/000119312526438017/d183592d8k.htm"
     }
   ],
   "error": null,
-  "prev_close": 628.77,
-  "change": -4.14,
-  "change_pct": -0.658,
+  "prev_close": 623.61,
+  "change": 2.5799,
+  "change_pct": 0.414,
   "currency": "USD",
   "exchange": "NASDAQ-GS",
-  "volume": 4649301.633351,
+  "volume": 10341736.002873,
   "quote_source": "nasdaq-stocks"
 }
