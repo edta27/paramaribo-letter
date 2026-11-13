@@ -1,7 +1,7 @@
 {
   "ticker": "AMZN",
-  "updated_at": "2026-11-13T01:40:20Z",
-  "price": 268.04,
+  "updated_at": "2026-11-13T16:56:06Z",
+  "price": 264.6,
   "filings": [
     {
       "form": "4",
@@ -36,10 +36,10 @@
   ],
   "error": null,
   "prev_close": 267.44,
-  "change": 0.6,
-  "change_pct": 0.224,
+  "change": -2.84,
+  "change_pct": -1.062,
   "currency": "USD",
   "exchange": "NASDAQ-GS",
-  "volume": 34497492.867449,
+  "volume": 11917108.680311,
   "quote_source": "nasdaq-stocks"
 }
