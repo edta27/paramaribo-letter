@@ -123,7 +123,10 @@
   const model = data.model || {};
   const sourceLinks = (data.sources || []).map((item) =>
     `<a href="${esc(item.url)}">${esc(item.label)}</a>`).join(" · ");
-  const staleComponents = (model.active_components || []).filter((item) => item.stale);
+  const staleComponents = [
+    ...(model.active_components || []),
+    ...(model.vulnerability_components || []),
+  ].filter((item) => item.stale);
   const staleCoverage = staleComponents.length
     ? `<p class="emily-sources"><strong>Conservative carry-forward:</strong> ${staleComponents.map((item) => `${esc(item.name)} — ${esc(item.source || "last verified observation")}`).join(" · ")}</p>`
     : "";
@@ -285,7 +288,7 @@
           </table>
         </div>
         <p><strong>Equity–Rates Divergence score:</strong> ${esc(equityRates.score)} / 100 · ${esc(equityRates.band)}. ${esc(equityRates.interpretation)}</p>
-        <p class="emily-updated">Latest available observation: ${esc(equityRates.latest_date)}. This module contributes to panic vulnerability but never raises active panic by itself.</p>
+        <p class="emily-updated">Latest available observation: ${esc(equityRates.latest_date)}.${equityRates.stale ? " FRED did not refresh, so this score reuses the last verified print." : ""} This module contributes to panic vulnerability but never raises active panic by itself.</p>
         </div>
       </details>
 
@@ -308,7 +311,7 @@
             </tbody>
           </table>
         </div>
-        <p class="emily-updated">Latest available macro date: ${esc(model.latest_macro_date)}. Traditional-market feeds naturally lag on weekends and holidays.</p>
+        <p class="emily-updated">Latest available macro date: ${esc(model.latest_macro_date)}. ${Object.values(m).some((row) => row && row.stale) ? "FRED did not refresh, so these prints are the last verified observations." : "Traditional-market feeds naturally lag on weekends and holidays."}</p>
         </div>
       </details>
 
