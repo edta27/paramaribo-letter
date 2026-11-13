@@ -126,7 +126,7 @@
     "dek": "The letter maps Bitcoin as a ladder of levels. Each one is a door: a daily close through it changes the odds, a wick through it does not.",
     "intro": [
       "The letter reads Bitcoin price as a confirmation road: a ladder of support and resistance levels, each with a rule for what confirms it and what invalidates it. The core discipline is that a wick is not a daily close. A level only counts as broken when price closes through it and fails to reclaim it.",
-      "As of Issue 33 (6 November 2026), the 48-hour reclaim of $80,000 failed. 30 October closed at $77,180 and 31 October closed at $77,424. 4 November closed back above $80,000, at $80,428, and 5 November closed at $75,969. The new 48-hour window on that close under $77,000 runs through the 7 November UTC close and was still open at the freeze. The unfinished 6 November session had traded about $75,186 to $76,306. $86k still has no completed close above it since 4 October. 21 October's $84,856 high was not exceeded. The $74k to $76k band was tagged, at $75,601 on 4 November and $75,035 on 5 November, and was not accepted on a close under $74,000. $72k is the working next pool only if $77k is accepted and that band is then accepted, then the $60k power-law area and the 2026 Coinbase low near $57,718 on 1 July. Around $35k is kept only as an extreme wildcard that would need a major transmission event, not as a base case.",
+      "As of Issue 34 (13 November 2026), the 48-hour test of $77,000 failed. 6 November closed at $75,731 and 7 November closed at $75,754. Neither day traded $77,000. 10 November closed at $73,698, the first completed close under $74,000 since 20 August's close of $73,012, and 11 and 12 November did not reclaim it. 12 November closed at $71,370, the first completed close under $72,000 since 19 August. The new 48-hour window on that close runs through the 14 November UTC close and was still open at the freeze. The unfinished 13 November session had traded $67,555 to $71,429 and had not traded $72,000. $86k still has no completed close above it since 4 October. $80,000 was not traded after 5 November. The 2026 Coinbase low near $57,718 on 1 July was not visited. Around $35k is kept only as an extreme wildcard that would need a major transmission event, not as a base case.",
       "The rule for reading the ladder is sequence, with one caveat Issue 28 adds: these levels are gates, not scheduled stops. October 2025 showed that forced selling can cross several of them before a daily candle closes, so a fast break may not pause at each door. A bearish path still has to show failures with rising intensity, and a bullish path has to hold daily closes while leverage resets and spot demand returns. Skipping straight from $77k to $28k in the headlines is exactly what the letter tries not to do.",
       "The issues below show the map as it was drawn at each point in time, so you can check what was written down in advance against what happened."
     ],
@@ -139,9 +139,9 @@
     "pattern": "\\$\\d{2}(?:[.,]\\d+)?k\\b|\\$\\d{2},\\d{3}|daily close|weekly close|support|resistance|reclaim",
     "min_hits": 20,
     "pinned": [
+      "2026-11-13-the-window-closed",
       "2026-11-06-the-reclaim-lasted-one-close",
-      "2026-10-30-the-door-printed",
-      "2026-10-23-the-outflow-printed"
+      "2026-10-30-the-door-printed"
     ],
     "include": [
       "2026-08-24-second-probe",

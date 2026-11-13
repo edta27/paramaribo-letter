@@ -1,0 +1,602 @@
+{
+  "id": "2026-11-13-the-window-closed",
+  "date": "2026-11-13",
+  "kicker": "Chart Desk \u00b7 Issue 34",
+  "title": "The window closed. Panic did not.",
+  "dek": "6 and 7 November both closed under $77,000. 12 November closed at $71,370. Equities and the VIX repaired. Credit tightened.",
+  "asOf": "2026-11-13T14:08:59Z",
+  "cadence": "follow-up",
+  "thesis": "The window closed. Panic did not.",
+  "stakes": "BTC ~$69.2k. 6 and 7 Nov closed under $77k. 12 Nov close $71,370. The 48-hour test of $72k is open. VIX cash close 18.70. WAIT.",
+  "levels": [
+    "$86k",
+    "$80k",
+    "$77k",
+    "$74k",
+    "$72k",
+    "~$57.7k"
+  ],
+  "letterId": "2026-11-13-the-window-closed",
+  "letterUrl": "/issue?id=2026-11-13-the-window-closed",
+  "letterLabel": "Vol. 1 \u00b7 Issue 34",
+  "subscribeHook": "A UTC close back above $72k on 13 or 14 November, or a second close under it, updates the sequence. Charts stay free here; the call moves by email.",
+  "sourceNote": "Issue 34 charts use Coinbase Exchange UTC candles (daily 29 Oct\u201312 Nov 2026; hourly 12 Nov 00:00 through 13 Nov 13:00 UTC), completed 5 and 12 November closes from Yahoo Finance, and Farside Investors US-session ETF flows for 2\u201312 November. 13 November is a partial UTC day and an incomplete Farside row. Weekend blanks are not zeroes. Educational scenario research; no leverage.",
+  "briefs": [
+    {
+      "id": "btc-window-path",
+      "asset": "BTC",
+      "headline": "The $77k window closed. $72k has one close through it.",
+      "lede": "6 and 7 November both closed under $77,000. 12 November closed at $71,370.",
+      "bodyHtml": "<p><strong>Fact.</strong> The 48-hour test Issue 33 wrote down failed. A later close under $74,000 was not reclaimed inside 48 hours either.</p><p><strong>Read.</strong> $72,000 has one completed close through it. That window was still open at the freeze.</p>",
+      "charts": [
+        {
+          "title": "BTC daily range [USD] vs close",
+          "bars": {
+            "label": "Daily high\u2013low range [USD]",
+            "unsigned": true,
+            "data": [
+              [
+                1793232000000,
+                4191.0
+              ],
+              [
+                1793318400000,
+                2493.78
+              ],
+              [
+                1793404800000,
+                690.55
+              ],
+              [
+                1793491200000,
+                928.82
+              ],
+              [
+                1793577600000,
+                2209.3
+              ],
+              [
+                1793664000000,
+                1742.84
+              ],
+              [
+                1793750400000,
+                5530.15
+              ],
+              [
+                1793836800000,
+                5808.75
+              ],
+              [
+                1793923200000,
+                1584.26
+              ],
+              [
+                1794009600000,
+                699.55
+              ],
+              [
+                1794096000000,
+                2617.99
+              ],
+              [
+                1794182400000,
+                1864.0
+              ],
+              [
+                1794268800000,
+                2696.75
+              ],
+              [
+                1794355200000,
+                1627.15
+              ],
+              [
+                1794441600000,
+                3115.71
+              ]
+            ]
+          },
+          "line": {
+            "label": "BTC-USD close [USD]",
+            "data": [
+              [
+                1793232000000,
+                77780.33
+              ],
+              [
+                1793318400000,
+                77180.42
+              ],
+              [
+                1793404800000,
+                77423.98
+              ],
+              [
+                1793491200000,
+                78230.55
+              ],
+              [
+                1793577600000,
+                76674.13
+              ],
+              [
+                1793664000000,
+                77336.75
+              ],
+              [
+                1793750400000,
+                80428.31
+              ],
+              [
+                1793836800000,
+                75969.06
+              ],
+              [
+                1793923200000,
+                75731.04
+              ],
+              [
+                1794009600000,
+                75753.96
+              ],
+              [
+                1794096000000,
+                74754.08
+              ],
+              [
+                1794182400000,
+                75259.28
+              ],
+              [
+                1794268800000,
+                73697.87
+              ],
+              [
+                1794355200000,
+                73927.63
+              ],
+              [
+                1794441600000,
+                71369.9
+              ]
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "btc-window-hours",
+      "asset": "BTC \u00b7 12\u201313 NOV 2026",
+      "headline": "One close under $72k. The next day has not traded it back.",
+      "lede": "12 November closed at $71,370. The 13 November 05:00 UTC hour low was $67,555. $72,000 was not traded.",
+      "bodyHtml": "<p><strong>Fact.</strong> The low is on an unfinished UTC day.</p><p><strong>Read.</strong> A wick is not acceptance. The 48-hour test runs through the 14 November close.</p>",
+      "charts": [
+        {
+          "title": "BTC hourly range [USD] vs close \u00b7 12\u201313 Nov 2026",
+          "bars": {
+            "label": "Hourly high\u2013low range [USD]",
+            "unsigned": true,
+            "data": [
+              [
+                1794441600000,
+                365.62
+              ],
+              [
+                1794445200000,
+                494.63
+              ],
+              [
+                1794448800000,
+                513.27
+              ],
+              [
+                1794452400000,
+                172.66
+              ],
+              [
+                1794456000000,
+                238.21
+              ],
+              [
+                1794459600000,
+                219.87
+              ],
+              [
+                1794463200000,
+                317.08
+              ],
+              [
+                1794466800000,
+                243.25
+              ],
+              [
+                1794470400000,
+                178.25
+              ],
+              [
+                1794474000000,
+                335.44
+              ],
+              [
+                1794477600000,
+                260.5
+              ],
+              [
+                1794481200000,
+                715.52
+              ],
+              [
+                1794484800000,
+                406.23
+              ],
+              [
+                1794488400000,
+                738.36
+              ],
+              [
+                1794492000000,
+                1295.32
+              ],
+              [
+                1794495600000,
+                493.69
+              ],
+              [
+                1794499200000,
+                714.29
+              ],
+              [
+                1794502800000,
+                413.49
+              ],
+              [
+                1794506400000,
+                497.2
+              ],
+              [
+                1794510000000,
+                364.03
+              ],
+              [
+                1794513600000,
+                314.02
+              ],
+              [
+                1794517200000,
+                270.53
+              ],
+              [
+                1794520800000,
+                254.04
+              ],
+              [
+                1794524400000,
+                442.0
+              ],
+              [
+                1794528000000,
+                829.46
+              ],
+              [
+                1794531600000,
+                488.49
+              ],
+              [
+                1794535200000,
+                1062.23
+              ],
+              [
+                1794538800000,
+                1803.64
+              ],
+              [
+                1794542400000,
+                575.88
+              ],
+              [
+                1794546000000,
+                1247.73
+              ],
+              [
+                1794549600000,
+                1250.87
+              ],
+              [
+                1794553200000,
+                796.11
+              ],
+              [
+                1794556800000,
+                391.44
+              ],
+              [
+                1794560400000,
+                471.97
+              ],
+              [
+                1794564000000,
+                403.42
+              ],
+              [
+                1794567600000,
+                1416.43
+              ],
+              [
+                1794571200000,
+                331.7
+              ],
+              [
+                1794574800000,
+                1108.3
+              ]
+            ]
+          },
+          "line": {
+            "label": "BTC-USD hourly close [USD]",
+            "data": [
+              [
+                1794441600000,
+                73989.0
+              ],
+              [
+                1794445200000,
+                73620.06
+              ],
+              [
+                1794448800000,
+                73711.77
+              ],
+              [
+                1794452400000,
+                73709.96
+              ],
+              [
+                1794456000000,
+                73640.91
+              ],
+              [
+                1794459600000,
+                73493.96
+              ],
+              [
+                1794463200000,
+                73425.04
+              ],
+              [
+                1794466800000,
+                73557.65
+              ],
+              [
+                1794470400000,
+                73502.06
+              ],
+              [
+                1794474000000,
+                73405.46
+              ],
+              [
+                1794477600000,
+                73370.73
+              ],
+              [
+                1794481200000,
+                72854.36
+              ],
+              [
+                1794484800000,
+                72810.36
+              ],
+              [
+                1794488400000,
+                72415.42
+              ],
+              [
+                1794492000000,
+                71556.04
+              ],
+              [
+                1794495600000,
+                71618.34
+              ],
+              [
+                1794499200000,
+                71681.1
+              ],
+              [
+                1794502800000,
+                71826.81
+              ],
+              [
+                1794506400000,
+                71678.98
+              ],
+              [
+                1794510000000,
+                71597.52
+              ],
+              [
+                1794513600000,
+                71341.7
+              ],
+              [
+                1794517200000,
+                71461.82
+              ],
+              [
+                1794520800000,
+                71325.75
+              ],
+              [
+                1794524400000,
+                71369.9
+              ],
+              [
+                1794528000000,
+                71043.76
+              ],
+              [
+                1794531600000,
+                70864.06
+              ],
+              [
+                1794535200000,
+                70174.19
+              ],
+              [
+                1794538800000,
+                68882.49
+              ],
+              [
+                1794542400000,
+                68508.08
+              ],
+              [
+                1794546000000,
+                68065.78
+              ],
+              [
+                1794549600000,
+                69005.14
+              ],
+              [
+                1794553200000,
+                68517.56
+              ],
+              [
+                1794556800000,
+                68644.4
+              ],
+              [
+                1794560400000,
+                69034.25
+              ],
+              [
+                1794564000000,
+                69272.69
+              ],
+              [
+                1794567600000,
+                69253.96
+              ],
+              [
+                1794571200000,
+                69135.4
+              ],
+              [
+                1794574800000,
+                69494.34
+              ]
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "btc-window-cross",
+      "asset": "CROSS-ASSET \u00b7 5\u201312 NOV",
+      "headline": "Equities repaired. Bitcoin did not.",
+      "lede": "From the 5 November close to the 12 November close, the S&P 500 rose 3.2% and Bitcoin fell 6.1%. The VIX cash close went from 28.18 to 18.70.",
+      "bodyHtml": "<p><strong>Fact.</strong> The equity indexes and equal-weight stocks closed higher. January Brent and gold closed lower. HYG was nearly unchanged.</p><p><strong>Read.</strong> That is not the panic cluster. Credit spreads tightened over the same week.</p>",
+      "charts": [
+        {
+          "title": "5 Nov close to 12 Nov close [%]",
+          "bars": {
+            "label": "Change from the 5 Nov close to the 12 Nov close [%]",
+            "data": [
+              [
+                1794441600000,
+                -6.05
+              ],
+              [
+                1794441600001,
+                3.25
+              ],
+              [
+                1794441600002,
+                4.32
+              ],
+              [
+                1794441600003,
+                1.5
+              ],
+              [
+                1794441600004,
+                1.78
+              ],
+              [
+                1794441600005,
+                17.51
+              ],
+              [
+                1794441600006,
+                -0.39
+              ],
+              [
+                1794441600007,
+                -2.51
+              ],
+              [
+                1794441600008,
+                -5.55
+              ]
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "btc-window-flows",
+      "asset": "US SPOT BTC ETF",
+      "headline": "Six completed sessions of outflows.",
+      "lede": "Farside\u2019s completed November total is \u2212$2,161.6 million. 5 through 12 November are six outflow sessions, \u2212$1,722.0 million.",
+      "bodyHtml": "<p><strong>Fact.</strong> 4 November, the one-day reclaim of $80,000, is the only completed November inflow, and IBIT was negative that day.</p><p><strong>Read.</strong> 13 November is dashes on the table. That is not a zero.</p>",
+      "charts": [
+        {
+          "title": "US spot Bitcoin ETF net flow [US$ millions]",
+          "bars": {
+            "label": "Net flow [US$ millions]",
+            "data": [
+              [
+                1793577600000,
+                -398.6
+              ],
+              [
+                1793664000000,
+                -115.6
+              ],
+              [
+                1793750400000,
+                74.6
+              ],
+              [
+                1793836800000,
+                -430.2
+              ],
+              [
+                1793923200000,
+                -411.9
+              ],
+              [
+                1794182400000,
+                -201.0
+              ],
+              [
+                1794268800000,
+                -95.0
+              ],
+              [
+                1794355200000,
+                -299.8
+              ],
+              [
+                1794441600000,
+                -284.1
+              ]
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

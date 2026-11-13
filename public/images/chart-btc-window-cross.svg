@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+<title id="title">Since 5 November, equities repaired. Bitcoin did not.</title>
+<desc id="desc">Percent change from the 5 November close to the 12 November close. Bitcoin is Coinbase. The others are Yahoo cash or futures closes. VIX is not plotted as a return.</desc>
+<rect width="1200" height="720" fill="#0e1721"/>
+<style>text{font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}.title{font-size:28px;font-weight:700;fill:#e6edf3}.sub{font-size:15px;fill:#9eb0c1}.axis{font-size:13px;fill:#9eb0c1}.note{font-size:12px;fill:#9eb0c1}.label{font-size:13px;font-weight:600;fill:#e6edf3}</style>
+<text x="56" y="48" class="title">Since 5 November, equities repaired. Bitcoin did not.</text>
+<text x="56" y="76" class="sub">Completed 12 Nov 2026 closes versus 5 Nov · VIX cash close 28.18 to 18.70, not shown as a percent</text>
+<rect x="168.0" y="118.0" width="900.0" height="470.0" rx="8" fill="#122131" stroke="#2a3b4d"/>
+<line x1="168.0" y1="525.3" x2="1068.0" y2="525.3" stroke="#2a3b4d"/>
+<text x="156.0" y="529.3" class="axis" text-anchor="end">-6%</text>
+<line x1="168.0" y1="431.3" x2="1068.0" y2="431.3" stroke="#2a3b4d"/>
+<text x="156.0" y="435.3" class="axis" text-anchor="end">0%</text>
+<line x1="168.0" y1="337.3" x2="1068.0" y2="337.3" stroke="#2a3b4d"/>
+<text x="156.0" y="341.3" class="axis" text-anchor="end">6%</text>
+<line x1="168.0" y1="243.3" x2="1068.0" y2="243.3" stroke="#2a3b4d"/>
+<text x="156.0" y="247.3" class="axis" text-anchor="end">12%</text>
+<line x1="168.0" y1="149.3" x2="1068.0" y2="149.3" stroke="#2a3b4d"/>
+<text x="156.0" y="153.3" class="axis" text-anchor="end">18%</text>
+<line x1="168.0" y1="431.3" x2="1068.0" y2="431.3" stroke="#9eb0c1"/>
+<rect x="187.0" y="431.3" width="62.0" height="94.8" fill="#ef8d8d" opacity="0.9" rx="4"/>
+<text x="218.0" y="544.2" class="label" text-anchor="middle" fill="#ef8d8d">-6.1%</text>
+<text x="218.0" y="616.0" class="axis" text-anchor="middle">Bitcoin</text>
+<rect x="287.0" y="380.5" width="62.0" height="50.8" fill="#79d3a3" opacity="0.9" rx="4"/>
+<text x="318.0" y="370.5" class="label" text-anchor="middle" fill="#79d3a3">+3.2%</text>
+<text x="318.0" y="616.0" class="axis" text-anchor="middle">S&amp;P</text>
+<rect x="387.0" y="363.6" width="62.0" height="67.7" fill="#79d3a3" opacity="0.9" rx="4"/>
+<text x="418.0" y="353.6" class="label" text-anchor="middle" fill="#79d3a3">+4.3%</text>
+<text x="418.0" y="616.0" class="axis" text-anchor="middle">Nasdaq</text>
+<rect x="487.0" y="407.8" width="62.0" height="23.5" fill="#79d3a3" opacity="0.9" rx="4"/>
+<text x="518.0" y="397.8" class="label" text-anchor="middle" fill="#79d3a3">+1.5%</text>
+<text x="518.0" y="616.0" class="axis" text-anchor="middle">Dow</text>
+<rect x="587.0" y="403.5" width="62.0" height="27.8" fill="#79d3a3" opacity="0.9" rx="4"/>
+<text x="618.0" y="393.5" class="label" text-anchor="middle" fill="#79d3a3">+1.8%</text>
+<text x="618.0" y="616.0" class="axis" text-anchor="middle">RSP</text>
+<rect x="687.0" y="157.1" width="62.0" height="274.3" fill="#79d3a3" opacity="0.9" rx="4"/>
+<text x="718.0" y="147.1" class="label" text-anchor="middle" fill="#79d3a3">+17.5%</text>
+<text x="718.0" y="616.0" class="axis" text-anchor="middle">SOXX</text>
+<rect x="787.0" y="431.3" width="62.0" height="6.1" fill="#ef8d8d" opacity="0.9" rx="4"/>
+<text x="818.0" y="455.4" class="label" text-anchor="middle" fill="#ef8d8d">-0.4%</text>
+<text x="818.0" y="616.0" class="axis" text-anchor="middle">HYG</text>
+<rect x="887.0" y="431.3" width="62.0" height="39.4" fill="#ef8d8d" opacity="0.9" rx="4"/>
+<text x="918.0" y="488.7" class="label" text-anchor="middle" fill="#ef8d8d">-2.5%</text>
+<text x="918.0" y="616.0" class="axis" text-anchor="middle">Brent</text>
+<rect x="987.0" y="431.3" width="62.0" height="86.9" fill="#ef8d8d" opacity="0.9" rx="4"/>
+<text x="1018.0" y="536.2" class="label" text-anchor="middle" fill="#ef8d8d">-5.5%</text>
+<text x="1018.0" y="616.0" class="axis" text-anchor="middle">Gold</text>
+<text x="178.0" y="673" class="note">SOXX is Yahoo’s split-adjusted series, the same one Issue 33 used. January Brent is BZF27. Gold and Brent are futures settles, not the unfinished 13 Nov session.</text>
+<text x="1068.0" y="698" class="note" text-anchor="end">Sources: Coinbase Exchange and Yahoo Finance · 13 Nov 2026 · 8:08 a.m. CT / 14:08 UTC</text>
+</svg>
