@@ -1,8 +1,14 @@
 {
   "ticker": "NBIS",
-  "updated_at": "2026-11-13T16:56:03Z",
-  "price": 117.0,
+  "updated_at": "2026-11-13T22:22:43Z",
+  "price": 113.22,
   "filings": [
+    {
+      "form": "4",
+      "filing_date": "2026-11-13",
+      "accession": "0001513845-26-000149",
+      "url": "https://www.sec.gov/Archives/edgar/data/1513845/000151384526000149/xslF345X06/form4.xml"
+    },
     {
       "form": "6-K",
       "filing_date": "2026-11-12",
@@ -26,20 +32,14 @@
       "filing_date": "2026-10-30",
       "accession": "0001513845-26-000145",
       "url": "https://www.sec.gov/Archives/edgar/data/1513845/000151384526000145/xslF345X06/form4.xml"
-    },
-    {
-      "form": "4",
-      "filing_date": "2026-10-29",
-      "accession": "0001513845-26-000143",
-      "url": "https://www.sec.gov/Archives/edgar/data/1513845/000151384526000143/xslF345X06/form4.xml"
     }
   ],
   "error": null,
-  "prev_close": 128.64,
-  "change": -11.64,
-  "change_pct": -9.049,
+  "prev_close": 115.88,
+  "change": -2.66,
+  "change_pct": -2.295,
   "currency": "USD",
   "exchange": "NASDAQ-GS",
-  "volume": 31468059.236804,
+  "volume": 48398589.766985,
   "quote_source": "nasdaq-stocks"
 }
