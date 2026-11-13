@@ -1,5 +1,30 @@
 [
   {
+    "id": "2026-11-13-the-window-closed",
+    "date": "2026-11-13",
+    "kicker": "Chart Desk \u00b7 Issue 34",
+    "title": "The window closed. Panic did not.",
+    "dek": "6 and 7 November both closed under $77,000. 12 November closed at $71,370. Equities and the VIX repaired. Credit tightened.",
+    "asOf": "2026-11-13T14:08:59Z",
+    "cadence": "follow-up",
+    "thesis": "The window closed. Panic did not.",
+    "stakes": "BTC ~$69.2k. 6 and 7 Nov closed under $77k. 12 Nov close $71,370. The 48-hour test of $72k is open. VIX cash close 18.70. WAIT.",
+    "levels": [
+      "$86k",
+      "$80k",
+      "$77k",
+      "$74k",
+      "$72k",
+      "~$57.7k"
+    ],
+    "letterId": "2026-11-13-the-window-closed",
+    "letterUrl": "/issue?id=2026-11-13-the-window-closed",
+    "letterLabel": "Vol. 1 \u00b7 Issue 34",
+    "subscribeHook": "A UTC close back above $72k on 13 or 14 November, or a second close under it, updates the sequence. Charts stay free here; the call moves by email.",
+    "sourceNote": "Issue 34 charts use Coinbase Exchange UTC candles (daily 29 Oct\u201312 Nov 2026; hourly 12 Nov 00:00 through 13 Nov 13:00 UTC), completed 5 and 12 November closes from Yahoo Finance, and Farside Investors US-session ETF flows for 2\u201312 November. 13 November is a partial UTC day and an incomplete Farside row. Weekend blanks are not zeroes. Educational scenario research; no leverage.",
+    "packUrl": "/charts/packs/2026-11-13-the-window-closed.json"
+  },
+  {
     "id": "2026-11-06-the-reclaim-lasted-one-close",
     "date": "2026-11-06",
     "kicker": "Chart Desk \u00b7 Issue 33",
