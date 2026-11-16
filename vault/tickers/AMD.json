@@ -1,8 +1,14 @@
 {
   "ticker": "AMD",
-  "updated_at": "2026-11-13T22:22:42Z",
-  "price": 527.2,
+  "updated_at": "2026-11-16T19:14:44Z",
+  "price": 508.75,
   "filings": [
+    {
+      "form": "8-K/A",
+      "filing_date": "2026-11-16",
+      "accession": "0001193125-26-462340",
+      "url": "https://www.sec.gov/Archives/edgar/data/2488/000119312526462340/d105780d8ka.htm"
+    },
     {
       "form": "4",
       "filing_date": "2026-11-13",
@@ -26,20 +32,14 @@
       "filing_date": "2026-11-03",
       "accession": "0000002488-26-000188",
       "url": "https://www.sec.gov/Archives/edgar/data/2488/000000248826000188/amd-20261103.htm"
-    },
-    {
-      "form": "4",
-      "filing_date": "2026-10-19",
-      "accession": "0000002488-26-000184",
-      "url": "https://www.sec.gov/Archives/edgar/data/2488/000000248826000184/xslF345X06/wk-form4_1792441001.xml"
     }
   ],
   "error": null,
   "prev_close": 534.06,
-  "change": -6.86,
-  "change_pct": -1.284,
+  "change": -25.31,
+  "change_pct": -4.739,
   "currency": "USD",
   "exchange": "NASDAQ-GS",
-  "volume": 49020830.297366,
+  "volume": 25174750.60488,
   "quote_source": "nasdaq-stocks"
 }
