@@ -1,8 +1,14 @@
 {
   "ticker": "KEEL",
-  "updated_at": "2026-11-16T19:14:46Z",
-  "price": 1.715,
+  "updated_at": "2026-11-17T03:23:10Z",
+  "price": 1.86,
   "filings": [
+    {
+      "form": "4",
+      "filing_date": "2026-11-16",
+      "accession": "0001812477-26-000048",
+      "url": "https://www.sec.gov/Archives/edgar/data/1812477/000181247726000048/xslF345X06/wk-form4_1794865255.xml"
+    },
     {
       "form": "4",
       "filing_date": "2026-11-13",
@@ -26,20 +32,14 @@
       "filing_date": "2026-11-05",
       "accession": "0001812477-26-000040",
       "url": "https://www.sec.gov/Archives/edgar/data/1812477/000181247726000040/keel-20260930.htm"
-    },
-    {
-      "form": "8-K",
-      "filing_date": "2026-11-05",
-      "accession": "0001812477-26-000041",
-      "url": "https://www.sec.gov/Archives/edgar/data/1812477/000181247726000041/keel-20261105.htm"
     }
   ],
   "error": null,
-  "prev_close": 1.86,
-  "change": -0.145,
-  "change_pct": -7.796,
+  "prev_close": 1.95,
+  "change": -0.09,
+  "change_pct": -4.615,
   "currency": "USD",
   "exchange": "NASDAQ-GM",
-  "volume": 11296165.417209,
+  "volume": 18586843.0,
   "quote_source": "nasdaq-stocks"
 }

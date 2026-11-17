@@ -1,8 +1,20 @@
 {
   "ticker": "AMD",
-  "updated_at": "2026-11-16T19:14:44Z",
-  "price": 508.75,
+  "updated_at": "2026-11-17T03:23:09Z",
+  "price": 534.06,
   "filings": [
+    {
+      "form": "4",
+      "filing_date": "2026-11-16",
+      "accession": "0000002488-26-000197",
+      "url": "https://www.sec.gov/Archives/edgar/data/2488/000000248826000197/xslF345X06/wk-form4_1794870238.xml"
+    },
+    {
+      "form": "13F-HR",
+      "filing_date": "2026-11-16",
+      "accession": "0001193125-26-463642",
+      "url": "https://www.sec.gov/Archives/edgar/data/2488/000119312526463642/xslForm13F_X02/primary_doc.xml"
+    },
     {
       "form": "8-K/A",
       "filing_date": "2026-11-16",
@@ -20,26 +32,14 @@
       "filing_date": "2026-11-13",
       "accession": "0000002488-26-000193",
       "url": "https://www.sec.gov/Archives/edgar/data/2488/000000248826000193/xslF345X06/wk-form4_1794604616.xml"
-    },
-    {
-      "form": "10-Q",
-      "filing_date": "2026-11-04",
-      "accession": "0000002488-26-000191",
-      "url": "https://www.sec.gov/Archives/edgar/data/2488/000000248826000191/amd-20260926.htm"
-    },
-    {
-      "form": "8-K",
-      "filing_date": "2026-11-03",
-      "accession": "0000002488-26-000188",
-      "url": "https://www.sec.gov/Archives/edgar/data/2488/000000248826000188/amd-20261103.htm"
     }
   ],
   "error": null,
-  "prev_close": 534.06,
-  "change": -25.31,
-  "change_pct": -4.739,
+  "prev_close": 585.3,
+  "change": -51.24,
+  "change_pct": -8.754,
   "currency": "USD",
   "exchange": "NASDAQ-GS",
-  "volume": 25174750.60488,
+  "volume": 49387598.0,
   "quote_source": "nasdaq-stocks"
 }
