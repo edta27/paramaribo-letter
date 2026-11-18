@@ -1,45 +1,45 @@
 {
   "ticker": "AMZN",
-  "updated_at": "2026-11-17T18:07:20Z",
-  "price": 257.5893,
+  "updated_at": "2026-11-18T02:43:39Z",
+  "price": 257.75,
   "filings": [
     {
       "form": "4",
-      "filing_date": "2026-11-16",
-      "accession": "0001018724-26-000044",
-      "url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000044/xslF345X06/wk-form4_1794864240.xml"
+      "filing_date": "2026-11-17",
+      "accession": "0001936006-26-000030",
+      "url": "https://www.sec.gov/Archives/edgar/data/1018724/000193600626000030/xslF345X06/wk-form4_1794951971.xml"
     },
     {
       "form": "4",
-      "filing_date": "2026-11-12",
-      "accession": "0001018724-26-000042",
-      "url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000042/xslF345X06/wk-form4_1794526071.xml"
+      "filing_date": "2026-11-17",
+      "accession": "0001018724-26-000054",
+      "url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000054/xslF345X06/wk-form4_1794951713.xml"
     },
     {
       "form": "4",
-      "filing_date": "2026-11-04",
-      "accession": "0001936006-26-000028",
-      "url": "https://www.sec.gov/Archives/edgar/data/1018724/000193600626000028/xslF345X06/wk-form4_1793831214.xml"
+      "filing_date": "2026-11-17",
+      "accession": "0001018724-26-000052",
+      "url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000052/xslF345X06/wk-form4_1794951462.xml"
     },
     {
-      "form": "13F-HR",
-      "filing_date": "2026-11-03",
-      "accession": "0001104659-26-122014",
-      "url": "https://www.sec.gov/Archives/edgar/data/1018724/000110465926122014/xslForm13F_X02/primary_doc.xml"
+      "form": "4",
+      "filing_date": "2026-11-17",
+      "accession": "0001018724-26-000050",
+      "url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000050/xslF345X06/wk-form4_1794951114.xml"
     },
     {
-      "form": "10-Q",
-      "filing_date": "2026-10-30",
-      "accession": "0001018724-26-000040",
-      "url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000040/amzn-20260930.htm"
+      "form": "4",
+      "filing_date": "2026-11-17",
+      "accession": "0001018724-26-000048",
+      "url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000048/xslF345X06/wk-form4_1794950800.xml"
     }
   ],
   "error": null,
-  "prev_close": 257.75,
-  "change": -0.1607,
-  "change_pct": -0.062,
+  "prev_close": 266.66,
+  "change": -8.91,
+  "change_pct": -3.341,
   "currency": "USD",
   "exchange": "NASDAQ-GS",
-  "volume": 18638720.070517,
+  "volume": 48054227.0,
   "quote_source": "nasdaq-stocks"
 }

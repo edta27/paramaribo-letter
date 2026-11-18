@@ -1,45 +1,45 @@
 {
   "ticker": "META",
-  "updated_at": "2026-11-17T18:07:20Z",
-  "price": 619.92,
+  "updated_at": "2026-11-18T02:43:40Z",
+  "price": 626.41,
   "filings": [
     {
       "form": "4",
-      "filing_date": "2026-11-12",
-      "accession": "0000950103-26-017401",
-      "url": "https://www.sec.gov/Archives/edgar/data/1326801/000095010326017401/xslF345X06/ownership.xml"
+      "filing_date": "2026-11-17",
+      "accession": "0000950103-26-017707",
+      "url": "https://www.sec.gov/Archives/edgar/data/1326801/000095010326017707/xslF345X06/ownership.xml"
     },
     {
       "form": "4",
-      "filing_date": "2026-11-12",
-      "accession": "0000950103-26-017398",
-      "url": "https://www.sec.gov/Archives/edgar/data/1326801/000095010326017398/xslF345X06/ownership.xml"
-    },
-    {
-      "form": "8-K",
-      "filing_date": "2026-11-12",
-      "accession": "0001193125-26-458525",
-      "url": "https://www.sec.gov/Archives/edgar/data/1326801/000119312526458525/d177728d8k.htm"
+      "filing_date": "2026-11-17",
+      "accession": "0000950103-26-017706",
+      "url": "https://www.sec.gov/Archives/edgar/data/1326801/000095010326017706/xslF345X06/ownership.xml"
     },
     {
       "form": "4",
-      "filing_date": "2026-11-06",
-      "accession": "0000950103-26-017123",
-      "url": "https://www.sec.gov/Archives/edgar/data/1326801/000095010326017123/xslF345X06/ownership.xml"
+      "filing_date": "2026-11-17",
+      "accession": "0000950103-26-017705",
+      "url": "https://www.sec.gov/Archives/edgar/data/1326801/000095010326017705/xslF345X06/ownership.xml"
     },
     {
-      "form": "8-K",
-      "filing_date": "2026-11-05",
-      "accession": "0001193125-26-450074",
-      "url": "https://www.sec.gov/Archives/edgar/data/1326801/000119312526450074/d166273d8k.htm"
+      "form": "4",
+      "filing_date": "2026-11-17",
+      "accession": "0000950103-26-017704",
+      "url": "https://www.sec.gov/Archives/edgar/data/1326801/000095010326017704/xslF345X06/ownership.xml"
+    },
+    {
+      "form": "4",
+      "filing_date": "2026-11-17",
+      "accession": "0000950103-26-017703",
+      "url": "https://www.sec.gov/Archives/edgar/data/1326801/000095010326017703/xslF345X06/ownership.xml"
     }
   ],
   "error": null,
-  "prev_close": 626.41,
-  "change": -6.49,
-  "change_pct": -1.036,
+  "prev_close": 641.69,
+  "change": -15.28,
+  "change_pct": -2.381,
   "currency": "USD",
   "exchange": "NASDAQ-GS",
-  "volume": 6705916.436575,
+  "volume": 11577864.0,
   "quote_source": "nasdaq-stocks"
 }

@@ -1,8 +1,14 @@
 {
   "ticker": "COIN",
-  "updated_at": "2026-11-17T18:07:18Z",
-  "price": 116.4,
+  "updated_at": "2026-11-18T02:43:37Z",
+  "price": 119.84,
   "filings": [
+    {
+      "form": "4",
+      "filing_date": "2026-11-17",
+      "accession": "0001851432-26-000002",
+      "url": "https://www.sec.gov/Archives/edgar/data/1679788/000185143226000002/xslF345X06/form4-11172026_101156.xml"
+    },
     {
       "form": "10-Q",
       "filing_date": "2026-10-29",
@@ -26,20 +32,14 @@
       "filing_date": "2026-10-02",
       "accession": "0001679788-26-000113",
       "url": "https://www.sec.gov/Archives/edgar/data/1679788/000167978826000113/coin-20260929.htm"
-    },
-    {
-      "form": "4",
-      "filing_date": "2026-09-23",
-      "accession": "0001679788-26-000109",
-      "url": "https://www.sec.gov/Archives/edgar/data/1679788/000167978826000109/xslF345X06/wk-form4_1790194735.xml"
     }
   ],
   "error": null,
-  "prev_close": 119.84,
-  "change": -3.44,
-  "change_pct": -2.87,
+  "prev_close": 127.645,
+  "change": -7.805,
+  "change_pct": -6.115,
   "currency": "USD",
   "exchange": "NASDAQ-GS",
-  "volume": 5138308.844445,
+  "volume": 11226073.0,
   "quote_source": "nasdaq-stocks"
 }
