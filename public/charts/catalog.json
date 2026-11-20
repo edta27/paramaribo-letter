@@ -1,5 +1,28 @@
 [
   {
+    "id": "2026-11-20-the-window-failed",
+    "date": "2026-11-20",
+    "kicker": "Chart Desk \u00b7 Issue 35",
+    "title": "The window failed. Credit did not.",
+    "dek": "13 and 14 November both closed under $72,000. 19 November closed at $61,913. The VIX cash close was 28.44. High-yield OAS did not go through 3.48%.",
+    "asOf": "2026-11-20T14:05:46Z",
+    "cadence": "follow-up",
+    "thesis": "The window failed. Credit did not.",
+    "stakes": "BTC ~$61.8k. 13 and 14 Nov closed under $72k. 19 Nov close $61,913. The 48-hour test of the 15 Nov low is open. VIX cash close 28.44. HY OAS 3.47% on 18 Nov. WAIT.",
+    "levels": [
+      "$72k",
+      "$61.9k",
+      "$61.5k",
+      "~$57.7k"
+    ],
+    "letterId": "2026-11-20-the-window-failed",
+    "letterUrl": "/issue?id=2026-11-20-the-window-failed",
+    "letterLabel": "Vol. 1 \u00b7 Issue 35",
+    "subscribeHook": "A UTC close back above the 15 November low on 20 or 21 November, or a second close under it, updates the sequence. Charts stay free here; the call moves by email.",
+    "sourceNote": "Issue 35 charts use Coinbase Exchange UTC candles (daily 12\u201319 Nov 2026; hourly 19 Nov 00:00 through 20 Nov 13:00 UTC), completed 12 and 19 November closes from Yahoo Finance, and Farside Investors US-session ETF flows for 2\u201319 November. 20 November is a partial UTC day and an incomplete Farside row. Weekend blanks are not zeroes. Educational scenario research; no leverage.",
+    "packUrl": "/charts/packs/2026-11-20-the-window-failed.json"
+  },
+  {
     "id": "2026-11-13-the-window-closed",
     "date": "2026-11-13",
     "kicker": "Chart Desk \u00b7 Issue 34",
