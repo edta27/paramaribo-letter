@@ -1,8 +1,14 @@
 {
   "ticker": "NVDA",
-  "updated_at": "2026-11-21T01:57:56Z",
-  "price": 145.98,
+  "updated_at": "2026-11-23T20:51:43Z",
+  "price": 164.44,
   "filings": [
+    {
+      "form": "8-K",
+      "filing_date": "2026-11-23",
+      "accession": "0001045810-26-000090",
+      "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000090/nvda-20261122.htm"
+    },
     {
       "form": "8-K",
       "filing_date": "2026-11-17",
@@ -26,20 +32,14 @@
       "filing_date": "2026-11-06",
       "accession": "0001197647-26-000013",
       "url": "https://www.sec.gov/Archives/edgar/data/1045810/000119764726000013/xslF345X06/wk-form4_1793999520.xml"
-    },
-    {
-      "form": "4/A",
-      "filing_date": "2026-10-13",
-      "accession": "0002152188-26-000007",
-      "url": "https://www.sec.gov/Archives/edgar/data/1045810/000215218826000007/xslF345X06/wk-form4a_1791925767.xml"
     }
   ],
   "error": null,
-  "prev_close": 150.96,
-  "change": -4.98,
-  "change_pct": -3.299,
+  "prev_close": 125.53,
+  "change": 38.91,
+  "change_pct": 30.997,
   "currency": "USD",
   "exchange": "NASDAQ-GS",
-  "volume": 322940099.0,
+  "volume": 688586100.894075,
   "quote_source": "nasdaq-stocks"
 }
