@@ -1,8 +1,26 @@
 {
   "ticker": "WMT",
-  "updated_at": "2026-11-23T20:51:48Z",
-  "price": 129.7,
+  "updated_at": "2026-11-24T05:08:22Z",
+  "price": 127.95,
   "filings": [
+    {
+      "form": "4",
+      "filing_date": "2026-11-23",
+      "accession": "0001696737-26-000023",
+      "url": "https://www.sec.gov/Archives/edgar/data/104169/000169673726000023/xslF345X06/wk-form4_1795469042.xml"
+    },
+    {
+      "form": "4",
+      "filing_date": "2026-11-23",
+      "accession": "0001992808-26-000031",
+      "url": "https://www.sec.gov/Archives/edgar/data/104169/000199280826000031/xslF345X06/wk-form4_1795469035.xml"
+    },
+    {
+      "form": "4",
+      "filing_date": "2026-11-23",
+      "accession": "0001579299-26-000030",
+      "url": "https://www.sec.gov/Archives/edgar/data/104169/000157929926000030/xslF345X06/wk-form4_1795469027.xml"
+    },
     {
       "form": "8-K",
       "filing_date": "2026-11-19",
@@ -14,32 +32,14 @@
       "filing_date": "2026-11-16",
       "accession": "0001739859-26-000003",
       "url": "https://www.sec.gov/Archives/edgar/data/104169/000173985926000003/xslF345X06/wk-form4_1794871039.xml"
-    },
-    {
-      "form": "8-K",
-      "filing_date": "2026-11-16",
-      "accession": "0000104169-26-000165",
-      "url": "https://www.sec.gov/Archives/edgar/data/104169/000010416926000165/wmt-20261113.htm"
-    },
-    {
-      "form": "13F-HR",
-      "filing_date": "2026-11-06",
-      "accession": "0001123292-26-001495",
-      "url": "https://www.sec.gov/Archives/edgar/data/104169/000112329226001495/xslForm13F_X02/primary_doc.xml"
-    },
-    {
-      "form": "4",
-      "filing_date": "2026-11-05",
-      "accession": "0001886367-26-000031",
-      "url": "https://www.sec.gov/Archives/edgar/data/104169/000188636726000031/xslF345X06/wk-form4_1793915990.xml"
     }
   ],
   "error": null,
-  "prev_close": 127.95,
-  "change": 1.75,
-  "change_pct": 1.368,
+  "prev_close": 126.04,
+  "change": 1.91,
+  "change_pct": 1.515,
   "currency": "USD",
   "exchange": "NASDAQ-GS",
-  "volume": 16011294.170386,
+  "volume": 42651169.0,
   "quote_source": "nasdaq-stocks"
 }

@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-23T20:51:52Z",
+  "updated_at": "2026-11-24T05:08:25Z",
   "mode": "auto-refresh",
   "disclaimer": "Educational quotes and EDGAR indexes only. Not advice. No trades. No email.",
   "watchlist": [
@@ -27,9 +27,15 @@
   "tickers": [
     {
       "ticker": "NVDA",
-      "updated_at": "2026-11-23T20:51:43Z",
-      "price": 164.44,
+      "updated_at": "2026-11-24T05:08:20Z",
+      "price": 165.05,
       "filings": [
+        {
+          "form": "4",
+          "filing_date": "2026-11-23",
+          "accession": "0001696841-26-000016",
+          "url": "https://www.sec.gov/Archives/edgar/data/1045810/000169684126000016/xslF345X06/wk-form4_1795470863.xml"
+        },
         {
           "form": "8-K",
           "filing_date": "2026-11-23",
@@ -53,27 +59,21 @@
           "filing_date": "2026-11-12",
           "accession": "0001045810-26-000082",
           "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000082/nvda-20261111.htm"
-        },
-        {
-          "form": "4",
-          "filing_date": "2026-11-06",
-          "accession": "0001197647-26-000013",
-          "url": "https://www.sec.gov/Archives/edgar/data/1045810/000119764726000013/xslF345X06/wk-form4_1793999520.xml"
         }
       ],
       "error": null,
       "prev_close": 125.53,
-      "change": 38.91,
-      "change_pct": 30.997,
+      "change": 39.52,
+      "change_pct": 31.483,
       "currency": "USD",
       "exchange": "NASDAQ-GS",
-      "volume": 688586100.894075,
+      "volume": 782593289.0,
       "quote_source": "nasdaq-stocks"
     },
     {
       "ticker": "AVGO",
-      "updated_at": "2026-11-23T20:51:44Z",
-      "price": 311.39,
+      "updated_at": "2026-11-24T05:08:20Z",
+      "price": 313.55,
       "filings": [
         {
           "form": "8-K",
@@ -108,17 +108,17 @@
       ],
       "error": null,
       "prev_close": 304.41,
-      "change": 6.98,
-      "change_pct": 2.293,
+      "change": 9.14,
+      "change_pct": 3.003,
       "currency": "USD",
       "exchange": "NASDAQ-GS",
-      "volume": 31073891.480933,
+      "volume": 41104877.0,
       "quote_source": "nasdaq-stocks"
     },
     {
       "ticker": "TSM",
-      "updated_at": "2026-11-23T20:51:45Z",
-      "price": 362.425,
+      "updated_at": "2026-11-24T05:08:20Z",
+      "price": 363.365,
       "filings": [
         {
           "form": "4",
@@ -153,17 +153,17 @@
       ],
       "error": null,
       "prev_close": 318.71,
-      "change": 43.715,
-      "change_pct": 13.716,
+      "change": 44.655,
+      "change_pct": 14.011,
       "currency": "USD",
       "exchange": "NYSE",
-      "volume": 26589751.408996,
+      "volume": 31668231.0,
       "quote_source": "nasdaq-stocks"
     },
     {
       "ticker": "AMD",
-      "updated_at": "2026-11-23T20:51:45Z",
-      "price": 451.11,
+      "updated_at": "2026-11-24T05:08:20Z",
+      "price": 453.46,
       "filings": [
         {
           "form": "8-K",
@@ -198,17 +198,17 @@
       ],
       "error": null,
       "prev_close": 424.39,
-      "change": 26.72,
-      "change_pct": 6.296,
+      "change": 29.07,
+      "change_pct": 6.85,
       "currency": "USD",
       "exchange": "NASDAQ-GS",
-      "volume": 41998388.354779,
+      "volume": 54000570.0,
       "quote_source": "nasdaq-stocks"
     },
     {
       "ticker": "IREN",
-      "updated_at": "2026-11-23T20:51:45Z",
-      "price": 14.585,
+      "updated_at": "2026-11-24T05:08:21Z",
+      "price": 11.82,
       "filings": [
         {
           "form": "10-Q",
@@ -242,18 +242,18 @@
         }
       ],
       "error": null,
-      "prev_close": 11.82,
-      "change": 2.765,
-      "change_pct": 23.393,
+      "prev_close": 14.41,
+      "change": -2.59,
+      "change_pct": -17.974,
       "currency": "USD",
       "exchange": "NASDAQ-GS",
-      "volume": 111861416.241305,
+      "volume": 132422519.0,
       "quote_source": "nasdaq-stocks"
     },
     {
       "ticker": "CLSK",
-      "updated_at": "2026-11-23T20:51:46Z",
-      "price": 5.4758,
+      "updated_at": "2026-11-24T05:08:21Z",
+      "price": 4.89,
       "filings": [
         {
           "form": "4",
@@ -287,18 +287,18 @@
         }
       ],
       "error": null,
-      "prev_close": 4.89,
-      "change": 0.5858,
-      "change_pct": 11.98,
+      "prev_close": 5.84,
+      "change": -0.95,
+      "change_pct": -16.267,
       "currency": "USD",
       "exchange": "NASDAQ-CM",
-      "volume": 15633296.188211,
+      "volume": 25222592.0,
       "quote_source": "nasdaq-stocks"
     },
     {
       "ticker": "WYFI",
-      "updated_at": "2026-11-23T20:51:46Z",
-      "price": 7.28,
+      "updated_at": "2026-11-24T05:08:21Z",
+      "price": 6.35,
       "filings": [
         {
           "form": "4",
@@ -332,18 +332,18 @@
         }
       ],
       "error": null,
-      "prev_close": 6.35,
-      "change": 0.93,
-      "change_pct": 14.646,
+      "prev_close": 7.65,
+      "change": -1.3,
+      "change_pct": -16.993,
       "currency": "USD",
       "exchange": "NASDAQ-CM",
-      "volume": 2672171.562031,
+      "volume": 2337060.0,
       "quote_source": "nasdaq-stocks"
     },
     {
       "ticker": "KEEL",
-      "updated_at": "2026-11-23T20:51:47Z",
-      "price": 1.6,
+      "updated_at": "2026-11-24T05:08:21Z",
+      "price": 1.3794,
       "filings": [
         {
           "form": "4",
@@ -377,18 +377,18 @@
         }
       ],
       "error": null,
-      "prev_close": 1.375,
-      "change": 0.225,
-      "change_pct": 16.364,
+      "prev_close": 1.71,
+      "change": -0.3306,
+      "change_pct": -19.333,
       "currency": "USD",
       "exchange": "NASDAQ-GM",
-      "volume": 23120593.903813,
+      "volume": 33020517.0,
       "quote_source": "nasdaq-stocks"
     },
     {
       "ticker": "NBIS",
-      "updated_at": "2026-11-23T20:51:47Z",
-      "price": 97.26,
+      "updated_at": "2026-11-24T05:08:22Z",
+      "price": 81.31,
       "filings": [
         {
           "form": "4",
@@ -422,18 +422,18 @@
         }
       ],
       "error": null,
-      "prev_close": 81.31,
-      "change": 15.95,
-      "change_pct": 19.616,
+      "prev_close": 96.92,
+      "change": -15.61,
+      "change_pct": -16.106,
       "currency": "USD",
       "exchange": "NASDAQ-GS",
-      "volume": 47323558.704786,
+      "volume": 49813334.0,
       "quote_source": "nasdaq-stocks"
     },
     {
       "ticker": "AAOI",
-      "updated_at": "2026-11-23T20:51:48Z",
-      "price": 38.345,
+      "updated_at": "2026-11-24T05:08:22Z",
+      "price": 32.93,
       "filings": [
         {
           "form": "8-K",
@@ -467,19 +467,37 @@
         }
       ],
       "error": null,
-      "prev_close": 32.93,
-      "change": 5.415,
-      "change_pct": 16.444,
+      "prev_close": 39.46,
+      "change": -6.53,
+      "change_pct": -16.548,
       "currency": "USD",
       "exchange": "NASDAQ-GM",
-      "volume": 11649004.242286,
+      "volume": 18832166.0,
       "quote_source": "nasdaq-stocks"
     },
     {
       "ticker": "WMT",
-      "updated_at": "2026-11-23T20:51:48Z",
-      "price": 129.7,
+      "updated_at": "2026-11-24T05:08:22Z",
+      "price": 127.95,
       "filings": [
+        {
+          "form": "4",
+          "filing_date": "2026-11-23",
+          "accession": "0001696737-26-000023",
+          "url": "https://www.sec.gov/Archives/edgar/data/104169/000169673726000023/xslF345X06/wk-form4_1795469042.xml"
+        },
+        {
+          "form": "4",
+          "filing_date": "2026-11-23",
+          "accession": "0001992808-26-000031",
+          "url": "https://www.sec.gov/Archives/edgar/data/104169/000199280826000031/xslF345X06/wk-form4_1795469035.xml"
+        },
+        {
+          "form": "4",
+          "filing_date": "2026-11-23",
+          "accession": "0001579299-26-000030",
+          "url": "https://www.sec.gov/Archives/edgar/data/104169/000157929926000030/xslF345X06/wk-form4_1795469027.xml"
+        },
         {
           "form": "8-K",
           "filing_date": "2026-11-19",
@@ -491,39 +509,21 @@
           "filing_date": "2026-11-16",
           "accession": "0001739859-26-000003",
           "url": "https://www.sec.gov/Archives/edgar/data/104169/000173985926000003/xslF345X06/wk-form4_1794871039.xml"
-        },
-        {
-          "form": "8-K",
-          "filing_date": "2026-11-16",
-          "accession": "0000104169-26-000165",
-          "url": "https://www.sec.gov/Archives/edgar/data/104169/000010416926000165/wmt-20261113.htm"
-        },
-        {
-          "form": "13F-HR",
-          "filing_date": "2026-11-06",
-          "accession": "0001123292-26-001495",
-          "url": "https://www.sec.gov/Archives/edgar/data/104169/000112329226001495/xslForm13F_X02/primary_doc.xml"
-        },
-        {
-          "form": "4",
-          "filing_date": "2026-11-05",
-          "accession": "0001886367-26-000031",
-          "url": "https://www.sec.gov/Archives/edgar/data/104169/000188636726000031/xslF345X06/wk-form4_1793915990.xml"
         }
       ],
       "error": null,
-      "prev_close": 127.95,
-      "change": 1.75,
-      "change_pct": 1.368,
+      "prev_close": 126.04,
+      "change": 1.91,
+      "change_pct": 1.515,
       "currency": "USD",
       "exchange": "NASDAQ-GS",
-      "volume": 16011294.170386,
+      "volume": 42651169.0,
       "quote_source": "nasdaq-stocks"
     },
     {
       "ticker": "COIN",
-      "updated_at": "2026-11-23T20:51:48Z",
-      "price": 108.52,
+      "updated_at": "2026-11-24T05:08:22Z",
+      "price": 101.97,
       "filings": [
         {
           "form": "4",
@@ -557,32 +557,32 @@
         }
       ],
       "error": null,
-      "prev_close": 101.97,
-      "change": 6.55,
-      "change_pct": 6.423,
+      "prev_close": 108.87,
+      "change": -6.9,
+      "change_pct": -6.338,
       "currency": "USD",
       "exchange": "NASDAQ-GS",
-      "volume": 8690903.981159,
+      "volume": 14188125.0,
       "quote_source": "nasdaq-stocks"
     },
     {
       "ticker": "SPY",
-      "updated_at": "2026-11-23T20:51:49Z",
-      "price": 722.53,
+      "updated_at": "2026-11-24T05:08:23Z",
+      "price": 690.43,
       "filings": [],
       "error": null,
-      "prev_close": 689.81,
-      "change": 32.72,
-      "change_pct": 4.743,
+      "prev_close": 715.87,
+      "change": -25.44,
+      "change_pct": -3.554,
       "currency": "USD",
       "exchange": "PSE",
-      "volume": 67283810.667594,
+      "volume": 151413318.0,
       "quote_source": "nasdaq-etf"
     },
     {
       "ticker": "QQQ",
-      "updated_at": "2026-11-23T20:51:49Z",
-      "price": 650.65,
+      "updated_at": "2026-11-24T05:08:23Z",
+      "price": 651.03,
       "filings": [
         {
           "form": "8-K",
@@ -599,17 +599,17 @@
       ],
       "error": null,
       "prev_close": 608.45,
-      "change": 42.2,
-      "change_pct": 6.936,
+      "change": 42.58,
+      "change_pct": 6.998,
       "currency": "USD",
       "exchange": "NASDAQ-GM",
-      "volume": 74694891.427906,
+      "volume": 85330834.0,
       "quote_source": "nasdaq-etf"
     },
     {
       "ticker": "DE",
-      "updated_at": "2026-11-23T20:51:50Z",
-      "price": 634.06,
+      "updated_at": "2026-11-24T05:08:23Z",
+      "price": 609.24,
       "filings": [
         {
           "form": "4",
@@ -643,18 +643,18 @@
         }
       ],
       "error": null,
-      "prev_close": 609.25,
-      "change": 24.81,
-      "change_pct": 4.072,
+      "prev_close": 624.89,
+      "change": -15.65,
+      "change_pct": -2.504,
       "currency": "USD",
       "exchange": "NYSE",
-      "volume": 1047595.392375,
+      "volume": 2178450.0,
       "quote_source": "nasdaq-stocks"
     },
     {
       "ticker": "MRNA",
-      "updated_at": "2026-11-23T20:51:50Z",
-      "price": 211.71,
+      "updated_at": "2026-11-24T05:08:23Z",
+      "price": 195.0,
       "filings": [
         {
           "form": "4",
@@ -688,18 +688,18 @@
         }
       ],
       "error": null,
-      "prev_close": 195.0,
-      "change": 16.71,
-      "change_pct": 8.569,
+      "prev_close": 199.33,
+      "change": -4.33,
+      "change_pct": -2.172,
       "currency": "USD",
       "exchange": "NASDAQ-GS",
-      "volume": 6410019.427282,
+      "volume": 9687633.0,
       "quote_source": "nasdaq-stocks"
     },
     {
       "ticker": "AMZN",
-      "updated_at": "2026-11-23T20:51:51Z",
-      "price": 256.17,
+      "updated_at": "2026-11-24T05:08:24Z",
+      "price": 246.82,
       "filings": [
         {
           "form": "4",
@@ -733,18 +733,18 @@
         }
       ],
       "error": null,
-      "prev_close": 246.82,
-      "change": 9.35,
-      "change_pct": 3.788,
+      "prev_close": 257.37,
+      "change": -10.55,
+      "change_pct": -4.099,
       "currency": "USD",
       "exchange": "NASDAQ-GS",
-      "volume": 40432184.004101,
+      "volume": 74362636.0,
       "quote_source": "nasdaq-stocks"
     },
     {
       "ticker": "MSFT",
-      "updated_at": "2026-11-23T20:51:51Z",
-      "price": 495.61,
+      "updated_at": "2026-11-24T05:08:24Z",
+      "price": 492.5,
       "filings": [
         {
           "form": "4",
@@ -779,18 +779,24 @@
       ],
       "error": null,
       "prev_close": 484.52,
-      "change": 11.09,
-      "change_pct": 2.289,
+      "change": 7.98,
+      "change_pct": 1.647,
       "currency": "USD",
       "exchange": "NASDAQ-GS",
-      "volume": 19592267.293358,
+      "volume": 30404395.0,
       "quote_source": "nasdaq-stocks"
     },
     {
       "ticker": "GOOGL",
-      "updated_at": "2026-11-23T20:51:51Z",
-      "price": 283.03,
+      "updated_at": "2026-11-24T05:08:24Z",
+      "price": 265.29,
       "filings": [
+        {
+          "form": "4",
+          "filing_date": "2026-11-23",
+          "accession": "0001193125-26-472910",
+          "url": "https://www.sec.gov/Archives/edgar/data/1652044/000119312526472910/xslF345X06/ownership.xml"
+        },
         {
           "form": "4",
           "filing_date": "2026-11-16",
@@ -814,28 +820,28 @@
           "filing_date": "2026-11-05",
           "accession": "0001193125-26-449835",
           "url": "https://www.sec.gov/Archives/edgar/data/1652044/000119312526449835/d174184d8k.htm"
-        },
-        {
-          "form": "4",
-          "filing_date": "2026-10-30",
-          "accession": "0001193125-26-442116",
-          "url": "https://www.sec.gov/Archives/edgar/data/1652044/000119312526442116/xslF345X06/ownership.xml"
         }
       ],
       "error": null,
-      "prev_close": 265.29,
-      "change": 17.74,
-      "change_pct": 6.687,
+      "prev_close": 272.66,
+      "change": -7.37,
+      "change_pct": -2.703,
       "currency": "USD",
       "exchange": "NASDAQ-GS",
-      "volume": 32698344.832701,
+      "volume": 58330646.0,
       "quote_source": "nasdaq-stocks"
     },
     {
       "ticker": "META",
-      "updated_at": "2026-11-23T20:51:52Z",
-      "price": 598.78,
+      "updated_at": "2026-11-24T05:08:24Z",
+      "price": 560.84,
       "filings": [
+        {
+          "form": "8-K",
+          "filing_date": "2026-11-23",
+          "accession": "0001628280-26-075541",
+          "url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026075541/meta-20261118.htm"
+        },
         {
           "form": "4",
           "filing_date": "2026-11-19",
@@ -859,21 +865,15 @@
           "filing_date": "2026-11-17",
           "accession": "0000950103-26-017707",
           "url": "https://www.sec.gov/Archives/edgar/data/1326801/000095010326017707/xslF345X06/ownership.xml"
-        },
-        {
-          "form": "4",
-          "filing_date": "2026-11-17",
-          "accession": "0000950103-26-017706",
-          "url": "https://www.sec.gov/Archives/edgar/data/1326801/000095010326017706/xslF345X06/ownership.xml"
         }
       ],
       "error": null,
-      "prev_close": 560.84,
-      "change": 37.94,
-      "change_pct": 6.765,
+      "prev_close": 596.22,
+      "change": -35.38,
+      "change_pct": -5.934,
       "currency": "USD",
       "exchange": "NASDAQ-GS",
-      "volume": 14541993.171643,
+      "volume": 25687222.0,
       "quote_source": "nasdaq-stocks"
     }
   ],
@@ -882,8 +882,16 @@
       "ticker": "NVDA",
       "lane": "quotes",
       "tag": "ALPHA",
-      "text": "164.44 (+31.00%)",
+      "text": "165.05 (+31.48%)",
       "severity": 4
+    },
+    {
+      "ticker": "NVDA",
+      "lane": "filings",
+      "tag": "ALPHA",
+      "text": "4 2026-11-23",
+      "severity": 3,
+      "url": "https://www.sec.gov/Archives/edgar/data/1045810/000169684126000016/xslF345X06/wk-form4_1795470863.xml"
     },
     {
       "ticker": "NVDA",
@@ -918,25 +926,17 @@
       "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000082/nvda-20261111.htm"
     },
     {
-      "ticker": "NVDA",
-      "lane": "filings",
-      "tag": "ALPHA",
-      "text": "4 2026-11-06",
-      "severity": 3,
-      "url": "https://www.sec.gov/Archives/edgar/data/1045810/000119764726000013/xslF345X06/wk-form4_1793999520.xml"
-    },
-    {
       "ticker": "AVGO",
       "lane": "quotes",
       "tag": "BEAT",
-      "text": "311.39 (+2.29%)",
+      "text": "313.55 (+3.00%)",
       "severity": 2
     },
     {
       "ticker": "TSM",
       "lane": "quotes",
       "tag": "ALPHA",
-      "text": "362.425 (+13.72%)",
+      "text": "363.365 (+14.01%)",
       "severity": 4
     },
     {
@@ -983,7 +983,7 @@
       "ticker": "AMD",
       "lane": "quotes",
       "tag": "ALPHA",
-      "text": "451.11 (+6.30%)",
+      "text": "453.46 (+6.85%)",
       "severity": 4
     },
     {
@@ -1029,8 +1029,8 @@
     {
       "ticker": "IREN",
       "lane": "quotes",
-      "tag": "ALPHA",
-      "text": "14.585 (+23.39%)",
+      "tag": "FLAG",
+      "text": "11.82 (-17.97%)",
       "severity": 4
     },
     {
@@ -1052,15 +1052,15 @@
     {
       "ticker": "CLSK",
       "lane": "quotes",
-      "tag": "ALPHA",
-      "text": "5.4758 (+11.98%)",
+      "tag": "FLAG",
+      "text": "4.89 (-16.27%)",
       "severity": 4
     },
     {
       "ticker": "WYFI",
       "lane": "quotes",
-      "tag": "ALPHA",
-      "text": "7.28 (+14.65%)",
+      "tag": "FLAG",
+      "text": "6.35 (-16.99%)",
       "severity": 4
     },
     {
@@ -1096,18 +1096,10 @@
       "url": "https://www.sec.gov/Archives/edgar/data/2042022/000121390026117723/ea0311622-8k_whitefiber.htm"
     },
     {
-      "ticker": "WYFI",
-      "lane": "filings",
-      "tag": "ALPHA",
-      "text": "4 2026-11-03",
-      "severity": 3,
-      "url": "https://www.sec.gov/Archives/edgar/data/2042022/000121390026115645/xslF345X06/ownership.xml"
-    },
-    {
       "ticker": "KEEL",
       "lane": "quotes",
-      "tag": "ALPHA",
-      "text": "1.6 (+16.36%)",
+      "tag": "FLAG",
+      "text": "1.3794 (-19.33%)",
       "severity": 4
     },
     {
@@ -1153,8 +1145,8 @@
     {
       "ticker": "NBIS",
       "lane": "quotes",
-      "tag": "ALPHA",
-      "text": "97.26 (+19.62%)",
+      "tag": "FLAG",
+      "text": "81.31 (-16.11%)",
       "severity": 4
     },
     {
@@ -1200,8 +1192,8 @@
     {
       "ticker": "AAOI",
       "lane": "quotes",
-      "tag": "ALPHA",
-      "text": "38.345 (+16.44%)",
+      "tag": "FLAG",
+      "text": "32.93 (-16.55%)",
       "severity": 4
     },
     {
@@ -1248,8 +1240,32 @@
       "ticker": "WMT",
       "lane": "quotes",
       "tag": "BEAT",
-      "text": "129.7 (+1.37%)",
+      "text": "127.95 (+1.51%)",
       "severity": 2
+    },
+    {
+      "ticker": "WMT",
+      "lane": "filings",
+      "tag": "ALPHA",
+      "text": "4 2026-11-23",
+      "severity": 3,
+      "url": "https://www.sec.gov/Archives/edgar/data/104169/000169673726000023/xslF345X06/wk-form4_1795469042.xml"
+    },
+    {
+      "ticker": "WMT",
+      "lane": "filings",
+      "tag": "ALPHA",
+      "text": "4 2026-11-23",
+      "severity": 3,
+      "url": "https://www.sec.gov/Archives/edgar/data/104169/000199280826000031/xslF345X06/wk-form4_1795469035.xml"
+    },
+    {
+      "ticker": "WMT",
+      "lane": "filings",
+      "tag": "ALPHA",
+      "text": "4 2026-11-23",
+      "severity": 3,
+      "url": "https://www.sec.gov/Archives/edgar/data/104169/000157929926000030/xslF345X06/wk-form4_1795469027.xml"
     },
     {
       "ticker": "WMT",
@@ -1268,34 +1284,10 @@
       "url": "https://www.sec.gov/Archives/edgar/data/104169/000173985926000003/xslF345X06/wk-form4_1794871039.xml"
     },
     {
-      "ticker": "WMT",
-      "lane": "filings",
-      "tag": "FLAG",
-      "text": "8-K 2026-11-16",
-      "severity": 3,
-      "url": "https://www.sec.gov/Archives/edgar/data/104169/000010416926000165/wmt-20261113.htm"
-    },
-    {
-      "ticker": "WMT",
-      "lane": "filings",
-      "tag": "13F",
-      "text": "13F-HR 2026-11-06",
-      "severity": 3,
-      "url": "https://www.sec.gov/Archives/edgar/data/104169/000112329226001495/xslForm13F_X02/primary_doc.xml"
-    },
-    {
-      "ticker": "WMT",
-      "lane": "filings",
-      "tag": "ALPHA",
-      "text": "4 2026-11-05",
-      "severity": 3,
-      "url": "https://www.sec.gov/Archives/edgar/data/104169/000188636726000031/xslF345X06/wk-form4_1793915990.xml"
-    },
-    {
       "ticker": "COIN",
       "lane": "quotes",
-      "tag": "ALPHA",
-      "text": "108.52 (+6.42%)",
+      "tag": "FLAG",
+      "text": "101.97 (-6.34%)",
       "severity": 4
     },
     {
@@ -1309,22 +1301,22 @@
     {
       "ticker": "SPY",
       "lane": "quotes",
-      "tag": "BEAT",
-      "text": "722.53 (+4.74%)",
+      "tag": "FLAG",
+      "text": "690.43 (-3.55%)",
       "severity": 2
     },
     {
       "ticker": "QQQ",
       "lane": "quotes",
       "tag": "ALPHA",
-      "text": "650.65 (+6.94%)",
+      "text": "651.03 (+7.00%)",
       "severity": 4
     },
     {
       "ticker": "DE",
       "lane": "quotes",
-      "tag": "BEAT",
-      "text": "634.06 (+4.07%)",
+      "tag": "FLAG",
+      "text": "609.24 (-2.50%)",
       "severity": 2
     },
     {
@@ -1338,9 +1330,9 @@
     {
       "ticker": "MRNA",
       "lane": "quotes",
-      "tag": "ALPHA",
-      "text": "211.71 (+8.57%)",
-      "severity": 4
+      "tag": "FLAG",
+      "text": "195.0 (-2.17%)",
+      "severity": 2
     },
     {
       "ticker": "MRNA",
@@ -1385,8 +1377,8 @@
     {
       "ticker": "AMZN",
       "lane": "quotes",
-      "tag": "BEAT",
-      "text": "256.17 (+3.79%)",
+      "tag": "FLAG",
+      "text": "246.82 (-4.10%)",
       "severity": 2
     },
     {
@@ -1433,7 +1425,7 @@
       "ticker": "MSFT",
       "lane": "quotes",
       "tag": "BEAT",
-      "text": "495.61 (+2.29%)",
+      "text": "492.5 (+1.65%)",
       "severity": 2
     },
     {
@@ -1479,9 +1471,17 @@
     {
       "ticker": "GOOGL",
       "lane": "quotes",
+      "tag": "FLAG",
+      "text": "265.29 (-2.70%)",
+      "severity": 2
+    },
+    {
+      "ticker": "GOOGL",
+      "lane": "filings",
       "tag": "ALPHA",
-      "text": "283.03 (+6.69%)",
-      "severity": 4
+      "text": "4 2026-11-23",
+      "severity": 3,
+      "url": "https://www.sec.gov/Archives/edgar/data/1652044/000119312526472910/xslF345X06/ownership.xml"
     },
     {
       "ticker": "GOOGL",
@@ -1518,9 +1518,17 @@
     {
       "ticker": "META",
       "lane": "quotes",
-      "tag": "ALPHA",
-      "text": "598.78 (+6.76%)",
+      "tag": "FLAG",
+      "text": "560.84 (-5.93%)",
       "severity": 4
+    },
+    {
+      "ticker": "META",
+      "lane": "filings",
+      "tag": "FLAG",
+      "text": "8-K 2026-11-23",
+      "severity": 3,
+      "url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026075541/meta-20261118.htm"
     },
     {
       "ticker": "META",
@@ -1553,14 +1561,6 @@
       "text": "4 2026-11-17",
       "severity": 3,
       "url": "https://www.sec.gov/Archives/edgar/data/1326801/000095010326017707/xslF345X06/ownership.xml"
-    },
-    {
-      "ticker": "META",
-      "lane": "filings",
-      "tag": "ALPHA",
-      "text": "4 2026-11-17",
-      "severity": 3,
-      "url": "https://www.sec.gov/Archives/edgar/data/1326801/000095010326017706/xslF345X06/ownership.xml"
     }
   ],
   "stats": {
