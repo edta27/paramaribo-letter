@@ -1,8 +1,14 @@
 {
   "ticker": "AAOI",
-  "updated_at": "2026-11-24T19:55:23Z",
-  "price": 38.3801,
+  "updated_at": "2026-11-25T03:56:39Z",
+  "price": 37.82,
   "filings": [
+    {
+      "form": "4",
+      "filing_date": "2026-11-24",
+      "accession": "0001683168-26-009095",
+      "url": "https://www.sec.gov/Archives/edgar/data/1158114/000168316826009095/xslF345X06/ownership.xml"
+    },
     {
       "form": "8-K",
       "filing_date": "2026-11-17",
@@ -26,20 +32,14 @@
       "filing_date": "2026-11-05",
       "accession": "0001437749-26-035282",
       "url": "https://www.sec.gov/Archives/edgar/data/1158114/000143774926035282/aaoi20260930_10q.htm"
-    },
-    {
-      "form": "8-K",
-      "filing_date": "2026-11-05",
-      "accession": "0001683168-26-008351",
-      "url": "https://www.sec.gov/Archives/edgar/data/1158114/000168316826008351/aaoi_8k.htm"
     }
   ],
   "error": null,
   "prev_close": 38.7,
-  "change": -0.3199,
-  "change_pct": -0.827,
+  "change": -0.88,
+  "change_pct": -2.274,
   "currency": "USD",
   "exchange": "NASDAQ-GM",
-  "volume": 14608645.614668,
+  "volume": 17422033.829483,
   "quote_source": "nasdaq-stocks"
 }

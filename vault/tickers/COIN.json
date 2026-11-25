@@ -1,8 +1,26 @@
 {
   "ticker": "COIN",
-  "updated_at": "2026-11-24T19:55:24Z",
-  "price": 103.15,
+  "updated_at": "2026-11-25T03:56:39Z",
+  "price": 102.1073,
   "filings": [
+    {
+      "form": "4",
+      "filing_date": "2026-11-24",
+      "accession": "0001668711-26-000004",
+      "url": "https://www.sec.gov/Archives/edgar/data/1679788/000166871126000004/xslF345X06/form4-11242026_041109.xml"
+    },
+    {
+      "form": "4",
+      "filing_date": "2026-11-24",
+      "accession": "0001851658-26-000005",
+      "url": "https://www.sec.gov/Archives/edgar/data/1679788/000185165826000005/xslF345X06/form4-11242026_041106.xml"
+    },
+    {
+      "form": "4",
+      "filing_date": "2026-11-24",
+      "accession": "0001851432-26-000003",
+      "url": "https://www.sec.gov/Archives/edgar/data/1679788/000185143226000003/xslF345X06/form4-11242026_041103.xml"
+    },
     {
       "form": "4",
       "filing_date": "2026-11-17",
@@ -14,32 +32,14 @@
       "filing_date": "2026-10-29",
       "accession": "0001679788-26-000122",
       "url": "https://www.sec.gov/Archives/edgar/data/1679788/000167978826000122/coin-20260930.htm"
-    },
-    {
-      "form": "8-K",
-      "filing_date": "2026-10-29",
-      "accession": "0001679788-26-000121",
-      "url": "https://www.sec.gov/Archives/edgar/data/1679788/000167978826000121/coin-20261029.htm"
-    },
-    {
-      "form": "4",
-      "filing_date": "2026-10-05",
-      "accession": "0001160077-26-000010",
-      "url": "https://www.sec.gov/Archives/edgar/data/1679788/000116007726000010/xslF345X06/form4-10052026_091019.xml"
-    },
-    {
-      "form": "8-K",
-      "filing_date": "2026-10-02",
-      "accession": "0001679788-26-000113",
-      "url": "https://www.sec.gov/Archives/edgar/data/1679788/000167978826000113/coin-20260929.htm"
     }
   ],
   "error": null,
   "prev_close": 108.78,
-  "change": -5.63,
-  "change_pct": -5.176,
+  "change": -6.6727,
+  "change_pct": -6.134,
   "currency": "USD",
   "exchange": "NASDAQ-GS",
-  "volume": 4725881.089875,
+  "volume": 7238891.603017,
   "quote_source": "nasdaq-stocks"
 }
