@@ -1,8 +1,20 @@
 {
   "ticker": "TSM",
-  "updated_at": "2026-11-25T03:56:36Z",
-  "price": 347.9,
+  "updated_at": "2026-11-25T18:58:20Z",
+  "price": 339.2105,
   "filings": [
+    {
+      "form": "6-K",
+      "filing_date": "2026-11-25",
+      "accession": "0001046179-26-000807",
+      "url": "https://www.sec.gov/Archives/edgar/data/1046179/000104617926000807/tsm-dividendadjustmentx202.htm"
+    },
+    {
+      "form": "6-K",
+      "filing_date": "2026-11-25",
+      "accession": "0001046179-26-000805",
+      "url": "https://www.sec.gov/Archives/edgar/data/1046179/000104617926000805/tsm-monthend6kx20261125.htm"
+    },
     {
       "form": "4",
       "filing_date": "2026-11-20",
@@ -20,26 +32,14 @@
       "filing_date": "2026-11-13",
       "accession": "0001046179-26-000801",
       "url": "https://www.sec.gov/Archives/edgar/data/1046179/000104617926000801/tsm-fsx20261113x6k.htm"
-    },
-    {
-      "form": "6-K",
-      "filing_date": "2026-11-12",
-      "accession": "0001046179-26-000800",
-      "url": "https://www.sec.gov/Archives/edgar/data/1046179/000104617926000800/a20261112statementregardin.htm"
-    },
-    {
-      "form": "6-K",
-      "filing_date": "2026-11-10",
-      "accession": "0001046179-26-000797",
-      "url": "https://www.sec.gov/Archives/edgar/data/1046179/000104617926000797/tsm-boardx202611xx.htm"
     }
   ],
   "error": null,
-  "prev_close": 363.6,
-  "change": -15.7,
-  "change_pct": -4.318,
+  "prev_close": 349.2,
+  "change": -9.9895,
+  "change_pct": -2.861,
   "currency": "USD",
   "exchange": "NYSE",
-  "volume": 17256916.245581,
+  "volume": 17426171.480527,
   "quote_source": "nasdaq-stocks"
 }
