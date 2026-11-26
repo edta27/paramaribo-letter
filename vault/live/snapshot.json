@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-26T03:21:57Z",
+  "updated_at": "2026-11-26T18:49:01Z",
   "mode": "auto-refresh",
   "disclaimer": "Educational quotes and EDGAR indexes only. Not advice. No trades. No email.",
   "watchlist": [
@@ -27,7 +27,7 @@
   "tickers": [
     {
       "ticker": "NVDA",
-      "updated_at": "2026-11-26T03:21:51Z",
+      "updated_at": "2026-11-26T18:48:55Z",
       "price": 149.3,
       "filings": [
         {
@@ -67,12 +67,12 @@
       "change_pct": -3.913,
       "currency": "USD",
       "exchange": "NASDAQ-GS",
-      "volume": 366571861.978475,
+      "volume": 366571889.978475,
       "quote_source": "nasdaq-stocks"
     },
     {
       "ticker": "AVGO",
-      "updated_at": "2026-11-26T03:21:52Z",
+      "updated_at": "2026-11-26T18:48:55Z",
       "price": 300.86,
       "filings": [
         {
@@ -112,12 +112,12 @@
       "change_pct": -0.073,
       "currency": "USD",
       "exchange": "NASDAQ-GS",
-      "volume": 34349543.236056,
+      "volume": 34349549.236056,
       "quote_source": "nasdaq-stocks"
     },
     {
       "ticker": "TSM",
-      "updated_at": "2026-11-26T03:21:52Z",
+      "updated_at": "2026-11-26T18:48:55Z",
       "price": 342.1,
       "filings": [
         {
@@ -162,7 +162,7 @@
     },
     {
       "ticker": "AMD",
-      "updated_at": "2026-11-26T03:21:52Z",
+      "updated_at": "2026-11-26T18:48:56Z",
       "price": 406.03,
       "filings": [
         {
@@ -207,7 +207,7 @@
     },
     {
       "ticker": "IREN",
-      "updated_at": "2026-11-26T03:21:52Z",
+      "updated_at": "2026-11-26T18:48:56Z",
       "price": 12.85,
       "filings": [
         {
@@ -247,12 +247,12 @@
       "change_pct": -0.772,
       "currency": "USD",
       "exchange": "NASDAQ-GS",
-      "volume": 83315846.736197,
+      "volume": 83318747.736197,
       "quote_source": "nasdaq-stocks"
     },
     {
       "ticker": "CLSK",
-      "updated_at": "2026-11-26T03:21:53Z",
+      "updated_at": "2026-11-26T18:48:56Z",
       "price": 5.18,
       "filings": [
         {
@@ -297,7 +297,7 @@
     },
     {
       "ticker": "WYFI",
-      "updated_at": "2026-11-26T03:21:53Z",
+      "updated_at": "2026-11-26T18:48:57Z",
       "price": 6.5,
       "filings": [
         {
@@ -342,7 +342,7 @@
     },
     {
       "ticker": "KEEL",
-      "updated_at": "2026-11-26T03:21:53Z",
+      "updated_at": "2026-11-26T18:48:57Z",
       "price": 1.38,
       "filings": [
         {
@@ -387,7 +387,7 @@
     },
     {
       "ticker": "NBIS",
-      "updated_at": "2026-11-26T03:21:54Z",
+      "updated_at": "2026-11-26T18:48:57Z",
       "price": 84.99,
       "filings": [
         {
@@ -427,12 +427,12 @@
       "change_pct": -2.657,
       "currency": "USD",
       "exchange": "NASDAQ-GS",
-      "volume": 40766796.346195,
+      "volume": 40766818.346195,
       "quote_source": "nasdaq-stocks"
     },
     {
       "ticker": "AAOI",
-      "updated_at": "2026-11-26T03:21:54Z",
+      "updated_at": "2026-11-26T18:48:58Z",
       "price": 37.02,
       "filings": [
         {
@@ -472,12 +472,12 @@
       "change_pct": -3.594,
       "currency": "USD",
       "exchange": "NASDAQ-GM",
-      "volume": 12809079.033695,
+      "volume": 12809130.033695,
       "quote_source": "nasdaq-stocks"
     },
     {
       "ticker": "WMT",
-      "updated_at": "2026-11-26T03:21:54Z",
+      "updated_at": "2026-11-26T18:48:58Z",
       "price": 131.94,
       "filings": [
         {
@@ -522,7 +522,7 @@
     },
     {
       "ticker": "COIN",
-      "updated_at": "2026-11-26T03:21:54Z",
+      "updated_at": "2026-11-26T18:48:58Z",
       "price": 103.72,
       "filings": [
         {
@@ -562,12 +562,12 @@
       "change_pct": 1.343,
       "currency": "USD",
       "exchange": "NASDAQ-GS",
-      "volume": 9968401.889228,
+      "volume": 9968412.889228,
       "quote_source": "nasdaq-stocks"
     },
     {
       "ticker": "SPY",
-      "updated_at": "2026-11-26T03:21:55Z",
+      "updated_at": "2026-11-26T18:48:59Z",
       "price": 716.81,
       "filings": [],
       "error": null,
@@ -581,7 +581,7 @@
     },
     {
       "ticker": "QQQ",
-      "updated_at": "2026-11-26T03:21:55Z",
+      "updated_at": "2026-11-26T18:48:59Z",
       "price": 633.93,
       "filings": [
         {
@@ -608,7 +608,7 @@
     },
     {
       "ticker": "DE",
-      "updated_at": "2026-11-26T03:21:55Z",
+      "updated_at": "2026-11-26T18:48:59Z",
       "price": 641.61,
       "filings": [
         {
@@ -653,7 +653,7 @@
     },
     {
       "ticker": "MRNA",
-      "updated_at": "2026-11-26T03:21:56Z",
+      "updated_at": "2026-11-26T18:48:59Z",
       "price": 220.84,
       "filings": [
         {
@@ -693,12 +693,12 @@
       "change_pct": -2.876,
       "currency": "USD",
       "exchange": "NASDAQ-GS",
-      "volume": 6812616.807432,
+      "volume": 6812887.807432,
       "quote_source": "nasdaq-stocks"
     },
     {
       "ticker": "AMZN",
-      "updated_at": "2026-11-26T03:21:56Z",
+      "updated_at": "2026-11-26T18:49:00Z",
       "price": 244.43,
       "filings": [
         {
@@ -743,7 +743,7 @@
     },
     {
       "ticker": "MSFT",
-      "updated_at": "2026-11-26T03:21:56Z",
+      "updated_at": "2026-11-26T18:49:00Z",
       "price": 489.93,
       "filings": [
         {
@@ -788,7 +788,7 @@
     },
     {
       "ticker": "GOOGL",
-      "updated_at": "2026-11-26T03:21:56Z",
+      "updated_at": "2026-11-26T18:49:01Z",
       "price": 273.1,
       "filings": [
         {
@@ -828,12 +828,12 @@
       "change_pct": -2.132,
       "currency": "USD",
       "exchange": "NASDAQ-GS",
-      "volume": 41283558.409258,
+      "volume": 41283672.409258,
       "quote_source": "nasdaq-stocks"
     },
     {
       "ticker": "META",
-      "updated_at": "2026-11-26T03:21:57Z",
+      "updated_at": "2026-11-26T18:49:01Z",
       "price": 609.89,
       "filings": [
         {
