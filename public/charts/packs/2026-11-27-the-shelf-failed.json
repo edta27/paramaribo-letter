@@ -1,0 +1,456 @@
+{
+  "id": "2026-11-27-the-shelf-failed",
+  "date": "2026-11-27",
+  "kicker": "Chart Desk \u00b7 Issue 36",
+  "title": "The shelf failed. Credit went through.",
+  "dek": "20 and 21 November both closed under $61,946. 20 November closed at $58,815, $291 above the 30 June close. High-yield OAS printed 3.76% on 20 November.",
+  "asOf": "2026-11-27T14:11:51Z",
+  "cadence": "follow-up",
+  "thesis": "The shelf failed. Credit went through. June's close held.",
+  "stakes": "BTC ~$61.3k. 20 and 21 Nov closed under $61,946. 20 Nov close $58,815, $291 above 30 June. Low $55,106. HY OAS 3.76% on 20 Nov, 3.72% on 24 Nov. WAIT.",
+  "levels": [
+    "$61.9k",
+    "$61.5k",
+    "$58.5k",
+    "~$57.7k"
+  ],
+  "letterId": "2026-11-27-the-shelf-failed",
+  "letterUrl": "/issue?id=2026-11-27-the-shelf-failed",
+  "letterLabel": "Vol. 1 \u00b7 Issue 36",
+  "subscribeHook": "A UTC close under the 30 June close, or a UTC close back above the 2 July close, updates the sequence. Charts stay free here; the call moves by email.",
+  "sourceNote": "Issue 36 charts use Coinbase Exchange UTC candles (daily 19\u201326 Nov 2026; hourly 21 Nov), completed 19 and 25 November closes from Yahoo Finance, and Farside Investors US-session ETF flows for 2\u201325 November. 2\u20136 November totals are the figures Issue 35 retrieved; 9\u201319 November on this pull match that letter. 26 November is absent. 27 November is a partial UTC day and an incomplete Farside row. Weekend blanks are not zeroes. Educational scenario research; no leverage.",
+  "briefs": [
+    {
+      "id": "btc-shelf-path",
+      "asset": "BTC",
+      "headline": "The shelf failed. June's close held.",
+      "lede": "20 and 21 November both closed under $61,946. Every completed close from 20 November through 26 November held above $58,524.",
+      "bodyHtml": "<p><strong>Fact.</strong> The 48-hour test Issue 35 wrote down failed. The 30 June close was traded through and was not lost on a close.</p><p><strong>Read.</strong> The tail door is a close under the 1 July low. That close is not in.</p>",
+      "charts": [
+        {
+          "title": "BTC daily range [USD] vs close",
+          "bars": {
+            "label": "Daily high\u2013low range [USD]",
+            "unsigned": true,
+            "data": [
+              [
+                1795046400000,
+                2673.69
+              ],
+              [
+                1795132800000,
+                4906.98
+              ],
+              [
+                1795219200000,
+                5777.03
+              ],
+              [
+                1795305600000,
+                2931.93
+              ],
+              [
+                1795392000000,
+                4247.04
+              ],
+              [
+                1795478400000,
+                2409.27
+              ],
+              [
+                1795564800000,
+                3278.83
+              ],
+              [
+                1795651200000,
+                1684.46
+              ]
+            ]
+          },
+          "line": {
+            "label": "BTC-USD close [USD]",
+            "data": [
+              [
+                1795046400000,
+                61913.23
+              ],
+              [
+                1795132800000,
+                58814.99
+              ],
+              [
+                1795219200000,
+                60086.0
+              ],
+              [
+                1795305600000,
+                61163.01
+              ],
+              [
+                1795392000000,
+                61189.97
+              ],
+              [
+                1795478400000,
+                59740.87
+              ],
+              [
+                1795564800000,
+                60383.51
+              ],
+              [
+                1795651200000,
+                60495.57
+              ]
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "btc-shelf-hours",
+      "asset": "BTC \u00b7 21 NOV 2026",
+      "headline": "The low was $55,106. The close was $60,086.",
+      "lede": "21 November's low printed in the 06:00 UTC hour. The UTC close held above the 30 June close.",
+      "bodyHtml": "<p><strong>Fact.</strong> The 1 July low was traded. It was not a close.</p><p><strong>Read.</strong> Acceptance, in the rule this letter inherited, is a UTC close.</p>",
+      "charts": [
+        {
+          "title": "BTC hourly range [USD] vs close \u00b7 21 Nov 2026",
+          "bars": {
+            "label": "Hourly high\u2013low range [USD]",
+            "unsigned": true,
+            "data": [
+              [
+                1795219200000,
+                297.06
+              ],
+              [
+                1795222800000,
+                336.07
+              ],
+              [
+                1795226400000,
+                503.87
+              ],
+              [
+                1795230000000,
+                2211.12
+              ],
+              [
+                1795233600000,
+                1247.54
+              ],
+              [
+                1795237200000,
+                788.48
+              ],
+              [
+                1795240800000,
+                2910.5
+              ],
+              [
+                1795244400000,
+                925.62
+              ],
+              [
+                1795248000000,
+                765.86
+              ],
+              [
+                1795251600000,
+                338.65
+              ],
+              [
+                1795255200000,
+                392.05
+              ],
+              [
+                1795258800000,
+                783.48
+              ],
+              [
+                1795262400000,
+                1025.2
+              ],
+              [
+                1795266000000,
+                2125.2
+              ],
+              [
+                1795269600000,
+                835.89
+              ],
+              [
+                1795273200000,
+                807.83
+              ],
+              [
+                1795276800000,
+                468.03
+              ],
+              [
+                1795280400000,
+                379.85
+              ],
+              [
+                1795284000000,
+                194.73
+              ],
+              [
+                1795287600000,
+                353.06
+              ],
+              [
+                1795291200000,
+                205.79
+              ],
+              [
+                1795294800000,
+                238.02
+              ],
+              [
+                1795298400000,
+                357.19
+              ],
+              [
+                1795302000000,
+                351.91
+              ]
+            ]
+          },
+          "line": {
+            "label": "BTC-USD hourly close [USD]",
+            "data": [
+              [
+                1795219200000,
+                58900.0
+              ],
+              [
+                1795222800000,
+                58907.25
+              ],
+              [
+                1795226400000,
+                58492.07
+              ],
+              [
+                1795230000000,
+                56641.65
+              ],
+              [
+                1795233600000,
+                56220.85
+              ],
+              [
+                1795237200000,
+                55704.83
+              ],
+              [
+                1795240800000,
+                57962.02
+              ],
+              [
+                1795244400000,
+                57876.35
+              ],
+              [
+                1795248000000,
+                57692.84
+              ],
+              [
+                1795251600000,
+                57912.13
+              ],
+              [
+                1795255200000,
+                57833.87
+              ],
+              [
+                1795258800000,
+                58110.53
+              ],
+              [
+                1795262400000,
+                58764.51
+              ],
+              [
+                1795266000000,
+                60452.7
+              ],
+              [
+                1795269600000,
+                60237.37
+              ],
+              [
+                1795273200000,
+                59826.32
+              ],
+              [
+                1795276800000,
+                59943.36
+              ],
+              [
+                1795280400000,
+                59967.34
+              ],
+              [
+                1795284000000,
+                60040.26
+              ],
+              [
+                1795287600000,
+                60231.47
+              ],
+              [
+                1795291200000,
+                60321.27
+              ],
+              [
+                1795294800000,
+                60347.97
+              ],
+              [
+                1795298400000,
+                60024.39
+              ],
+              [
+                1795302000000,
+                60086.0
+              ]
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "btc-shelf-cross",
+      "asset": "CROSS-ASSET \u00b7 19\u201325 NOV",
+      "headline": "Bitcoin stayed down. The S&P 500 did not.",
+      "lede": "From the 19 November close to the 25 November close, Bitcoin fell 2.47% and the S&P 500 rose 0.10%. HYG was unchanged.",
+      "bodyHtml": "<p><strong>Fact.</strong> On 20 November alone, Bitcoin fell 5.00% and the S&P 500 fell 3.70%.</p><p><strong>Read.</strong> The spread went through 3.48%. The high-yield fund did not stay down.</p>",
+      "charts": [
+        {
+          "title": "19 Nov close to 25 Nov close [%]",
+          "bars": {
+            "label": "Change from the 19 Nov close to the 25 Nov close [%]",
+            "data": [
+              [
+                1795564800000,
+                -2.47
+              ],
+              [
+                1795564800001,
+                0.1
+              ],
+              [
+                1795564800002,
+                -1.23
+              ],
+              [
+                1795564800003,
+                -0.01
+              ],
+              [
+                1795564800004,
+                -4.06
+              ],
+              [
+                1795564800005,
+                2.86
+              ]
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "btc-shelf-flows",
+      "asset": "US SPOT BTC ETF",
+      "headline": "20 November is the new IBIT minimum on the table.",
+      "lede": "The completed November total is \u2212$5,391.1 million. 20 November is \u2212$669.2 million, of which IBIT is \u2212$544.7 million.",
+      "bodyHtml": "<p><strong>Fact.</strong> The Minimum row for IBIT on the retrieved table is (544.7). The Total column\u2019s minimum is still a larger outflow on another day.</p><p><strong>Read.</strong> 26 November is absent. 27 November is dashes. Neither is a zero.</p>",
+      "charts": [
+        {
+          "title": "US spot Bitcoin ETF net flow [US$ millions]",
+          "bars": {
+            "label": "Net flow [US$ millions]",
+            "data": [
+              [
+                1793577600000,
+                -398.6
+              ],
+              [
+                1793664000000,
+                -115.6
+              ],
+              [
+                1793750400000,
+                74.6
+              ],
+              [
+                1793836800000,
+                -430.2
+              ],
+              [
+                1793923200000,
+                -411.9
+              ],
+              [
+                1794182400000,
+                -201.0
+              ],
+              [
+                1794268800000,
+                -95.0
+              ],
+              [
+                1794355200000,
+                -299.8
+              ],
+              [
+                1794441600000,
+                -284.1
+              ],
+              [
+                1794528000000,
+                -185.4
+              ],
+              [
+                1794787200000,
+                7.9
+              ],
+              [
+                1794873600000,
+                -239.9
+              ],
+              [
+                1794960000000,
+                -306.5
+              ],
+              [
+                1795046400000,
+                -582.3
+              ],
+              [
+                1795132800000,
+                -669.2
+              ],
+              [
+                1795392000000,
+                -569.7
+              ],
+              [
+                1795478400000,
+                -231.4
+              ],
+              [
+                1795564800000,
+                -453.0
+              ]
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}
