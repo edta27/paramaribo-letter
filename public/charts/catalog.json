@@ -1,5 +1,28 @@
 [
   {
+    "id": "2026-11-27-the-shelf-failed",
+    "date": "2026-11-27",
+    "kicker": "Chart Desk \u00b7 Issue 36",
+    "title": "The shelf failed. Credit went through.",
+    "dek": "20 and 21 November both closed under $61,946. 20 November closed at $58,815, $291 above the 30 June close. High-yield OAS printed 3.76% on 20 November.",
+    "asOf": "2026-11-27T14:11:51Z",
+    "cadence": "follow-up",
+    "thesis": "The shelf failed. Credit went through. June's close held.",
+    "stakes": "BTC ~$61.3k. 20 and 21 Nov closed under $61,946. 20 Nov close $58,815, $291 above 30 June. Low $55,106. HY OAS 3.76% on 20 Nov, 3.72% on 24 Nov. WAIT.",
+    "levels": [
+      "$61.9k",
+      "$61.5k",
+      "$58.5k",
+      "~$57.7k"
+    ],
+    "letterId": "2026-11-27-the-shelf-failed",
+    "letterUrl": "/issue?id=2026-11-27-the-shelf-failed",
+    "letterLabel": "Vol. 1 \u00b7 Issue 36",
+    "subscribeHook": "A UTC close under the 30 June close, or a UTC close back above the 2 July close, updates the sequence. Charts stay free here; the call moves by email.",
+    "sourceNote": "Issue 36 charts use Coinbase Exchange UTC candles (daily 19\u201326 Nov 2026; hourly 21 Nov), completed 19 and 25 November closes from Yahoo Finance, and Farside Investors US-session ETF flows for 2\u201325 November. 2\u20136 November totals are the figures Issue 35 retrieved; 9\u201319 November on this pull match that letter. 26 November is absent. 27 November is a partial UTC day and an incomplete Farside row. Weekend blanks are not zeroes. Educational scenario research; no leverage.",
+    "packUrl": "/charts/packs/2026-11-27-the-shelf-failed.json"
+  },
+  {
     "id": "2026-11-20-the-window-failed",
     "date": "2026-11-20",
     "kicker": "Chart Desk \u00b7 Issue 35",
